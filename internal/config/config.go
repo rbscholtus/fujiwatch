@@ -57,6 +57,11 @@ type Watchlist struct {
 type Defaults struct {
 	DelayMS  int `yaml:"delay_ms"`
 	TimeoutS int `yaml:"timeout_s"`
+
+	// A price drop is alerted if it is at least MinDropPct percent OR at
+	// least MinDropVND. Both 0 (default): every drop is alerted.
+	MinDropPct float64 `yaml:"min_drop_pct"`
+	MinDropVND int64   `yaml:"min_drop_vnd"`
 }
 
 // Delay returns the delay between requests to the same host.
@@ -125,6 +130,9 @@ func (c *Config) ProductByID(id string) (Product, bool) {
 func (c *Config) Validate() error {
 	var errs []error
 	errs = append(errs, c.Watchlist.validate()...)
+	if d := c.Sources.Defaults; d.MinDropPct < 0 || d.MinDropPct >= 100 || d.MinDropVND < 0 {
+		errs = append(errs, fmt.Errorf("defaults: min_drop_pct must be in [0, 100) and min_drop_vnd ≥ 0"))
+	}
 
 	for i, s := range c.Sources.Sources {
 		where := fmt.Sprintf("sources[%d] (%s)", i, s.Shop)

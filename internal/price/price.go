@@ -53,3 +53,28 @@ func ParseVND(s string) (int64, error) {
 
 	return v, nil
 }
+
+// FormatVND formats a price the Vietnamese way: 27490000 → "27.490.000₫".
+// 0 (price not shown) formats as "liên hệ".
+func FormatVND(v int64) string {
+	if v == 0 {
+		return "liên hệ"
+	}
+	neg := v < 0
+	if neg {
+		v = -v
+	}
+	s := strconv.FormatInt(v, 10)
+	var b strings.Builder
+	if neg {
+		b.WriteByte('-')
+	}
+	for i, r := range s {
+		if i > 0 && (len(s)-i)%3 == 0 {
+			b.WriteByte('.')
+		}
+		b.WriteRune(r)
+	}
+	b.WriteString("₫")
+	return b.String()
+}

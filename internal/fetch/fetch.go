@@ -65,8 +65,9 @@ type Client struct {
 	retries int
 	backoff time.Duration
 
-	mu    sync.Mutex
-	hosts map[string]*host
+	mu     sync.Mutex
+	hosts  map[string]*host
+	robots map[string]*Robots // per host; nil = no robots.txt
 }
 
 type host struct {
@@ -101,6 +102,7 @@ func New(opts Options) *Client {
 		retries: opts.Retries,
 		backoff: opts.Backoff,
 		hosts:   map[string]*host{},
+		robots:  map[string]*Robots{},
 	}
 }
 

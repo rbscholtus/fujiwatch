@@ -252,21 +252,31 @@ Matching rules per product: all `patterns` must match, all `require_all` must ma
 
 ## 7. State, history and events
 
-`data/state.json`, keyed by `shop|url`:
+`data/state.json` holds the last known state of every tracked offer, keyed by `shop|url`, plus the health of every source page (used for `adapter_broken`):
 
 ```json
 {
-  "xspace|https://fujifilm-xspace.vn/products/...": {
-    "product": "xf10-24-ii",
-    "title": "Ống kính Fujinon XF10-24mm F4 R OIS WR II",
-    "price_vnd": 27490000,
-    "in_stock": true,
-    "condition": "new",
-    "first_seen": "2026-11-07T23:17:00Z",
-    "last_seen": "2026-11-07T23:17:00Z"
+  "offers": {
+    "xspace|https://fujifilm-xspace.vn/products/...": {
+      "product": "xf10-24-ii",
+      "shop": "xspace",
+      "url": "https://fujifilm-xspace.vn/products/...",
+      "title": "Ống kính Fujinon XF10-24mm F4 R OIS WR II",
+      "price_vnd": 27490000,
+      "in_stock": true,
+      "condition": "new",
+      "source": "xspace|https://fujifilm-xspace.vn/products/...",
+      "first_seen": "2026-11-07T23:17:00Z",
+      "last_seen": "2026-11-07T23:17:00Z"
+    }
+  },
+  "sources": {
+    "xspace|https://fujifilm-xspace.vn/products/...": { "last_count": 1, "last_ok": "2026-11-07T23:17:00Z" }
   }
 }
 ```
+
+Only matched offers are tracked. If a page hides the price ("Liên hệ") or the stock, the last known value is kept, so the next visible price is compared against it. The file is written atomically (temp file + rename).
 
 `data/history/<product-id>.jsonl` gets one line per offer per run:
 
@@ -276,11 +286,12 @@ Matching rules per product: all `patterns` must match, all `require_all` must ma
 
 **Events (`internal/diff`)**
 
-- `price_drop` / `price_rise`: only alert on drops by default. Optional threshold (e.g. ≥ 2% or ≥ 300,000 VND) to ignore noise.
+- `price_drop` / `price_rise`: only alert on drops by default. Optional threshold in `sources.yaml` (`min_drop_pct`, `min_drop_vnd`: a drop counts if it meets either) to ignore noise. The stored price is updated either way.
 - `back_in_stock` / `out_of_stock`
 - `new_listing`: the URL has not been seen before (listing mode)
-- `gone`: not seen for 3 consecutive runs. Remove it from state and log it (useful for used items: "sold").
-- `adapter_broken`: a source that previously returned ≥ 1 offer now returns 0, or the HTTP status is not 200. Always included in the email, so silent failures are visible.
+- `gone`: not seen for 3 consecutive runs. Remove it from state and log it (useful for used items: "sold"). Only runs in which the offer's own source page worked count, so a broken shop never marks its items as sold; offers of a source removed from `sources.yaml` age out the same way.
+- `adapter_broken`: a source that previously returned ≥ 1 offer now returns 0, or the HTTP status is not 200, or the fetch, robots.txt check or extraction failed. Always included in the email, so silent failures are visible.
+- `new_listing` is only raised in listing mode; the first sighting of a product-mode URL is silent. The same URL found on two source pages in one run counts once.
 
 ---
 

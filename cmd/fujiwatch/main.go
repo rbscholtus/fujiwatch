@@ -12,7 +12,7 @@ import (
 )
 
 const usage = `usage:
-  fujiwatch run [--dry-run] [--only <shop>] [--no-notify]
+  fujiwatch run [--config <dir>] [--data <dir>] [--dry-run] [--only <shop>] [--no-notify]
   fujiwatch snapshot [--config <dir>] [--out <dir>] [--shop <shop>] [--mode product|listing] [--no-rewrite] <url>
   fujiwatch extract [--config <dir>] [--url <page-url>] <shop> <file>
   fujiwatch match [--config <dir>] "<title>" [url]`
@@ -42,8 +42,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 	case "extract":
 		return cmdExtract(args[1:], stdout, stderr)
 	case "run":
-		_, _ = fmt.Fprintf(stderr, "fujiwatch: %q is not implemented yet\n", cmd)
-		return exitError
+		return cmdRun(args[1:], stdout, stderr)
 	case "-h", "--help", "help":
 		_, _ = fmt.Fprintln(stdout, usage)
 		return exitOK
@@ -65,4 +64,13 @@ func loadConfig(dir string) (*config.Config, error) {
 func errorf(stderr io.Writer, format string, args ...any) int {
 	_, _ = fmt.Fprintf(stderr, "fujiwatch: "+format+"\n", args...)
 	return exitError
+}
+
+func hasShop(sources []config.Source, shop string) bool {
+	for _, s := range sources {
+		if s.Shop == shop {
+			return true
+		}
+	}
+	return false
 }

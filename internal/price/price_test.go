@@ -64,3 +64,26 @@ func TestParseVNDRangeBoundaries(t *testing.T) {
 		}
 	}
 }
+
+func TestFormatVND(t *testing.T) {
+	tests := []struct {
+		in   int64
+		want string
+	}{
+		{27_490_000, "27.490.000₫"},
+		{500_000, "500.000₫"},
+		{1_000, "1.000₫"},
+		{999, "999₫"},
+		{-1_500_000, "-1.500.000₫"},
+		{0, "liên hệ"},
+	}
+	for _, tt := range tests {
+		if got := FormatVND(tt.in); got != tt.want {
+			t.Errorf("FormatVND(%d) = %q, want %q", tt.in, got, tt.want)
+		}
+	}
+	// Round trip with the parser.
+	if v, err := ParseVND(FormatVND(27_490_000)); err != nil || v != 27_490_000 {
+		t.Errorf("round trip = %d, %v", v, err)
+	}
+}
