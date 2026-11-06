@@ -1,0 +1,29 @@
+# Pages to watch. See README §4.
+#
+# mode: product  — one fixed product page; `product` must be a watchlist ID.
+# mode: listing  — category / search / used page; every title goes through
+#                  the matcher.
+# condition: new | used | auto (detect from title/URL).
+#            Defaults: new for product mode, auto for listing mode.
+#
+# TODO: collect the real product, category and used-section URLs per shop.
+
+defaults:
+  delay_ms: 3000        # between requests to the same host
+  timeout_s: 20
+
+sources:
+  - shop: xspace
+    mode: product
+    product: xf10-24-ii
+    url: https://fujifilm-xspace.vn/products/fujinon-xf10-24mmf4-r-ois-wr-ii
+
+  - shop: vjshop
+    mode: listing
+    condition: used
+    url: https://vjshop.vn/do-cu-chat        # refine to the camera/lens subcategory
+
+  - shop: mayanhhoangto
+    mode: listing
+    condition: auto
+    url: https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/

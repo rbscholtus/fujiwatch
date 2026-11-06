@@ -3,28 +3,111 @@
 package main
 
 import (
+	"flag"
 	"fmt"
+	"io"
 	"os"
+	"path/filepath"
+	"strings"
+	"text/tabwriter"
+
+	"github.com/rbscholtus/fujiwatch/internal/config"
+	"github.com/rbscholtus/fujiwatch/internal/match"
 )
 
 const usage = `usage:
   fujiwatch run [--dry-run] [--only <shop>] [--no-notify]
   fujiwatch snapshot <url>
   fujiwatch extract <shop> <file.html>
-  fujiwatch match "<title>"`
+  fujiwatch match [--config <dir>] "<title>" [url]`
+
+// Exit codes.
+const (
+	exitOK    = 0
+	exitError = 1
+	exitUsage = 2
+)
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Fprintln(os.Stderr, usage)
-		os.Exit(2)
+	os.Exit(run(os.Args[1:], os.Stdout, os.Stderr))
+}
+
+func run(args []string, stdout, stderr io.Writer) int {
+	if len(args) == 0 {
+		_, _ = fmt.Fprintln(stderr, usage)
+		return exitUsage
 	}
 
-	switch cmd := os.Args[1]; cmd {
-	case "run", "snapshot", "extract", "match":
-		fmt.Fprintf(os.Stderr, "fujiwatch: %q is not implemented yet\n", cmd)
-		os.Exit(1)
+	switch cmd := args[0]; cmd {
+	case "match":
+		return cmdMatch(args[1:], stdout, stderr)
+	case "run", "snapshot", "extract":
+		_, _ = fmt.Fprintf(stderr, "fujiwatch: %q is not implemented yet\n", cmd)
+		return exitError
+	case "-h", "--help", "help":
+		_, _ = fmt.Fprintln(stdout, usage)
+		return exitOK
 	default:
-		fmt.Fprintf(os.Stderr, "fujiwatch: unknown command %q\n\n%s\n", cmd, usage)
-		os.Exit(2)
+		_, _ = fmt.Fprintf(stderr, "fujiwatch: unknown command %q\n\n%s\n", cmd, usage)
+		return exitUsage
 	}
+}
+
+func loadConfig(dir string) (*config.Config, error) {
+	cfg, err := config.Load(filepath.Join(dir, "watchlist.yaml"), filepath.Join(dir, "sources.yaml"))
+	if err != nil {
+		return nil, fmt.Errorf("load config: %w", err)
+	}
+	return cfg, nil
+}
+
+// cmdMatch shows which product a title matches, and why the others don't.
+func cmdMatch(args []string, stdout, stderr io.Writer) int {
+	fs := flag.NewFlagSet("match", flag.ContinueOnError)
+	fs.SetOutput(stderr)
+	cfgDir := fs.String("config", "config", "directory with watchlist.yaml and sources.yaml")
+	if err := fs.Parse(args); err != nil {
+		return exitUsage
+	}
+	if fs.NArg() < 1 || fs.NArg() > 2 {
+		_, _ = fmt.Fprintln(stderr, usage)
+		return exitUsage
+	}
+	title, pageURL := fs.Arg(0), fs.Arg(1)
+
+	cfg, err := loadConfig(*cfgDir)
+	if err != nil {
+		_, _ = fmt.Fprintf(stderr, "fujiwatch: %v\n", err)
+		return exitError
+	}
+	m, err := match.New(cfg.Watchlist.Products)
+	if err != nil {
+		_, _ = fmt.Fprintf(stderr, "fujiwatch: %v\n", err)
+		return exitError
+	}
+
+	res := m.Match(title)
+	_, traces := m.Explain(title)
+
+	_, _ = fmt.Fprintf(stdout, "normalised: %s\n", res.Normalized)
+	switch res.Status {
+	case match.Matched:
+		_, _ = fmt.Fprintf(stdout, "result:     matched %s\n", res.ProductID)
+	case match.Ambiguous:
+		_, _ = fmt.Fprintf(stdout, "result:     ambiguous (%s)\n", strings.Join(res.Candidates, ", "))
+	case match.Unmatched:
+		_, _ = fmt.Fprintln(stdout, "result:     unmatched")
+	}
+	_, _ = fmt.Fprintf(stdout, "condition:  %s\n\n", match.DetectCondition(title, pageURL))
+
+	tw := tabwriter.NewWriter(stdout, 0, 0, 2, ' ', 0)
+	for _, tr := range traces {
+		mark := "✗"
+		if tr.Matched {
+			mark = "✓"
+		}
+		_, _ = fmt.Fprintf(tw, "  %s\t%s\t%s\n", mark, tr.ProductID, tr.Reason)
+	}
+	_ = tw.Flush()
+	return exitOK
 }

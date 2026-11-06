@@ -1,0 +1,46 @@
+# Watched products. Patterns are RE2 regular expressions matched against the
+# *normalised* title: lowercase, no diacritics, "XT3"/"X T3" → "x-t3",
+# "f/2.8" → "f2.8". See README §6.
+#
+# Rules: all `patterns` and all `require_all` must match, at least one
+# `require_any` must match (if set), and no `exclude` may match.
+#
+# Go's regexp has no lookahead, so model boundaries use (\D|$):
+# "x-t3" followed by a non-digit or end of title, never "x-t30".
+# Focal ranges use (^|\D)…(\D|$) instead of \b, because there is no word
+# boundary inside "xf10-24", and "110-240" must not match "10-24".
+
+products:
+  - id: x-t3
+    name: "Fujifilm X-T3"
+    kind: body
+    patterns: ['\bx-t3(\D|$)']
+
+  - id: x-t4
+    name: "Fujifilm X-T4"
+    kind: body
+    patterns: ['\bx-t4(\D|$)']
+
+  - id: x-t5
+    name: "Fujifilm X-T5"
+    kind: body
+    patterns: ['\bx-t5(\D|$)']
+
+  - id: xf10-24-ii
+    name: "XF10-24mm F4 R OIS WR (II)"
+    kind: lens
+    patterns: ['(^|\D)10-24(\D|$)']
+    require_all: ['\bwr\b|\bii\b|mark ?ii']
+
+  - id: xf10-24-i
+    name: "XF10-24mm F4 R OIS (I)"
+    kind: lens
+    patterns: ['(^|\D)10-24(\D|$)']
+    exclude: ['\bwr\b', '\bii\b', 'mark ?ii']
+
+  - id: tamron-16-50
+    name: "Tamron 16-50mm F2.8 Di III VXD (X)"
+    kind: lens
+    patterns: ['tamron', '(^|\D)16-50(\D|$)']
+    require_any: ['fuji', 'fujifilm', 'x-?mount', 'ngam x', '\bfx\b']
+    exclude: ['sony', '\bfe\b', '\be-?mount', 'nikon', '\bz\b', 'canon', '\brf\b']
