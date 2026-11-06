@@ -1,0 +1,70 @@
+version: "2"
+linters:
+  default: all
+  disable:
+    # Style / opinionated — not worth the noise
+    - exhaustruct      # requires all struct fields explicitly initialised
+    - exhaustruct_v5   # successor of exhaustruct
+    - wsl              # replaced by wsl_v5
+    - wsl_v5           # whitespace style
+    - nlreturn         # blank line before every return
+    - godot            # period at end of every comment
+    - lll              # line length
+    - funcorder        # order of functions within a file
+    - tagliatelle      # JSON/YAML tag naming convention (we use snake_case)
+    - nonamedreturns   # no named return values
+    - noinlineerr      # no inline errors.New / fmt.Errorf
+    - perfsprint       # micro-opt: Sprintf → string concat
+    - testpackage      # tests must be in a separate _test package
+    - paralleltest     # requires t.Parallel() in every test
+    - forbidigo        # pattern-based forbid; useless without explicit config
+
+    # Too strict for parsing / scraping code
+    - mnd              # magic numbers
+    - funlen           # function length
+    - cyclop           # cyclomatic complexity
+    - gocognit         # cognitive complexity
+    - gocyclo          # cyclomatic complexity (duplicate of cyclop)
+    - nestif           # deeply nested ifs
+    - varnamelen       # short variable names (i, j, s, re, doc, etc.)
+
+    # Idiomatic Go patterns
+    - ireturn          # returning interfaces
+    - wrapcheck        # every external error must be wrapped
+    - err113           # all errors must be named/typed
+
+    # Deprecated (replaced by newer versions already enabled via default: all)
+    - gomodguard       # replaced by gomodguard_v2
+
+    # Noisy / false positives
+    - gochecknoglobals # no package-level variables (adapter registry, compiled regexps)
+    - goconst          # repeated string literals
+    - depguard         # requires explicit allowlist; flags all our own imports by default
+    - dupl             # per-shop adapters and table-driven tests are intentionally similar
+    - godox            # flags TODO/FIXME comments
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+    rules:
+      - linters:
+          - gosec
+        path: '_test\.go$'
+        text: 'G306'
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

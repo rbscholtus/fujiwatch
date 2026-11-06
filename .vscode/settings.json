@@ -1,0 +1,33 @@
+{
+    "editor.formatOnSave": true,
+    "go.toolsManagement.autoUpdate": true,
+    "go.diagnostic.vulncheck": "Imports",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [],
+    "go.lintOnSave": "workspace",
+    "go.testFlags": [
+        "-v"
+    ],
+    "[go]": {
+        "editor.rulers": [
+            100,
+            120
+        ],
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        }
+    },
+    "[yaml]": {
+        "editor.tabSize": 2
+    },
+    "files.associations": {
+        "*.jsonl": "jsonl"
+    },
+    "files.exclude": {
+        "site/node_modules": true
+    },
+    "search.exclude": {
+        "testdata/**/*.html": true,
+        "data/history/**": true
+    }
+}

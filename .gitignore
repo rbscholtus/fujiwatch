@@ -1,0 +1,51 @@
+# ── Go: build artifacts ──────────────────────────────────────────
+*.exe
+*.out
+*.test
+*.go.bak
+bin/
+dist/
+/fujiwatch
+/fujiwatch-*
+/main
+
+# ── Go: profiling, coverage & tooling ────────────────────────────
+vendor/
+/*.prof
+coverage.*
+cover.out
+
+# ── Secrets (local only; CI uses GitHub Actions secrets) ─────────
+.env
+.env.*
+!.env.example
+
+# ── IDE & editor ─────────────────────────────────────────────────
+.idea/
+.vscode/*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# ── OS ───────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+
+# ── AI tool state ────────────────────────────────────────────────
+.gemini/*
+.claude/settings.local.json
+
+# ── Price-history site (Svelte + Vite) ───────────────────────────
+site/node_modules/
+site/dist/
+site/.svelte-kit/
+# generated from data/history at build time
+site/public/data/
+site/.vite/
+
+# ── Root-level output & scratch ──────────────────────────────────
+# Note: data/ (state + history) and testdata/ (HTML snapshots) ARE committed.
+/logs/
+/*.log
+/*.html
+/*.csv
+/tmp/
