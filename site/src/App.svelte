@@ -67,7 +67,7 @@
         {#each ["new", "used"] as c}
           {@const b = entry.best[c]}
           <div class="card">
-            <div class="muted small">Best {c}</div>
+            <div class="muted small">Best {c}{#if entry.targets?.[c]} · target {vnd(entry.targets[c])}{/if}</div>
             {#if b}
               <div class="price"><a href={b.url} rel="noopener">{vnd(b.price_vnd)}</a></div>
               <div class="small">{b.shop}{b.in_stock === null ? " · stock unknown" : ""}</div>
@@ -87,7 +87,8 @@
 
       <h2>Price history</h2>
       {#if product}
-        <Chart {series} {shops} />
+        <Chart {series} {shops}
+          targets={Object.entries(entry.targets ?? {}).filter(([c]) => condition === "all" || c === condition)} />
       {:else}
         <p class="muted">Loading…</p>
       {/if}

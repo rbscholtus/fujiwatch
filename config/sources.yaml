@@ -22,6 +22,9 @@ notify:
   #          on the heartbeat weekday (Vietnam time).
   email: always
   heartbeat: sunday
+  # Add a "this week vs last week" lowest-price summary to the email on
+  # this weekday (Vietnam time). Remove to disable.
+  weekly: sunday
 
 sources:
   - shop: xspace

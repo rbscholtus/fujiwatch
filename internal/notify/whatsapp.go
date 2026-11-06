@@ -87,6 +87,9 @@ func WhatsAppText(msg *Message) string {
 			pct := float64(e.OldPrice-e.PriceVND) * 100 / float64(e.OldPrice)
 			line = fmt.Sprintf("📉 %s (%s) %s: %s → %s (-%.0f%%)", name, e.Condition, e.Shop,
 				price.FormatVND(e.OldPrice), price.FormatVND(e.PriceVND), pct)
+		case diff.BelowTarget:
+			line = fmt.Sprintf("🎯 %s (%s) %s: %s, target %s", name, e.Condition, e.Shop,
+				price.FormatVND(e.PriceVND), price.FormatVND(e.TargetVND))
 		case diff.BackInStock:
 			line = fmt.Sprintf("✅ %s (%s) back in stock at %s: %s", name, e.Condition, e.Shop, price.FormatVND(e.PriceVND))
 		case diff.NewListing:

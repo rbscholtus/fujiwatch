@@ -155,3 +155,29 @@ sources:
 		})
 	}
 }
+
+// Milestone 8: target prices and the weekly summary day.
+func TestTargetsAndWeeklyConfig(t *testing.T) {
+	p := Product{TargetVND: 30_000_000, TargetUsedVND: 20_000_000}
+	if p.Target(ConditionNew) != 30_000_000 || p.Target(ConditionUsed) != 20_000_000 || (Product{}).Target("used") != 0 {
+		t.Error("Product.Target wrong")
+	}
+
+	dir := t.TempDir()
+	wl := writeFile(t, dir, "watchlist.yaml", validWatchlist+"    target_vnd: 35000000\n    target_used_vnd: 28000000\n")
+	src := writeFile(t, dir, "sources.yaml", "notify:\n  weekly: Sunday\nsources: []\n")
+	cfg, err := Load(wl, src)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got := cfg.Watchlist.Products[0]; got.TargetVND != 35_000_000 || got.TargetUsedVND != 28_000_000 {
+		t.Errorf("targets = %d / %d", got.TargetVND, got.TargetUsedVND)
+	}
+
+	bad := writeFile(t, dir, "bad.yaml", validWatchlist+"    target_vnd: -1\n")
+	badSrc := writeFile(t, dir, "badsrc.yaml", "notify:\n  weekly: someday\nsources: []\n")
+	_, err = Load(bad, badSrc)
+	if err == nil || !strings.Contains(err.Error(), "target prices must be ≥ 0") || !strings.Contains(err.Error(), "weekly must be a weekday") {
+		t.Errorf("err = %v", err)
+	}
+}

@@ -2,7 +2,7 @@
   import { vnd, vndShort, shopColor } from "./format.js";
 
   /** @type {{ series: {shop: string, condition: string, points: {date: string, price_vnd: number, url: string}[]}[], shops: string[] }} */
-  let { series, shops } = $props();
+  let { series, shops, targets = [] } = $props();
 
   let width = $state(0);
   const height = 300;
@@ -19,7 +19,7 @@
 
   const xDomain = $derived(dates.length ? [t(dates[0]), t(dates[dates.length - 1])] : [0, 1]);
   const yDomain = $derived.by(() => {
-    const prices = visible.flatMap((s) => s.points.map((p) => p.price_vnd));
+    const prices = visible.flatMap((s) => s.points.map((p) => p.price_vnd)).concat(targets.map(([, v]) => v));
     if (!prices.length) return [0, 1];
     let lo = Math.min(...prices), hi = Math.max(...prices);
     const margin = Math.max((hi - lo) * 0.08, hi * 0.02);
@@ -100,6 +100,11 @@
         {/if}
       {/each}
 
+      {#each targets as [cond, v]}
+        <line class="target" x1={pad.left} x2={width - pad.right} y1={y(v)} y2={y(v)} />
+        <text class="tick target-label" x={width - pad.right} y={y(v) - 4} text-anchor="end">target {cond} {vndShort(v)}</text>
+      {/each}
+
       {#if hoverDate}
         <line class="hover" x1={x(hoverDate)} x2={x(hoverDate)} y1={pad.top} y2={pad.top + innerH} />
       {/if}
@@ -136,6 +141,8 @@
   .grid { stroke: var(--line); stroke-width: 1; }
   .hover { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 3; }
   .tick { fill: var(--muted); font-size: 11px; }
+  .target { stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 8 4; }
+  .target-label { fill: var(--accent); }
   .readout { min-height: 2.6em; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; margin-top: 4px; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .legend button {

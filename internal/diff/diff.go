@@ -23,6 +23,7 @@ const (
 	NewListing    Type = "new_listing"
 	Gone          Type = "gone"
 	AdapterBroken Type = "adapter_broken"
+	BelowTarget   Type = "below_target" // price reached the product's target
 )
 
 // GoneAfter is how many consecutive successful runs of its source an offer
@@ -41,6 +42,7 @@ type Event struct {
 	PriceVND  int64  `json:"price_vnd,omitempty"`
 	InStock   *bool  `json:"in_stock,omitempty"`
 	Detail    string `json:"detail,omitempty"` // adapter_broken: what went wrong
+	TargetVND int64  `json:"target_vnd,omitempty"`
 }
 
 // Observation is one matched offer seen in this run.
@@ -73,6 +75,17 @@ type Options struct {
 	// least MinDropVND. Both zero: every drop is reported.
 	MinDropPct float64
 	MinDropVND int64
+
+	// Targets returns the target price for a product and condition
+	// (0 = none). Nil: no targets.
+	Targets func(product, condition string) int64
+}
+
+func (o Options) target(ob Observation) int64 {
+	if o.Targets == nil {
+		return 0
+	}
+	return o.Targets(ob.Product, ob.Condition)
 }
 
 func (o Options) dropCounts(oldP, newP int64) bool {
@@ -153,10 +166,16 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 			FirstSeen: now,
 			LastSeen:  now,
 		}
+		var events []Event
 		if run.Mode == config.ModeListing {
-			return []Event{event(NewListing, ob, 0)}
+			events = append(events, event(NewListing, ob, 0))
 		}
-		return nil
+		if t := opts.target(ob); t > 0 && ob.PriceVND > 0 && ob.PriceVND <= t {
+			e := event(BelowTarget, ob, 0)
+			e.TargetVND = t
+			events = append(events, e)
+		}
+		return events
 	}
 
 	var events []Event
@@ -167,6 +186,13 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 		case ob.PriceVND > old.PriceVND:
 			events = append(events, event(PriceRise, ob, old.PriceVND))
 		}
+	}
+	// Target: fire once when the price crosses to or below it (or when the
+	// last known price was hidden), not on every run it stays there.
+	if t := opts.target(ob); t > 0 && ob.PriceVND > 0 && ob.PriceVND <= t && (old.PriceVND == 0 || old.PriceVND > t) {
+		e := event(BelowTarget, ob, old.PriceVND)
+		e.TargetVND = t
+		events = append(events, e)
 	}
 	if old.InStock != nil && ob.InStock != nil && *old.InStock != *ob.InStock {
 		if *ob.InStock {

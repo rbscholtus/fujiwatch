@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"context"
 	"encoding/base64"
+	"fmt"
 	"io"
 	"mime"
 	"mime/multipart"
@@ -150,7 +151,10 @@ func TestShouldEmail(t *testing.T) {
 func TestBuildMessage(t *testing.T) {
 	cfg := &config.Config{Watchlist: config.Watchlist{Products: []config.Product{{ID: "x-t5", Name: "Fujifilm X-T5"}}}}
 	rep := &runner.Report{Time: now, Events: []diff.Event{{Type: diff.NewListing, Product: "x-t5"}}}
-	msg := BuildMessage(cfg, rep, state.New())
+	msg, err := BuildMessage(cfg, rep, state.New(), t.TempDir())
+	if err != nil {
+		t.Fatal(err)
+	}
 	if msg.Subject != "fujiwatch: 1 new listing" || msg.Names["x-t5"] != "Fujifilm X-T5" || len(msg.Best) != 2 || !msg.Time.Equal(now) {
 		t.Errorf("message = %+v", msg)
 	}
@@ -191,9 +195,9 @@ func TestWhatsAppText(t *testing.T) {
 
 func TestWhatsAppTextTruncates(t *testing.T) {
 	msg := &Message{}
-	for range 60 {
+	for i := range 60 {
 		msg.Events = append(msg.Events, diff.Event{Type: diff.NewListing, Product: "x-t3", Shop: "vjshop",
-			Condition: "used", PriceVND: 15_000_000, URL: "https://vjshop.vn/may-anh-fujifilm-x-t3-body-2nd-123456"})
+			Condition: "used", PriceVND: 15_000_000, URL: fmt.Sprintf("https://vjshop.vn/may-anh-fujifilm-x-t3-body-2nd-%06d", i)})
 	}
 	text := WhatsAppText(msg)
 	if len(text) > maxWhatsAppChars {

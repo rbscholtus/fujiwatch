@@ -30,6 +30,7 @@ type Message struct {
 	Sources   []runner.SourceReport
 	Unmatched []runner.Unmatched
 	Names     map[string]string // product ID → display name
+	Weekly    []WeekRow         // set on the weekly-summary day
 }
 
 // Best is the cheapest known offer of one product in one condition.
@@ -41,14 +42,14 @@ type Best struct {
 	Count     int // offers known for this product+condition
 }
 
-// BuildMessage assembles the message for a finished run. st must already
-// contain this run's changes.
-func BuildMessage(cfg *config.Config, rep *runner.Report, st *state.State) *Message {
+// BuildMessage assembles the message for a finished run. st and the history
+// in historyDir must already contain this run's changes.
+func BuildMessage(cfg *config.Config, rep *runner.Report, st *state.State, historyDir string) (*Message, error) {
 	names := map[string]string{}
 	for _, p := range cfg.Watchlist.Products {
 		names[p.ID] = p.Name
 	}
-	return &Message{
+	msg := &Message{
 		Subject:   Subject(rep.Events),
 		Time:      rep.Time,
 		Events:    rep.Events,
@@ -57,6 +58,15 @@ func BuildMessage(cfg *config.Config, rep *runner.Report, st *state.State) *Mess
 		Unmatched: rep.Unmatched,
 		Names:     names,
 	}
+	if IsWeeklyDay(cfg.Sources.Notify, rep.Time) {
+		weekly, err := Weekly(cfg.Watchlist.Products, historyDir, rep.Time)
+		if err != nil {
+			return nil, err
+		}
+		msg.Weekly = weekly
+		msg.Subject += " · weekly summary"
+	}
+	return msg, nil
 }
 
 // subjectOrder lists event types in subject-line order.
@@ -64,6 +74,7 @@ var subjectOrder = []struct {
 	t        diff.Type
 	one, few string
 }{
+	{diff.BelowTarget, "below target", "below target"},
 	{diff.PriceDrop, "price drop", "price drops"},
 	{diff.BackInStock, "back in stock", "back in stock"},
 	{diff.NewListing, "new listing", "new listings"},
@@ -128,21 +139,34 @@ func ShouldEmail(n config.Notify, events []diff.Event, now time.Time) bool {
 	if n.Email != config.EmailChanges {
 		return true
 	}
-	if len(events) > 0 {
+	if len(events) > 0 || IsWeeklyDay(n, now) {
 		return true
 	}
 	return n.Heartbeat != "" && strings.EqualFold(now.In(saigon).Weekday().String(), n.Heartbeat)
 }
 
 // WhatsAppTypes are the events worth an instant message (README §8).
-var WhatsAppTypes = []diff.Type{diff.PriceDrop, diff.BackInStock, diff.NewListing}
+// It is ordered by importance: when one listing has several of these events
+// in a run, only the first type in this list is sent.
+var WhatsAppTypes = []diff.Type{diff.BelowTarget, diff.PriceDrop, diff.BackInStock, diff.NewListing}
 
 func instant(events []diff.Event) []diff.Event {
+	best := map[string]int{} // URL → index into out
 	var out []diff.Event
 	for _, e := range events {
-		if slices.Contains(WhatsAppTypes, e.Type) {
-			out = append(out, e)
+		rank := slices.Index(WhatsAppTypes, e.Type)
+		if rank < 0 {
+			continue
 		}
+		key := e.Shop + "|" + e.URL
+		if i, ok := best[key]; ok {
+			if rank < slices.Index(WhatsAppTypes, out[i].Type) {
+				out[i] = e
+			}
+			continue
+		}
+		best[key] = len(out)
+		out = append(out, e)
 	}
 	return out
 }

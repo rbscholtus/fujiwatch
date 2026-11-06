@@ -47,6 +47,19 @@ type Product struct {
 	RequireAll []string `yaml:"require_all"` // all must match
 	RequireAny []string `yaml:"require_any"` // at least one must match, if set
 	Exclude    []string `yaml:"exclude"`     // none may match
+
+	// Optional alert thresholds: a below_target event fires when an offer's
+	// price drops to or below the target (once per crossing).
+	TargetVND     int64 `yaml:"target_vnd"`      // new offers
+	TargetUsedVND int64 `yaml:"target_used_vnd"` // used offers
+}
+
+// Target returns the target price for a condition (0 = none).
+func (p Product) Target(condition string) int64 {
+	if condition == ConditionUsed {
+		return p.TargetUsedVND
+	}
+	return p.TargetVND
 }
 
 // Watchlist is the parsed watchlist.yaml.
@@ -102,6 +115,9 @@ type Notify struct {
 	// when there are events, plus a heartbeat on the Heartbeat weekday).
 	Email     string `yaml:"email"`
 	Heartbeat string `yaml:"heartbeat"` // e.g. "sunday" (Vietnam time)
+	// Weekly adds a "this week vs last week" summary to the email on this
+	// weekday (Vietnam time); the email is always sent that day.
+	Weekly string `yaml:"weekly"`
 }
 
 // Sources is the parsed sources.yaml.
@@ -152,6 +168,9 @@ func (c *Config) Validate() error {
 	if h := c.Sources.Notify.Heartbeat; h != "" && !isWeekday(h) {
 		errs = append(errs, fmt.Errorf("notify: heartbeat must be a weekday name, got %q", h))
 	}
+	if w := c.Sources.Notify.Weekly; w != "" && !isWeekday(w) {
+		errs = append(errs, fmt.Errorf("notify: weekly must be a weekday name, got %q", w))
+	}
 	if d := c.Sources.Defaults; d.MinDropPct < 0 || d.MinDropPct >= 100 || d.MinDropVND < 0 {
 		errs = append(errs, fmt.Errorf("defaults: min_drop_pct must be in [0, 100) and min_drop_vnd ≥ 0"))
 	}
@@ -196,6 +215,9 @@ func (w Watchlist) validate() []error {
 			errs = append(errs, fmt.Errorf("%s: duplicate id", where))
 		}
 		seen[p.ID] = true
+		if p.TargetVND < 0 || p.TargetUsedVND < 0 {
+			errs = append(errs, fmt.Errorf("%s: target prices must be ≥ 0", where))
+		}
 		if len(p.Patterns) == 0 {
 			errs = append(errs, fmt.Errorf("%s: at least one pattern is required", where))
 		}

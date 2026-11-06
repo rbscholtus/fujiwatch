@@ -87,7 +87,7 @@ func TestAggregate(t *testing.T) {
 
 func testProducts() []config.Product {
 	return []config.Product{
-		{ID: "x-t5", Name: "Fujifilm X-T5", Kind: "body"},
+		{ID: "x-t5", Name: "Fujifilm X-T5", Kind: "body", TargetUsedVND: 30_000_000},
 		{ID: "x-t3", Name: "Fujifilm X-T3", Kind: "body"},
 	}
 }
@@ -196,7 +196,7 @@ func TestWriteMatchesSiteContract(t *testing.T) {
 	}
 	fields := map[string][]string{
 		"index":   {"generated", "products"},
-		"product": {"id", "name", "best", "offers"},
+		"product": {"id", "name", "best", "offers", "targets"},
 		"offer":   {"shop", "url", "title", "condition", "price_vnd", "in_stock", "first_seen"},
 		"best":    {"shop", "url", "price_vnd", "in_stock"},
 		"series":  {"shop", "condition", "points"},
@@ -222,7 +222,10 @@ func TestWriteMatchesSiteContract(t *testing.T) {
 		}
 		src.Write(b)
 	}
-	for _, k := range []string{".generated", ".products", ".best", ".offers", ".price_vnd", ".in_stock", ".first_seen", ".series", ".points", ".date", ".condition", ".shop", "./data/index.json", "./data/${id}.json"} {
+	if obj(t, p0["targets"])["used"] != float64(30_000_000) {
+		t.Errorf("targets = %v", p0["targets"])
+	}
+	for _, k := range []string{".targets", ".generated", ".products", ".best", ".offers", ".price_vnd", ".in_stock", ".first_seen", ".series", ".points", ".date", ".condition", ".shop", "./data/index.json", "./data/${id}.json"} {
 		if !strings.Contains(src.String(), k) {
 			t.Errorf("site source no longer uses %q; update the contract", k)
 		}

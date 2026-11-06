@@ -160,6 +160,8 @@ products:
     exclude: ['sony', '\bfe\b', 'e-?mount', 'nikon', '\bz\b', 'canon', '\brf\b']
 ```
 
+Optional per product: `target_vnd` and `target_used_vnd` (see §7, `below_target`).
+
 > Note: Go's `regexp` (RE2) does **not** support lookahead `(?!…)`, so model-number boundaries use a negated class instead: `(\D|$)` means "followed by a non-digit or end of string". Use `\D`, not `[^0]`, so no other trailing digit slips through either. Prefer this over `exclude: ['x-?t30']`: an exclude rejects the whole title, which would wrongly drop a listing such as "X-T3 kèm grip, dùng chung pin với X-T30". Keep `exclude` for real confusions (other mounts or brands). Normalisation (§6) must turn "X T3" / "XT3" / "X-T3" into the same form *before* these patterns run.
 
 ### `config/sources.yaml`
@@ -296,6 +298,7 @@ Only matched offers are tracked. If a page hides the price ("Liên hệ") or the
 - `new_listing`: the URL has not been seen before (listing mode)
 - `gone`: not seen for 3 consecutive runs. Remove it from state and log it (useful for used items: "sold"). Only runs in which the offer's own source page worked count, so a broken shop never marks its items as sold; offers of a source removed from `sources.yaml` age out the same way.
 - `adapter_broken`: a source that previously returned ≥ 1 offer now returns 0, or the HTTP status is not 200, or the fetch, robots.txt check or extraction failed. Always included in the email, so silent failures are visible.
+- `below_target`: an offer's price reached the product's `target_vnd` (new) or `target_used_vnd` (used). Raised once per crossing: when the price goes from above the target (or unknown) to at or below it, including a first sighting already below it.
 - `new_listing` is only raised in listing mode; the first sighting of a product-mode URL is silent. The same URL found on two source pages in one run counts once.
 
 ---
@@ -313,7 +316,9 @@ type Notifier interface {
 
 `Message` carries the subject, the events, the best-price table, source health and unmatched offers, built from the run report and the updated state. Notifiers are enabled by their environment variables (repository secrets, or a local `.env`; see `.env.example`). A notifier with only some of its variables set is skipped with a warning. Notification failures never fail the run (the data must still be committed); they are printed as warnings, and as `::warning::` annotations on GitHub Actions.
 
-**WhatsApp via CallMeBot (instant, important events only: `price_drop`, `back_in_stock`, `new_listing`)**
+**WhatsApp via CallMeBot (instant, important events only: `below_target`, `price_drop`, `back_in_stock`, `new_listing`)**
+
+When one listing has several of these in a run (e.g. `new_listing` and `below_target`), only the most important one is sent, in that order.
 
 - One-time setup: add CallMeBot's number to your phone contacts and send it "I allow callmebot to send me messages". It replies with your personal API key. The current number and steps are at https://www.callmebot.com/blog/free-api-whatsapp-messages/
 - Send with `GET https://api.callmebot.com/whatsapp.php?phone=<+84…>&text=<urlencoded>&apikey=<key>`
@@ -324,6 +329,7 @@ type Notifier interface {
 - Gmail SMTP: `smtp.gmail.com:587` with STARTTLS. Requires 2-Step Verification and an **app password** (Google Account → Security → App passwords).
 - Contents: events at the top, then a table of the current best price per product (new vs used), unmatched/ambiguous offers, and adapter health.
 - Option (`notify:` in `sources.yaml`): `email: changes` sends the email only when there are events or failures, plus a weekly "all OK" heartbeat on `heartbeat: <weekday>` (Vietnam time). Default `email: always`.
+- Weekly summary (`notify: weekly: <weekday>`): on that day the email always goes out, with the subject suffix "· weekly summary" and a table of each product's lowest new and used price over the last 7 days against the 7 days before, from `data/history`.
 - Optional variables: `MAIL_FROM` (default `SMTP_USER`), `SMTP_ADDR` (default `smtp.gmail.com:587`). `MAIL_TO` may list several addresses, comma-separated. The password is only sent after STARTTLS.
 
 **Instagram:** not supported. There is no practical API for a bot to DM a personal account.
@@ -415,16 +421,16 @@ For local secrets, use a `.env` file (git-ignored) that is loaded only when pres
 
 ## 14. Milestones
 
-1. **Skeleton:** config loading, fetch client, VND price parser, normaliser and matcher with table-driven tests (X-T3 vs X-T30, X-T5 vs X-T50, XF10-24 Mark I vs Mark II, Tamron X vs E-mount).
-2. **First two shops:** fujifilm-xspace (product mode) and vjshop (listing mode, used section), with golden tests from snapshots.
-3. **State, history and diff:** events, `--dry-run` output.
-4. **Notifications:** email digest, then CallMeBot WhatsApp.
-5. **GitHub Actions:** schedule, data commit, secrets.
-6. **Remaining shops:** kyma, then the WooCommerce shops (try the Store API), then zshop, mayanh24h, giangduydat.
-7. **History site:** Svelte page on GitHub Pages.
-8. **Nice-to-haves:** a per-product target price ("alert below X VND"), a weekly summary, more lenses.
+All done; each was committed with spec tests that pass (`go test ./...`).
 
----
+1. ✅ **Skeleton:** config loading, fetch client, VND price parser, normaliser and matcher with table-driven tests (X-T3 vs X-T30, X-T5 vs X-T50, XF10-24 Mark I vs Mark II, Tamron X vs E-mount).
+2. ✅ **First two shops:** fujifilm-xspace (product mode) and vjshop (listing mode, used section), with golden tests from snapshots.
+3. ✅ **State, history and diff:** events, `--dry-run` output.
+4. ✅ **Notifications:** email digest, then CallMeBot WhatsApp.
+5. ✅ **GitHub Actions:** schedule, data commit, secrets.
+6. ✅ **Remaining shops:** kyma, then the WooCommerce shops (Store API), then zshop, mayanh24h, giangduydat.
+7. ✅ **History site:** Svelte page on GitHub Pages.
+8. ✅ **Nice-to-haves:** a per-product target price ("alert below X VND"), a weekly summary. More lenses: add them to `config/watchlist.yaml` (no code changes needed).
 
 ## 15. Open items
 

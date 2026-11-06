@@ -5,6 +5,10 @@
 # Rules: all `patterns` and all `require_all` must match, at least one
 # `require_any` must match (if set), and no `exclude` may match.
 #
+# Optional per product: target_vnd / target_used_vnd. When a new / used
+# offer's price reaches the target, a below_target alert is sent (WhatsApp
+# and email), once per crossing. The site draws targets on the chart.
+#
 # Go's regexp has no lookahead, so model boundaries use (\D|$):
 # "x-t3" followed by a non-digit or end of title, never "x-t30".
 # Focal ranges use (^|\D)…(\D|$) instead of \b, because there is no word

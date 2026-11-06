@@ -94,7 +94,7 @@ func cmdRun(args []string, stdout, stderr io.Writer) int {
 	}
 
 	if !rf.noNotify {
-		sendNotifications(ctx, cfg, rep, st, stderr)
+		sendNotifications(ctx, cfg, rep, st, filepath.Join(rf.dataDir, "history"), stderr)
 	}
 	return exitOK
 }
@@ -113,12 +113,16 @@ var notifierFactory = func() (email, whatsapp notify.Notifier, problems []string
 
 // sendNotifications delivers the run's results. Failures are warnings, not
 // errors: the run's state must still be committed by CI.
-func sendNotifications(ctx context.Context, cfg *config.Config, rep *runner.Report, st *state.State, stderr io.Writer) {
+func sendNotifications(ctx context.Context, cfg *config.Config, rep *runner.Report, st *state.State, historyDir string, stderr io.Writer) {
 	email, whatsapp, problems := notifierFactory()
 	for _, p := range problems {
 		warn(stderr, p)
 	}
-	msg := notify.BuildMessage(cfg, rep, st)
+	msg, err := notify.BuildMessage(cfg, rep, st, historyDir)
+	if err != nil {
+		warn(stderr, err.Error())
+		return
+	}
 
 	if whatsapp != nil {
 		if err := whatsapp.Send(ctx, msg); err != nil {

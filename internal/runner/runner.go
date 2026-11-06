@@ -107,6 +107,10 @@ func Run(ctx context.Context, cfg *config.Config, st *state.State, f Fetcher, op
 	rep.Events = diff.Apply(st, runs, configured, now, diff.Options{
 		MinDropPct: cfg.Sources.Defaults.MinDropPct,
 		MinDropVND: cfg.Sources.Defaults.MinDropVND,
+		Targets: func(product, condition string) int64 {
+			p, _ := cfg.ProductByID(product)
+			return p.Target(condition)
+		},
 	})
 
 	return rep, history(runs, now), nil

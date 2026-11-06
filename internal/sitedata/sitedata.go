@@ -32,9 +32,10 @@ type ProductEntry struct {
 	ID     string           `json:"id"`
 	Name   string           `json:"name"`
 	Kind   string           `json:"kind"`
-	Best   map[string]Offer `json:"best"`   // "new"/"used"; absent if none
-	Offers []Offer          `json:"offers"` // current offers, cheapest first
-	Points int              `json:"points"` // history points available
+	Best   map[string]Offer `json:"best"`    // "new"/"used"; absent if none
+	Offers []Offer          `json:"offers"`  // current offers, cheapest first
+	Points int              `json:"points"`  // history points available
+	Target map[string]int64 `json:"targets"` // "new"/"used" → target price; absent if none
 }
 
 // Offer is a current offer from state.json.
@@ -83,7 +84,12 @@ func Build(products []config.Product, st *state.State, historyDir string, now ti
 		prod := Product{ID: p.ID, Name: p.Name, Series: aggregate(recs)}
 		out = append(out, prod)
 
-		entry := ProductEntry{ID: p.ID, Name: p.Name, Kind: p.Kind, Best: map[string]Offer{}, Offers: currentOffers(st, p.ID)}
+		entry := ProductEntry{ID: p.ID, Name: p.Name, Kind: p.Kind, Best: map[string]Offer{}, Offers: currentOffers(st, p.ID), Target: map[string]int64{}}
+		for _, c := range []string{config.ConditionNew, config.ConditionUsed} {
+			if t := p.Target(c); t > 0 {
+				entry.Target[c] = t
+			}
+		}
 		for _, s := range prod.Series {
 			entry.Points += len(s.Points)
 		}

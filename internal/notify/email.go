@@ -140,6 +140,11 @@ type bestView struct {
 	Count                             int
 }
 
+type weekView struct {
+	Name, Condition, This, Last, Change, URL, Shop string
+	Down                                           bool
+}
+
 type unmatchedGroup struct {
 	Status string
 	Items  []runner.Unmatched
@@ -153,6 +158,7 @@ type view struct {
 	Sources   []runner.SourceReport
 	Broken    int
 	Unmatched []unmatchedGroup
+	Weekly    []weekView
 }
 
 func newView(msg *Message) view {
@@ -192,6 +198,22 @@ func newView(msg *Message) view {
 		}
 	}
 
+	for _, w := range msg.Weekly {
+		wv := weekView{Name: w.Name, Condition: w.Condition, This: "–", Last: "–", URL: w.This.URL, Shop: w.This.Shop}
+		if w.This.PriceVND > 0 {
+			wv.This = price.FormatVND(w.This.PriceVND)
+		}
+		if w.Last.PriceVND > 0 {
+			wv.Last = price.FormatVND(w.Last.PriceVND)
+		}
+		if w.This.PriceVND > 0 && w.Last.PriceVND > 0 {
+			pct := float64(w.This.PriceVND-w.Last.PriceVND) * 100 / float64(w.Last.PriceVND)
+			wv.Change = fmt.Sprintf("%+.1f%%", pct)
+			wv.Down = pct < 0
+		}
+		v.Weekly = append(v.Weekly, wv)
+	}
+
 	// Ambiguous and mismatched first: those need attention. Plain
 	// unmatched offers (other models on a category page) come last.
 	for _, status := range []string{"mismatch", "ambiguous", "unmatched"} {
@@ -219,7 +241,10 @@ EVENTS ({{len .Events}})
   {{.URL}}
 {{end}}{{else}}No changes.
 {{end}}
-BEST PRICES
+{{if .Weekly}}THIS WEEK (lowest price, vs last week)
+{{range .Weekly}}- {{.Name}} ({{.Condition}}): {{.This}}{{if .Shop}} at {{.Shop}}{{end}} | last week {{.Last}}{{if .Change}} ({{.Change}}){{end}}
+{{end}}
+{{end}}BEST PRICES
 {{range .Best}}- {{.Name}} ({{.Condition}}): {{.Price}}{{if .Shop}} at {{.Shop}} {{.URL}}{{end}} [{{.Count}} known]
 {{end}}
 SOURCES ({{len .Sources}}, {{.Broken}} failing)
@@ -247,6 +272,17 @@ var htmlTmpl = htmltemplate.Must(htmltemplate.New("html").Parse(`<!doctype html>
 </tr>
 {{end}}</table>{{else}}<p>No changes.</p>{{end}}
 
+{{if .Weekly}}<h3>This week</h3>
+<table cellpadding="6" style="border-collapse:collapse;width:100%">
+<tr style="text-align:left;color:#656d76"><th>Product</th><th>Cond.</th><th style="text-align:right">This week</th><th style="text-align:right">Last week</th><th style="text-align:right">Change</th></tr>
+{{range .Weekly}}<tr style="border-top:1px solid #d0d7de">
+<td>{{.Name}}</td><td>{{.Condition}}</td>
+<td style="text-align:right;white-space:nowrap">{{if .URL}}<a href="{{.URL}}">{{.This}}</a>{{else}}{{.This}}{{end}}</td>
+<td style="text-align:right;white-space:nowrap">{{.Last}}</td>
+<td style="text-align:right;color:{{if .Down}}#1a7f37{{else}}#656d76{{end}}">{{.Change}}</td>
+</tr>
+{{end}}</table>
+{{end}}
 <h3>Best prices</h3>
 <table cellpadding="6" style="border-collapse:collapse;width:100%">
 <tr style="text-align:left;color:#656d76"><th>Product</th><th>Cond.</th><th style="text-align:right">Price</th><th>Shop</th><th style="text-align:right">Known</th></tr>

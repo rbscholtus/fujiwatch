@@ -27,6 +27,8 @@ func EventLabel(t diff.Type) string {
 		return "gone"
 	case diff.AdapterBroken:
 		return "BROKEN"
+	case diff.BelowTarget:
+		return "BELOW TARGET"
 	default:
 		return string(t)
 	}
@@ -41,6 +43,8 @@ func EventPrice(e diff.Event) string {
 		return fmt.Sprintf("%s → %s (%+.1f%%)", price.FormatVND(e.OldPrice), price.FormatVND(e.PriceVND), pct)
 	case diff.AdapterBroken:
 		return ""
+	case diff.BelowTarget:
+		return fmt.Sprintf("%s (target %s)", price.FormatVND(e.PriceVND), price.FormatVND(e.TargetVND))
 	case diff.BackInStock, diff.OutOfStock, diff.NewListing, diff.Gone:
 		return price.FormatVND(e.PriceVND)
 	default:
