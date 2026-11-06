@@ -38,6 +38,9 @@ func Name(pageURL string) string {
 	}
 	p := strings.TrimSuffix(u.Path, "/")
 	name := p[strings.LastIndex(p, "/")+1:]
+	for _, ext := range []string{".html", ".htm", ".php", ".aspx"} {
+		name = strings.TrimSuffix(name, ext)
+	}
 	if u.RawQuery != "" {
 		name += "-" + u.RawQuery
 	}

@@ -1,0 +1,3935 @@
+[
+ {
+  "id": 3380,
+  "name": "Máy ảnh FUJIFILM X-H2S",
+  "slug": "fujifilm-x-h2s",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-h2s/",
+  "prices": {
+   "price": "58490000",
+   "regular_price": "66990000",
+   "sale_price": "58490000",
+   "price_range": {
+    "min_amount": "58490000",
+    "max_amount": "79490000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3404,
+  "name": "Máy ảnh FUJIFILM X-H2",
+  "slug": "fujifilm-x-h2",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-h2/",
+  "prices": {
+   "price": "43490000",
+   "regular_price": "52990000",
+   "sale_price": "43490000",
+   "price_range": {
+    "min_amount": "43490000",
+    "max_amount": "64880000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 2870,
+  "name": "Máy ảnh FUJIFILM X-T5",
+  "slug": "fujifilm-x-t5",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t5/",
+  "prices": {
+   "price": "38490000",
+   "regular_price": "44490000",
+   "sale_price": "38490000",
+   "price_range": {
+    "min_amount": "38490000",
+    "max_amount": "51490000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3339,
+  "name": "Máy ảnh FUJIFILM X100VI",
+  "slug": "fujifilm-x100vi",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x100vi/",
+  "prices": {
+   "price": "49990000",
+   "regular_price": "55990000",
+   "sale_price": "49990000",
+   "price_range": {
+    "min_amount": "49990000",
+    "max_amount": "51990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "compact",
+    "name": "Máy ảnh Compact"
+   }
+  ]
+ },
+ {
+  "id": 7440,
+  "name": "Máy ảnh Fujifilm X-Half",
+  "slug": "fujifilm-x-half",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-half/",
+  "prices": {
+   "price": "13490000",
+   "regular_price": "19490000",
+   "sale_price": "13490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   }
+  ]
+ },
+ {
+  "id": 2860,
+  "name": "Máy ảnh FUJIFILM X-S20",
+  "slug": "fujifilm-x-s20",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-s20/",
+  "prices": {
+   "price": "30990000",
+   "regular_price": "33990000",
+   "sale_price": "30990000",
+   "price_range": {
+    "min_amount": "30990000",
+    "max_amount": "43490000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 5682,
+  "name": "Máy ảnh FUJIFILM X-E5",
+  "slug": "fujifilm-x-e5",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-e5/",
+  "prices": {
+   "price": "30990000",
+   "regular_price": "37990000",
+   "sale_price": "30990000",
+   "price_range": {
+    "min_amount": "30990000",
+    "max_amount": "42990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3450,
+  "name": "Máy ảnh FUJIFILM X-T50",
+  "slug": "fujifilm-x-t50",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t50/",
+  "prices": {
+   "price": "33490000",
+   "regular_price": "35490000",
+   "sale_price": "33490000",
+   "price_range": {
+    "min_amount": "33490000",
+    "max_amount": "43990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 8085,
+  "name": "Máy ảnh FUJIFILM X-T30 III",
+  "slug": "fujifilm-x-t30-iii",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t30-iii/",
+  "prices": {
+   "price": "25490000",
+   "regular_price": "25490000",
+   "sale_price": "25490000",
+   "price_range": {
+    "min_amount": "25490000",
+    "max_amount": "37990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3475,
+  "name": "Máy ảnh FUJIFILM X-T30 II",
+  "slug": "fujifilm-x-t30-mark-ii",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t30-mark-ii/",
+  "prices": {
+   "price": "26990000",
+   "regular_price": "26990000",
+   "sale_price": "26990000",
+   "price_range": {
+    "min_amount": "26990000",
+    "max_amount": "39490000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 5805,
+  "name": "Máy ảnh FUJIFILM X-M5",
+  "slug": "fujifilm-x-m5",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-m5/",
+  "prices": {
+   "price": "22490000",
+   "regular_price": "26990000",
+   "sale_price": "22490000",
+   "price_range": {
+    "min_amount": "22490000",
+    "max_amount": "27490000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3552,
+  "name": "Máy ảnh FUJIFILM X-Pro3",
+  "slug": "fujifilm-x-pro3",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-pro3/",
+  "prices": {
+   "price": "42990000",
+   "regular_price": "42990000",
+   "sale_price": "42990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3370,
+  "name": "Máy ảnh FUJIFILM X100V",
+  "slug": "fujifilm-x100v",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x100v/",
+  "prices": {
+   "price": "43990000",
+   "regular_price": "43990000",
+   "sale_price": "43990000",
+   "price_range": {
+    "min_amount": "43990000",
+    "max_amount": "44990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "compact",
+    "name": "Máy ảnh Compact"
+   }
+  ]
+ },
+ {
+  "id": 2869,
+  "name": "Máy ảnh FUJIFILM X-T4",
+  "slug": "fujifilm-x-t4",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t4/",
+  "prices": {
+   "price": "36990000",
+   "regular_price": "36990000",
+   "sale_price": "36990000",
+   "price_range": {
+    "min_amount": "36990000",
+    "max_amount": "37990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3568,
+  "name": "Máy ảnh FUJIFILM X-E4",
+  "slug": "fujifilm-x-e4",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-e4/",
+  "prices": {
+   "price": "29990000",
+   "regular_price": "29990000",
+   "sale_price": "29990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 2868,
+  "name": "Máy ảnh FUJIFILM X-S10",
+  "slug": "fujifilm-x-s10",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-s10/",
+  "prices": {
+   "price": "28990000",
+   "regular_price": "28990000",
+   "sale_price": "28990000",
+   "price_range": {
+    "min_amount": "28990000",
+    "max_amount": "30990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 4016,
+  "name": "Máy ảnh FUJIFILM X-T3",
+  "slug": "fujifilm-x-t3",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t3/",
+  "prices": {
+   "price": "26990000",
+   "regular_price": "26990000",
+   "sale_price": "26990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3561,
+  "name": "Máy ảnh FUJIFILM X-T200",
+  "slug": "fujifilm-x-t200",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t200/",
+  "prices": {
+   "price": "15990000",
+   "regular_price": "15990000",
+   "sale_price": "15990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 4034,
+  "name": "Máy ảnh FUJIFILM X-T20",
+  "slug": "fujifilm-x-t20",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-t20/",
+  "prices": {
+   "price": "16500000",
+   "regular_price": "16500000",
+   "sale_price": "16500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 4755,
+  "name": "Máy ảnh FUJIFILM X-E3",
+  "slug": "fujifilm-x-e3",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-e3/",
+  "prices": {
+   "price": "16500000",
+   "regular_price": "16500000",
+   "sale_price": "16500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 3829,
+  "name": "Máy ảnh FUJIFILM X-A7",
+  "slug": "fujifilm-x-a7",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-a7/",
+  "prices": {
+   "price": "15990000",
+   "regular_price": "15990000",
+   "sale_price": "15990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 4659,
+  "name": "Máy ảnh FUJIFILM X-A5",
+  "slug": "fujifilm-x-a5",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-a5/",
+  "prices": {
+   "price": "11990000",
+   "regular_price": "11990000",
+   "sale_price": "11990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 4643,
+  "name": "Máy ảnh FUJIFILM X-A3",
+  "slug": "fujifilm-x-a3",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-x-a3/",
+  "prices": {
+   "price": "8490000",
+   "regular_price": "8490000",
+   "sale_price": "8490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "mirroless",
+    "name": "Máy ảnh Mirrorless"
+   }
+  ]
+ },
+ {
+  "id": 6747,
+  "name": "FUJIFILM GFX100RF",
+  "slug": "fujifilm-gfx100rf",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx100rf/",
+  "prices": {
+   "price": "140990000",
+   "regular_price": "142490000",
+   "sale_price": "140990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "medium-format",
+    "name": "Máy ảnh Medium Format"
+   }
+  ]
+ },
+ {
+  "id": 3881,
+  "name": "Máy ảnh FUJIFILM GFX 100 II",
+  "slug": "fujifilm-gfx-100-ii",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx-100-ii/",
+  "prices": {
+   "price": "192500000",
+   "regular_price": "192500000",
+   "sale_price": "192500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "medium-format",
+    "name": "Máy ảnh Medium Format"
+   }
+  ]
+ },
+ {
+  "id": 3157,
+  "name": "Máy ảnh FUJIFILM GFX 100S II",
+  "slug": "fujifilm-gfx-100s-ii",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx-100s-ii/",
+  "prices": {
+   "price": "132990000",
+   "regular_price": "132990000",
+   "sale_price": "132990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "medium-format",
+    "name": "Máy ảnh Medium Format"
+   }
+  ]
+ },
+ {
+  "id": 4537,
+  "name": "Máy ảnh FUJIFILM GFX 100S",
+  "slug": "fujifilm-gfx-100s",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx-100s/",
+  "prices": {
+   "price": "93990000",
+   "regular_price": "134900000",
+   "sale_price": "93990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "medium-format",
+    "name": "Máy ảnh Medium Format"
+   }
+  ]
+ },
+ {
+  "id": 3858,
+  "name": "Máy ảnh FUJIFILM GFX 50S II",
+  "slug": "fujifilm-gfx-50s-ii",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx-50s-ii/",
+  "prices": {
+   "price": "78990000",
+   "regular_price": "96990000",
+   "sale_price": "78990000",
+   "price_range": {
+    "min_amount": "78990000",
+    "max_amount": "90990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "medium-format",
+    "name": "Máy ảnh Medium Format"
+   }
+  ]
+ },
+ {
+  "id": 3624,
+  "name": "Máy ảnh FUJIFILM GFX 100",
+  "slug": "fujifilm-gfx-100",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx-100/",
+  "prices": {
+   "price": "254990000",
+   "regular_price": "254990000",
+   "sale_price": "254990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "medium-format",
+    "name": "Máy ảnh Medium Format"
+   }
+  ]
+ },
+ {
+  "id": 4562,
+  "name": "Máy ảnh Fujifilm GFX 50R",
+  "slug": "fujifilm-gfx-50r",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx-50r/",
+  "prices": {
+   "price": "86000000",
+   "regular_price": "86000000",
+   "sale_price": "86000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   },
+   {
+    "slug": "medium-format",
+    "name": "Máy ảnh Medium Format"
+   }
+  ]
+ },
+ {
+  "id": 6601,
+  "name": "FUJIFILM GFX ETERNA",
+  "slug": "fujifilm-gfx-eterna",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-gfx-eterna/",
+  "prices": {
+   "price": "0",
+   "regular_price": "0",
+   "sale_price": "0",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "may-anh",
+    "name": "Máy ảnh"
+   }
+  ]
+ },
+ {
+  "id": 3268,
+  "name": "Ống kính FUJIFILM XF 8mm f/3.5 R WR",
+  "slug": "ong-kinh-fujifilm-xf-8mm-f-3-5-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-8mm-f-3-5-r-wr/",
+  "prices": {
+   "price": "19990000",
+   "regular_price": "19990000",
+   "sale_price": "19990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 3291,
+  "name": "Ống kính FUJIFILM XF 14mm F2.8 R",
+  "slug": "ong-kinh-fujifilm-xf-14mm-f2-8-r",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-14mm-f2-8-r/",
+  "prices": {
+   "price": "9990000",
+   "regular_price": "9990000",
+   "sale_price": "9990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 3318,
+  "name": "Ống kính FUJIFILM XF 16mm f/1.4 R WR",
+  "slug": "ong-kinh-fujifilm-xf-16mm-f-1-4-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-16mm-f-1-4-r-wr/",
+  "prices": {
+   "price": "22990000",
+   "regular_price": "22990000",
+   "sale_price": "22990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 3324,
+  "name": "Ống kính FUJIFILM XF 16mm f/2.8 R WR",
+  "slug": "ong-kinh-fujifilm-xf-16mm-f-2-8-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-16mm-f-2-8-r-wr/",
+  "prices": {
+   "price": "9990000",
+   "regular_price": "9990000",
+   "sale_price": "9990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 3937,
+  "name": "Ống kính FUJIFILM XF 18mm f/1.4 R LM WR",
+  "slug": "ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr/",
+  "prices": {
+   "price": "20490000",
+   "regular_price": "22990000",
+   "sale_price": "20490000",
+   "price_range": {
+    "min_amount": "20490000",
+    "max_amount": "22490000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 3944,
+  "name": "Ống kính FUJIFILM XF 18mm f/2 R",
+  "slug": "ong-kinh-fujifilm-xf-18mm-f-2-r",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-18mm-f-2-r/",
+  "prices": {
+   "price": "5990000",
+   "regular_price": "5990000",
+   "sale_price": "5990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 3952,
+  "name": "Ống kính FUJIFILM XF 23mm F1.4 R LM WR",
+  "slug": "ong-kinh-fujifilm-xf-23mm-f1-4-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-23mm-f1-4-r-lm-wr/",
+  "prices": {
+   "price": "23490000",
+   "regular_price": "23490000",
+   "sale_price": "23490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 3959,
+  "name": "Ống kính FUJIFILM XF 23mm f/2 R WR",
+  "slug": "ong-kinh-fujifilm-xf-23mm-f-2-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-23mm-f-2-r-wr/",
+  "prices": {
+   "price": "8990000",
+   "regular_price": "8990000",
+   "sale_price": "8990000",
+   "price_range": {
+    "min_amount": "8990000",
+    "max_amount": "10590000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 7753,
+  "name": "Ống kính FUJIFILM XF 23mm f/2.8 R WR",
+  "slug": "ong-kinh-fujifilm-xf-23mm-f-2-8-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-23mm-f-2-8-r-wr/",
+  "prices": {
+   "price": "10590000",
+   "regular_price": "11990000",
+   "sale_price": "10590000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 7214,
+  "name": "Ống kính Viltrox AF 23mm F1.4 for Fujifilm",
+  "slug": "viltrox-af-23mm-f1-4",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/viltrox-af-23mm-f1-4/",
+  "prices": {
+   "price": "6490000",
+   "regular_price": "6490000",
+   "sale_price": "6490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "viltrox",
+    "name": "Viltrox"
+   }
+  ]
+ },
+ {
+  "id": 7173,
+  "name": "Ống kính TTArtisan 23mm f/1.8 for Fujifilm",
+  "slug": "ttartisan-23mm-f-1-8",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ttartisan-23mm-f-1-8/",
+  "prices": {
+   "price": "3290000",
+   "regular_price": "3290000",
+   "sale_price": "3290000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "ttartisan",
+    "name": "TTArtisan"
+   }
+  ]
+ },
+ {
+  "id": 7076,
+  "name": "Ống Kính FUJIFILM XF 27mm f/2.8 R WR",
+  "slug": "fujifilm-xf-27mm-f2-8-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-xf-27mm-f2-8-r-wr/",
+  "prices": {
+   "price": "10990000",
+   "regular_price": "12490000",
+   "sale_price": "10990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 7042,
+  "name": "Ống Kính TTArtisan 27mm f/2.8 for Fujifilm",
+  "slug": "ttartisan-27mm-f-2-8",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ttartisan-27mm-f-2-8/",
+  "prices": {
+   "price": "3500000",
+   "regular_price": "3500000",
+   "sale_price": "3500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "ttartisan",
+    "name": "TTArtisan"
+   }
+  ]
+ },
+ {
+  "id": 6802,
+  "name": "Ống kính FUJIFILM XF 33mm F1.4 R LM WR",
+  "slug": "fujifilm-xf-33mm-f1-4-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-xf-33mm-f1-4-r-lm-wr/",
+  "prices": {
+   "price": "19190000",
+   "regular_price": "20900000",
+   "sale_price": "19190000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 5414,
+  "name": "Ống kính FUJIFILM XF 35mm f/1.4 R",
+  "slug": "ong-kinh-fujifilm-xf-35mm-f-1-4-r",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-35mm-f-1-4-r/",
+  "prices": {
+   "price": "11990000",
+   "regular_price": "12990000",
+   "sale_price": "11990000",
+   "price_range": {
+    "min_amount": "11990000",
+    "max_amount": "12990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 8826,
+  "name": "Ống kính Viltrox AF 25mm F/1.7 for Fujifilm",
+  "slug": "ong-kinh-viltrox-af-25mm-f-1-7-for-fujifilm",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-viltrox-af-25mm-f-1-7-for-fujifilm/",
+  "prices": {
+   "price": "3680000",
+   "regular_price": "3680000",
+   "sale_price": "3680000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "viltrox",
+    "name": "Viltrox"
+   }
+  ]
+ },
+ {
+  "id": 8693,
+  "name": "SG image AF 25mm F1.8 for Fujifilm",
+  "slug": "sg-image-af-25mm-f-1-8",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/sg-image-af-25mm-f-1-8/",
+  "prices": {
+   "price": "3180000",
+   "regular_price": "3180000",
+   "sale_price": "3180000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "sg-image",
+    "name": "Sg Image"
+   },
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   }
+  ]
+ },
+ {
+  "id": 7467,
+  "name": "Ống kính Viltrox 35mm F1.7 for Fujifilm",
+  "slug": "ong-kinh-viltrox-35mm-f1-7-xf",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-viltrox-35mm-f1-7-xf/",
+  "prices": {
+   "price": "3680000",
+   "regular_price": "3680000",
+   "sale_price": "3680000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "viltrox",
+    "name": "Viltrox"
+   }
+  ]
+ },
+ {
+  "id": 7369,
+  "name": "7artisan AF 35mm F1.4 APS-C for Fujifilm X",
+  "slug": "7artisan-af-35mm-f1-4-aps-c-for-fujifilm-x",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/7artisan-af-35mm-f1-4-aps-c-for-fujifilm-x/",
+  "prices": {
+   "price": "3990000",
+   "regular_price": "3990000",
+   "sale_price": "3990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "7artisan",
+    "name": "7Artisan"
+   }
+  ]
+ },
+ {
+  "id": 4355,
+  "name": "Ống kính FUJIFILM XF 35mm f/2.0 R WR",
+  "slug": "ong-kinh-fujifilm-xf-35mm-f-2-0-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-35mm-f-2-0-r-wr/",
+  "prices": {
+   "price": "9490000",
+   "regular_price": "10590000",
+   "sale_price": "9490000",
+   "price_range": {
+    "min_amount": "9490000",
+    "max_amount": "10590000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 6410,
+  "name": "Ống kính FUJIFILM XC 35mm F/2",
+  "slug": "ong-kinh-fujifilm-xc-35mm-f-2",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xc-35mm-f-2/",
+  "prices": {
+   "price": "5490000",
+   "regular_price": "5490000",
+   "sale_price": "5490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 7137,
+  "name": "Ống kính TTArtisan 35mm f/1.8 II for Fujifilm",
+  "slug": "ttartisan-35mm-f-1-8",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ttartisan-35mm-f-1-8/",
+  "prices": {
+   "price": "3290000",
+   "regular_price": "3290000",
+   "sale_price": "3290000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "ttartisan",
+    "name": "TTArtisan"
+   }
+  ]
+ },
+ {
+  "id": 4307,
+  "name": "Ống kính FUJIFILM XF 50mm f/2 R WR",
+  "slug": "ong-kinh-fujifilm-xf-50mm-f-2-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-50mm-f-2-r-wr/",
+  "prices": {
+   "price": "10490000",
+   "regular_price": "11490000",
+   "sale_price": "10490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 4266,
+  "name": "Ống kính FUJIFILM XF 56mm f/1.2 R WR",
+  "slug": "ong-kinh-fujifilm-xf-56mm-f-1-2-r",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-56mm-f-1-2-r/",
+  "prices": {
+   "price": "23490000",
+   "regular_price": "24990000",
+   "sale_price": "23490000",
+   "price_range": {
+    "min_amount": "23490000",
+    "max_amount": "24990000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 7519,
+  "name": "Ống kính Viltrox AF 56mm f/1.7 for Fujifilm",
+  "slug": "ong-kinh-viltrox-af-56mm-f-1-7-for-fujifilm",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-viltrox-af-56mm-f-1-7-for-fujifilm/",
+  "prices": {
+   "price": "3680000",
+   "regular_price": "3680000",
+   "sale_price": "3680000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "viltrox",
+    "name": "Viltrox"
+   }
+  ]
+ },
+ {
+  "id": 7159,
+  "name": "Ống kính TTArtisan 56mm f/1.8 for Fujifilm",
+  "slug": "ttartisan-56mm-f-1-8",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ttartisan-56mm-f-1-8/",
+  "prices": {
+   "price": "3690000",
+   "regular_price": "3690000",
+   "sale_price": "3690000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "ttartisan",
+    "name": "TTArtisan"
+   }
+  ]
+ },
+ {
+  "id": 6271,
+  "name": "Ống kính FUJIFILM XF 60mm f/2.4 Macro",
+  "slug": "ong-kinh-fujifilm-xf-60mm-f-2-4-macro",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-60mm-f-2-4-macro/",
+  "prices": {
+   "price": "9990000",
+   "regular_price": "9990000",
+   "sale_price": "9990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 5121,
+  "name": "Ống kính FUJIFILM XF 90mm f/2 R LM WR",
+  "slug": "ong-kinh-fujifilm-xf-90mm-f-2-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-90mm-f-2-r-lm-wr/",
+  "prices": {
+   "price": "19490000",
+   "regular_price": "21990000",
+   "sale_price": "19490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 8410,
+  "name": "Ống kính FUJIFILM XC 13-33mm f/3.5-6.3 OIS",
+  "slug": "fujifilm-xc-13-33mm-f-3-5-6-3-ois",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/fujifilm-xc-13-33mm-f-3-5-6-3-ois/",
+  "prices": {
+   "price": "4490000",
+   "regular_price": "4990000",
+   "sale_price": "4490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 4618,
+  "name": "Ống kính FUJIFILM XC 15-45mm f/3.5-5.6 OIS PZ",
+  "slug": "ong-kinh-fujifilm-xc-15-45mm-f-3-5-5-6-ois-pz",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xc-15-45mm-f-3-5-5-6-ois-pz/",
+  "prices": {
+   "price": "3490000",
+   "regular_price": "4500000",
+   "sale_price": "3490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 5972,
+  "name": "Ống kính FUJIFILM XF 16-50mm f/2.8-4.8 R LM WR",
+  "slug": "ong-kinh-fujifilm-xf-16-50mm-f-2-8-4-8-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-16-50mm-f-2-8-4-8-r-lm-wr/",
+  "prices": {
+   "price": "11990000",
+   "regular_price": "11990000",
+   "sale_price": "11990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 4332,
+  "name": "Ống kính FUJIFILM XF 16-55mm f/2.8 R LM WR",
+  "slug": "ong-kinh-fujifilm-xf-16-55mm-f-2-8-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-16-55mm-f-2-8-r-lm-wr/",
+  "prices": {
+   "price": "27990000",
+   "regular_price": "29990000",
+   "sale_price": "27990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 6192,
+  "name": "Ống kính FUJIFILM XF 16-55mm f/2.8 R LM WR II",
+  "slug": "ong-kinh-fujifilm-xf-16-55mm-f-2-8-r-lm-wr-ii",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-16-55mm-f-2-8-r-lm-wr-ii/",
+  "prices": {
+   "price": "34490000",
+   "regular_price": "34490000",
+   "sale_price": "34490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 6050,
+  "name": "Ống kính FUJIFILM XF 16-80mm f/4 R OIS WR",
+  "slug": "ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr/",
+  "prices": {
+   "price": "12490000",
+   "regular_price": "12490000",
+   "sale_price": "12490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 8847,
+  "name": "Ống kính Sigma 16mm f/1.4 DC DN For Fujifilm X",
+  "slug": "ong-kinh-sigma-16mm-f-1-4-dc-dn-for-fujifilm-x",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-sigma-16mm-f-1-4-dc-dn-for-fujifilm-x/",
+  "prices": {
+   "price": "7990000",
+   "regular_price": "10190000",
+   "sale_price": "7990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "sigma",
+    "name": "Sigma"
+   }
+  ]
+ },
+ {
+  "id": 8808,
+  "name": "Ống kính Sigma 56mm f/1.4 DC DN For Fujifilm X",
+  "slug": "ong-kinh-sigma-56mm-f-1-4-dc-dn-for-fujifilm-x",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-sigma-56mm-f-1-4-dc-dn-for-fujifilm-x/",
+  "prices": {
+   "price": "10290000",
+   "regular_price": "10290000",
+   "sale_price": "10290000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "sigma",
+    "name": "Sigma"
+   }
+  ]
+ },
+ {
+  "id": 8792,
+  "name": "Ống kính Sigma 30mm f/1.4 DC DN For Fujifilm X",
+  "slug": "ong-kinh-sigma-30mm-f-1-4-dc-dn-for-fujifilm-x",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-sigma-30mm-f-1-4-dc-dn-for-fujifilm-x/",
+  "prices": {
+   "price": "7620000",
+   "regular_price": "7890000",
+   "sale_price": "7620000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "sigma",
+    "name": "Sigma"
+   }
+  ]
+ },
+ {
+  "id": 7809,
+  "name": "Ống kính Sigma 17-40mm f/1.8 DC Art For Fujifilm X",
+  "slug": "ong-kinh-sigma-17-40mm-f-1-8-dc-art",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-sigma-17-40mm-f-1-8-dc-art/",
+  "prices": {
+   "price": "21220000",
+   "regular_price": "22990000",
+   "sale_price": "21220000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "sigma",
+    "name": "Sigma"
+   }
+  ]
+ },
+ {
+  "id": 5960,
+  "name": "Ống kính FUJIFILM XF 18-55mm f/2.8-4 R LM OIS",
+  "slug": "ong-kinh-fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois/",
+  "prices": {
+   "price": "9500000",
+   "regular_price": "9500000",
+   "sale_price": "9500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 7423,
+  "name": "Sigma 18-50mm f/2.8 DC DN for Fujifilm X",
+  "slug": "sigma-18-50mm-f-2-8-dc-dn",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/sigma-18-50mm-f-2-8-dc-dn/",
+  "prices": {
+   "price": "13100000",
+   "regular_price": "13100000",
+   "sale_price": "13100000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "sigma",
+    "name": "Sigma"
+   }
+  ]
+ },
+ {
+  "id": 5936,
+  "name": "Ống kính FUJIFILM XF 50-140mm f/2.8 R LM OIS WR",
+  "slug": "ong-kinh-fujifilm-xf-50-140mm-f-2-8-r-lm-ois-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-50-140mm-f-2-8-r-lm-ois-wr/",
+  "prices": {
+   "price": "33990000",
+   "regular_price": "38990000",
+   "sale_price": "33990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 5993,
+  "name": "Ống kính FUJIFILM XF 55-200mm f/3.5-4.8 R LM OIS",
+  "slug": "ong-kinh-fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois/",
+  "prices": {
+   "price": "15990000",
+   "regular_price": "15990000",
+   "sale_price": "15990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 6068,
+  "name": "Ống kính FUJIFILM XF 100-400mm f/4.5-5.6 R LM OIS WR",
+  "slug": "ong-kinh-fujifilm-xf-100-400mm-f-4-5-5-6-r-lm-ois-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-100-400mm-f-4-5-5-6-r-lm-ois-wr/",
+  "prices": {
+   "price": "30990000",
+   "regular_price": "44790000",
+   "sale_price": "30990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 6093,
+  "name": "Ống kính FUJIFILM XF 200mm f/2 OIS WR",
+  "slug": "ong-kinh-fujifilm-xf-200mm-f-2-ois-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-200mm-f-2-ois-wr/",
+  "prices": {
+   "price": "144990000",
+   "regular_price": "144990000",
+   "sale_price": "144990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 6210,
+  "name": "Ống kính FUJIFILM XF 500mm f/5.6 R LM OIS WR",
+  "slug": "ong-kinh-fujifilm-xf-500mm-f-5-6-r-lm-ois-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-500mm-f-5-6-r-lm-ois-wr/",
+  "prices": {
+   "price": "75990000",
+   "regular_price": "75990000",
+   "sale_price": "75990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "ong-kinh-mirroless",
+    "name": "Ống kính Mirroless"
+   },
+   {
+    "slug": "fujifilm",
+    "name": "Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 4249,
+  "name": "Ống kính FUJIFILM GF 23mm f/4 R LM WR",
+  "slug": "ong-kinh-fujifilm-gf-23mm-f-4-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-gf-23mm-f-4-r-lm-wr/",
+  "prices": {
+   "price": "62900000",
+   "regular_price": "62900000",
+   "sale_price": "62900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "medium-forrmat",
+    "name": "Ống kính Medium Forrmat"
+   }
+  ]
+ },
+ {
+  "id": 4578,
+  "name": "Ống kính FUJIFILM GF 30mm f/3.5 R WR",
+  "slug": "ong-kinh-fujifilm-gf-30mm-f-3-5-r-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-gf-30mm-f-3-5-r-wr/",
+  "prices": {
+   "price": "43990000",
+   "regular_price": "43990000",
+   "sale_price": "43990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "medium-forrmat",
+    "name": "Ống kính Medium Forrmat"
+   }
+  ]
+ },
+ {
+  "id": 4720,
+  "name": "Ống kính FUJIFILM GF 32-64mm f/4 R LM WR",
+  "slug": "ong-kinh-fujifilm-gf-32-64mm-f-4-r-lm-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-gf-32-64mm-f-4-r-lm-wr/",
+  "prices": {
+   "price": "54900000",
+   "regular_price": "54900000",
+   "sale_price": "54900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "medium-forrmat",
+    "name": "Ống kính Medium Forrmat"
+   }
+  ]
+ },
+ {
+  "id": 4734,
+  "name": "Ống kính FUJIFILM GF 100-200mm f/5.6 R LM OIS WR",
+  "slug": "ong-kinh-fujifilm-gf-100-200mm-f-5-6-r-lm-ois-wr",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/ong-kinh-fujifilm-gf-100-200mm-f-5-6-r-lm-ois-wr/",
+  "prices": {
+   "price": "59900000",
+   "regular_price": "59900000",
+   "sale_price": "59900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh",
+    "name": "Ống kính"
+   },
+   {
+    "slug": "medium-forrmat",
+    "name": "Ống kính Medium Forrmat"
+   }
+  ]
+ },
+ {
+  "id": 9039,
+  "name": "Case Fujifilm X100VI Xphoto",
+  "slug": "case-fujifilm-x100vi-xphoto",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/case-fujifilm-x100vi-xphoto/",
+  "prices": {
+   "price": "1800000",
+   "regular_price": "1800000",
+   "sale_price": "1800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "case",
+    "name": "Case"
+   }
+  ]
+ },
+ {
+  "id": 8984,
+  "name": "Case Fujifilm X-S20 Xphoto",
+  "slug": "case-fujifilm-x-s20-xphoto",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/case-fujifilm-x-s20-xphoto/",
+  "prices": {
+   "price": "1800000",
+   "regular_price": "1800000",
+   "sale_price": "1800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "case",
+    "name": "Case"
+   }
+  ]
+ },
+ {
+  "id": 8940,
+  "name": "Case Fujifilm X-S20",
+  "slug": "case-fujifilm-x-s20",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/case-fujifilm-x-s20/",
+  "prices": {
+   "price": "1800000",
+   "regular_price": "1800000",
+   "sale_price": "1800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "case",
+    "name": "Case"
+   }
+  ]
+ },
+ {
+  "id": 7671,
+  "name": "Case Fujifilm X100VI",
+  "slug": "case-fujifilm-x100vi",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/case-fujifilm-x100vi/",
+  "prices": {
+   "price": "1800000",
+   "regular_price": "1800000",
+   "sale_price": "1800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "case",
+    "name": "Case"
+   }
+  ]
+ },
+ {
+  "id": 7659,
+  "name": "Case Fujifilm X-Half",
+  "slug": "case-fujifilm-x-half",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/case-fujifilm-x-half/",
+  "prices": {
+   "price": "990000",
+   "regular_price": "990000",
+   "sale_price": "990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "case",
+    "name": "Case"
+   }
+  ]
+ },
+ {
+  "id": 8919,
+  "name": "Túi máy ảnh FUJIFILM &#8211; da cao cấp, dây rút",
+  "slug": "tui-may-anh-fujifilm-da-cao-cap-day-rut",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/tui-may-anh-fujifilm-da-cao-cap-day-rut/",
+  "prices": {
+   "price": "490000",
+   "regular_price": "490000",
+   "sale_price": "490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "tui-balo",
+    "name": "Túi, Balo"
+   }
+  ]
+ },
+ {
+  "id": 4520,
+  "name": "Túi máy ảnh FUJIFILM",
+  "slug": "tui-may-anh-fujifilm",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/tui-may-anh-fujifilm/",
+  "prices": {
+   "price": "1290000",
+   "regular_price": "1290000",
+   "sale_price": "1290000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "tui-balo",
+    "name": "Túi, Balo"
+   }
+  ]
+ },
+ {
+  "id": 5020,
+  "name": "Hood Vuông YC Onion for FUJIFILM X100-Series",
+  "slug": "hood-vuong-yc-onion-for-fujifilm-x100-series",
+  "type": "variable",
+  "permalink": "https://x-camera.vn/shop/hood-vuong-yc-onion-for-fujifilm-x100-series/",
+  "prices": {
+   "price": "1290000",
+   "regular_price": "1290000",
+   "sale_price": "1290000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": ""
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "lens-caps-hoods",
+    "name": "Lens Caps &amp; Hoods"
+   }
+  ]
+ },
+ {
+  "id": 7896,
+  "name": "Bộ 2 pin + sạc đôi RAVPower for Fujifilm NP-W235",
+  "slug": "bo-sac-fujifilm-np-w235-ravpower-rp-bc1004",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/bo-sac-fujifilm-np-w235-ravpower-rp-bc1004/",
+  "prices": {
+   "price": "1390000",
+   "regular_price": "1390000",
+   "sale_price": "1390000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 8336,
+  "name": "Bộ 2 pin + Sạc đôi FB NP-W235 For Fujifilm",
+  "slug": "bo-2-pin-sac-doi-fb-np-w235-for-fujifilm",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/bo-2-pin-sac-doi-fb-np-w235-for-fujifilm/",
+  "prices": {
+   "price": "1390000",
+   "regular_price": "1390000",
+   "sale_price": "1390000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 7701,
+  "name": "Bộ 2 pin + Sạc đôi FB NP-W126s For Fujifilm",
+  "slug": "bo-2-pin-sac-doi-fb-np-w126s-for-fujifilm",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/bo-2-pin-sac-doi-fb-np-w126s-for-fujifilm/",
+  "prices": {
+   "price": "750000",
+   "regular_price": "750000",
+   "sale_price": "750000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 7886,
+  "name": "Sạc máy ảnh for Fujifilm NP-W126/W126s",
+  "slug": "sac-may-anh-fujifilm-bc-w126-for-fujifilm-np-w126",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/sac-may-anh-fujifilm-bc-w126-for-fujifilm-np-w126/",
+  "prices": {
+   "price": "350000",
+   "regular_price": "350000",
+   "sale_price": "350000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 3217,
+  "name": "Pin Fujifilm NP-W126S",
+  "slug": "pin-fujifilm-np-w126s",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/pin-fujifilm-np-w126s/",
+  "prices": {
+   "price": "990000",
+   "regular_price": "990000",
+   "sale_price": "990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 3576,
+  "name": "Pin Fujifilm NP-W235",
+  "slug": "pin-fujifilm-np-w235",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/pin-fujifilm-np-w235/",
+  "prices": {
+   "price": "1390000",
+   "regular_price": "1600000",
+   "sale_price": "1390000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 3209,
+  "name": "Bộ Sạc Pin Fujifilm BC-W126S",
+  "slug": "bo-sac-pin-fujifilm-bc-w126s",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/bo-sac-pin-fujifilm-bc-w126s/",
+  "prices": {
+   "price": "990000",
+   "regular_price": "1400000",
+   "sale_price": "990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 5059,
+  "name": "Bộ Sạc Pin Fujifilm BC-W235",
+  "slug": "bo-sac-pin-fujifilm-bc-w235",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/bo-sac-pin-fujifilm-bc-w235/",
+  "prices": {
+   "price": "1390000",
+   "regular_price": "1600000",
+   "sale_price": "1390000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "sac-pin",
+    "name": "Pin, Sạc"
+   }
+  ]
+ },
+ {
+  "id": 3227,
+  "name": "Tripod FUJIFILM TG-BT1",
+  "slug": "tay-cam-may-anh-fujifilm-tg-bt1",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/tay-cam-may-anh-fujifilm-tg-bt1/",
+  "prices": {
+   "price": "4790000",
+   "regular_price": "4890000",
+   "sale_price": "4790000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   },
+   {
+    "slug": "tripod",
+    "name": "Tripod"
+   }
+  ]
+ },
+ {
+  "id": 4530,
+  "name": "Miếng dán màn hình cho máy ảnh Fujifilm",
+  "slug": "mieng-dan-man-hinh-cho-may-anh-fujifilm",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/mieng-dan-man-hinh-cho-may-anh-fujifilm/",
+  "prices": {
+   "price": "80000",
+   "regular_price": "80000",
+   "sale_price": "80000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "phu-kien",
+    "name": "Phụ kiện"
+   }
+  ]
+ },
+ {
+  "id": 8310,
+  "name": "Máy ảnh Fujifilm X-M5 Black (2nd) Body #01576",
+  "slug": "may-anh-fujifilm-x-m5-black-2nd-body-01576",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/may-anh-fujifilm-x-m5-black-2nd-body-01576/",
+  "prices": {
+   "price": "19500000",
+   "regular_price": "21500000",
+   "sale_price": "19500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "do-cu",
+    "name": "Đồ cũ"
+   },
+   {
+    "slug": "may-anh-fujifilm-cu",
+    "name": "Máy ảnh Fujifilm cũ"
+   },
+   {
+    "slug": "fujifilm-x-m5-cu",
+    "name": "Fujifilm X-M5 cũ"
+   }
+  ]
+ },
+ {
+  "id": 8890,
+  "name": "Máy ảnh Fujifilm X-E3 + TTArtisan 27mm cũ (2nd) #5565",
+  "slug": "may-anh-fujifilm-x-e3-ttartisan-27mm-cu-2nd-5565",
+  "type": "simple",
+  "permalink": "https://x-camera.vn/shop/may-anh-fujifilm-x-e3-ttartisan-27mm-cu-2nd-5565/",
+  "prices": {
+   "price": "16290000",
+   "regular_price": "18290000",
+   "sale_price": "16290000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "fujifilm-x-e3-cu",
+    "name": "Fujifilm X-E3 Cũ"
+   },
+   {
+    "slug": "do-cu",
+    "name": "Đồ cũ"
+   },
+   {
+    "slug": "may-anh-fujifilm-cu",
+    "name": "Máy ảnh Fujifilm cũ"
+   }
+  ]
+ }
+]

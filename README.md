@@ -28,17 +28,17 @@ More lenses will be added later. Adding an item must only require editing `confi
 
 **Shops (initial)**
 
-| Shop | Site | Platform (observed / presumed) |
-|---|---|---|
-| fujifilm-xspace | fujifilm-xspace.vn | Haravan (verified) |
-| vjshop | vjshop.vn | Next.js (verified) |
-| kyma | kyma.vn | Custom (verified search page is server-rendered) |
-| zshop | zshop.vn | presumed Magento-like (`.html` product URLs) — verify |
-| mayanhhoangto | mayanhhoangto.com | presumed WordPress/WooCommerce — verify |
-| bncamera | bncamera.com | WooCommerce (`?s=…&post_type=product`) — verify |
-| mayanh24h | mayanh24h.com | unknown — verify |
-| x-camera | x-camera.vn | presumed WooCommerce (`/shop/…`) — verify |
-| giangduydat | giangduydat.vn | unknown — verify |
+| Shop | Site | Platform (verified) | How it is read |
+|---|---|---|---|
+| xspace | fujifilm-xspace.vn | Haravan | `/products/<handle>.js` JSON |
+| vjshop | vjshop.vn | Next.js | `__NEXT_DATA__` (listings), `api.vjshop.vn` (products) |
+| kyma | kyma.vn | Custom | CSS selectors on category pages |
+| zshop | zshop.vn | CS-Cart | CSS selectors (category and product pages) |
+| mayanhhoangto | mayanhhoangto.com | WooCommerce | Store API |
+| bncamera | bncamera.com | WooCommerce | Store API |
+| mayanh24h | mayanh24h.com | Custom (AngularJS front, server-rendered lists) | CSS selectors (category and product pages) |
+| x-camera | x-camera.vn | WooCommerce | Store API |
+| giangduydat | giangduydat.vn | Custom | CSS selectors; product pages list each unit as a schema.org Offer |
 
 **Out of scope:** Shopee, Lazada, Tiki, Chợ Tốt (scam risk), Facebook Marketplace and groups.
 
@@ -222,7 +222,12 @@ type Adapter interface {
 - **vjshop (Next.js):** the price is not in the visible server-rendered text. Listing pages embed the product list in `<script id="__NEXT_DATA__" type="application/json">` at `props.pageProps.products` (`core.name`, `core.slug`, `real_price`, `core.status.raw`, `core.product_category.slug`). Product pages are rendered client-side and carry **no** product data, so product mode fetches `https://api.vjshop.vn/api/products/<slug>` instead; that response has no `real_price`, only `prices.{default,sale,flashsale}` with priorities and optional `from`/`to` windows (Vietnam time), so the adapter picks the highest-priority price active now. The site has a used-goods section ("Đồ cũ chất", `/do-cu-chat`); `robots.txt` disallows `/may-anh-cu` and `/ong-kinh-cu`, so don't watch those. Product URLs carry the variant (e.g. `...-silver-chinh-hang`). Unknown slugs return HTTP 200 with an empty page, so a wrong URL shows up as `adapter_broken`, not as a 404.
 - **kyma:** the search page is server-rendered, but its search is picky; a query like `XF 18-55mm f/2.8-4` returned 0 results. Watch category pages (e.g. `/ong-kinh-fujifilm`, `/may-anh-fujifilm`) or exact product URLs instead of search.
 - **WooCommerce shops (bncamera, x-camera, probably mayanhhoangto):** try the Store API first: `GET /wp-json/wc/store/v1/products?search=<term>` returns clean JSON with prices (in minor units; check `currency_minor_unit`). It is often enabled by default. Fall back to HTML: `.product .price .woocommerce-Price-amount`.
-- **zshop, mayanh24h, giangduydat:** inspect them, save a snapshot into `testdata/`, then write the adapter.
+- **WooCommerce details:** names contain HTML entities (`&#8211;`); prices are strings in minor units; `is_on_backorder` ("Cho phép đặt hàng trước", pre-order allowed) counts as **not** in stock even when `is_in_stock` is true. The adapter rewrites shop URLs: product page → `?slug=<slug>`, search page `?s=<term>` → `?search=<term>`, category page → `?category=<last path segment>` (an unknown slug returns `[]`). Responses embed full HTML descriptions, so JSON bodies are never parsed as HTML. Snapshots in `testdata/` are trimmed to the fields the adapter reads.
+- **kyma:** cards are `li.li-product`; the first `span` in `.item__price` is the current price (the second is the struck-through one). No stock labels on category pages.
+- **zshop (CS-Cart, not Magento):** cards `.ty-grid-list__item`, price `.ty-price .ty-price-num`; product pages `h1.ty-product-block-title`. Upcoming products have no price (→ 0).
+- **mayanh24h:** `robots.txt` disallows every URL with a query string. Cards `.product-item` with a `.stock-status` label; used items are graded in the title ("Mới 98%" = 98% condition). Product pages: `h1.text_1`, price `h2.text-primary`, stock after "Tình trạng:".
+- **giangduydat:** category cards `li.idx-prod` ("Từ 4.490.000 đ" = from). A product page lists every unit (new, used 85%, 90%, …) as its own `Offer` with a name and price, so watch product pages in **listing** mode; each unit gets the page URL plus a `#<slug of its name>` fragment as identity.
+- Shops without structured data are configured as **layouts** in `internal/adapters/adapter.go` (`Layout{Marker, Card, Title, Link, Price, Stock}`); a comma-separated selector inside a card is a priority order.
 
 **Workflow for adding a shop**
 
@@ -420,4 +425,5 @@ For local secrets, use a `.env` file (git-ignored) that is loaded only when pres
 - [ ] Collect the real product, category and used-section URLs per shop for the watched items.
 - [x] Repo visibility: **public** (GitHub Pages works on the free plan).
 - [ ] Decide the price-drop alert threshold.
-- [ ] Verify the platform per shop (rows marked "verify" in §1).
+- [x] Verify the platform per shop (§1).
+- [ ] Decide whether body-only products should exclude kits ("X-T5 + Lens XF 16-50mm"); today a kit matches the body and its higher price is mixed into the body's history.

@@ -15,6 +15,9 @@ func TestName(t *testing.T) {
 		{"https://vjshop.vn/may-anh-fujifilm?page=2", "may-anh-fujifilm-page-2"},
 		{"https://bncamera.com/?s=x-t5&post_type=product", "s-x-t5-post_type-product"},
 		{"https://kyma.vn/", "index"},
+		{"https://zshop.vn/fujifilm-x-t5.html", "fujifilm-x-t5"},
+		{"https://kyma.vn/may-anh-fujifilm-x-t5.html?product-id=163637", "may-anh-fujifilm-x-t5-product-id-163637"},
+		{"https://shop.vn/index.php", "index"},
 		{"https://kyma.vn/Máy Ảnh", "m-y-nh"},
 	}
 	for _, tt := range tests {

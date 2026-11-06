@@ -59,7 +59,13 @@ func cmdSnapshot(args []string, stdout, stderr io.Writer) int {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
 	defer cancel()
-	res, err := fetch.New(fetch.Options{Timeout: cfg.Sources.Defaults.Timeout()}).Get(ctx, fetchURL)
+	client := fetch.New(fetch.Options{Timeout: cfg.Sources.Defaults.Timeout(), Delay: cfg.Sources.Defaults.Delay()})
+	if ok, err := client.Allowed(ctx, fetchURL); err != nil {
+		return errorf(stderr, "%v", err)
+	} else if !ok {
+		return errorf(stderr, "%s is disallowed by robots.txt", fetchURL)
+	}
+	res, err := client.Get(ctx, fetchURL)
 	if err != nil {
 		return errorf(stderr, "%v", err)
 	}

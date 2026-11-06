@@ -44,7 +44,7 @@ func TestRunSendsNotifications(t *testing.T) {
 		t.Fatalf("sent email=%d whatsapp=%d, want 1 each", len(email.msgs), len(wa.msgs))
 	}
 	m := email.msgs[0]
-	if !strings.Contains(m.Subject, "new listing") || len(m.Best) != 12 || len(m.Sources) != 5 {
+	if !strings.Contains(m.Subject, "new listing") || len(m.Best) != 12 || len(m.Sources) != repoSourceCount(t) {
 		t.Errorf("message: subject %q, best %d, sources %d", m.Subject, len(m.Best), len(m.Sources))
 	}
 }

@@ -1,0 +1,7 @@
+{
+  "shop": "bncamera",
+  "mode": "listing",
+  "page_url": "https://bncamera.com/?s=fujifilm\u0026post_type=product",
+  "fetch_url": "https://bncamera.com/wp-json/wc/store/v1/products?per_page=100\u0026search=fujifilm",
+  "fetched_at": "2026-11-06T21:35:01Z"
+}

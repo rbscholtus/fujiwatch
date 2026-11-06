@@ -45,7 +45,78 @@ sources:
     product: x-t5
     url: https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang
 
+  # ── WooCommerce shops: category, search and product URLs are rewritten
+  #    to the Store API (/wp-json/wc/store/v1/products) by the adapter.
   - shop: mayanhhoangto
     mode: listing
-    condition: auto
     url: https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/
+
+  - shop: mayanhhoangto
+    mode: listing
+    url: https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/
+
+  - shop: bncamera
+    mode: listing
+    url: https://bncamera.com/?s=fujifilm&post_type=product
+
+  - shop: bncamera
+    mode: product
+    product: tamron-16-50
+    url: https://bncamera.com/san-pham/tamron-16-50mm-f2-8-a-for-fujifilm-x
+
+  - shop: x-camera
+    mode: listing
+    url: https://x-camera.vn/?s=fujifilm&post_type=product
+
+  # ── kyma: category pages (its search is too picky).
+  - shop: kyma
+    mode: listing
+    url: https://kyma.vn/may-anh-fujifilm
+
+  - shop: kyma
+    mode: listing
+    url: https://kyma.vn/ong-kinh-fujifilm
+
+  # ── zshop (CS-Cart)
+  - shop: zshop
+    mode: listing
+    url: https://zshop.vn/may-anh-mirrorless-fujifilm/
+
+  - shop: zshop
+    mode: product
+    product: x-t5
+    url: https://zshop.vn/fujifilm-x-t5.html
+
+  # ── mayanh24h: robots.txt disallows every URL with a query string.
+  - shop: mayanh24h
+    mode: listing
+    condition: used
+    url: https://mayanh24h.com/may-anh-fujifilm-cu.html
+
+  - shop: mayanh24h
+    mode: listing
+    condition: used
+    url: https://mayanh24h.com/ong-kinh-fujifilm-x-mount-cu.html
+
+  - shop: mayanh24h
+    mode: listing
+    url: https://mayanh24h.com/may-anh-mirrorless-fujifilm.html
+
+  - shop: mayanh24h
+    mode: listing
+    url: https://mayanh24h.com/ong-kinh-fujifilm-x-mount.html
+
+  - shop: mayanh24h
+    mode: product
+    product: tamron-16-50
+    url: https://mayanh24h.com/tamron-16-50mm-f-2-8-cho-fujifilm.html
+
+  # ── giangduydat: a product page lists each unit (new and used) as its
+  #    own offer, so it is watched as a listing.
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/c/ong-kinh-fujifilm
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-t4

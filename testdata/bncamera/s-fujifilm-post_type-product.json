@@ -1,0 +1,3302 @@
+[
+ {
+  "id": 41588,
+  "name": "Tamron 16-50mm F2.8 A For Fujifilm X",
+  "slug": "tamron-16-50mm-f2-8-a-for-fujifilm-x",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/tamron-16-50mm-f2-8-a-for-fujifilm-x",
+  "prices": {
+   "price": "14200000",
+   "regular_price": "14200000",
+   "sale_price": "14200000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": true,
+  "stock_availability": {
+   "text": "Cho phép đặt hàng trước",
+   "class": "available-on-backorder"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-tamron",
+    "name": "Ống kính Tamron"
+   }
+  ]
+ },
+ {
+  "id": 41239,
+  "name": "TTArtisan AF 17mm f1.8 Air for Fujifilm X",
+  "slug": "ttartisan-af-17mm-f1-8-air-for-fujifilm-x",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/ttartisan-af-17mm-f1-8-air-for-fujifilm-x",
+  "prices": {
+   "price": "3700000",
+   "regular_price": "3700000",
+   "sale_price": "3700000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-ttartisans",
+    "name": "Ống kính TTArtisans"
+   }
+  ]
+ },
+ {
+  "id": 40935,
+  "name": "Sigma 50-120mm f/2.8 DC OS Contemporary For Fujifilm X",
+  "slug": "sigma-50-120mm-f-2-8-dc-os-contemporary-for-fujifilm-x",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/sigma-50-120mm-f-2-8-dc-os-contemporary-for-fujifilm-x",
+  "prices": {
+   "price": "20774000",
+   "regular_price": "20774000",
+   "sale_price": "20774000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-sigma",
+    "name": "Ống kính Sigma"
+   }
+  ]
+ },
+ {
+  "id": 40154,
+  "name": "Fujifilm XF 400mm f/4.5 R LM OIS WR",
+  "slug": "fujifilm-xf-400mm-f-4-5-r-lm-ois-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-400mm-f-4-5-r-lm-ois-wr",
+  "prices": {
+   "price": "83345000",
+   "regular_price": "83345000",
+   "sale_price": "83345000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   },
+   {
+    "slug": "ong-kinh",
+    "name": "Ống Kính"
+   }
+  ]
+ },
+ {
+  "id": 38838,
+  "name": "Viltrox TCL-X100VI (Ống kính chuyển đổi góc tele cho Fujifilm X100)",
+  "slug": "viltrox-tcl-x100vi",
+  "type": "variable",
+  "permalink": "https://bncamera.com/san-pham/viltrox-tcl-x100vi",
+  "prices": {
+   "price": "3900000",
+   "regular_price": "3900000",
+   "sale_price": "3900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ngam",
+    "name": "Ngàm"
+   }
+  ]
+ },
+ {
+  "id": 38749,
+  "name": "Viltrox 15mm f/1.7 Air For Fujifilm X",
+  "slug": "viltrox-15mm-f-1-7-air-for-fujifilm-x",
+  "type": "variable",
+  "permalink": "https://bncamera.com/san-pham/viltrox-15mm-f-1-7-air-for-fujifilm-x",
+  "prices": {
+   "price": "5000000",
+   "regular_price": "5900000",
+   "sale_price": "5000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-viltrox",
+    "name": "Ống Kính Viltrox"
+   }
+  ]
+ },
+ {
+  "id": 38213,
+  "name": "Bộ công thức màu Fujifilm | Quà tặng",
+  "slug": "bo-cong-thuc-mau-fujifilm-qua-tang",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/bo-cong-thuc-mau-fujifilm-qua-tang",
+  "prices": {
+   "price": "0",
+   "regular_price": "0",
+   "sale_price": "0",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": []
+ },
+ {
+  "id": 37192,
+  "name": "Fujifilm GF 63mm f/2.8 R WR",
+  "slug": "fujifilm-gf-63mm-f-2-8-r-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-gf-63mm-f-2-8-r-wr",
+  "prices": {
+   "price": "35148000",
+   "regular_price": "35148000",
+   "sale_price": "35148000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 37022,
+  "name": "Fujifilm GF 110mm f/2 R LM WR",
+  "slug": "fujifilm-gf-110mm-f-2-r-lm-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-gf-110mm-f-2-r-lm-wr",
+  "prices": {
+   "price": "70000000",
+   "regular_price": "70000000",
+   "sale_price": "70000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 37104,
+  "name": "Fujifilm GF 45-100mm f/4 R LM OIS WR",
+  "slug": "fujifilm-gf-45-100mm-f-4-r-lm-ois-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-gf-45-100mm-f-4-r-lm-ois-wr",
+  "prices": {
+   "price": "48900000",
+   "regular_price": "48900000",
+   "sale_price": "48900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 37037,
+  "name": "Fujifilm GF 32-64mm F4 R LM WR",
+  "slug": "gf-32-64mm-f4-r-lm-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/gf-32-64mm-f4-r-lm-wr",
+  "prices": {
+   "price": "57600000",
+   "regular_price": "57600000",
+   "sale_price": "57600000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 36975,
+  "name": "Fujifilm GF 80mm f/1.7 R WR",
+  "slug": "fujifilm-gf-80mm-f-1-7-r-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-gf-80mm-f-1-7-r-wr",
+  "prices": {
+   "price": "42900000",
+   "regular_price": "42900000",
+   "sale_price": "42900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 36594,
+  "name": "Fujifilm X-T6",
+  "slug": "fujifilm-x-t6",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t6",
+  "prices": {
+   "price": "0",
+   "regular_price": "0",
+   "sale_price": "0",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-fujifilm",
+    "name": "Máy ảnh Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 36181,
+  "name": "Fujifilm XC 13-33mm f/3.5-6.3 OIS",
+  "slug": "fujifilm-xc-13-33mm-f-3-5-6-3-ois",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xc-13-33mm-f-3-5-6-3-ois",
+  "prices": {
+   "price": "5000000",
+   "regular_price": "5000000",
+   "sale_price": "5000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 34845,
+  "name": "Sigma 100-400mm f/5-6.3 DG DN OS (C) for Fujifilm X",
+  "slug": "sigma-100-400mm-f-5-6-3-dg-dn-os-c-for-fujifilm-x",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/sigma-100-400mm-f-5-6-3-dg-dn-os-c-for-fujifilm-x",
+  "prices": {
+   "price": "24900000",
+   "regular_price": "24900000",
+   "sale_price": "24900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-sigma",
+    "name": "Ống kính Sigma"
+   }
+  ]
+ },
+ {
+  "id": 34118,
+  "name": "Fujifilm XF 56mm f/1.2 R APD",
+  "slug": "fujifilm-xf-56mm-f-1-2-r-apd",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-56mm-f-1-2-r-apd",
+  "prices": {
+   "price": "12900000",
+   "regular_price": "12900000",
+   "sale_price": "12900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 33992,
+  "name": "Fujifilm XF 35mm f/1.4 R",
+  "slug": "fujifilm-xf-35mm-f-1-4-r",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-35mm-f-1-4-r",
+  "prices": {
+   "price": "10500000",
+   "regular_price": "12600000",
+   "sale_price": "10500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 33990,
+  "name": "Fujifilm XF 200mm f/2 R LM OIS WR",
+  "slug": "fujifilm-xf-200mm-f-2-r-lm-ois-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-200mm-f-2-r-lm-ois-wr",
+  "prices": {
+   "price": "144500000",
+   "regular_price": "144500000",
+   "sale_price": "144500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 33963,
+  "name": "Fujifilm XF 14mm f/2.8 R",
+  "slug": "fujifilm-xf-14mm-f-2-8-r",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-14mm-f-2-8-r",
+  "prices": {
+   "price": "25000000",
+   "regular_price": "25000000",
+   "sale_price": "25000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 33876,
+  "name": "Fujifilm XF 23mm f/1.4 R",
+  "slug": "fujifilm-xf-23mm-f-1-4-r",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-23mm-f-1-4-r",
+  "prices": {
+   "price": "0",
+   "regular_price": "0",
+   "sale_price": "0",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 33775,
+  "name": "Sigma 15mm F1.4 DC Contemporary for Fujifilm X",
+  "slug": "sigma-15mm-f1-4-dc-contemporary-for-fujifilm-x",
+  "type": "variable",
+  "permalink": "https://bncamera.com/san-pham/sigma-15mm-f1-4-dc-contemporary-for-fujifilm-x",
+  "prices": {
+   "price": "10500000",
+   "regular_price": "10500000",
+   "sale_price": "10500000",
+   "price_range": {
+    "min_amount": "10500000",
+    "max_amount": "11800000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-sigma",
+    "name": "Ống kính Sigma"
+   }
+  ]
+ },
+ {
+  "id": 33329,
+  "name": "Fujifilm X-T30 cũ (3063)",
+  "slug": "fujifilm-x-t30-cu-2nd-3063",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-cu-2nd-3063",
+  "prices": {
+   "price": "18500000",
+   "regular_price": "18500000",
+   "sale_price": "18500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 33311,
+  "name": "Fujifilm X-T20 cũ (9503)",
+  "slug": "fujifilm-x-t20-cu-9503",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-9503",
+  "prices": {
+   "price": "14200000",
+   "regular_price": "14200000",
+   "sale_price": "14200000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 33298,
+  "name": "Fujifilm X-T20 cũ (3225)",
+  "slug": "fujifilm-x-t20-cu-3225",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-3225",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 33290,
+  "name": "Fujifilm X-T20 cũ (2446)",
+  "slug": "fujifilm-x-t20-cu-2446",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-2446",
+  "prices": {
+   "price": "14200000",
+   "regular_price": "14200000",
+   "sale_price": "14200000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 33265,
+  "name": "Fujifilm X-S10 cũ (9411)",
+  "slug": "fujifilm-x-s10-cu-9411",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-s10-cu-9411",
+  "prices": {
+   "price": "24490000",
+   "regular_price": "24490000",
+   "sale_price": "24490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 33256,
+  "name": "Fujifilm XF 35mm f/2.0 R WR cũ (2521)",
+  "slug": "fujifilm-xf-35mm-f-20-r-wr-cu-2521",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-35mm-f-20-r-wr-cu-2521",
+  "prices": {
+   "price": "7200000",
+   "regular_price": "7200000",
+   "sale_price": "7200000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 33219,
+  "name": "Tamron 17-70mm f/2.8 Di III-A VC RXD For Fujifilm X cũ (0579)",
+  "slug": "tamron-17-70mm-f-28-di-iii-a-vc-rxd-for-fujifilm-x-cu-0579",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/tamron-17-70mm-f-28-di-iii-a-vc-rxd-for-fujifilm-x-cu-0579",
+  "prices": {
+   "price": "11890000",
+   "regular_price": "11890000",
+   "sale_price": "11890000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 33128,
+  "name": "Fujifilm X-T3 cũ (9168)",
+  "slug": "fujifilm-x-t3-cu-9168",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t3-cu-9168",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 33123,
+  "name": "Fujifilm XF 18-55mm f/2.8-4 R LM OIS cũ (7502)",
+  "slug": "fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-cu-7502",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-cu-7502",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 33103,
+  "name": "Fujifilm XF 18-55mm f/2.8-4 R LM OIS cũ (0110)",
+  "slug": "fujifilm-xf-18-55mm-f-28-4-r-lm-ois-cu-0110",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-18-55mm-f-28-4-r-lm-ois-cu-0110",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 33096,
+  "name": "Fujifilm XF 35mm f/2.0 R WR cũ (4065)",
+  "slug": "fujifilm-xf-35mm-f-20-r-wr-cu-4065",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-35mm-f-20-r-wr-cu-4065",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 33050,
+  "name": "Fujifilm X-M5 cũ (7780)",
+  "slug": "fujifilm-x-m5-cu-7780",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-m5-cu-7780",
+  "prices": {
+   "price": "21500000",
+   "regular_price": "21500000",
+   "sale_price": "21500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 32724,
+  "name": "Fujifilm X100V cũ | 2nd (0135)",
+  "slug": "may-anh-fujifilm-x100v-cu-2nd-0135",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/may-anh-fujifilm-x100v-cu-2nd-0135",
+  "prices": {
+   "price": "32000000",
+   "regular_price": "32000000",
+   "sale_price": "32000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 32019,
+  "name": "Fujifilm XF 35mm f/2.0 R WR cũ (5668)",
+  "slug": "fujifilm-xf-35mm-f-20-r-wr-cu-5668",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-35mm-f-20-r-wr-cu-5668",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 31978,
+  "name": "Fujifilm XF 23mm f/2 R WR cũ (6527)",
+  "slug": "fujifilm-xf-23mm-f-2-r-wr-cu-6527",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-23mm-f-2-r-wr-cu-6527",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 31973,
+  "name": "Fujifilm XF 35mm f/2.0 R WR cũ (9439)",
+  "slug": "fujifilm-xf-35mm-f-20-r-wr-cu-9439",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-35mm-f-20-r-wr-cu-9439",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 31968,
+  "name": "Fujifilm XF 35mm f/2.0 R WR cũ (3593)",
+  "slug": "fujifilm-xf-35mm-f-2-0-r-wr-cu-3593",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-35mm-f-2-0-r-wr-cu-3593",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 31942,
+  "name": "Fujifilm X-T30 II cũ (6202)",
+  "slug": "fujifilm-x-t30-ii-cu-6202",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-ii-cu-6202",
+  "prices": {
+   "price": "22500000",
+   "regular_price": "22500000",
+   "sale_price": "22500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31935,
+  "name": "Fujifilm X-T30 II cũ | 2nd (3593)",
+  "slug": "fujifilm-x-t30-ii-cu-2nd-3593",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-ii-cu-2nd-3593",
+  "prices": {
+   "price": "24490000",
+   "regular_price": "24490000",
+   "sale_price": "24490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31933,
+  "name": "Fujifilm X-T20 cũ | 2nd (4226)",
+  "slug": "fujifilm-x-t20-cu-2nd-4226",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-2nd-4226",
+  "prices": {
+   "price": "14500000",
+   "regular_price": "14500000",
+   "sale_price": "14500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31917,
+  "name": "Fujifilm X-T50 cũ (7337)",
+  "slug": "fujifilm-x-t50-cu-7337",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t50-cu-7337",
+  "prices": {
+   "price": "30990000",
+   "regular_price": "30990000",
+   "sale_price": "30990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31763,
+  "name": "Fujifilm X-T50 cũ (5133)",
+  "slug": "fujifilm-x-t50-cu-5133",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t50-cu-5133",
+  "prices": {
+   "price": "30790000",
+   "regular_price": "30790000",
+   "sale_price": "30790000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31724,
+  "name": "Fujifilm X-T30 cũ | 2nd (5552)",
+  "slug": "fujifilm-x-t30-cu-2nd-5552",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-cu-2nd-5552",
+  "prices": {
+   "price": "18000000",
+   "regular_price": "18000000",
+   "sale_price": "18000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31709,
+  "name": "Fujifilm X-S10 cũ | 2nd (8469)",
+  "slug": "fujifilm-x-s10-cu-2nd-8469",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-s10-cu-2nd-8469",
+  "prices": {
+   "price": "24290000",
+   "regular_price": "24290000",
+   "sale_price": "24290000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31661,
+  "name": "7Artisans 35mm F1.4 AF For (FUJIFILM X, Black)",
+  "slug": "7artisans-35mm-f14-af",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/7artisans-35mm-f14-af",
+  "prices": {
+   "price": "3800000",
+   "regular_price": "4000000",
+   "sale_price": "3800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": []
+ },
+ {
+  "id": 31653,
+  "name": "Fujifilm X-S10 cũ | 2nd (9204)",
+  "slug": "fujifilm-x-s10-cu-2nd-9204",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-s10-cu-2nd-9204",
+  "prices": {
+   "price": "24490000",
+   "regular_price": "24490000",
+   "sale_price": "24490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31639,
+  "name": "Fujifilm X-S20 cũ (4397)",
+  "slug": "fujifilm-xs20-cu-4397",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xs20-cu-4397",
+  "prices": {
+   "price": "28500000",
+   "regular_price": "28500000",
+   "sale_price": "28500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31433,
+  "name": "Fujifilm XF 2x TC WR",
+  "slug": "fujifilm-xf-2x-tc-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-2x-tc-wr",
+  "prices": {
+   "price": "12490000",
+   "regular_price": "12490000",
+   "sale_price": "12490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ngam",
+    "name": "Ngàm"
+   }
+  ]
+ },
+ {
+  "id": 31421,
+  "name": "Fujifilm XF 1.4x TC WR",
+  "slug": "fujifilm-xf-14x-tc-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-14x-tc-wr",
+  "prices": {
+   "price": "12490000",
+   "regular_price": "12490000",
+   "sale_price": "12490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ngam",
+    "name": "Ngàm"
+   }
+  ]
+ },
+ {
+  "id": 31360,
+  "name": "Fujifilm XF 8-16mm f/2.8 R LM WR",
+  "slug": "fujifilm-xf-8-16mm-f-28-r-lm-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-8-16mm-f-28-r-lm-wr",
+  "prices": {
+   "price": "49000000",
+   "regular_price": "49000000",
+   "sale_price": "49000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 31377,
+  "name": "Fujifilm XF 50-140mm f/2.8 R LM OIS WR",
+  "slug": "fujifilm-xf-50-140mm-f-28-r-lm-ois-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-50-140mm-f-28-r-lm-ois-wr",
+  "prices": {
+   "price": "33000000",
+   "regular_price": "33000000",
+   "sale_price": "33000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 31342,
+  "name": "Fujifilm XF 18-135mm f/3.5-5.6 R LM OIS WR",
+  "slug": "fujifilm-xf-18-135mm-f-35-56-r-lm-ois-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-18-135mm-f-35-56-r-lm-ois-wr",
+  "prices": {
+   "price": "22000000",
+   "regular_price": "22000000",
+   "sale_price": "22000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 31318,
+  "name": "Fujifilm XF 55-200mm f/3.5-4.8 R LM OIS",
+  "slug": "fujifilm-xf-55-200mm-f-35-48-r-lm-ois",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-55-200mm-f-35-48-r-lm-ois",
+  "prices": {
+   "price": "17000000",
+   "regular_price": "17000000",
+   "sale_price": "17000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 31332,
+  "name": "Fujifilm XF 90mm f/2 R LM WR",
+  "slug": "fujifilm-xf-90mm-f-2-r-lm-wr",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-90mm-f-2-r-lm-wr",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 31311,
+  "name": "Fujifilm XF 80mm f/2.8 R LM OIS WR Macro",
+  "slug": "fujifilm-xf-80mm-f-28-r-lm-ois-wr-macro",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-80mm-f-28-r-lm-ois-wr-macro",
+  "prices": {
+   "price": "27600000",
+   "regular_price": "27600000",
+   "sale_price": "27600000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-fujifilm",
+    "name": "Ống kính Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 31039,
+  "name": "Fujifilm XF 27mm f/2.8 R WR cũ (1597)",
+  "slug": "fujifilm-xf-27mm-f-28-r-wr-cu-1597",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-27mm-f-28-r-wr-cu-1597",
+  "prices": {
+   "price": "9190000",
+   "regular_price": "9190000",
+   "sale_price": "9190000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 31033,
+  "name": "Fujifilm XF 27mm f/2.8 R WR cũ (0169)",
+  "slug": "fujifilm-xf-27mm-f-28-r-wr-cu-0169",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-27mm-f-28-r-wr-cu-0169",
+  "prices": {
+   "price": "8990000",
+   "regular_price": "8990000",
+   "sale_price": "8990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 31026,
+  "name": "Fujifilm X-T30 cũ | 2nd (3125)",
+  "slug": "fujifilm-x-t30-cu-2nd-3125",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-cu-2nd-3125",
+  "prices": {
+   "price": "17990000",
+   "regular_price": "17990000",
+   "sale_price": "17990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31012,
+  "name": "Fujifilm X-T30 cũ | 2nd (7648)",
+  "slug": "fujifilm-x-t30-cu-2nd-7648",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-cu-2nd-7648",
+  "prices": {
+   "price": "18190000",
+   "regular_price": "18190000",
+   "sale_price": "18190000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 31000,
+  "name": "Fujifilm X-T3 cũ | 2nd (0831)",
+  "slug": "fujifilm-x-t3-cu-2nd-0831",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t3-cu-2nd-0831",
+  "prices": {
+   "price": "18790000",
+   "regular_price": "18790000",
+   "sale_price": "18790000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30993,
+  "name": "Fujifilm X-T30 II cũ + Kit XC 15-45mm 2nd (0524/4013)",
+  "slug": "fujifilm-x-t30-ii-cu-kit-xc-15-45mm-0524-4013",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-ii-cu-kit-xc-15-45mm-0524-4013",
+  "prices": {
+   "price": "25990000",
+   "regular_price": "25990000",
+   "sale_price": "25990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30980,
+  "name": "Fujifilm X-E5 cũ | 2nd (4677)",
+  "slug": "fujifilm-x-e5-cu-2nd-4677",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-e5-cu-2nd-4677",
+  "prices": {
+   "price": "31190000",
+   "regular_price": "31190000",
+   "sale_price": "31190000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30861,
+  "name": "Fujifilm X-T20 cũ | 2nd (8647)",
+  "slug": "fujifilm-x-t20-cu-2nd-8647",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-2nd-8647",
+  "prices": {
+   "price": "14600000",
+   "regular_price": "14600000",
+   "sale_price": "14600000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30860,
+  "name": "Fujifilm X-T3 cũ | 2nd (3241)",
+  "slug": "fujifilm-x-t3-cu-2nd-3241",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t3-cu-2nd-3241",
+  "prices": {
+   "price": "18990000",
+   "regular_price": "18990000",
+   "sale_price": "18990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30844,
+  "name": "Fujifilm X-T20 cũ (0368)",
+  "slug": "fujifilm-x-t20-cu-0368",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-0368",
+  "prices": {
+   "price": "15990000",
+   "regular_price": "15990000",
+   "sale_price": "15990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30833,
+  "name": "Fujifilm X-T20 cũ | 2nd (1057)",
+  "slug": "fujifilm-x-t20-cu-2nd-1057",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-2nd-1057",
+  "prices": {
+   "price": "14490000",
+   "regular_price": "14490000",
+   "sale_price": "14490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30820,
+  "name": "Fujifilm XF 23mm f/2 R WR cũ (8405)",
+  "slug": "fujifilm-xf-23mm-f-2-r-wr-cu-8405",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-23mm-f-2-r-wr-cu-8405",
+  "prices": {
+   "price": "6990000",
+   "regular_price": "6990000",
+   "sale_price": "6990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 30812,
+  "name": "Fujifilm X-T1 cũ (4302)",
+  "slug": "fujifilm-x-t1-cu-4302",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t1-cu-4302",
+  "prices": {
+   "price": "6900000",
+   "regular_price": "6900000",
+   "sale_price": "6900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30803,
+  "name": "Fujifilm XF 35mm f/2.0 R WR cũ (2245)",
+  "slug": "fujifilm-xf-35mm-f-20-r-wr-cu-2245",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-35mm-f-20-r-wr-cu-2245",
+  "prices": {
+   "price": "6990000",
+   "regular_price": "6990000",
+   "sale_price": "6990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 30180,
+  "name": "Fujifilm X-T3 cũ | 2nd (5412)",
+  "slug": "fujifilm-x-t3-cu-2nd-5412",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t3-cu-2nd-5412",
+  "prices": {
+   "price": "18990000",
+   "regular_price": "18990000",
+   "sale_price": "18990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30172,
+  "name": "Fujifilm X-T20 cũ | 2nd (3579)",
+  "slug": "fujifilm-x-t20-cu-2nd-3579",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t20-cu-2nd-3579",
+  "prices": {
+   "price": "14500000",
+   "regular_price": "14500000",
+   "sale_price": "14500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30099,
+  "name": "Fujifilm XF 33mm f/1.4 R LM WR cũ (6120)",
+  "slug": "fujifilm-xf-33mm-f-1-4-r-lm-wr-cu-6120",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-33mm-f-1-4-r-lm-wr-cu-6120",
+  "prices": {
+   "price": "15190000",
+   "regular_price": "15190000",
+   "sale_price": "15190000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 30077,
+  "name": "Fujifilm XF 18-55mm f/2.8-4 R LM OIS | 2nd (7090)",
+  "slug": "fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-7090",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-7090",
+  "prices": {
+   "price": "8190000",
+   "regular_price": "8190000",
+   "sale_price": "8190000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 30061,
+  "name": "Fujifilm X-S10 cũ | 2nd (5873)",
+  "slug": "fujifilm-xs10-cu-2nd-5873",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xs10-cu-2nd-5873",
+  "prices": {
+   "price": "22990000",
+   "regular_price": "22990000",
+   "sale_price": "22990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30054,
+  "name": "Fujifilm X-T30 II cũ | 2nd (8101)",
+  "slug": "fujifilm-x-t30-ii-cu-2nd-8101",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-ii-cu-2nd-8101",
+  "prices": {
+   "price": "24490000",
+   "regular_price": "24490000",
+   "sale_price": "24490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30045,
+  "name": "Fujifilm X-S10 cũ | 2nd (5951)",
+  "slug": "fujifilm-x-s10-cu-2nd-5951",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-s10-cu-2nd-5951",
+  "prices": {
+   "price": "24490000",
+   "regular_price": "24490000",
+   "sale_price": "24490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 30039,
+  "name": "Fujifilm XS20 cũ (1408)",
+  "slug": "fujifilm-xs20-cu-1408",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xs20-cu-1408",
+  "prices": {
+   "price": "29490000",
+   "regular_price": "29490000",
+   "sale_price": "29490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29976,
+  "name": "Fujifilm X-M5 cũ + Kit 15-45mm (4382+7679)",
+  "slug": "fujifilm-x-m5-cu-kit-15-45mm-4382-7679",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-m5-cu-kit-15-45mm-4382-7679",
+  "prices": {
+   "price": "24990000",
+   "regular_price": "24990000",
+   "sale_price": "24990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29963,
+  "name": "Fujifilm X-M5 cũ + Kit 15-45mm (7961+8698)",
+  "slug": "fujifilm-x-m5-cu-kit-15-45mm-7961-8698",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-m5-cu-kit-15-45mm-7961-8698",
+  "prices": {
+   "price": "24490000",
+   "regular_price": "24490000",
+   "sale_price": "24490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29879,
+  "name": "Fujifilm XF 23mm f/2 R WR cũ (5555)",
+  "slug": "fujifilm-xf-23mm-f-2-r-wr-cu-5555",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-23mm-f-2-r-wr-cu-5555",
+  "prices": {
+   "price": "6790000",
+   "regular_price": "6790000",
+   "sale_price": "6790000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 29866,
+  "name": "Fujifilm XC 15-45mm f3.5-5.6 OIS PZ cũ (7918)",
+  "slug": "fujifilm-xc-15-45mm-f35-56-ois-pz-cu-7918",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xc-15-45mm-f35-56-ois-pz-cu-7918",
+  "prices": {
+   "price": "2800000",
+   "regular_price": "2800000",
+   "sale_price": "2800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 29859,
+  "name": "Fujifilm XC 35mm f/2 cũ (7373)",
+  "slug": "fujifilm-xc-35mm-f-2-cu-7373",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xc-35mm-f-2-cu-7373",
+  "prices": {
+   "price": "4500000",
+   "regular_price": "4500000",
+   "sale_price": "4500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 29840,
+  "name": "Fujifilm XF 18-55mm f/2.8-4 R LM OIS | 2nd (6956)",
+  "slug": "fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-6956",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-6956",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 29835,
+  "name": "Fujifilm XF 18-55mm f/2.8-4 R LM OIS | 2nd (0826)",
+  "slug": "fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-0826",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-0826",
+  "prices": {
+   "price": "7490000",
+   "regular_price": "7490000",
+   "sale_price": "7490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 29831,
+  "name": "Fujifilm XF 18-55mm f/2.8-4 R LM OIS | 2nd (4341)",
+  "slug": "fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-4341",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-2nd-4341",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-cu",
+    "name": "Ống kính cũ"
+   }
+  ]
+ },
+ {
+  "id": 29817,
+  "name": "Fujifilm X-T2 cũ | 2nd (0090)",
+  "slug": "fujifilm-x-t2-cu-2nd-0090",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t2-cu-2nd-0090",
+  "prices": {
+   "price": "14500000",
+   "regular_price": "14500000",
+   "sale_price": "14500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29809,
+  "name": "Fujifilm XS20 cũ (0984)",
+  "slug": "fujifilm-xs20-cu-0984",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-xs20-cu-0984",
+  "prices": {
+   "price": "29490000",
+   "regular_price": "29490000",
+   "sale_price": "29490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29797,
+  "name": "Fujifilm X-S10 cũ | 2nd (8519)",
+  "slug": "fujifilm-x-s10-cu-2nd-8519",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-s10-cu-2nd-8519",
+  "prices": {
+   "price": "24490000",
+   "regular_price": "24490000",
+   "sale_price": "24490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29781,
+  "name": "Fujifilm X-T30 cũ | 2nd (5968)",
+  "slug": "fujifilm-x-t30-cu-2nd-5968",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-cu-2nd-5968",
+  "prices": {
+   "price": "17990000",
+   "regular_price": "17990000",
+   "sale_price": "17990000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29772,
+  "name": "Fujifilm X-T30 cũ | 2nd (1561)",
+  "slug": "fujifilm-x-t30-cu-2nd-1561",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-cu-2nd-1561",
+  "prices": {
+   "price": "18490000",
+   "regular_price": "18490000",
+   "sale_price": "18490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29763,
+  "name": "Fujifilm X-T30 II cũ | 2nd (8116)",
+  "slug": "fujifilm-x-t30-ii-cu-2nd-8116",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-ii-cu-2nd-8116",
+  "prices": {
+   "price": "23490000",
+   "regular_price": "23490000",
+   "sale_price": "23490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29756,
+  "name": "Fujifilm X-T30 II cũ | 2nd (5621)",
+  "slug": "fujifilm-x-t30-ii-cu-2nd-5621",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-ii-cu-2nd-5621",
+  "prices": {
+   "price": "23490000",
+   "regular_price": "23490000",
+   "sale_price": "23490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29705,
+  "name": "Fujifilm X-A3 cũ + Kit 16-50mm cũ (4689/4818)",
+  "slug": "fujifilm-x-a3-cu-kit-16-50mm-cu-4689-4818",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-a3-cu-kit-16-50mm-cu-4689-4818",
+  "prices": {
+   "price": "8500000",
+   "regular_price": "8500000",
+   "sale_price": "8500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29697,
+  "name": "Fujifilm X-T10 cũ + Kit 16-50mm (7564/7038)",
+  "slug": "fujifilm-x-t10-cu-kit-16-50mm-7564-7038",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t10-cu-kit-16-50mm-7564-7038",
+  "prices": {
+   "price": "12500000",
+   "regular_price": "12500000",
+   "sale_price": "12500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-cu",
+    "name": "Máy ảnh cũ"
+   }
+  ]
+ },
+ {
+  "id": 29516,
+  "name": "Meike AF 33mm f/1.4 for FUJIFILM X",
+  "slug": "meike-af-33mm-f-14-for-fujifilm-x",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/meike-af-33mm-f-14-for-fujifilm-x",
+  "prices": {
+   "price": "5300000",
+   "regular_price": "5300000",
+   "sale_price": "5300000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-meike",
+    "name": "Ống kính Meike"
+   }
+  ]
+ },
+ {
+  "id": 29431,
+  "name": "Case Fujifilm X100VI Da Thật",
+  "slug": "case-fujifilm-x100vi",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/case-fujifilm-x100vi",
+  "prices": {
+   "price": "1690000",
+   "regular_price": "1690000",
+   "sale_price": "1690000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "case-op-may-anh",
+    "name": "Case, Ốp Máy ảnh"
+   }
+  ]
+ },
+ {
+  "id": 29365,
+  "name": "Fujifilm X-T30 III",
+  "slug": "fujifilm-x-t30-iii",
+  "type": "variable",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-iii",
+  "prices": {
+   "price": "25490000",
+   "regular_price": "28000000",
+   "sale_price": "25490000",
+   "price_range": {
+    "min_amount": "25490000",
+    "max_amount": "29490000"
+   },
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "may-anh-fujifilm",
+    "name": "Máy ảnh Fujifilm"
+   }
+  ]
+ },
+ {
+  "id": 29366,
+  "name": "Case Fujifilm X-S20 Da Thật",
+  "slug": "case-fujifilm-x-s20-da-that",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/case-fujifilm-x-s20-da-that",
+  "prices": {
+   "price": "1690000",
+   "regular_price": "1690000",
+   "sale_price": "1690000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "case-op-may-anh",
+    "name": "Case, Ốp Máy ảnh"
+   }
+  ]
+ },
+ {
+  "id": 29386,
+  "name": "Case Fujifilm X-M5 Da Thật",
+  "slug": "case-fujifilm-x-m5-da-that",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/case-fujifilm-x-m5-da-that",
+  "prices": {
+   "price": "1690000",
+   "regular_price": "1690000",
+   "sale_price": "1690000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "categories": [
+   {
+    "slug": "case-op-may-anh",
+    "name": "Case, Ốp Máy ảnh"
+   }
+  ]
+ }
+]

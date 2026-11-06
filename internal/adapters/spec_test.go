@@ -29,7 +29,7 @@ func loadSnapshot(t *testing.T, rel string) []Offer {
 }
 
 func TestRegistry(t *testing.T) {
-	if got := Shops(); !slices.Equal(got, []string{"vjshop", "xspace"}) {
+	if got := Shops(); !slices.Contains(got, "vjshop") || !slices.Contains(got, "xspace") || !slices.IsSorted(got) {
 		t.Errorf("Shops() = %v", got)
 	}
 	if a := ForShop("unknown-shop"); a.Name() != "unknown-shop" {

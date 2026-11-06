@@ -1,0 +1,35 @@
+[
+ {
+  "id": 41588,
+  "name": "Tamron 16-50mm F2.8 A For Fujifilm X",
+  "slug": "tamron-16-50mm-f2-8-a-for-fujifilm-x",
+  "type": "simple",
+  "permalink": "https://bncamera.com/san-pham/tamron-16-50mm-f2-8-a-for-fujifilm-x",
+  "prices": {
+   "price": "14200000",
+   "regular_price": "14200000",
+   "sale_price": "14200000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": true,
+  "stock_availability": {
+   "text": "Cho phép đặt hàng trước",
+   "class": "available-on-backorder"
+  },
+  "categories": [
+   {
+    "slug": "ong-kinh-tamron",
+    "name": "Ống kính Tamron"
+   }
+  ]
+ }
+]
