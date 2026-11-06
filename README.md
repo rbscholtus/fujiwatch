@@ -218,16 +218,16 @@ type Adapter interface {
 
 **Per-shop notes**
 
-- **fujifilm-xspace (Haravan):** product pages expose `og:price:amount` (e.g. `27490000`) and `og:price:currency` = `VND`. Stock text on the page is "Còn hàng" (in stock) or "Hết hàng" (out of stock). Haravan, like Shopify, usually also serves product JSON at `/products/<handle>.js`. Verify that and prefer it if it works.
-- **vjshop (Next.js):** the price is not in the visible server-rendered text. Look for `<script id="__NEXT_DATA__" type="application/json">` and walk the JSON for the price and variant fields. The site has a used-goods section ("Đồ cũ chất", `/do-cu-chat`). Product URLs carry the variant (e.g. `...-silver-chinh-hang`), while the canonical URL drops it.
+- **fujifilm-xspace (Haravan):** product pages expose `og:price:amount` (e.g. `27490000`) and `og:price:currency` = `VND`. Stock text is in `.checkProduct`: "Còn hàng" (in stock) or "Hết hàng" (out of stock); related-product cards elsewhere on the page also say "Hết hàng", so don't search the whole page. Product JSON at `/products/<handle>.js` works (verified) and is preferred: prices are in VND × 100, with `available` per variant. `/search` is disallowed in `robots.txt`.
+- **vjshop (Next.js):** the price is not in the visible server-rendered text. Listing pages embed the product list in `<script id="__NEXT_DATA__" type="application/json">` at `props.pageProps.products` (`core.name`, `core.slug`, `real_price`, `core.status.raw`, `core.product_category.slug`). Product pages are rendered client-side and carry **no** product data, so product mode fetches `https://api.vjshop.vn/api/products/<slug>` instead; that response has no `real_price`, only `prices.{default,sale,flashsale}` with priorities and optional `from`/`to` windows (Vietnam time), so the adapter picks the highest-priority price active now. The site has a used-goods section ("Đồ cũ chất", `/do-cu-chat`); `robots.txt` disallows `/may-anh-cu` and `/ong-kinh-cu`, so don't watch those. Product URLs carry the variant (e.g. `...-silver-chinh-hang`). Unknown slugs return HTTP 200 with an empty page, so a wrong URL shows up as `adapter_broken`, not as a 404.
 - **kyma:** the search page is server-rendered, but its search is picky; a query like `XF 18-55mm f/2.8-4` returned 0 results. Watch category pages (e.g. `/ong-kinh-fujifilm`, `/may-anh-fujifilm`) or exact product URLs instead of search.
 - **WooCommerce shops (bncamera, x-camera, probably mayanhhoangto):** try the Store API first: `GET /wp-json/wc/store/v1/products?search=<term>` returns clean JSON with prices (in minor units; check `currency_minor_unit`). It is often enabled by default. Fall back to HTML: `.product .price .woocommerce-Price-amount`.
 - **zshop, mayanh24h, giangduydat:** inspect them, save a snapshot into `testdata/`, then write the adapter.
 
 **Workflow for adding a shop**
 
-1. `go run ./cmd/fujiwatch snapshot <url>` saves `testdata/<shop>/<slug>.html`.
-2. Write the adapter, plus a golden test asserting the extracted offers from the snapshot.
+1. `go run ./cmd/fujiwatch snapshot <url>` saves `testdata/<shop>/<slug>.html` (or `.json` when the adapter fetches a JSON endpoint) plus `<slug>.meta.json` (page URL, fetch URL, mode, fetch time).
+2. Write the adapter. `go test ./internal/adapters -update` writes `<slug>.golden.json` for every snapshot; review it, commit it, and add explicit assertions for the important fields.
 3. Add the entry to `sources.yaml`.
 
 ---

@@ -18,10 +18,21 @@ sources:
     product: xf10-24-ii
     url: https://fujifilm-xspace.vn/products/fujinon-xf10-24mmf4-r-ois-wr-ii
 
+  # vjshop: robots.txt disallows /may-anh-cu and /ong-kinh-cu, so used gear
+  # is watched through "Đồ cũ chất" (/do-cu-chat) only.
   - shop: vjshop
     mode: listing
     condition: used
-    url: https://vjshop.vn/do-cu-chat        # refine to the camera/lens subcategory
+    url: https://vjshop.vn/do-cu-chat
+
+  - shop: vjshop
+    mode: listing
+    url: https://vjshop.vn/may-anh-fujifilm   # new Fujifilm bodies (page 1 of 3, 36 per page)
+
+  - shop: vjshop
+    mode: product
+    product: x-t5
+    url: https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang
 
   - shop: mayanhhoangto
     mode: listing
