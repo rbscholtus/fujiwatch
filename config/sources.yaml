@@ -16,6 +16,13 @@ defaults:
   min_drop_pct: 0
   min_drop_vnd: 0
 
+notify:
+  # always:  email a digest every run.
+  # changes: email only when there are events, plus an "all OK" heartbeat
+  #          on the heartbeat weekday (Vietnam time).
+  email: always
+  heartbeat: sunday
+
 sources:
   - shop: xspace
     mode: product

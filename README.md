@@ -301,9 +301,12 @@ Notifier interface:
 
 ```go
 type Notifier interface {
-    Send(ctx context.Context, subject string, events []diff.Event) error
+    Name() string
+    Send(ctx context.Context, msg *notify.Message) error
 }
 ```
+
+`Message` carries the subject, the events, the best-price table, source health and unmatched offers, built from the run report and the updated state. Notifiers are enabled by their environment variables (repository secrets, or a local `.env`; see `.env.example`). A notifier with only some of its variables set is skipped with a warning. Notification failures never fail the run (the data must still be committed); they are printed as warnings, and as `::warning::` annotations on GitHub Actions.
 
 **WhatsApp via CallMeBot (instant, important events only: `price_drop`, `back_in_stock`, `new_listing`)**
 
@@ -315,7 +318,8 @@ type Notifier interface {
 
 - Gmail SMTP: `smtp.gmail.com:587` with STARTTLS. Requires 2-Step Verification and an **app password** (Google Account → Security → App passwords).
 - Contents: events at the top, then a table of the current best price per product (new vs used), unmatched/ambiguous offers, and adapter health.
-- Option: send the email only when there are events or failures, plus a weekly "all OK" heartbeat.
+- Option (`notify:` in `sources.yaml`): `email: changes` sends the email only when there are events or failures, plus a weekly "all OK" heartbeat on `heartbeat: <weekday>` (Vietnam time). Default `email: always`.
+- Optional variables: `MAIL_FROM` (default `SMTP_USER`), `SMTP_ADDR` (default `smtp.gmail.com:587`). `MAIL_TO` may list several addresses, comma-separated. The password is only sent after STARTTLS.
 
 **Instagram:** not supported. There is no practical API for a bot to DM a personal account.
 

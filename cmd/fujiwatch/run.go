@@ -5,12 +5,15 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"os"
 	"os/signal"
 	"path/filepath"
 	"syscall"
 	"time"
 
+	"github.com/rbscholtus/fujiwatch/internal/config"
 	"github.com/rbscholtus/fujiwatch/internal/fetch"
+	"github.com/rbscholtus/fujiwatch/internal/notify"
 	"github.com/rbscholtus/fujiwatch/internal/runner"
 	"github.com/rbscholtus/fujiwatch/internal/state"
 )
@@ -45,6 +48,9 @@ func cmdRun(args []string, stdout, stderr io.Writer) int {
 		return exitUsage
 	}
 
+	if err := loadDotEnv(".env"); err != nil {
+		return errorf(stderr, "%v", err)
+	}
 	cfg, err := loadConfig(rf.cfgDir)
 	if err != nil {
 		return errorf(stderr, "%v", err)
@@ -86,5 +92,55 @@ func cmdRun(args []string, stdout, stderr io.Writer) int {
 	if err := st.Save(statePath); err != nil {
 		return errorf(stderr, "%v", err)
 	}
+
+	if !rf.noNotify {
+		sendNotifications(ctx, cfg, rep, st, stderr)
+	}
 	return exitOK
+}
+
+// notifierFactory builds notifiers from the environment; tests replace it.
+var notifierFactory = func() (email, whatsapp notify.Notifier, problems []string) {
+	e, w, problems := notify.FromEnv(os.Getenv)
+	if e != nil {
+		email = e
+	}
+	if w != nil {
+		whatsapp = w
+	}
+	return email, whatsapp, problems
+}
+
+// sendNotifications delivers the run's results. Failures are warnings, not
+// errors: the run's state must still be committed by CI.
+func sendNotifications(ctx context.Context, cfg *config.Config, rep *runner.Report, st *state.State, stderr io.Writer) {
+	email, whatsapp, problems := notifierFactory()
+	for _, p := range problems {
+		warn(stderr, p)
+	}
+	msg := notify.BuildMessage(cfg, rep, st)
+
+	if whatsapp != nil {
+		if err := whatsapp.Send(ctx, msg); err != nil {
+			warn(stderr, err.Error())
+		}
+	}
+	switch {
+	case email == nil:
+	case !notify.ShouldEmail(cfg.Sources.Notify, rep.Events, rep.Time):
+		_, _ = fmt.Fprintln(stderr, "email: no changes, not sending (notify.email: changes)")
+	default:
+		if err := email.Send(ctx, msg); err != nil {
+			warn(stderr, err.Error())
+		}
+	}
+}
+
+// warn prints a warning, as a GitHub Actions annotation when running there.
+func warn(w io.Writer, msg string) {
+	if os.Getenv("GITHUB_ACTIONS") == "true" {
+		_, _ = fmt.Fprintf(w, "::warning::%s\n", msg)
+		return
+	}
+	_, _ = fmt.Fprintf(w, "fujiwatch: warning: %s\n", msg)
 }

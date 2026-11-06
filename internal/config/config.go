@@ -11,6 +11,7 @@ import (
 	"os"
 	"regexp"
 	"slices"
+	"strings"
 	"time"
 
 	"gopkg.in/yaml.v3"
@@ -89,9 +90,24 @@ type Source struct {
 	URL       string `yaml:"url"`
 }
 
+// Email policies.
+const (
+	EmailAlways  = "always"
+	EmailChanges = "changes"
+)
+
+// Notify configures notifications. Credentials come from the environment.
+type Notify struct {
+	// Email is "always" (default: a digest every run) or "changes" (only
+	// when there are events, plus a heartbeat on the Heartbeat weekday).
+	Email     string `yaml:"email"`
+	Heartbeat string `yaml:"heartbeat"` // e.g. "sunday" (Vietnam time)
+}
+
 // Sources is the parsed sources.yaml.
 type Sources struct {
 	Defaults Defaults `yaml:"defaults"`
+	Notify   Notify   `yaml:"notify"`
 	Sources  []Source `yaml:"sources"`
 }
 
@@ -130,6 +146,12 @@ func (c *Config) ProductByID(id string) (Product, bool) {
 func (c *Config) Validate() error {
 	var errs []error
 	errs = append(errs, c.Watchlist.validate()...)
+	if n := c.Sources.Notify; n.Email != "" && n.Email != EmailAlways && n.Email != EmailChanges {
+		errs = append(errs, fmt.Errorf("notify: email must be %q or %q, got %q", EmailAlways, EmailChanges, n.Email))
+	}
+	if h := c.Sources.Notify.Heartbeat; h != "" && !isWeekday(h) {
+		errs = append(errs, fmt.Errorf("notify: heartbeat must be a weekday name, got %q", h))
+	}
 	if d := c.Sources.Defaults; d.MinDropPct < 0 || d.MinDropPct >= 100 || d.MinDropVND < 0 {
 		errs = append(errs, fmt.Errorf("defaults: min_drop_pct must be in [0, 100) and min_drop_vnd ≥ 0"))
 	}
@@ -215,4 +237,13 @@ func decodeFile(path string, v any) error {
 		return fmt.Errorf("parse %s: %w", path, err)
 	}
 	return nil
+}
+
+func isWeekday(s string) bool {
+	for d := time.Sunday; d <= time.Saturday; d++ {
+		if strings.EqualFold(d.String(), s) {
+			return true
+		}
+	}
+	return false
 }
