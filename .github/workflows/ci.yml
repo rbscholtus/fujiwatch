@@ -31,3 +31,16 @@ jobs:
       - uses: golangci/golangci-lint-action@v9
         with:
           version: v2.15
+
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Build site
+        working-directory: site
+        run: npm ci && npm run build

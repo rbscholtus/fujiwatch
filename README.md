@@ -337,6 +337,7 @@ fujiwatch run [--dry-run] [--only <shop>] [--no-notify]
 fujiwatch snapshot <url>                 # save HTML to testdata/
 fujiwatch extract <shop> <file.html>     # run one adapter on a saved file, print offers
 fujiwatch match "<title>"                # show which product a title matches, and why
+fujiwatch sitedata                       # build the history site's JSON from data/
 ```
 
 `--dry-run` fetches and diffs but does not write state or send notifications. Use it locally all the time.
@@ -365,14 +366,18 @@ Actions are pinned to their current major versions (`actions/checkout@v7`, `acti
 
 ## 11. Price-history site (`site/`)
 
-- Svelte + Vite, built to static files.
-- At build time, a small script (or a Vite plugin) reads `../data/history/*.jsonl` and emits `public/data/<product-id>.json`, aggregated per day and shop, with new and used as separate series.
+- Svelte 5 + Vite, built to static files in `site/dist`.
+- At build time, `fujiwatch sitedata` (Go) reads `data/history/*.jsonl` and `data/state.json` and writes `site/public/data/`:
+  - `index.json`: every watched product (watchlist order) with its current offers (cheapest first) and its best new and best used price (in stock or unknown stock, price shown);
+  - `<product-id>.json`: one series per shop and condition (new and used separate), one point per **Vietnam** day at that day's lowest price, with the listing URL. Days where the price was hidden are left out.
 - One page:
-  - a product selector
-  - a line chart per product, one line per shop, with markers for used listings
-  - a table of current best prices with links to the shop pages
-- Charting: a small library such as Chart.js or uPlot, or hand-rolled SVG. Keep the bundle small.
-- No backend and no runtime API calls. Everything is baked in at build time.
+  - a product selector (the selection is kept in the URL hash, e.g. `#x-t5`)
+  - a line chart per product, one line per shop; used listings are dashed with open markers; hover shows the prices of a day; legend entries toggle series
+  - a new / used / all filter
+  - a table of current offers with links to the shop pages
+- Charting: hand-rolled SVG, no chart library (≈ 19 kB gzipped JS in total). Light and dark mode; works at phone width.
+- No backend and no API calls: the page only loads the JSON files that were generated next to it at build time.
+- Local preview: `go run ./cmd/fujiwatch sitedata && cd site && npm install && npm run dev`.
 
 ---
 
@@ -400,6 +405,7 @@ go run ./cmd/fujiwatch match "Ống kính Fujinon XF10-24mm F4 R OIS WR II"
 go run ./cmd/fujiwatch run --dry-run
 
 # site
+go run ./cmd/fujiwatch sitedata          # data/ → site/public/data/
 cd site && npm install && npm run dev
 ```
 

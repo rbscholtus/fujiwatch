@@ -15,7 +15,8 @@ const usage = `usage:
   fujiwatch run [--config <dir>] [--data <dir>] [--dry-run] [--only <shop>] [--no-notify]
   fujiwatch snapshot [--config <dir>] [--out <dir>] [--shop <shop>] [--mode product|listing] [--no-rewrite] <url>
   fujiwatch extract [--config <dir>] [--url <page-url>] <shop> <file>
-  fujiwatch match [--config <dir>] "<title>" [url]`
+  fujiwatch match [--config <dir>] "<title>" [url]
+  fujiwatch sitedata [--config <dir>] [--data <dir>] [--out <dir>]`
 
 // Exit codes.
 const (
@@ -41,6 +42,8 @@ func run(args []string, stdout, stderr io.Writer) int {
 		return cmdSnapshot(args[1:], stdout, stderr)
 	case "extract":
 		return cmdExtract(args[1:], stdout, stderr)
+	case "sitedata":
+		return cmdSiteData(args[1:], stdout, stderr)
 	case "run":
 		return cmdRun(args[1:], stdout, stderr)
 	case "-h", "--help", "help":
