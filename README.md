@@ -340,65 +340,12 @@ fujiwatch match "<title>"                # show which product a title matches, a
 
 ## 10. GitHub Actions
 
-`.github/workflows/watch.yml`:
+Two workflows:
 
-```yaml
-name: watch
-on:
-  schedule:
-    - cron: "17 23 * * *"     # 06:17 Asia/Saigon (cron is UTC); off-the-hour to avoid queue delays
-  workflow_dispatch: {}        # manual "Run workflow" button
+- [`.github/workflows/watch.yml`](.github/workflows/watch.yml): the daily run. `cron: "17 23 * * *"` is 06:17 Asia/Saigon (cron is UTC), off the hour to avoid queue delays, plus a manual **Run workflow** button with optional `dry_run` and `only` inputs. The `scrape` job runs `go test ./...`, then `fujiwatch run`, then commits `data/` as `data: <date> [skip ci]` (only when it changed). The `site` job builds and deploys the history site (§11).
+- [`.github/workflows/ci.yml`](.github/workflows/ci.yml): `go vet`, `go test -race` and `golangci-lint` on pushes and pull requests (data-only commits are ignored).
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: watch
-  cancel-in-progress: false
-
-jobs:
-  scrape:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
-        with: { go-version-file: go.mod }
-      - run: go test ./...
-      - run: go run ./cmd/fujiwatch run
-        env:
-          CALLMEBOT_PHONE:  ${{ secrets.CALLMEBOT_PHONE }}
-          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
-          SMTP_USER:        ${{ secrets.SMTP_USER }}
-          SMTP_PASS:        ${{ secrets.SMTP_PASS }}
-          MAIL_TO:          ${{ secrets.MAIL_TO }}
-      - name: Commit data
-        run: |
-          git config user.name  "fujiwatch-bot"
-          git config user.email "fujiwatch-bot@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "data: $(date -u +%F) [skip ci]"
-          git push
-
-  site:
-    needs: scrape
-    runs-on: ubuntu-latest
-    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
-    steps:
-      - uses: actions/checkout@v4
-        with: { ref: main }    # pick up the data commit
-      - uses: actions/setup-node@v4
-        with: { node-version: 22 }
-      - run: npm ci && npm run build
-        working-directory: site
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: site/dist }
-      - id: deploy
-        uses: actions/deploy-pages@v4
-```
-
-Check the action versions against the GitHub Marketplace when setting this up; they may have newer major versions.
+Actions are pinned to their current major versions (`actions/checkout@v7`, `actions/setup-go@v7`, …); bump them when GitHub releases new majors. `cmd/fujiwatch/workflow_test.go` checks the workflows against this section and executes their shell steps.
 
 **Secrets** (repository → Settings → Secrets and variables → Actions): `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY`, `SMTP_USER`, `SMTP_PASS`, `MAIL_TO`.
 
