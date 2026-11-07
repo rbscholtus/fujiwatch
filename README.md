@@ -436,6 +436,6 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 
 - [ ] Collect the real product, category and used-section URLs per shop for the watched items.
 - [x] Repo visibility: **public** (GitHub Pages works on the free plan).
-- [ ] Decide the price-drop alert threshold.
 - [x] Verify the platform per shop (§1).
-- [ ] Decide whether body-only products should exclude kits ("X-T5 + Lens XF 16-50mm"); today a kit matches the body and its higher price is mixed into the body's history.
+- [x] Body-only products exclude kits ("X-T5 + Lens XF 16-50mm"), so kit prices don't mix into the body's history (`kit_excludes` in `config/watchlist.yaml`).
+- [x] Price-drop threshold: alert on every drop (`min_drop_pct: 0`, `min_drop_vnd: 0`).
