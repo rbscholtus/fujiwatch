@@ -93,3 +93,7 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 - [ ] Set target prices (`target_vnd`, `target_used_vnd`) per product.
 - [ ] vjshop: add the Tamron 16-50mm (X) product page once vjshop lists it.
 - [ ] vjshop: recheck the XF18-55 (product 4898). It is out of stock; its listing shows 8.890.000₫, but the product API has only `default: 0`, so the listing price may be stale.
+
+## License
+
+BSD 3-Clause; see [LICENSE](LICENSE).
