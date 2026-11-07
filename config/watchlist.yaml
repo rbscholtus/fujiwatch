@@ -61,6 +61,22 @@ products:
     patterns: ['(^|\D)10-24(\D|$)']
     exclude: ['\bwr\b', '\bii\b', 'mark ?ii', '\bx-(t|s|h|e|m|a|pro)\d']
 
+  # The 2025 "WR II" is a different lens at a different price.
+  - id: xf16-55
+    name: "XF16-55mm F2.8 R LM WR (I)"
+    kind: lens
+    patterns: ['(^|\D)16-55(\D|$)']
+    require_any: ['\bxf ?16-55', 'fujinon', 'fuji']
+    exclude: ['\bii\b', 'mark ?ii', '\bx-(t|s|h|e|m|a|pro)\d']
+
+  - id: xf16-55-ii
+    name: "XF16-55mm F2.8 R LM WR II"
+    kind: lens
+    patterns: ['(^|\D)16-55(\D|$)']
+    require_any: ['\bxf ?16-55', 'fujinon', 'fuji']
+    require_all: ['\bii\b|mark ?ii']
+    exclude: *body
+
   - id: tamron-16-50
     name: "Tamron 16-50mm F2.8 Di III VXD (X)"
     kind: lens

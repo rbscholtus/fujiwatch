@@ -72,10 +72,34 @@ sources:
     mode: listing
     url: https://vjshop.vn/khuyen-mai?brands=3,11,12
 
+  # Product pages. vjshop links them under a category path
+  # (/ong-kinh-mirrorless/<slug>), but listings report https://vjshop.vn/<slug>;
+  # use that form so both identify the same offer.
   - shop: vjshop
     mode: product
     product: x-t5
     url: https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang
+
+  - shop: vjshop
+    mode: product
+    product: xf10-24-ii
+    url: https://vjshop.vn/ong-kinh-fujifilm-xf-10-24mm-f4-r-ois-wr-chinh-hang
+
+  # /xf-18-55mm-f28-4-r-lm-ois-chinh-hang is an alias of the same product.
+  - shop: vjshop
+    mode: product
+    product: xf18-55
+    url: https://vjshop.vn/fujifilm-xf-18-55mm-f28-4-r-lm-ois-chinh-hang
+
+  - shop: vjshop
+    mode: product
+    product: xf16-55
+    url: https://vjshop.vn/fujifilm-xf-16-55mm-f28-r-lm-wr-chinh-hang
+
+  - shop: vjshop
+    mode: product
+    product: xf16-55-ii
+    url: https://vjshop.vn/fujifilm-xf16-55mm-f2-8-r-lm-wr-ii
 
   # ── WooCommerce shops: category, search and product URLs are rewritten
   #    to the Store API (/wp-json/wc/store/v1/products) by the adapter.
