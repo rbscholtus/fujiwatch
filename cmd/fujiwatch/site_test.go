@@ -1,6 +1,6 @@
 package main
 
-// Spec tests for README §11 (history site) and the site job of README §10.
+// Spec tests for docs/architecture.md, Price-history site, and the site job in docs/usage.md, GitHub Actions.
 
 import (
 	"bytes"
@@ -59,7 +59,7 @@ func TestSiteDataCommand(t *testing.T) {
 	}
 }
 
-// README §11: Svelte + Vite, static build, small and without a chart library.
+// docs/architecture.md, Price-history site: Svelte + Vite, static build, small and without a chart library.
 func TestSiteProject(t *testing.T) {
 	var pkg struct {
 		Scripts         map[string]string `json:"scripts"`

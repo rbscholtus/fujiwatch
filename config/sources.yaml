@@ -1,4 +1,4 @@
-# Pages to watch. See README §4.
+# Pages to watch. See docs/usage.md, Configuration.
 #
 # mode: product  — one fixed product page; `product` must be a watchlist ID.
 # mode: listing  — category / search / used page; every title goes through

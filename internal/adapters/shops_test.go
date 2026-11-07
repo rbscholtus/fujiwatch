@@ -1,6 +1,6 @@
 package adapters
 
-// Spec tests for milestone 6 (README §1 shops, §5 per-shop notes): the
+// Spec tests for milestone 6 (README shops table, docs/shops.md): the
 // WooCommerce Store API shops and the selector-based shops.
 
 import (
@@ -15,7 +15,7 @@ import (
 	"github.com/rbscholtus/fujiwatch/internal/match"
 )
 
-// Every shop in README §1 has a dedicated adapter and at least one
+// Every shop in the README shops table has a dedicated adapter and at least one
 // snapshot with a golden file, and every shop in sources.yaml is covered.
 func TestAllShopsCovered(t *testing.T) {
 	readmeShops := []string{"xspace", "vjshop", "kyma", "zshop", "mayanhhoangto", "bncamera", "mayanh24h", "x-camera", "giangduydat"}

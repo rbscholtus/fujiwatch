@@ -1,6 +1,6 @@
 package notify
 
-// Spec tests for README §8 (notifications).
+// Spec tests for docs/usage.md, Notifications.
 
 import (
 	"bufio"
@@ -83,7 +83,7 @@ func TestSubject(t *testing.T) {
 	}
 }
 
-// README §8: "a table of the current best price per product (new vs used)".
+// docs/usage.md, Notifications: "a table of the current best price per product (new vs used)".
 func TestBestPrices(t *testing.T) {
 	st := state.New()
 	add := func(url, product, cond string, p int64, stock *bool) {
@@ -123,7 +123,7 @@ func TestBestPrices(t *testing.T) {
 	}
 }
 
-// README §8 option: email only on events, plus a weekly heartbeat.
+// docs/usage.md, Notifications: email only on events, plus a weekly heartbeat.
 func TestShouldEmail(t *testing.T) {
 	events := []diff.Event{{Type: diff.PriceRise}}
 	saturdayICT := now.Add(-24 * time.Hour)
@@ -162,7 +162,7 @@ func TestBuildMessage(t *testing.T) {
 
 // ── WhatsApp ─────────────────────────────────────────────────────
 
-// README §8: only price_drop, back_in_stock and new_listing, batched into
+// docs/usage.md, Notifications: only price_drop, back_in_stock and new_listing, batched into
 // one short message.
 func TestWhatsAppText(t *testing.T) {
 	text := WhatsAppText(sampleMessage())
@@ -297,7 +297,7 @@ func parseEmail(t *testing.T, raw []byte) (*mail.Message, string, string, string
 	return m, subject, parts["text/plain"], parts["text/html"]
 }
 
-// README §8 digest contents: events at the top, best prices, unmatched or
+// docs/usage.md, Notifications: digest contents: events at the top, best prices, unmatched or
 // ambiguous offers, and adapter health.
 func TestEmailRender(t *testing.T) {
 	e := &Email{From: "bot@example.com", To: []string{"a@example.com", "b@example.com"}}

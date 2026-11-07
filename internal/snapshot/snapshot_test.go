@@ -36,7 +36,7 @@ func TestExt(t *testing.T) {
 	}
 }
 
-// README §5 workflow step 1: snapshot saves testdata/<shop>/<slug>.html.
+// docs/usage.md, Adding a shop, step 2: snapshot saves testdata/<shop>/<slug>.html.
 func TestSaveAndLoadMeta(t *testing.T) {
 	dir := t.TempDir()
 	m := Meta{

@@ -1,6 +1,6 @@
 package notify
 
-// Spec tests for README §14 milestone 8: target-price alerts and the
+// Spec tests for README milestone 8: target-price alerts and the
 // weekly summary.
 
 import (

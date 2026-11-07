@@ -1,5 +1,5 @@
 // Package sitedata turns data/history/*.jsonl and data/state.json into the
-// static JSON the price-history site renders (README §11).
+// static JSON the price-history site renders (docs/architecture.md, Price-history site).
 //
 //	index.json     products, current offers and best prices
 //	<product>.json one price series per shop and condition, one point per day

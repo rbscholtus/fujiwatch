@@ -18,7 +18,7 @@ import (
 const storeAPIPath = "/wp-json/wc/store/v1/products"
 
 // WooCommerce handles WooCommerce shops through the public Store API
-// (README §5), which returns clean JSON with prices and stock:
+// (docs/shops.md, WooCommerce), which returns clean JSON with prices and stock:
 //
 //   - product page  /…/<slug>/  → /wp-json/wc/store/v1/products?slug=<slug>
 //   - search page   /?s=<term>  → …/products?search=<term>&per_page=100

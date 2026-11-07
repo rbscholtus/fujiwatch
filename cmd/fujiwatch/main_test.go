@@ -41,7 +41,7 @@ func TestRunUsage(t *testing.T) {
 	}
 }
 
-// README §5 workflow step 2: extract runs one adapter on a saved file.
+// docs/usage.md, Adding a shop, step 3: extract runs one adapter on a saved file.
 func TestExtractCommand(t *testing.T) {
 	var out, errOut bytes.Buffer
 	code := run([]string{"extract", "--config", "../../config", "vjshop", "../../testdata/vjshop/may-anh-fujifilm.html"}, &out, &errOut)
@@ -71,7 +71,7 @@ func TestExtractCommandNeedsURL(t *testing.T) {
 	}
 }
 
-// README §5 workflow step 1, against a local server instead of a real shop.
+// docs/usage.md, Adding a shop, step 2, against a local server instead of a real shop.
 func TestSnapshotCommand(t *testing.T) {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "/products/x-t5.js" {

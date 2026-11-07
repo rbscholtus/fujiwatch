@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// loadDotEnv sets variables from a .env file if it exists (README §13).
+// loadDotEnv sets variables from a .env file if it exists (docs/usage.md, Local development).
 // Variables already set in the environment win, so CI secrets are never
 // overridden by a stray file. Supports KEY=VALUE, "export KEY=VALUE",
 // comments and single or double quotes.

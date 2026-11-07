@@ -78,7 +78,7 @@ func repoSourceCount(t *testing.T) int {
 	return len(cfg.Sources.Sources)
 }
 
-// README §9: --dry-run fetches and diffs but writes nothing.
+// docs/usage.md, CLI: --dry-run fetches and diffs but writes nothing.
 func TestRunDryRunWritesNothing(t *testing.T) {
 	useSnapshotFetcher(t)
 	data := t.TempDir()

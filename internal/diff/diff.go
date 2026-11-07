@@ -14,7 +14,7 @@ import (
 // Type is an event type.
 type Type string
 
-// Event types (README §7).
+// Event types (docs/architecture.md, State, history and events).
 const (
 	PriceDrop     Type = "price_drop"
 	PriceRise     Type = "price_rise"

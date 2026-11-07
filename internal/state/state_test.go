@@ -31,7 +31,7 @@ func TestLoadCorrupt(t *testing.T) {
 	}
 }
 
-// README §7: state.json keyed by shop|url with the documented fields.
+// docs/architecture.md, State, history and events: state.json keyed by shop|url with the documented fields.
 func TestSaveFormatAndRoundTrip(t *testing.T) {
 	dir := t.TempDir()
 	p := filepath.Join(dir, "data", "state.json")
@@ -60,7 +60,7 @@ func TestSaveFormatAndRoundTrip(t *testing.T) {
 	entry := generic["offers"]["xspace|"+url]
 	for _, field := range []string{"product", "title", "price_vnd", "in_stock", "condition", "first_seen", "last_seen"} {
 		if _, ok := entry[field]; !ok {
-			t.Errorf("state entry missing README field %q", field)
+			t.Errorf("state entry missing documented field %q", field)
 		}
 	}
 	if entry["first_seen"] != "2026-11-07T23:17:00Z" {
@@ -86,7 +86,7 @@ func TestSaveFormatAndRoundTrip(t *testing.T) {
 	}
 }
 
-// README §7: one line per offer per run, in data/history/<product-id>.jsonl.
+// docs/architecture.md, State, history and events: one line per offer per run, in data/history/<product-id>.jsonl.
 func TestHistoryAppendAndRead(t *testing.T) {
 	dir := filepath.Join(t.TempDir(), "history")
 	r1 := Record{TS: ts, Shop: "xspace", URL: "https://x/p", PriceVND: 27_490_000, InStock: new(true), Condition: "new"}

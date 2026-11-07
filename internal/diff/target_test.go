@@ -1,6 +1,6 @@
 package diff
 
-// Spec tests for README §14 milestone 8: per-product target price
+// Spec tests for README milestone 8: per-product target price
 // ("alert below X VND").
 
 import (

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// Environment variables (README §10: repository secrets).
+// Environment variables (docs/usage.md, GitHub Actions: secrets).
 const (
 	EnvCallMeBotPhone  = "CALLMEBOT_PHONE"
 	EnvCallMeBotAPIKey = "CALLMEBOT_APIKEY" //nolint:gosec // variable name, not a credential

@@ -1,6 +1,6 @@
 package diff
 
-// Spec tests for README §7 (state, history and events).
+// Spec tests for docs/architecture.md, State, history and events.
 
 import (
 	"errors"

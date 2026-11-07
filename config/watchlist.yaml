@@ -1,6 +1,6 @@
 # Watched products. Patterns are RE2 regular expressions matched against the
 # *normalised* title: lowercase, no diacritics, "XT3"/"X T3" → "x-t3",
-# "f/2.8" → "f2.8". See README §6.
+# "f/2.8" → "f2.8". See docs/architecture.md, Matching and normalisation.
 #
 # Rules: all `patterns` and all `require_all` must match, at least one
 # `require_any` must match (if set), and no `exclude` may match.

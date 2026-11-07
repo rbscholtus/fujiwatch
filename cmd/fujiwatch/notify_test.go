@@ -65,7 +65,7 @@ func TestRunNoNotifyAndDryRun(t *testing.T) {
 	}
 }
 
-// README §8: notification failures are non-fatal; the state is still saved.
+// docs/usage.md, Notifications: notification failures are non-fatal; the state is still saved.
 func TestRunNotificationFailureIsWarning(t *testing.T) {
 	useSnapshotFetcher(t)
 	t.Setenv("GITHUB_ACTIONS", "true")
@@ -101,7 +101,7 @@ func TestWarnFormat(t *testing.T) {
 	}
 }
 
-// README §13: .env is loaded only when present; real env vars win.
+// docs/usage.md, Local development: .env is loaded only when present; real env vars win.
 func TestLoadDotEnv(t *testing.T) {
 	dir := t.TempDir()
 	p := filepath.Join(dir, ".env")

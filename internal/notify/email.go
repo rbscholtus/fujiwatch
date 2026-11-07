@@ -22,7 +22,7 @@ import (
 	"github.com/rbscholtus/fujiwatch/internal/runner"
 )
 
-// Email sends the daily digest over SMTP with STARTTLS (README §8), e.g.
+// Email sends the daily digest over SMTP with STARTTLS (docs/usage.md, Notifications), e.g.
 // Gmail on smtp.gmail.com:587 with an app password.
 type Email struct {
 	Addr string // host:port

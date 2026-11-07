@@ -1,6 +1,6 @@
 package sitedata
 
-// Spec tests for README §11 (price-history site data).
+// Spec tests for docs/architecture.md, Price-history site (the site data).
 
 import (
 	"encoding/json"

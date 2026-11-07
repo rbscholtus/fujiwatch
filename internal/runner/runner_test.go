@@ -97,7 +97,7 @@ func testFetcher(t *testing.T) *fakeFetcher {
 // vjPage builds a vjshop listing page (page cur of last) holding a product
 // per title, each priced 10,000,000 VND at /<slug>, the slug being the title.
 func vjPage(cur, last int, titles ...string) []byte {
-	var products []string
+	products := make([]string, 0, len(titles))
 	for _, t := range titles {
 		products = append(products, fmt.Sprintf(`{"core":{"name":%q,"slug":%q},"real_price":10000000}`, t, t))
 	}
@@ -116,7 +116,7 @@ func countType(evs []diff.Event, typ diff.Type) int {
 	return n
 }
 
-// One full cycle over real snapshots (README §2 pipeline).
+// One full cycle over real snapshots (docs/architecture.md, Pipeline).
 func TestRunFirstCycle(t *testing.T) {
 	cfg := testConfig(t)
 	f := testFetcher(t)
@@ -263,7 +263,7 @@ func TestRunCancelled(t *testing.T) {
 	}
 }
 
-// README §6 condition detection and source condition precedence.
+// docs/architecture.md, Matching and normalisation: condition detection and source condition precedence.
 func TestResolveCondition(t *testing.T) {
 	tests := []struct {
 		offerCond, srcCond, title, url, want string

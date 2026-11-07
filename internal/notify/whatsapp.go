@@ -21,7 +21,7 @@ const CallMeBotURL = "https://api.callmebot.com/whatsapp.php"
 const maxWhatsAppChars = 1000
 
 // WhatsApp sends one short message per run via CallMeBot, only for
-// price_drop, back_in_stock and new_listing (README §8).
+// price_drop, back_in_stock and new_listing (docs/usage.md, Notifications).
 type WhatsApp struct {
 	Phone   string // international format, e.g. +84…
 	APIKey  string

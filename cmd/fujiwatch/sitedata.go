@@ -11,7 +11,7 @@ import (
 	"github.com/rbscholtus/fujiwatch/internal/state"
 )
 
-// cmdSiteData writes the history site's JSON (README §11).
+// cmdSiteData writes the history site's JSON (docs/architecture.md, Price-history site).
 func cmdSiteData(args []string, stdout, stderr io.Writer) int {
 	fs := flag.NewFlagSet("sitedata", flag.ContinueOnError)
 	fs.SetOutput(stderr)

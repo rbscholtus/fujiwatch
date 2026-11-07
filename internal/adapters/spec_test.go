@@ -1,6 +1,6 @@
 package adapters
 
-// Tests of adapter behaviour against README §5, using real snapshots in
+// Tests of adapter behaviour against docs/architecture.md, Shop adapters, using real snapshots in
 // testdata/ and small synthetic pages.
 
 import (
@@ -292,7 +292,7 @@ func TestVJShopBrokenPage(t *testing.T) {
 	}
 }
 
-// ── generic extraction (README §5 order) ─────────────────────────
+// ── generic extraction (docs/architecture.md, Shop adapters, generic order) ─────────────────────────
 
 func TestGenericJSONLD(t *testing.T) {
 	page := `<html><head>

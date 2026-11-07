@@ -46,7 +46,7 @@ func TestParseVND(t *testing.T) {
 	}
 }
 
-// TestParseVNDRangeBoundaries checks README §6: the sanity range is
+// TestParseVNDRangeBoundaries checks docs/architecture.md, Matching and normalisation: the sanity range is
 // 500,000–200,000,000 VND inclusive.
 func TestParseVNDRangeBoundaries(t *testing.T) {
 	for _, tt := range []struct {

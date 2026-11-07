@@ -1,6 +1,6 @@
 package main
 
-// Spec tests for README §10 (GitHub Actions). Workflows are checked as text
+// Spec tests for docs/usage.md, GitHub Actions. Workflows are checked as text
 // (standard library only) and their shell steps are executed for real.
 
 import (
@@ -107,10 +107,10 @@ func TestWatchWorkflowSchedule(t *testing.T) {
 }
 
 // Every variable the notifiers read must be passed from a secret, and
-// documented in the README.
+// documented in docs/usage.md.
 func TestWatchWorkflowSecrets(t *testing.T) {
 	wf := readWorkflow(t, "watch.yml")
-	readme, err := os.ReadFile("../../README.md")
+	readme, err := os.ReadFile("../../docs/usage.md")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -123,7 +123,7 @@ func TestWatchWorkflowSecrets(t *testing.T) {
 			t.Errorf("watch.yml does not pass secret %s", name)
 		}
 		if !strings.Contains(string(readme), "`"+name+"`") {
-			t.Errorf("README does not document secret %s", name)
+			t.Errorf("docs/usage.md does not document secret %s", name)
 		}
 	}
 }
