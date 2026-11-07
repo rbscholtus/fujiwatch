@@ -145,7 +145,8 @@ func ShouldEmail(n config.Notify, events []diff.Event, now time.Time) bool {
 	return n.Heartbeat != "" && strings.EqualFold(now.In(saigon).Weekday().String(), n.Heartbeat)
 }
 
-// WhatsAppTypes are the events worth an instant message (docs/usage.md, Notifications).
+// WhatsAppTypes are the events worth an instant message (docs/usage.md,
+// Notifications). Baseline events (a source's first run) are never sent.
 // It is ordered by importance: when one listing has several of these events
 // in a run, only the first type in this list is sent.
 var WhatsAppTypes = []diff.Type{diff.BelowTarget, diff.PriceDrop, diff.BackInStock, diff.NewListing}
@@ -155,7 +156,7 @@ func instant(events []diff.Event) []diff.Event {
 	var out []diff.Event
 	for _, e := range events {
 		rank := slices.Index(WhatsAppTypes, e.Type)
-		if rank < 0 {
+		if rank < 0 || e.Baseline {
 			continue
 		}
 		key := e.Shop + "|" + e.URL

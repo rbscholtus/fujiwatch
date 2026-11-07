@@ -163,6 +163,27 @@ func TestMatchAmbiguous(t *testing.T) {
 	}
 }
 
+// A near miss names a watched product without confirming its mount or
+// version; a deliberate rejection (exclude: kits, other mounts) is not one.
+func TestNearMiss(t *testing.T) {
+	m := repoMatcher(t)
+	for _, tc := range []struct {
+		title string
+		want  []string
+	}{
+		{"Ống kính Tamron 16-50mm F2.8 Di III VXD", []string{"tamron-16-50"}},          // mount not stated
+		{"Ống kính Sigma 18-50mm f/2.8 DC DN (C) For Sony E", []string{"sigma-18-50"}}, // Sigma: other mounts are not excluded
+		{"Ống kính Tamron 16-50mm F2.8 Di III VXD for Sony E", nil},                    // excluded mount
+		{"Máy ảnh Fujifilm X-T5 + Lens XF 16-50mm F/2.8-4.8 | Chính Hãng", nil},        // kit
+		{"Máy ảnh Fujifilm X-H2 | Chính hãng", nil},                                    // another model
+		{"Ống kính Fujifilm XF 16-55mm f/2.8 R LM WR | Chính hãng", nil},               // matched, so no near miss
+	} {
+		if got := m.Match(tc.title).NearMiss; !slices.Equal(got, tc.want) {
+			t.Errorf("NearMiss(%q) = %v, want %v", tc.title, got, tc.want)
+		}
+	}
+}
+
 func TestExplain(t *testing.T) {
 	m := repoMatcher(t)
 	_, traces := m.Explain("Tamron 16-50mm F2.8 Di III VXD Sony E (Fujifilm version also in stock)")

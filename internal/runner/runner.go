@@ -52,6 +52,7 @@ type Unmatched struct {
 	Title      string   `json:"title"`
 	Status     string   `json:"status"` // unmatched | ambiguous | mismatch
 	Candidates []string `json:"candidates,omitempty"`
+	NearMiss   []string `json:"near_miss,omitempty"` // unmatched, but close to these products
 }
 
 // Report is the outcome of a run.
@@ -79,6 +80,7 @@ func Run(ctx context.Context, cfg *config.Config, st *state.State, f Fetcher, op
 
 	rep := &Report{Time: now}
 	configured := map[string]bool{}
+	unmatchedSeen := map[string]bool{} // shop|url: one offer found by overlapping sources
 	var runs []diff.SourceRun
 
 	for _, src := range cfg.Sources.Sources {
@@ -93,7 +95,12 @@ func Run(ctx context.Context, cfg *config.Config, st *state.State, f Fetcher, op
 
 		run, unmatched := runSource(ctx, src, m, f, now)
 		runs = append(runs, run)
-		rep.Unmatched = append(rep.Unmatched, unmatched...)
+		for _, u := range unmatched {
+			if k := state.Key(u.Shop, u.URL); !unmatchedSeen[k] {
+				unmatchedSeen[k] = true
+				rep.Unmatched = append(rep.Unmatched, u)
+			}
+		}
 		rep.Seen = append(rep.Seen, run.Observations...)
 
 		sr := SourceReport{Shop: src.Shop, Mode: src.Mode, URL: src.URL, Offers: run.OfferCount, Matched: len(run.Observations)}
@@ -156,7 +163,7 @@ func runSource(ctx context.Context, src config.Source, m *match.Matcher, f Fetch
 		res := m.Match(o.Title)
 		if res.Status != match.Matched {
 			unmatched = append(unmatched, Unmatched{
-				Shop: src.Shop, URL: o.URL, Title: o.Title, Status: res.Status.String(), Candidates: res.Candidates,
+				Shop: src.Shop, URL: o.URL, Title: o.Title, Status: res.Status.String(), Candidates: res.Candidates, NearMiss: res.NearMiss,
 			})
 			continue
 		}

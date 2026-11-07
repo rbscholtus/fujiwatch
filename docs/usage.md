@@ -56,7 +56,7 @@ Rules are RE2 regular expressions matched against the **normalised** title (lowe
 - at least one `require_any` must match (if set),
 - no `exclude` may match.
 
-A title that matches zero or several products is reported as unmatched or ambiguous in the email, never alerted on.
+A title that matches zero or several products is never alerted on. Ambiguous titles, and near misses (all `patterns` match, no `exclude` does, but a `require_all` / `require_any` fails), are listed in the email so the rules can be tuned.
 
 > Go's `regexp` (RE2) has **no** lookahead `(?!…)`, so model boundaries use a negated class: `(\D|$)` means "followed by a non-digit or the end". Focal ranges use `(^|\D)…(\D|$)` instead of `\b`, because there is no word boundary inside "xf10-24", and "110-240" must not match "10-24". Prefer this over `exclude: ['x-?t30']`: an exclude rejects the whole title, which would wrongly drop "X-T3 kèm grip, dùng chung pin với X-T30". Keep `exclude` for real confusions (other mounts, brands, kits, a newer Mark).
 
@@ -138,6 +138,8 @@ Notifiers are enabled by their environment variables: repository secrets on GitH
 
 When one listing has several of these in a run (e.g. `new_listing` and `below_target`), only the most important one is sent, in that order. At most one message per run, with the events batched.
 
+Events from a page's **first** successful run (the first run after launch, or a page just added to `sources.yaml`) are a baseline: they are in the email, with a note, but never sent to WhatsApp.
+
 - One-time setup: add CallMeBot's number to your phone contacts and send it "I allow callmebot to send me messages". It replies with your personal API key. The current number and steps are at https://www.callmebot.com/blog/free-api-whatsapp-messages/
 - Variables: `CALLMEBOT_PHONE` (`+84…`), `CALLMEBOT_APIKEY`.
 - It is a free shared service, so failures are non-fatal.
@@ -146,7 +148,11 @@ When one listing has several of these in a run (e.g. `new_listing` and `below_ta
 
 - Gmail SMTP: `smtp.gmail.com:587` with STARTTLS. Requires 2-Step Verification and an **app password** (Google Account → Security → App passwords).
 - Variables: `SMTP_USER`, `SMTP_PASS`, `MAIL_TO` (several addresses comma-separated). Optional: `MAIL_FROM` (default `SMTP_USER`), `SMTP_ADDR` (default `smtp.gmail.com:587`). The password is only sent after STARTTLS.
-- Contents: events at the top, then a table of the current best price per product (new vs used), unmatched/ambiguous offers, and source health.
+- Contents: events at the top, then a table of the current best price per product (new vs used), source health, and offers that need a look:
+  - **mismatch**: a product page whose title doesn't match its configured product;
+  - **ambiguous**: a title that matches several products;
+  - **near miss**: a title that names a watched product but fails its `require_all` / `require_any` rules (mount or version not confirmed), e.g. "Tamron 16-50mm F2.8 Di III VXD" without a mount;
+  - every other unmatched offer is only counted, per shop ("Other unmatched offers: 280 (vjshop 250, kyma 30)"). `fujiwatch run --dry-run` lists them all.
 - `notify: email: changes` sends the email only when there are events or failures, plus a weekly "all OK" heartbeat on `heartbeat: <weekday>`. Default `email: always`.
 - `notify: weekly: <weekday>`: on that day the email always goes out, with the subject suffix "· weekly summary" and a table of each product's lowest new and used price over the last 7 days against the 7 days before.
 

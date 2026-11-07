@@ -36,6 +36,12 @@ type Result struct {
 	Status     Status
 	ProductID  string   // set only when Status == Matched
 	Candidates []string // every product that matched (len > 1 if Ambiguous)
+	// NearMiss lists products whose patterns all match but whose
+	// require_all / require_any rules do not: the title names the product
+	// without confirming the mount or version. Titles rejected by an
+	// exclude (kits, other mounts) are deliberate rejections, not near
+	// misses. Only set when Status == Unmatched.
+	NearMiss []string
 }
 
 // Trace explains why a title did or did not match one product.
@@ -96,14 +102,18 @@ func compileAll(id string, exprs []string) ([]*regexp.Regexp, error) {
 // Match normalises title and returns which product it belongs to.
 func (m *Matcher) Match(title string) Result {
 	res := Result{Normalized: Normalize(title)}
+	var near []string
 	for _, r := range m.rules {
 		if ok, _ := r.eval(res.Normalized); ok {
 			res.Candidates = append(res.Candidates, r.id)
+		} else if r.nearMiss(res.Normalized) {
+			near = append(near, r.id)
 		}
 	}
 	switch len(res.Candidates) {
 	case 0:
 		res.Status = Unmatched
+		res.NearMiss = near
 	case 1:
 		res.Status = Matched
 		res.ProductID = res.Candidates[0]
@@ -144,6 +154,22 @@ func (r rule) eval(s string) (bool, string) {
 		}
 	}
 	return true, "all rules pass"
+}
+
+// nearMiss reports whether s matches every pattern and no exclude, but
+// fails a require_all or require_any rule.
+func (r rule) nearMiss(s string) bool {
+	for _, re := range r.patterns {
+		if !re.MatchString(s) {
+			return false
+		}
+	}
+	for _, re := range r.exclude {
+		if re.MatchString(s) {
+			return false
+		}
+	}
+	return len(r.requireAll) > 0 || len(r.requireAny) > 0
 }
 
 func anyMatch(res []*regexp.Regexp, s string) bool {

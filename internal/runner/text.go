@@ -90,8 +90,11 @@ func WriteText(w io.Writer, rep *Report, dryRun bool) error {
 	tw = tabwriter.NewWriter(&b, 0, 0, 2, ' ', 0)
 	for _, u := range rep.Unmatched {
 		cands := ""
-		if len(u.Candidates) > 0 {
+		switch {
+		case len(u.Candidates) > 0:
 			cands = "[" + strings.Join(u.Candidates, ", ") + "]"
+		case len(u.NearMiss) > 0:
+			cands = "near [" + strings.Join(u.NearMiss, ", ") + "]"
 		}
 		fmt.Fprintf(tw, "  %s\t%s\t%s\t%s  %s\n", u.Status, u.Shop, cands, u.Title, u.URL)
 	}

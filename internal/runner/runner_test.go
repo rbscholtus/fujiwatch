@@ -387,3 +387,20 @@ func TestRunEmptyListing(t *testing.T) {
 		t.Errorf("listing without a total: events = %v, want adapter_broken", rep.Events)
 	}
 }
+
+// An unmatched offer found by two overlapping sources (a category and the
+// promotions page) is reported once.
+func TestRunUnmatchedOnce(t *testing.T) {
+	const a, b = "https://vjshop.vn/ong-kinh-mirrorless-sigma", "https://vjshop.vn/khuyen-mai"
+	cfg := pagedConfig(t, a)
+	cfg.Sources.Sources = append(cfg.Sources.Sources, config.Source{Shop: "vjshop", Mode: config.ModeListing, Condition: config.ConditionAuto, URL: b})
+	page := vjPage(1, 1, "Sigma 56mm F1.4 DC DN for Sony E")
+	f := &fakeFetcher{bodies: map[string][]byte{a: page, b: page}}
+	rep, _, err := Run(t.Context(), cfg, state.New(), f, Options{Now: func() time.Time { return runTime }})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rep.Unmatched) != 1 {
+		t.Errorf("unmatched = %+v, want one", rep.Unmatched)
+	}
+}

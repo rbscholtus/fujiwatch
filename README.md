@@ -89,3 +89,6 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 - [x] Body-only products exclude kits ("X-T5 + Lens XF 16-50mm"), so kit prices don't mix into the body's history (`kit_excludes` in `config/watchlist.yaml`).
 - [x] Price-drop threshold: alert on every drop (`min_drop_pct: 0`, `min_drop_vnd: 0`).
 - [x] Multi-page listings are followed (vjshop).
+- [ ] Set target prices (`target_vnd`, `target_used_vnd`) per product.
+- [ ] vjshop: add the Tamron 16-50mm (X) product page once vjshop lists it.
+- [ ] vjshop: recheck the XF18-55 (product 4898). It is out of stock; its listing shows 8.890.000₫, but the product API has only `default: 0`, so the listing price may be stale.

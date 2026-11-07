@@ -292,6 +292,32 @@ func TestOptionsDropCounts(t *testing.T) {
 	}
 }
 
+// Offers first recorded in their source's first successful run are a
+// baseline; later new offers, and changes to known offers, are not. A
+// source added later starts its own baseline.
+func TestBaseline(t *testing.T) {
+	st := state.New()
+	evs := Apply(st, []SourceRun{listing(ob(itemURL, 15_000_000, nil))}, configured(), t0, Options{})
+	if len(evs) != 1 || evs[0].Type != NewListing || !evs[0].Baseline {
+		t.Fatalf("first run: %+v, want one baseline new_listing", evs)
+	}
+
+	second := itemURL + "-2"
+	evs = Apply(st, []SourceRun{listing(ob(itemURL, 14_000_000, nil), ob(second, 15_000_000, nil))}, configured(), day(1), Options{})
+	if len(evs) != 2 || slices.ContainsFunc(evs, func(e Event) bool { return e.Baseline }) {
+		t.Errorf("second run: %+v, want price_drop and new_listing, not baseline", evs)
+	}
+
+	other := SourceRun{Shop: shop, URL: listURL + "?page=other", Mode: config.ModeListing, OfferCount: 2,
+		Observations: []Observation{ob(itemURL, 14_000_000, nil), ob(itemURL+"-3", 9_000_000, nil)}}
+	cfgd := configured()
+	cfgd[other.Key()] = true
+	evs = Apply(st, []SourceRun{listing(ob(itemURL, 14_000_000, nil), ob(second, 15_000_000, nil)), other}, cfgd, day(2), Options{})
+	if len(evs) != 1 || evs[0].URL != itemURL+"-3" || !evs[0].Baseline {
+		t.Errorf("new source: %+v, want one baseline new_listing for its new offer", evs)
+	}
+}
+
 // A listing that states it has no items (the last used lens sold) is
 // healthy: no adapter_broken, and its offers age out toward "gone".
 func TestEmptyListingIsNotBroken(t *testing.T) {

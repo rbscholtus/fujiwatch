@@ -134,7 +134,7 @@ Every title is normalised before matching:
 3. NFD-normalise, then remove combining marks (`runes.Remove(runes.In(unicode.Mn))`). This turns "ống kính" into "ong kinh".
 4. Unify variants: `f/2.8` and `f2.8` → `f2.8`; en-dash and em-dash → `-`; collapse whitespace; `x t5` / `xt5` / `x-t5` → `x-t5`.
 
-Matching rules per product: all `patterns` must match, all `require_all` must match, at least one `require_any` must match (if set), and none of `exclude` may match. An offer that matches **zero or more than one** product is logged as unmatched or ambiguous and not alerted on; the daily email lists those so the rules can be tuned.
+Matching rules per product: all `patterns` must match, all `require_all` must match, at least one `require_any` must match (if set), and none of `exclude` may match. An offer that matches **zero or more than one** product is logged as unmatched or ambiguous and not alerted on. For an unmatched title, `Result.NearMiss` lists the products whose `patterns` all match and no `exclude` does, but whose `require_all` / `require_any` fail: the product is named, its mount or version not confirmed. A title rejected by an `exclude` (a kit, another mount) is a deliberate rejection, not a near miss. The email lists ambiguous titles and near misses, and only counts the rest. An unmatched offer found by several sources in one run is reported once.
 
 **Condition.** The first that applies wins:
 
@@ -187,6 +187,7 @@ Only matched offers are tracked. If a page hides the price ("Liên hệ") or the
 - `new_listing`: the URL has not been seen before. Only raised in listing mode; the first sighting of a product-mode URL is silent. The same URL found by two sources in one run counts once (the first source wins).
 - `gone`: not seen for 3 consecutive runs. Removed from state and logged (useful for used items: "sold"). Only runs in which the offer's own source worked count, so a broken shop never marks its items as sold; offers of a source removed from `sources.yaml` age out the same way.
 - `adapter_broken`: the fetch, robots.txt check or extraction failed, the HTTP status is not 200, a page of a multi-page listing failed, or a source that previously returned ≥ 1 offer now returns 0 (unless the page itself states the listing is empty, e.g. vjshop's `meta.total` of 0). Always included in the email, so silent failures are visible.
+- **Baseline:** events of an offer first recorded in its source's first successful run (`Event.Baseline`) go to the email but not to WhatsApp. That covers the first run after launch and every page added later; changes to offers already known are never baseline.
 - `below_target`: an offer's price reached the product's `target_vnd` (new) or `target_used_vnd` (used). Raised once per crossing: when the price goes from above the target (or unknown) to at or below it, including a first sighting already below it.
 
 ---

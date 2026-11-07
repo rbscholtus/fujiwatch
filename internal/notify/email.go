@@ -146,8 +146,13 @@ type weekView struct {
 }
 
 type unmatchedGroup struct {
-	Status string
-	Items  []runner.Unmatched
+	Status string // mismatch | ambiguous | near miss
+	Items  []unmatchedView
+}
+
+type unmatchedView struct {
+	Shop, Title, URL string
+	Products         []string // candidates, or the near-missed products
 }
 
 type view struct {
@@ -158,6 +163,9 @@ type view struct {
 	Sources   []runner.SourceReport
 	Broken    int
 	Unmatched []unmatchedGroup
+	Other     int    // unmatched offers not listed (not close to any product)
+	OtherShop string // Other per shop, e.g. "vjshop 250, kyma 30"
+	Baseline  int    // events from a source's first run
 	Weekly    []weekView
 }
 
@@ -180,6 +188,9 @@ func newView(msg *Message) view {
 			Detail:    e.Detail,
 			Important: e.Type != diff.PriceRise && e.Type != diff.OutOfStock && e.Type != diff.Gone,
 		})
+		if e.Baseline {
+			v.Baseline++
+		}
 	}
 
 	for _, b := range msg.Best {
@@ -214,27 +225,58 @@ func newView(msg *Message) view {
 		v.Weekly = append(v.Weekly, wv)
 	}
 
-	// Ambiguous and mismatched first: those need attention. Plain
-	// unmatched offers (other models on a category page) come last.
-	for _, status := range []string{"mismatch", "ambiguous", "unmatched"} {
-		g := unmatchedGroup{Status: status}
-		for _, u := range msg.Unmatched {
-			if u.Status == status {
-				g.Items = append(g.Items, u)
+	v.Unmatched, v.Other, v.OtherShop = groupUnmatched(msg.Unmatched)
+	return v
+}
+
+// groupUnmatched lists the offers that need attention: product pages whose
+// title doesn't match their product, titles matching several products, and
+// near misses (a watched product named, its mount or version not
+// confirmed). Every other unmatched offer (other models on a category page)
+// is only counted, per shop.
+func groupUnmatched(all []runner.Unmatched) (groups []unmatchedGroup, other int, otherShop string) {
+	byStatus := map[string]*unmatchedGroup{}
+	order := []string{"mismatch", "ambiguous", "near miss"}
+	perShop := map[string]int{}
+	var shops []string
+	for _, u := range all {
+		status, products := u.Status, u.Candidates
+		if status == "unmatched" {
+			if len(u.NearMiss) == 0 {
+				if perShop[u.Shop] == 0 {
+					shops = append(shops, u.Shop)
+				}
+				perShop[u.Shop]++
+				other++
+				continue
 			}
+			status, products = "near miss", u.NearMiss
 		}
-		if len(g.Items) > 0 {
-			v.Unmatched = append(v.Unmatched, g)
+		g := byStatus[status]
+		if g == nil {
+			g = &unmatchedGroup{Status: status}
+			byStatus[status] = g
+		}
+		g.Items = append(g.Items, unmatchedView{Shop: u.Shop, Title: u.Title, URL: u.URL, Products: products})
+	}
+	for _, s := range order {
+		if g := byStatus[s]; g != nil {
+			groups = append(groups, *g)
 		}
 	}
-	return v
+	parts := make([]string, 0, len(shops))
+	for _, s := range shops {
+		parts = append(parts, fmt.Sprintf("%s %d", s, perShop[s]))
+	}
+	return groups, other, strings.Join(parts, ", ")
 }
 
 var textTmpl = texttemplate.Must(texttemplate.New("text").Parse(`{{.Subject}}
 {{.Time}}
 
 EVENTS ({{len .Events}})
-{{range .Events}}{{if .Detail}}- {{.Label}}: {{.Shop}}: {{.Detail}}
+{{if .Baseline}}{{.Baseline}} from a source's first run: recorded as a baseline, not sent to WhatsApp.
+{{end}}{{range .Events}}{{if .Detail}}- {{.Label}}: {{.Shop}}: {{.Detail}}
   {{.URL}}
 {{else}}- {{.Label}}: {{.Product}} ({{.Condition}}) at {{.Shop}}: {{.Price}}
   {{.Title}}
@@ -252,9 +294,11 @@ SOURCES ({{len .Sources}}, {{.Broken}} failing)
   {{.Err}}{{end}}
 {{end}}{{range .Unmatched}}
 {{.Status}} ({{len .Items}})
-{{range .Items}}- {{.Shop}}: {{.Title}}{{if .Candidates}} {{.Candidates}}{{end}}
+{{range .Items}}- {{.Shop}}: {{.Title}}{{if .Products}} {{.Products}}{{end}}
   {{.URL}}
-{{end}}{{end}}`))
+{{end}}{{end}}{{if .Other}}
+Other unmatched offers: {{.Other}} ({{.OtherShop}})
+{{end}}`))
 
 var htmlTmpl = htmltemplate.Must(htmltemplate.New("html").Parse(`<!doctype html>
 <html><head><meta charset="utf-8"><title>{{.Subject}}</title></head>
@@ -263,7 +307,8 @@ var htmlTmpl = htmltemplate.Must(htmltemplate.New("html").Parse(`<!doctype html>
 <div style="color:#656d76;margin-bottom:16px">{{.Time}}</div>
 
 <h3>Events ({{len .Events}})</h3>
-{{if .Events}}<table cellpadding="6" style="border-collapse:collapse;width:100%">
+{{if .Baseline}}<p style="color:#656d76">{{.Baseline}} from a source's first run: recorded as a baseline, not sent to WhatsApp.</p>
+{{end}}{{if .Events}}<table cellpadding="6" style="border-collapse:collapse;width:100%">
 {{range .Events}}<tr style="border-top:1px solid #d0d7de;vertical-align:top">
 <td style="white-space:nowrap;font-weight:{{if .Important}}bold{{else}}normal{{end}}">{{.Label}}</td>
 {{if .Detail}}<td colspan="2">{{.Shop}}: {{.Detail}}<br><a href="{{.URL}}" style="color:#656d76;font-size:12px">{{.URL}}</a></td>
@@ -304,8 +349,9 @@ var htmlTmpl = htmltemplate.Must(htmltemplate.New("html").Parse(`<!doctype html>
 
 {{range .Unmatched}}<h3 style="text-transform:capitalize">{{.Status}} ({{len .Items}})</h3>
 <ul style="font-size:12px;color:#656d76;padding-left:18px">
-{{range .Items}}<li>{{.Shop}}: <a href="{{.URL}}" style="color:#656d76">{{.Title}}</a>{{if .Candidates}} {{.Candidates}}{{end}}</li>
+{{range .Items}}<li>{{.Shop}}: <a href="{{.URL}}" style="color:#656d76">{{.Title}}</a>{{if .Products}} {{.Products}}{{end}}</li>
 {{end}}</ul>
+{{end}}{{if .Other}}<p style="font-size:12px;color:#656d76">Other unmatched offers: {{.Other}} ({{.OtherShop}})</p>
 {{end}}
 <p style="color:#8c959f;font-size:12px;margin-top:24px">Sent by fujiwatch.</p>
 </body></html>

@@ -43,6 +43,10 @@ type Event struct {
 	InStock   *bool  `json:"in_stock,omitempty"`
 	Detail    string `json:"detail,omitempty"` // adapter_broken: what went wrong
 	TargetVND int64  `json:"target_vnd,omitempty"`
+	// Baseline: the offer was first recorded in its source's first
+	// successful run (a new deployment or a newly added page). Such events
+	// go to the email digest but not to WhatsApp.
+	Baseline bool `json:"baseline,omitempty"`
 }
 
 // Observation is one matched offer seen in this run.
@@ -130,6 +134,7 @@ func Apply(st *state.State, runs []SourceRun, configured map[string]bool, now ti
 			events = append(events, broken(run, fmt.Sprintf("no offers extracted (previous run: %d)", src.LastCount)))
 			continue
 		}
+		firstRun := src.LastOK.IsZero()
 		src.Failures, src.LastError = 0, ""
 		src.LastCount = run.OfferCount
 		src.LastOK = now
@@ -141,7 +146,7 @@ func Apply(st *state.State, runs []SourceRun, configured map[string]bool, now ti
 				continue // same listing twice on a page, or on two source pages
 			}
 			seen[key] = true
-			events = append(events, observe(st, run, key, ob, now, opts)...)
+			events = append(events, observe(st, run, key, ob, now, firstRun, opts)...)
 		}
 	}
 
@@ -154,7 +159,8 @@ func broken(run SourceRun, detail string) Event {
 }
 
 // observe records one observation and returns its events.
-func observe(st *state.State, run SourceRun, key string, ob Observation, now time.Time, opts Options) []Event {
+// baseline marks a new offer's events when its source runs for the first time.
+func observe(st *state.State, run SourceRun, key string, ob Observation, now time.Time, baseline bool, opts Options) []Event {
 	old, ok := st.Offers[key]
 	if !ok {
 		st.Offers[key] = &state.Offer{
@@ -177,6 +183,9 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 			e := event(BelowTarget, ob, 0)
 			e.TargetVND = t
 			events = append(events, e)
+		}
+		for i := range events {
+			events[i].Baseline = baseline
 		}
 		return events
 	}

@@ -53,6 +53,9 @@ func sampleMessage() *Message {
 		},
 		Unmatched: []runner.Unmatched{
 			{Shop: "vjshop", URL: "https://v/x-e3", Title: "Fujifilm X-E3", Status: "unmatched"},
+			{Shop: "kyma", URL: "https://k/x-h2", Title: "Fujifilm X-H2", Status: "unmatched"},
+			{Shop: "vjshop", URL: "https://v/x-s20", Title: "Fujifilm X-S20", Status: "unmatched"},
+			{Shop: "vjshop", URL: "https://v/tamron", Title: "Tamron 16-50mm F2.8 Di III VXD", Status: "unmatched", NearMiss: []string{"tamron-16-50"}},
 			{Shop: "vjshop", URL: "https://v/combo", Title: "Combo X-T4 + XF10-24 WR", Status: "ambiguous", Candidates: []string{"x-t4", "xf10-24-ii"}},
 		},
 		Names: map[string]string{"xf10-24-ii": "XF10-24mm F4 R OIS WR (II)", "x-t3": "Fujifilm X-T3", "x-t5": "Fujifilm X-T5"},
@@ -190,6 +193,34 @@ func TestWhatsAppText(t *testing.T) {
 	back := &Message{Events: []diff.Event{{Type: diff.BackInStock, Product: "p", Shop: "s", Condition: "new", PriceVND: 1_000_000, URL: "u"}}}
 	if got := WhatsAppText(back); !strings.Contains(got, "1 alert\n") || !strings.Contains(got, "✅ p (new) back in stock at s: 1.000.000₫") {
 		t.Errorf("back in stock text = %q", got)
+	}
+}
+
+// Events from a source's first run are a baseline: in the email, with a
+// note, but never on WhatsApp.
+func TestBaselineEventsAreEmailOnly(t *testing.T) {
+	msg := sampleMessage()
+	for i := range msg.Events {
+		msg.Events[i].Baseline = true
+	}
+	if got := WhatsAppText(msg); got != "" {
+		t.Errorf("baseline events sent to WhatsApp:\n%s", got)
+	}
+	msg.Events = append(msg.Events, diff.Event{Type: diff.PriceDrop, Product: "x-t5", Shop: "kyma", Condition: "new", OldPrice: 40_000_000, PriceVND: 38_000_000, URL: "https://k/x-t5"})
+	if got := WhatsAppText(msg); !strings.Contains(got, "1 alert\n") || !strings.Contains(got, "https://k/x-t5") {
+		t.Errorf("non-baseline event not sent:\n%s", got)
+	}
+
+	raw, err := (&Email{From: "f@x", To: []string{"t@x"}}).Render(msg)
+	if err != nil {
+		t.Fatal(err)
+	}
+	_, _, text, html := parseEmail(t, raw)
+	n := len(msg.Events) - 1
+	for _, part := range []string{text, html} {
+		if !strings.Contains(part, fmt.Sprintf("%d from a source's first run", n)) {
+			t.Errorf("email lacks the baseline note")
+		}
 	}
 }
 
@@ -334,16 +365,28 @@ func TestEmailRender(t *testing.T) {
 		"FAIL kyma listing",
 		"ambiguous (1)",
 		"Combo X-T4 + XF10-24 WR [x-t4 xf10-24-ii]",
-		"unmatched (1)",
+		"near miss (1)",
+		"Tamron 16-50mm F2.8 Di III VXD [tamron-16-50]",
+		"Other unmatched offers: 3 (vjshop 2, kyma 1)",
 	} {
 		if !strings.Contains(text, want) {
 			t.Errorf("text part missing %q", want)
 		}
 	}
-	// Events come first, ambiguous before unmatched.
+	// Events come first, ambiguous before near misses before the count.
 	if strings.Index(text, "EVENTS") > strings.Index(text, "BEST PRICES") ||
-		strings.Index(text, "ambiguous (1)") > strings.Index(text, "unmatched (1)") {
+		strings.Index(text, "ambiguous (1)") > strings.Index(text, "near miss (1)") ||
+		strings.Index(text, "near miss (1)") > strings.Index(text, "Other unmatched") {
 		t.Error("section order wrong")
+	}
+	// Plain unmatched offers are counted, not listed.
+	for _, unwanted := range []string{"Fujifilm X-E3", "X-S20", "https://k/x-h2"} {
+		if strings.Contains(text, unwanted) || strings.Contains(html, unwanted) {
+			t.Errorf("email lists plain unmatched offer %q", unwanted)
+		}
+	}
+	if strings.Contains(text, "first run") {
+		t.Error("baseline note without baseline events")
 	}
 
 	for _, want := range []string{"<h3>Events (4)</h3>", `<a href="https://x/p">25.990.000₫</a>`, "FAIL", "X-T3 &lt;b&gt;cũ&lt;/b&gt; 98%"} {
