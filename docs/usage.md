@@ -95,7 +95,7 @@ sources:
 ```
 
 - `shop` selects the adapter (the names in the [README shops table](../README.md#goals-and-scope)).
-- `mode: product` tracks one product's price and stock. `mode: listing` matches every item on the page; for shops whose adapter supports it (vjshop), every page of the listing is read.
+- `mode: product` tracks one product's price and stock. `mode: listing` matches every item on the page, and every page of the listing is read. `mode: flash` watches a shop's time-limited flash sale (bncamera's homepage): each watched product on offer is one `flash_sale` alert per slot, and the flash price is not recorded as a price.
 - `condition` defaults to `new` for product mode and `auto` for listing mode. `auto` detects used items from the title, URL or the shop's own data (see [architecture.md: condition detection](architecture.md#matching-and-normalisation)).
 - Weekdays (`heartbeat`, `weekly`) are in Vietnam time.
 - Removing a source is safe: its offers age out and are reported `gone` after 3 runs.
@@ -138,7 +138,7 @@ Flags:
 
 Notifiers are enabled by their environment variables: repository secrets on GitHub Actions, or a local `.env` file (see [`.env.example`](../.env.example)). A notifier with only some of its variables set is skipped with a warning. Notification failures never fail the run (the data must still be committed); they are printed as warnings, and as `::warning::` annotations on GitHub Actions.
 
-**WhatsApp via CallMeBot (instant, important events only: `below_target`, `price_drop`, `back_in_stock`, `new_listing`)**
+**WhatsApp via CallMeBot (instant, important events only: `below_target`, `flash_sale`, `price_drop`, `back_in_stock`, `new_listing`)**
 
 When one listing has several of these in a run (e.g. `new_listing` and `below_target`), only the most important one is sent, in that order. At most one message per run, with the events batched.
 

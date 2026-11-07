@@ -185,7 +185,7 @@ func runShops(ctx context.Context, sources []config.Source, m *match.Matcher, f 
 func runSource(ctx context.Context, src config.Source, m *match.Matcher, f Fetcher, now time.Time) (run diff.SourceRun, unmatched []Unmatched, pages int) {
 	run = diff.SourceRun{Shop: src.Shop, URL: src.URL, Mode: src.Mode}
 
-	a := adapters.WithClock(adapters.ForShop(src.Shop), func() time.Time { return now })
+	a := adapters.WithClock(adapters.ForSource(src.Shop, src.Mode), func() time.Time { return now })
 	fetchURL, err := adapters.FetchURL(a, src.URL, src.Mode)
 	if err != nil {
 		run.Err = err
@@ -198,7 +198,8 @@ func runSource(ctx context.Context, src config.Source, m *match.Matcher, f Fetch
 		return run, nil, pages
 	}
 	run.OfferCount = len(offers)
-	run.Empty = empty
+	// A flash sale with nothing on offer is normal, not a broken page.
+	run.Empty = empty || src.Mode == config.ModeFlash
 
 	if src.Mode == config.ModeProduct {
 		if len(offers) == 0 {
@@ -275,13 +276,18 @@ func fetchOffers(ctx context.Context, a adapters.Adapter, src config.Source, fet
 		}
 		// A listing can shift while it is paged through; skip an offer
 		// already seen on an earlier page.
+		// A flash-sale product may be on offer in several slots: each is
+		// its own offer.
+		key := func(o adapters.Offer) string {
+			return o.URL + "\x00" + o.Title + "\x00" + o.FlashStart.String()
+		}
 		for _, o := range pageOffers {
-			if !seen[o.URL+"\x00"+o.Title] {
+			if !seen[key(o)] {
 				offers = append(offers, o)
 			}
 		}
 		for _, o := range pageOffers {
-			seen[o.URL+"\x00"+o.Title] = true
+			seen[key(o)] = true
 		}
 
 		// Product pages follow too: a WooCommerce product's variations
@@ -345,6 +351,11 @@ func observation(o adapters.Offer, product string, src config.Source) diff.Obser
 		Condition: resolveCondition(o, src),
 		PriceVND:  o.PriceVND,
 		InStock:   o.InStock,
+
+		FlashStart: o.FlashStart,
+		FlashEnd:   o.FlashEnd,
+		RegularVND: o.RegularVND,
+		Quota:      o.Quota,
 	}
 }
 
@@ -366,7 +377,8 @@ func history(runs []diff.SourceRun, now time.Time) map[string][]state.Record {
 	out := map[string][]state.Record{}
 	seen := map[string]bool{}
 	for _, run := range runs {
-		if run.Err != nil {
+		// A flash price holds for a couple of hours; it is not history.
+		if run.Err != nil || run.Mode == config.ModeFlash {
 			continue
 		}
 		for _, ob := range run.Observations {

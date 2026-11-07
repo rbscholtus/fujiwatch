@@ -5,6 +5,7 @@ import (
 	"io"
 	"strings"
 	"text/tabwriter"
+	"time"
 
 	"github.com/rbscholtus/fujiwatch/internal/diff"
 	"github.com/rbscholtus/fujiwatch/internal/price"
@@ -29,6 +30,8 @@ func EventLabel(t diff.Type) string {
 		return "BROKEN"
 	case diff.BelowTarget:
 		return "BELOW TARGET"
+	case diff.FlashSale:
+		return "FLASH SALE"
 	default:
 		return string(t)
 	}
@@ -45,11 +48,33 @@ func EventPrice(e diff.Event) string {
 		return ""
 	case diff.BelowTarget:
 		return fmt.Sprintf("%s (target %s)", price.FormatVND(e.PriceVND), price.FormatVND(e.TargetVND))
+	case diff.FlashSale:
+		s := price.FormatVND(e.PriceVND)
+		if e.OldPrice > e.PriceVND && e.PriceVND > 0 {
+			s += fmt.Sprintf(" (normally %s, -%.0f%%)", price.FormatVND(e.OldPrice), float64(e.OldPrice-e.PriceVND)*100/float64(e.OldPrice))
+		}
+		s += ", " + FlashWindow(e)
+		if e.Quota != "" {
+			s += ", " + e.Quota + " sold"
+		}
+		return s
 	case diff.BackInStock, diff.OutOfStock, diff.NewListing, diff.Gone:
 		return price.FormatVND(e.PriceVND)
 	default:
 		return price.FormatVND(e.PriceVND)
 	}
+}
+
+// saigon is Vietnam time, for flash-sale windows.
+var saigon = time.FixedZone("ICT", 7*60*60)
+
+// FlashWindow is a flash sale's window in Vietnam time, e.g.
+// "Sun 08/11 20:00–22:00".
+func FlashWindow(e diff.Event) string {
+	if e.Start.IsZero() {
+		return ""
+	}
+	return e.Start.In(saigon).Format("Mon 02/01 15:04") + "–" + e.End.In(saigon).Format("15:04")
 }
 
 // WriteText writes a plain-text report, used for --dry-run and logs.

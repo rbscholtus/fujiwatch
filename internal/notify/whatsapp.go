@@ -11,6 +11,7 @@ import (
 
 	"github.com/rbscholtus/fujiwatch/internal/diff"
 	"github.com/rbscholtus/fujiwatch/internal/price"
+	"github.com/rbscholtus/fujiwatch/internal/runner"
 )
 
 // CallMeBotURL is the CallMeBot WhatsApp endpoint.
@@ -21,7 +22,8 @@ const CallMeBotURL = "https://api.callmebot.com/whatsapp.php"
 const maxWhatsAppChars = 1000
 
 // WhatsApp sends one short message per run via CallMeBot, only for
-// price_drop, back_in_stock and new_listing (docs/usage.md, Notifications).
+// below_target, flash_sale, price_drop, back_in_stock and new_listing
+// (docs/usage.md, Notifications).
 type WhatsApp struct {
 	Phone   string // international format, e.g. +84…
 	APIKey  string
@@ -94,6 +96,8 @@ func WhatsAppText(msg *Message) string {
 			line = fmt.Sprintf("✅ %s (%s) back in stock at %s: %s", name, e.Condition, e.Shop, price.FormatVND(e.PriceVND))
 		case diff.NewListing:
 			line = fmt.Sprintf("🆕 %s (%s) %s: %s", name, e.Condition, e.Shop, price.FormatVND(e.PriceVND))
+		case diff.FlashSale:
+			line = fmt.Sprintf("⚡ %s (%s) %s flash sale: %s", name, e.Condition, e.Shop, runner.EventPrice(e))
 		case diff.PriceRise, diff.OutOfStock, diff.Gone, diff.AdapterBroken:
 			continue
 		default:

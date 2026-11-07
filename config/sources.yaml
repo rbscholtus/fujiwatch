@@ -3,6 +3,7 @@
 # mode: product  — one fixed product page; `product` must be a watchlist ID.
 # mode: listing  — category / search / used page; every title goes through
 #                  the matcher.
+# mode: flash    — a shop's time-limited flash sale (bncamera only).
 # condition: new | used | auto (detect from title/URL).
 #            Defaults: new for product mode, auto for listing mode.
 #
@@ -120,6 +121,13 @@ sources:
     mode: listing
     condition: used
     url: https://bncamera.com/danh-muc/do-cu
+
+  # bncamera's flash sale (homepage): slots 10–12h, 12–14h and 20–22h for
+  # today and the next two days. A watched product on offer is a flash_sale
+  # alert (email + WhatsApp), once per slot; the price is not recorded.
+  - shop: bncamera
+    mode: flash
+    url: https://bncamera.com/
 
   - shop: x-camera
     mode: listing

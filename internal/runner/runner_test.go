@@ -3,6 +3,7 @@ package runner
 import (
 	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	"net/url"
 	"os"
@@ -522,5 +523,63 @@ func TestPickVariantPrefersCondition(t *testing.T) {
 		func(o adapters.Offer) bool { return resolveCondition(o, src) == src.Condition })
 	if !ok || got.PriceVND != 34_500_000 {
 		t.Errorf("picked %+v, want the cheapest new variation (34.500.000)", got)
+	}
+}
+
+// bncamera's flash sale: the homepage's slots are requested by POST; a
+// watched product on offer is one flash_sale event (a kit is not), and
+// nothing is recorded as an offer or in the price history.
+func TestRunFlashSale(t *testing.T) {
+	const home = "https://bncamera.com/"
+	start := runTime.Add(24 * time.Hour).Truncate(time.Hour)
+	page := fmt.Sprintf(`<html><body><section class="bnfs-section" data-bnfs-campaign="1" data-bnfs-active-tab="tab_all">
+<button data-day-id="%s"></button>
+<button class="bnfs-tab-btn--time" data-timeslot-id="slot_a" data-start="%d" data-end="%d"></button>
+<button data-category="all" data-tab-id="tab_all"></button></section>
+<script>var bnfsPublic = {"ajaxUrl":"x","nonce":"n0nce","serverTime":"%d"};</script></body></html>`,
+		"day_auto_"+start.In(time.FixedZone("ICT", 7*3600)).Format("20060102"), start.Unix(), start.Add(2*time.Hour).Unix(), runTime.Unix())
+	card := func(title, variant, sale, regular string) string {
+		return `<article class="bnfs-product-card"><h3 class="bnfs-product-card__title"><a href="https://bncamera.com/san-pham/fujifilm-x-t5?attribute_pa_phien-ban=` + variant + `">` + title + `</a></h3>` +
+			`<div class="bnfs-product-card__prices"><span class="bnfs-product-card__sale-price">` + sale + `</span><del>` + regular + `</del></div><div class="bnfs-product-card__sold">Đã bán 1/5 suất</div></article>`
+	}
+	slot, err := json.Marshal(map[string]any{"success": true, "data": map[string]any{
+		"html":      card("Fujifilm X-T5", "body-only", "33.900.000 ₫", "38.490.000 ₫") + card("Fujifilm X-T5", "lens-xf-16-50mm", "45.000.000 ₫", "50.490.000 ₫"),
+		"countdown": map[string]int64{"start": start.Unix(), "end": start.Add(2 * time.Hour).Unix()},
+	}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	form := url.Values{"action": {"bnfs_get_products"}, "nonce": {"n0nce"}, "campaign_id": {"1"}, "tab_id": {"tab_all"},
+		"limit": {"0"}, "ui": {""}, "day_id": {"day_auto_" + start.In(time.FixedZone("ICT", 7*3600)).Format("20060102")}, "timeslot_id": {"slot_a"}}
+	f := &fakeFetcher{bodies: map[string][]byte{
+		home: []byte(page),
+		"POST https://bncamera.com/wp-admin/admin-ajax.php " + form.Encode(): slot,
+	}}
+	cfg := testConfig(t)
+	cfg.Sources.Sources = []config.Source{{Shop: "bncamera", Mode: config.ModeFlash, Condition: config.ConditionAuto, URL: home}}
+	st := state.New()
+	rep, hist, err := Run(t.Context(), cfg, st, f, Options{Now: func() time.Time { return runTime }})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sr := rep.Sources[0]; sr.Err != "" || sr.Offers != 2 || sr.Matched != 1 || sr.Pages != 2 {
+		t.Fatalf("source = %+v", sr)
+	}
+	if len(rep.Events) != 1 {
+		t.Fatalf("events = %+v", rep.Events)
+	}
+	e := rep.Events[0]
+	if e.Type != diff.FlashSale || e.Product != "x-t5" || e.PriceVND != 33_900_000 || e.OldPrice != 38_490_000 ||
+		!e.Start.Equal(start) || e.Quota != "1/5" || e.Baseline {
+		t.Errorf("event = %+v", e)
+	}
+	if got := EventPrice(e); !strings.Contains(got, "33.900.000₫ (normally 38.490.000₫, -12%)") || !strings.Contains(got, "1/5 sold") {
+		t.Errorf("EventPrice = %q", got)
+	}
+	if len(st.Offers) != 0 || len(hist) != 0 {
+		t.Errorf("flash sale recorded: offers %v, history %v", st.Offers, hist)
+	}
+	if len(st.Flash) != 1 {
+		t.Errorf("flash state = %v", st.Flash)
 	}
 }

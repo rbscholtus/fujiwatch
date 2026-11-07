@@ -7,6 +7,7 @@ import (
 	"sort"
 	"time"
 
+	"github.com/rbscholtus/fujiwatch/internal/config"
 	"github.com/rbscholtus/fujiwatch/internal/state"
 )
 
@@ -23,6 +24,7 @@ const (
 	Gone          Type = "gone"
 	AdapterBroken Type = "adapter_broken"
 	BelowTarget   Type = "below_target" // price reached the product's target
+	FlashSale     Type = "flash_sale"   // a watched product in a time-limited flash sale
 )
 
 // GoneAfter is how many consecutive successful runs of its source an offer
@@ -46,6 +48,12 @@ type Event struct {
 	// successful run (a new deployment or a newly added page). Such events
 	// go to the email digest but not to WhatsApp.
 	Baseline bool `json:"baseline,omitempty"`
+
+	// flash_sale only: the price holds during [Start, End), instead of
+	// OldPrice (the regular price); Quota is "sold/total" units on offer.
+	Start time.Time `json:"start,omitzero"`
+	End   time.Time `json:"end,omitzero"`
+	Quota string    `json:"quota,omitempty"`
 }
 
 // Observation is one matched offer seen in this run.
@@ -57,6 +65,11 @@ type Observation struct {
 	Condition string // "new" | "used", already resolved
 	PriceVND  int64  // 0 = not shown
 	InStock   *bool  // nil = unknown
+
+	// Flash sale observations only (mode: flash).
+	FlashStart, FlashEnd time.Time
+	RegularVND           int64
+	Quota                string
 }
 
 // SourceRun is the outcome of fetching and extracting one source page.
@@ -139,6 +152,10 @@ func Apply(st *state.State, runs []SourceRun, configured map[string]bool, now ti
 		src.LastOK = now
 		healthy[run.Key()] = true
 
+		if run.Mode == config.ModeFlash {
+			events = append(events, flashSales(st, run)...)
+			continue
+		}
 		for _, ob := range run.Observations {
 			key := state.Key(ob.Shop, ob.URL)
 			if seen[key] {
@@ -150,6 +167,35 @@ func Apply(st *state.State, runs []SourceRun, configured map[string]bool, now ti
 	}
 
 	events = append(events, ageOut(st, seen, healthy, configured)...)
+
+	// Forget flash-sale slots that have ended.
+	for k, end := range st.Flash {
+		if !end.After(now) {
+			delete(st.Flash, k)
+		}
+	}
+	return events
+}
+
+// flashSales reports each watched product in a flash-sale slot once: a
+// flash price holds for a couple of hours, so it is neither an offer in
+// state nor a point in the price history. Not baseline: a flash sale is
+// worth an instant alert even on its source's first run.
+func flashSales(st *state.State, run SourceRun) []Event {
+	if st.Flash == nil {
+		st.Flash = map[string]time.Time{}
+	}
+	var events []Event
+	for _, ob := range run.Observations {
+		key := state.FlashKey(ob.Shop, ob.URL, ob.FlashStart)
+		if _, done := st.Flash[key]; done {
+			continue
+		}
+		st.Flash[key] = ob.FlashEnd
+		e := event(FlashSale, ob, ob.RegularVND)
+		e.Start, e.End, e.Quota = ob.FlashStart, ob.FlashEnd, ob.Quota
+		events = append(events, e)
+	}
 	return events
 }
 

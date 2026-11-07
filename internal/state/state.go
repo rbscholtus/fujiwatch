@@ -39,6 +39,15 @@ type Source struct {
 type State struct {
 	Offers  map[string]*Offer  `json:"offers"`
 	Sources map[string]*Source `json:"sources"`
+	// Flash holds the flash-sale offers already reported, keyed by
+	// FlashKey, with the end of their slot; entries are dropped once the
+	// slot has ended.
+	Flash map[string]time.Time `json:"flash,omitempty"`
+}
+
+// FlashKey identifies a flash-sale offer in one slot: "shop|url|start".
+func FlashKey(shop, url string, start time.Time) string {
+	return Key(shop, url) + "|" + start.UTC().Format(time.RFC3339)
 }
 
 // Key identifies an offer or source: "shop|url".
@@ -46,7 +55,7 @@ func Key(shop, url string) string { return shop + "|" + url }
 
 // New returns an empty state.
 func New() *State {
-	return &State{Offers: map[string]*Offer{}, Sources: map[string]*Source{}}
+	return &State{Offers: map[string]*Offer{}, Sources: map[string]*Source{}, Flash: map[string]time.Time{}}
 }
 
 // Load reads path; a missing file yields an empty state (first run).
@@ -67,6 +76,9 @@ func Load(path string) (*State, error) {
 	}
 	if st.Sources == nil {
 		st.Sources = map[string]*Source{}
+	}
+	if st.Flash == nil {
+		st.Flash = map[string]time.Time{}
 	}
 	return st, nil
 }

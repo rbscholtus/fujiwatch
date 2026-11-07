@@ -14,6 +14,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"golang.org/x/net/html"
 
+	"github.com/rbscholtus/fujiwatch/internal/config"
 	"github.com/rbscholtus/fujiwatch/internal/match"
 )
 
@@ -25,6 +26,13 @@ type Offer struct {
 	PriceVND  int64  `json:"price_vnd"`           // 0 = price not shown ("Liên hệ")
 	InStock   *bool  `json:"in_stock,omitempty"`  // nil = unknown
 	Condition string `json:"condition,omitempty"` // "new" | "used" | "" (unknown; the source decides)
+
+	// Flash sale offers only (mode: flash): the price above holds during
+	// [FlashStart, FlashEnd) instead of RegularVND.
+	FlashStart time.Time `json:"flash_start,omitzero"`
+	FlashEnd   time.Time `json:"flash_end,omitzero"`
+	RegularVND int64     `json:"regular_vnd,omitempty"`
+	Quota      string    `json:"quota,omitempty"` // e.g. "0/7" sold of the units on offer
 }
 
 // Adapter extracts offers from one shop's pages.
@@ -181,6 +189,32 @@ var registry = map[string]Adapter{
 			Next:  `#page a:contains("tiếp")`, // <category>_pN, 40 per page
 		},
 	),
+}
+
+// flashRegistry holds the adapters for mode: flash, keyed by shop name.
+var flashRegistry = map[string]Adapter{
+	"bncamera": NewBNFlash(),
+}
+
+// ForSource returns the adapter for a source: the shop's flash-sale adapter
+// in flash mode, else ForShop.
+func ForSource(shop, mode string) Adapter {
+	if mode == config.ModeFlash {
+		if a, ok := flashRegistry[shop]; ok {
+			return a
+		}
+		return noFlash{shop: shop}
+	}
+	return ForShop(shop)
+}
+
+// noFlash is the adapter for a flash source of a shop without one.
+type noFlash struct{ shop string }
+
+func (n noFlash) Name() string { return n.shop }
+
+func (n noFlash) Extract(string, *goquery.Document, []byte) ([]Offer, error) {
+	return nil, fmt.Errorf("no flash-sale adapter for shop %q", n.shop)
 }
 
 // ForShop returns the adapter for shop, or a generic one if the shop has no

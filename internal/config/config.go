@@ -21,6 +21,9 @@ import (
 const (
 	ModeProduct = "product"
 	ModeListing = "listing"
+	// ModeFlash watches a shop's time-limited flash sale (bncamera): its
+	// offers are reported as flash_sale events, never recorded as prices.
+	ModeFlash = "flash"
 )
 
 // Conditions for a source.
@@ -199,12 +202,12 @@ func (c *Config) Validate() error {
 			if _, ok := c.ProductByID(s.Product); !ok {
 				errs = append(errs, fmt.Errorf("%s: unknown product %q", where, s.Product))
 			}
-		case ModeListing:
+		case ModeListing, ModeFlash:
 			if s.Product != "" {
-				errs = append(errs, fmt.Errorf("%s: product must be empty in listing mode", where))
+				errs = append(errs, fmt.Errorf("%s: product must be empty in %s mode", where, s.Mode))
 			}
 		default:
-			errs = append(errs, fmt.Errorf("%s: mode must be %q or %q, got %q", where, ModeProduct, ModeListing, s.Mode))
+			errs = append(errs, fmt.Errorf("%s: mode must be %q, %q or %q, got %q", where, ModeProduct, ModeListing, ModeFlash, s.Mode))
 		}
 		if !slices.Contains([]string{ConditionNew, ConditionUsed, ConditionAuto}, s.Condition) {
 			errs = append(errs, fmt.Errorf("%s: invalid condition %q", where, s.Condition))

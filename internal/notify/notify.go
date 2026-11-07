@@ -75,6 +75,7 @@ var subjectOrder = []struct {
 	one, few string
 }{
 	{diff.BelowTarget, "below target", "below target"},
+	{diff.FlashSale, "flash sale", "flash sales"},
 	{diff.PriceDrop, "price drop", "price drops"},
 	{diff.BackInStock, "back in stock", "back in stock"},
 	{diff.NewListing, "new listing", "new listings"},
@@ -149,7 +150,7 @@ func ShouldEmail(n config.Notify, events []diff.Event, now time.Time) bool {
 // Notifications). Baseline events (a source's first run) are never sent.
 // It is ordered by importance: when one listing has several of these events
 // in a run, only the first type in this list is sent.
-var WhatsAppTypes = []diff.Type{diff.BelowTarget, diff.PriceDrop, diff.BackInStock, diff.NewListing}
+var WhatsAppTypes = []diff.Type{diff.BelowTarget, diff.FlashSale, diff.PriceDrop, diff.BackInStock, diff.NewListing}
 
 func instant(events []diff.Event) []diff.Event {
 	best := map[string]int{} // URL → index into out

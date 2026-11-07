@@ -342,3 +342,48 @@ func TestEmptyListingIsNotBroken(t *testing.T) {
 		t.Errorf("missed = %d, want 1", m)
 	}
 }
+
+// A flash-sale offer is reported once per slot, never stored as an offer
+// or as baseline, and forgotten once its slot has ended.
+func TestFlashSale(t *testing.T) {
+	start := t0.Add(13 * time.Hour)
+	flash := func(start time.Time) Observation {
+		o := ob(itemURL, 29_000_000, new(true))
+		o.FlashStart, o.FlashEnd, o.RegularVND, o.Quota = start, start.Add(2*time.Hour), 32_500_000, "0/5"
+		return o
+	}
+	run := func(obs ...Observation) SourceRun {
+		return SourceRun{Shop: shop, URL: "https://bncamera.com/", Mode: config.ModeFlash, OfferCount: len(obs), Empty: true, Observations: obs}
+	}
+	cfg := map[string]bool{state.Key(shop, "https://bncamera.com/"): true}
+	st := state.New()
+
+	evs := Apply(st, []SourceRun{run(flash(start))}, cfg, t0, Options{})
+	if len(evs) != 1 || evs[0].Type != FlashSale || evs[0].Baseline || evs[0].OldPrice != 32_500_000 ||
+		evs[0].PriceVND != 29_000_000 || !evs[0].Start.Equal(start) || evs[0].Quota != "0/5" {
+		t.Fatalf("first run: %+v", evs)
+	}
+	if len(st.Offers) != 0 {
+		t.Errorf("flash offer stored as an offer: %+v", st.Offers)
+	}
+
+	// Seen again before the slot: quiet. The same product in another slot: new.
+	if evs := Apply(st, []SourceRun{run(flash(start))}, cfg, t0.Add(time.Hour), Options{}); len(evs) != 0 {
+		t.Errorf("second run: %v", types(evs))
+	}
+	later := start.Add(24 * time.Hour)
+	if evs := Apply(st, []SourceRun{run(flash(start), flash(later))}, cfg, t0.Add(2*time.Hour), Options{}); len(evs) != 1 || !evs[0].Start.Equal(later) {
+		t.Errorf("another slot: %+v", evs)
+	}
+
+	// After the first slot ended it is forgotten; the later one is kept.
+	Apply(st, []SourceRun{run()}, cfg, start.Add(3*time.Hour), Options{})
+	if _, ok := st.Flash[state.FlashKey(shop, itemURL, start)]; ok || len(st.Flash) != 1 {
+		t.Errorf("flash state after the slot = %v", st.Flash)
+	}
+
+	// No flash sale at all is healthy, not adapter_broken.
+	if evs := Apply(st, []SourceRun{run()}, cfg, start.Add(4*time.Hour), Options{}); len(evs) != 0 {
+		t.Errorf("empty flash sale: %v", types(evs))
+	}
+}

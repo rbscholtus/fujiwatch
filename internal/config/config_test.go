@@ -125,6 +125,10 @@ sources:
     product: x-t5
     condition: mint
     url: https://c.example/
+  - shop: d
+    mode: flash
+    product: x-t5
+    url: https://d.example/
 `,
 			wantErr: []string{
 				`unknown product "nope"`,
@@ -133,6 +137,7 @@ sources:
 				"shop is required",
 				"product must be empty in listing mode",
 				`invalid condition "mint"`,
+				"product must be empty in flash mode",
 			},
 		},
 	}

@@ -574,3 +574,20 @@ func TestFromEnv(t *testing.T) {
 		t.Errorf("partial: email=%v wa=%v problems=%v", email, wa, problems)
 	}
 }
+
+// A flash sale is an instant alert, with its window (Vietnam time).
+func TestFlashSaleAlert(t *testing.T) {
+	start := time.Date(2026, 11, 8, 13, 0, 0, 0, time.UTC) // Sun 20:00 ICT
+	e := diff.Event{Type: diff.FlashSale, Product: "x-t5", Shop: "bncamera", Condition: "new", URL: "https://bncamera.com/x",
+		PriceVND: 33_900_000, OldPrice: 38_490_000, Start: start, End: start.Add(2 * time.Hour), Quota: "1/5"}
+	msg := &Message{Events: []diff.Event{e}, Names: map[string]string{"x-t5": "Fujifilm X-T5"}}
+	text := WhatsAppText(msg)
+	for _, want := range []string{"1 alert", "⚡ Fujifilm X-T5 (new) bncamera flash sale: 33.900.000₫ (normally 38.490.000₫, -12%), Sun 08/11 20:00–22:00, 1/5 sold", "https://bncamera.com/x"} {
+		if !strings.Contains(text, want) {
+			t.Errorf("WhatsApp text missing %q:\n%s", want, text)
+		}
+	}
+	if s := Subject(msg.Events); s != "fujiwatch: 1 flash sale" {
+		t.Errorf("subject = %q", s)
+	}
+}
