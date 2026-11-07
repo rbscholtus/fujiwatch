@@ -19,6 +19,10 @@
 # be mixed into the body's history. Every kit title names a focal length.
 kit_excludes: &kit ['\bkit\b', '\d+(-\d+)? ?mm\b', '\+ ?(lens|ong kinh)\b']
 
+# Lens products exclude titles that name a camera body, for the same reason
+# the other way round ("Fujifilm X-T5 + Sigma 18-50mm" is a kit).
+body_excludes: &body ['\bx-(t|s|h|e|m|a|pro)\d']
+
 products:
   - id: x-t3
     name: "Fujifilm X-T3"
@@ -43,16 +47,44 @@ products:
     kind: lens
     patterns: ['(^|\D)10-24(\D|$)']
     require_all: ['\bwr\b|\bii\b|mark ?ii']
+    exclude: *body
 
   - id: xf10-24-i
     name: "XF10-24mm F4 R OIS (I)"
     kind: lens
     patterns: ['(^|\D)10-24(\D|$)']
-    exclude: ['\bwr\b', '\bii\b', 'mark ?ii']
+    exclude: ['\bwr\b', '\bii\b', 'mark ?ii', '\bx-(t|s|h|e|m|a|pro)\d']
 
   - id: tamron-16-50
     name: "Tamron 16-50mm F2.8 Di III VXD (X)"
     kind: lens
     patterns: ['tamron', '(^|\D)16-50(\D|$)']
     require_any: ['fuji', 'fujifilm', 'x-?mount', 'ngam x', '\bfx\b']
-    exclude: ['sony', '\bfe\b', '\be-?mount', 'nikon', '\bz\b', 'canon', '\brf\b']
+    exclude: ['sony', '\bfe\b', '\be-?mount', 'nikon', '\bz\b', 'canon', '\brf\b', '\bx-(t|s|h|e|m|a|pro)\d']
+
+  # Canon, Nikon and Sony also make 18-55 kit zooms, and the XF18-55 is the
+  # classic X-T kit lens, so: Fujifilm/XF required, other brands and
+  # body-plus-lens kits excluded.
+  - id: xf18-55
+    name: "XF18-55mm F2.8-4 R LM OIS"
+    kind: lens
+    patterns: ['(^|\D)18-55(\D|$)']
+    require_any: ['\bxf ?18-55', 'fujinon', 'fuji']
+    exclude: ['canon', '\bef-?s\b', 'nikon', '\bdx\b', 'sony', 'pentax', '\bx-(t|s|h|e|m|a|pro)\d']
+
+  # Sigma lenses are made for X, Sony E and L mount. Shops often list one
+  # product for several mounts ("for Sony E/Fujifilm"), so instead of
+  # excluding other brands, a Fujifilm / X-mount mention is required.
+  - id: sigma-10-18
+    name: "Sigma 10-18mm F2.8 DC DN Contemporary (X)"
+    kind: lens
+    patterns: ['sigma', '(^|\D)10-18(\D|$)']
+    require_any: ['fuji', 'x-?mount', 'ngam x', '\bfx\b']
+    exclude: *body
+
+  - id: sigma-18-50
+    name: "Sigma 18-50mm F2.8 DC DN Contemporary (X)"
+    kind: lens
+    patterns: ['sigma', '(^|\D)18-50(\D|$)']
+    require_any: ['fuji', 'x-?mount', 'ngam x', '\bfx\b']
+    exclude: *body

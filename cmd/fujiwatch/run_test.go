@@ -60,6 +60,15 @@ func useSnapshotFetcher(t *testing.T) {
 	fetcherFactory = func(fetch.Options) runner.Fetcher { return snapshotFetcher{bodies: bodies} }
 }
 
+func repoProductCount(t *testing.T) int {
+	t.Helper()
+	cfg, err := loadConfig("../../config")
+	if err != nil {
+		t.Fatal(err)
+	}
+	return len(cfg.Watchlist.Products)
+}
+
 func repoSourceCount(t *testing.T) int {
 	t.Helper()
 	cfg, err := loadConfig("../../config")

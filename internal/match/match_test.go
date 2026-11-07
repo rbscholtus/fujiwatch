@@ -100,8 +100,33 @@ func TestMatchWatchlist(t *testing.T) {
 		{"Tamron 16-50mm F2.8 Di III VXD Nikon Z", ""},
 		{"Tamron 16-50mm F2.8 Di III VXD", ""}, // mount unknown → don't guess
 
+		// Sigma 10-18 and 18-50 (X-mount): real titles from the snapshots.
+		{"Ống kính Sigma 10-18mm f/2.8 DC DN Contemporary for Fujifilm/Sony", "sigma-10-18"},
+		{"Sigma 18-50mm f/2.8 DC DN for Fujifilm X", "sigma-18-50"},
+		{"Ống kính Sigma 18-50mm f/2.8 DC DN for Sony E/Fujifilm", "sigma-18-50"}, // dual-mount listing
+		{"Ống kính Sigma 18-50mm f/2.8 DC DN (C) For Sony E 2nd (#13013)", ""},    // Sony only
+		{"Sigma 18-50mm F2.8 DC DN Contemporary L-Mount", ""},
+		{"Sigma 10-18mm F2.8 DC DN Contemporary ngàm X", "sigma-10-18"},
+		{"Fujifilm X-T5 + Sigma 18-50mm f/2.8 XF (Màu Bạc), Mới 100% (Chính Hãng)", ""}, // kit
+		{"Sigma 18-35mm F1.8 DC HSM Art", ""},
+		{"Sigma 10-20mm F3.5 EX DC HSM", ""},
+
+		// Fujifilm XF18-55mm F2.8-4 R LM OIS.
+		{"Ống kính Fujifilm XF18-55mm F2.8-4 R LM OIS", "xf18-55"},
+		{"Fujinon XF 18-55mm f/2.8-4 R LM OIS cũ 98%", "xf18-55"},
+		{"FUJIFILM XF 18-55mm f/2.8-4 R LM OIS (Like new)", "xf18-55"},
+		{"Fujifilm X T3 + kit XF18-55mm", ""},                    // kit
+		{"Canon EF-S 18-55mm f/3.5-5.6 IS STM", ""},              // other brand
+		{"Nikon AF-P DX 18-55mm f/3.5-5.6G VR", ""},              // other brand
+		{"Sony E 18-55mm F3.5-5.6 OSS cho Fujifilm? (nhầm)", ""}, // other brand
+		{"Fujifilm XC 15-45mm F3.5-5.6 OIS PZ", ""},
+
+		// Lens kits: a lens product never takes a body-plus-lens price.
+		{"Fujifilm X-T5 + Tamron 16-50mm F2.8 Di III VXD", ""},
+		{"Combo Fujifilm X-T4 + Fujinon XF10-24mm F4 R OIS WR", ""},
+
 		// Unrelated
-		{"Fujinon XF18-55mm F2.8-4 R LM OIS", ""},
+		{"Fujinon XF18-55mm F2.8-4 R LM OIS", "xf18-55"}, // watched since it was added
 		{"Fujifilm X100VI", ""},
 	}
 
@@ -125,11 +150,12 @@ func TestMatchWatchlist(t *testing.T) {
 
 func TestMatchAmbiguous(t *testing.T) {
 	m := repoMatcher(t)
-	res := m.Match("Combo Fujifilm X-T4 + Fujinon XF10-24 F4 R OIS WR")
+	// One listing for two bodies: neither product may claim it.
+	res := m.Match("Fujifilm X-T4 / X-T5 body (thu cũ đổi mới)")
 	if res.Status != Ambiguous {
 		t.Fatalf("Status = %s, want ambiguous", res.Status)
 	}
-	if !slices.Equal(res.Candidates, []string{"x-t4", "xf10-24-ii"}) {
+	if !slices.Equal(res.Candidates, []string{"x-t4", "x-t5"}) {
 		t.Errorf("Candidates = %v", res.Candidates)
 	}
 	if res.ProductID != "" {

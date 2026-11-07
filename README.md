@@ -23,6 +23,11 @@ A static price-history site, built with Svelte and published on GitHub Pages, sh
 | `xf10-24-i` | XF10-24mm F4 R OIS (Mark I) | tracked separately from Mark II (different prices) |
 | `xf10-24-ii` | XF10-24mm F4 R OIS WR (Mark II) | Mark II is the WR version |
 | `tamron-16-50` | Tamron 16-50mm F2.8 Di III VXD | **X-mount only**; reject Sony E / Nikon Z / Canon RF variants |
+| `xf18-55` | Fujifilm XF18-55mm F2.8-4 R LM OIS | reject Canon / Nikon / Sony 18-55 kit zooms |
+| `sigma-10-18` | Sigma 10-18mm F2.8 DC DN Contemporary | X-mount; dual-mount listings ("for Fujifilm/Sony") count |
+| `sigma-18-50` | Sigma 18-50mm F2.8 DC DN Contemporary | X-mount; dual-mount listings count |
+
+Body products never match kits (a title with "kit", a focal length or "+ lens"), and lens products never match a title that names a camera body, so kit prices stay out of both histories.
 
 More lenses will be added later. Adding an item must only require editing `config/watchlist.yaml`.
 

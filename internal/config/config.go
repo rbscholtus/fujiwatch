@@ -66,9 +66,10 @@ func (p Product) Target(condition string) int64 {
 type Watchlist struct {
 	Products []Product `yaml:"products"`
 
-	// KitExcludes only exists to hold the YAML anchor (&kit) that body
-	// products reuse in their exclude lists.
-	KitExcludes []string `yaml:"kit_excludes"`
+	// KitExcludes and BodyExcludes only hold the YAML anchors (&kit, &body)
+	// that products reuse in their exclude lists.
+	KitExcludes  []string `yaml:"kit_excludes"`
+	BodyExcludes []string `yaml:"body_excludes"`
 }
 
 // Defaults holds per-run fetch settings from sources.yaml.

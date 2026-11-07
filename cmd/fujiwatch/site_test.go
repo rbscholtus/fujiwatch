@@ -5,6 +5,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -24,7 +25,7 @@ func TestSiteDataCommand(t *testing.T) {
 	if code := run([]string{"sitedata", "--config", "../../config", "--data", data, "--out", out}, &stdout, &stderr); code != exitOK {
 		t.Fatalf("sitedata: exit %d: %s", code, stderr.String())
 	}
-	if !strings.Contains(stdout.String(), "wrote 6 products") {
+	if !strings.Contains(stdout.String(), fmt.Sprintf("wrote %d products", repoProductCount(t))) {
 		t.Errorf("stdout = %q", stdout.String())
 	}
 
