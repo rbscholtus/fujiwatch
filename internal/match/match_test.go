@@ -54,7 +54,7 @@ func TestMatchWatchlist(t *testing.T) {
 		// X-T3 vs X-T30
 		{"Máy ảnh Fujifilm X-T3 Body (Chính hãng)", "x-t3"},
 		{"Fujifilm XT3 body cũ 98%", "x-t3"},
-		{"Fujifilm X T3 + kit XF18-55mm", "x-t3"},
+		{"Fujifilm X T3 + kit XF18-55mm", ""}, // kit, not body-only
 		{"Fujifilm X-T3", "x-t3"},
 		{"Fujifilm X-T3 kèm grip, dùng chung pin với X-T30", "x-t3"},
 		{"Máy ảnh Fujifilm X-T30", ""},
@@ -67,9 +67,22 @@ func TestMatchWatchlist(t *testing.T) {
 
 		// X-T5 vs X-T50
 		{"Máy ảnh Fujifilm X-T5 Body (Đen)", "x-t5"},
-		{"Fujifilm XT5 kit XF16-80mm", "x-t5"},
+		{"Fujifilm XT5 kit XF16-80mm", ""}, // kit, not body-only
 		{"Máy ảnh Fujifilm X-T50 Body", ""},
 		{"Fujifilm XT50 kit XC15-45", ""},
+
+		// Kits never match body-only products (real titles from the snapshots).
+		{"Máy ảnh Fujifilm X-T5 + Lens XF 16-50mm F/2.8-4.8 (Black) | Chính Hãng", ""},
+		{"Fujifilm X-T5 Kit XF 16-80mm F4 (Màu Bạc) - Mới 100% (Chính hãng)", ""},
+		{"Fujifilm X-T5 + Tamron 17-70mm f/2.8 (Màu Bạc), Mới 100% (Chính Hãng)", ""},
+		{"Fujifilm X-T5 + XF 16-50mm F2.8-4.8 (Bạc), Mới 100% (Chính Hãng)", ""},
+		{"Máy ảnh Fujifilm X-T3 + ống kính", ""},
+		// Body-only titles still match.
+		{"Fujifilm X-T5 (Chính hãng) (Body Only, Black)", "x-t5"},
+		{"Máy ảnh Fujifilm X-T5 (Body, Bạc)", "x-t5"},
+		{"Fujifilm X-T4 Body Black (85% - BH 03 Tháng) HN", "x-t4"},
+		{"Máy ảnh FUJIFILM X-T3 (XT3) Body cũ", "x-t3"},
+		{"Fujifilm X-T3 cũ | 2nd (0831)", "x-t3"},
 
 		// XF10-24 Mark I vs Mark II
 		{"Ống kính Fujinon XF10-24mm F4 R OIS WR II", "xf10-24-ii"},
@@ -112,7 +125,7 @@ func TestMatchWatchlist(t *testing.T) {
 
 func TestMatchAmbiguous(t *testing.T) {
 	m := repoMatcher(t)
-	res := m.Match("Combo Fujifilm X-T4 + XF10-24mm F4 R OIS WR")
+	res := m.Match("Combo Fujifilm X-T4 + Fujinon XF10-24 F4 R OIS WR")
 	if res.Status != Ambiguous {
 		t.Fatalf("Status = %s, want ambiguous", res.Status)
 	}

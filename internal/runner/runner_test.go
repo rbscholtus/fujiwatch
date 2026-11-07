@@ -135,25 +135,27 @@ func TestRunFirstCycle(t *testing.T) {
 		t.Errorf("blocked source err = %q", s.Err)
 	}
 
-	// Events: 5 new X-T5 listings, 2 broken sources, nothing for the
+	// Events: 2 new X-T5 body listings (the 3 kits on that page don't match
+	// the body-only product), 2 broken sources, nothing for the
 	// product-mode source on its first run.
-	if n := countType(rep.Events, diff.NewListing); n != 5 {
-		t.Errorf("new_listing = %d, want 5", n)
+	if n := countType(rep.Events, diff.NewListing); n != 2 {
+		t.Errorf("new_listing = %d, want 2", n)
 	}
 	if n := countType(rep.Events, diff.AdapterBroken); n != 2 {
 		t.Errorf("adapter_broken = %d, want 2", n)
 	}
-	if len(rep.Events) != 7 {
-		t.Errorf("events = %d, want 7", len(rep.Events))
+	if len(rep.Events) != 4 {
+		t.Errorf("events = %d, want 4", len(rep.Events))
 	}
 
-	// Unmatched: every non-watched offer from both listings (6 used + 31 new).
-	if len(rep.Unmatched) != 37 {
-		t.Errorf("unmatched = %d, want 37", len(rep.Unmatched))
+	// Unmatched: every non-watched offer from both listings (6 used + 34
+	// new, including the 3 X-T5 kits).
+	if len(rep.Unmatched) != 40 {
+		t.Errorf("unmatched = %d, want 40", len(rep.Unmatched))
 	}
 
 	// History: one record per matched offer.
-	if len(hist["xf10-24-ii"]) != 1 || len(hist["x-t5"]) != 5 {
+	if len(hist["xf10-24-ii"]) != 1 || len(hist["x-t5"]) != 2 {
 		t.Errorf("history = xf10-24-ii:%d x-t5:%d", len(hist["xf10-24-ii"]), len(hist["x-t5"]))
 	}
 	if r := hist["xf10-24-ii"][0]; r.PriceVND != 27_490_000 || !r.TS.Equal(runTime) || r.Condition != "new" || r.URL != xspaceURL {
@@ -164,8 +166,8 @@ func TestRunFirstCycle(t *testing.T) {
 	if o := st.Offers[state.Key("xspace", xspaceURL)]; o == nil || o.Product != "xf10-24-ii" {
 		t.Errorf("xspace state = %+v", o)
 	}
-	if len(st.Offers) != 6 {
-		t.Errorf("state offers = %d, want 6", len(st.Offers))
+	if len(st.Offers) != 3 {
+		t.Errorf("state offers = %d, want 3", len(st.Offers))
 	}
 }
 

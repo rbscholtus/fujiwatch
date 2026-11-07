@@ -14,21 +14,29 @@
 # Focal ranges use (^|\D)…(\D|$) instead of \b, because there is no word
 # boundary inside "xf10-24", and "110-240" must not match "10-24".
 
+# Body-only products exclude kits ("X-T5 + Lens XF 16-50mm", "X-T5 Kit
+# XF16-80mm", "X-T5 + Tamron 17-70mm"): a kit's higher price would otherwise
+# be mixed into the body's history. Every kit title names a focal length.
+kit_excludes: &kit ['\bkit\b', '\d+(-\d+)? ?mm\b', '\+ ?(lens|ong kinh)\b']
+
 products:
   - id: x-t3
     name: "Fujifilm X-T3"
     kind: body
     patterns: ['\bx-t3(\D|$)']
+    exclude: *kit
 
   - id: x-t4
     name: "Fujifilm X-T4"
     kind: body
     patterns: ['\bx-t4(\D|$)']
+    exclude: *kit
 
   - id: x-t5
     name: "Fujifilm X-T5"
     kind: body
     patterns: ['\bx-t5(\D|$)']
+    exclude: *kit
 
   - id: xf10-24-ii
     name: "XF10-24mm F4 R OIS WR (II)"
