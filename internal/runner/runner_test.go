@@ -4,9 +4,11 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"net/url"
 	"os"
 	"slices"
 	"strings"
+	"sync"
 	"testing"
 	"time"
 
@@ -19,6 +21,7 @@ import (
 
 // fakeFetcher serves canned bodies by URL.
 type fakeFetcher struct {
+	mu         sync.Mutex // shops fetch concurrently
 	bodies     map[string][]byte
 	errs       map[string]error
 	disallowed map[string]bool
@@ -26,6 +29,8 @@ type fakeFetcher struct {
 }
 
 func (f *fakeFetcher) Get(_ context.Context, u string) (*fetch.Response, error) {
+	f.mu.Lock()
+	defer f.mu.Unlock()
 	f.gets = append(f.gets, u)
 	if err := f.errs[u]; err != nil {
 		return nil, err
@@ -35,6 +40,11 @@ func (f *fakeFetcher) Get(_ context.Context, u string) (*fetch.Response, error) 
 		return nil, &fetch.StatusError{URL: u, Code: 404}
 	}
 	return &fetch.Response{URL: u, Status: 200, Body: b}, nil
+}
+
+// PostForm serves bodies keyed "POST <url> <encoded form>".
+func (f *fakeFetcher) PostForm(ctx context.Context, u string, form url.Values) (*fetch.Response, error) {
+	return f.Get(ctx, "POST "+u+" "+form.Encode())
 }
 
 func (f *fakeFetcher) Allowed(_ context.Context, u string) (bool, error) {
@@ -151,16 +161,16 @@ func TestRunFirstCycle(t *testing.T) {
 	}
 
 	// Events: 2 new X-T5 and 3 new X-E5 body listings (the kits on that page
-	// don't match the body-only products), 2 broken sources, nothing for the
-	// product-mode source on its first run.
-	if n := countType(rep.Events, diff.NewListing); n != 5 {
-		t.Errorf("new_listing = %d, want 5", n)
+	// don't match the body-only products), the product-mode source's product
+	// (all baseline), 2 broken sources.
+	if n := countType(rep.Events, diff.NewListing); n != 6 {
+		t.Errorf("new_listing = %d, want 6", n)
 	}
 	if n := countType(rep.Events, diff.AdapterBroken); n != 2 {
 		t.Errorf("adapter_broken = %d, want 2", n)
 	}
-	if len(rep.Events) != 7 {
-		t.Errorf("events = %d, want 7", len(rep.Events))
+	if len(rep.Events) != 8 {
+		t.Errorf("events = %d, want 8", len(rep.Events))
 	}
 
 	// Unmatched: every non-watched offer from both listings (43 offers
@@ -402,5 +412,115 @@ func TestRunUnmatchedOnce(t *testing.T) {
 	}
 	if len(rep.Unmatched) != 1 {
 		t.Errorf("unmatched = %+v, want one", rep.Unmatched)
+	}
+}
+
+// kyma: the category page is followed by one POST for the remaining
+// products; offers on both are counted once.
+func TestRunFollowsPostPage(t *testing.T) {
+	const u = "https://kyma.vn/may-anh-fujifilm"
+	cfg := testConfig(t)
+	cfg.Sources.Sources = []config.Source{{Shop: "kyma", Mode: config.ModeListing, Condition: config.ConditionAuto, URL: u}}
+	page := readFile(t, "kyma/may-anh-fujifilm.html")
+	first, err := adapters.Extract(adapters.ForShop("kyma"), u, page)
+	if err != nil {
+		t.Fatal(err)
+	}
+	more := url.Values{"categoryId": {"2123"}, "paging": {"0"}, "pageSize": {"300"}, "sortBy": {"3"}, "priceMin": {"590000"}, "priceMax": {"200500000"}}
+	// The response repeats one card from the first page and adds one.
+	resp := fmt.Sprintf(`{"list":%q,"paging":1,"remainingProducts":-404}`,
+		`<li><div class="item__product"><a class="item__name" href="`+strings.TrimPrefix(first[0].URL, "https://kyma.vn")+`"><h3>`+first[0].Title+`</h3></a><div class="item__price"><span>1,000,000</span></div></div></li>`+
+			`<li><div class="item__product"><a class="item__name" href="/may-anh-fujifilm-x-e5.html"><h3>Máy ảnh Fujifilm X-E5 (Body)</h3></a><div class="item__price"><span>33,990,000</span></div></div></li>`)
+	f := &fakeFetcher{bodies: map[string][]byte{
+		u: page,
+		"POST https://kyma.vn/Product/ShowMoreNextProCate " + more.Encode(): []byte(resp),
+	}}
+	rep, _, err := Run(t.Context(), cfg, state.New(), f, Options{Now: func() time.Time { return runTime }})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sr := rep.Sources[0]; sr.Err != "" || sr.Offers != len(first)+1 {
+		t.Errorf("source = %+v, want %d offers", sr, len(first)+1)
+	}
+	if !slices.ContainsFunc(rep.Seen, func(o diff.Observation) bool { return o.Product == "x-e5" }) {
+		t.Error("X-E5 from the show-more response not matched")
+	}
+}
+
+// A product page with variants: the matching variant is used (a kit never
+// stands in for the body), preferring in stock, then the lowest price.
+func TestRunProductVariants(t *testing.T) {
+	const page = "https://fujifilm-xspace.vn/products/fujifilm-x-t5"
+	cfg := testConfig(t)
+	cfg.Sources.Sources = []config.Source{{Shop: "xspace", Mode: config.ModeProduct, Product: "x-t5", Condition: config.ConditionNew, URL: page}}
+	js := `{"title":"Máy ảnh FUJIFILM X-T5","price":4549000000,"available":true,"variants":[` +
+		`{"title":"Body / Đen / Máy ảnh không gương lật","price":4549000000,"available":false},` +
+		`{"title":"Body / Bạc / Máy ảnh không gương lật","price":4549000000,"available":false},` +
+		`{"title":"XF16-80mm Kit / Đen / Máy ảnh không gương lật","price":5689000000,"available":true},` +
+		`{"title":"XF16-50mm Kit / Bạc / Máy ảnh không gương lật","price":5599000000,"available":true}]}`
+	f := &fakeFetcher{bodies: map[string][]byte{page + ".js": []byte(js)}}
+	rep, _, err := Run(t.Context(), cfg, state.New(), f, Options{Now: func() time.Time { return runTime }})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rep.Seen) != 1 {
+		t.Fatalf("seen = %+v", rep.Seen)
+	}
+	if o := rep.Seen[0]; o.PriceVND != 45_490_000 || o.InStock == nil || *o.InStock || o.URL != page {
+		t.Errorf("observation = %+v, want the body at 45.490.000, out of stock", o)
+	}
+	if len(rep.Unmatched) != 0 {
+		t.Errorf("unmatched = %+v", rep.Unmatched)
+	}
+}
+
+// Shops run concurrently, but results stay in config order, and within a
+// shop the first source still wins a URL that two sources find.
+func TestRunConfigOrder(t *testing.T) {
+	cfg := testConfig(t)
+	const vj1, vj2, kyma = "https://vjshop.vn/a", "https://vjshop.vn/b", "https://kyma.vn/may-anh-fujifilm"
+	cfg.Sources.Sources = []config.Source{
+		{Shop: "vjshop", Mode: config.ModeListing, Condition: config.ConditionUsed, URL: vj1},
+		{Shop: "kyma", Mode: config.ModeListing, Condition: config.ConditionAuto, URL: kyma},
+		{Shop: "vjshop", Mode: config.ModeListing, Condition: config.ConditionNew, URL: vj2},
+	}
+	page := vjPage(1, 1, "Fujifilm X-T5 Body")
+	f := &fakeFetcher{bodies: map[string][]byte{vj1: page, vj2: page, kyma: readFile(t, "kyma/may-anh-fujifilm.html")}}
+	st := state.New()
+	rep, _, err := Run(t.Context(), cfg, st, f, Options{Now: func() time.Time { return runTime }})
+	if err != nil {
+		t.Fatal(err)
+	}
+	urls := make([]string, 0, len(rep.Sources))
+	for _, s := range rep.Sources {
+		urls = append(urls, s.URL)
+	}
+	if !slices.Equal(urls, []string{vj1, kyma, vj2}) {
+		t.Errorf("sources in order %v", urls)
+	}
+	var vjOffers []*state.Offer
+	for _, o := range st.Offers {
+		if o.Shop == "vjshop" {
+			vjOffers = append(vjOffers, o)
+		}
+	}
+	if len(vjOffers) != 1 || vjOffers[0].Condition != "used" || vjOffers[0].Source != state.Key("vjshop", vj1) {
+		t.Errorf("vjshop offers = %+v, want one, from the first source (used)", vjOffers)
+	}
+}
+
+// Product mode: a used variation never stands in for a new product, even
+// when it is in stock and cheaper.
+func TestPickVariantPrefersCondition(t *testing.T) {
+	src := config.Source{Shop: "mayanhhoangto", Mode: config.ModeProduct, Product: "x-t5", Condition: config.ConditionNew}
+	offers := []adapters.Offer{
+		{Title: "X-T5 (Hàng khá đẹp)", PriceVND: 29_000_000, InStock: new(true), Condition: "used"},
+		{Title: "X-T5 (Hàng mới chính hãng)", PriceVND: 36_500_000, InStock: new(false)},
+		{Title: "X-T5 (Hàng mới nhập khẩu)", PriceVND: 34_500_000, InStock: new(false)},
+	}
+	got, ok := pickVariant(offers, func(string) bool { return true },
+		func(o adapters.Offer) bool { return resolveCondition(o, src) == src.Condition })
+	if !ok || got.PriceVND != 34_500_000 {
+		t.Errorf("picked %+v, want the cheapest new variation (34.500.000)", got)
 	}
 }

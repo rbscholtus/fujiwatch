@@ -69,11 +69,11 @@ func TestBelowTargetFirstSighting(t *testing.T) {
 		t.Errorf("events = %v", types(evs))
 	}
 
-	// Product mode first sighting below target: below_target only.
+	// Product mode first sighting below target: both events too.
 	run := SourceRun{Shop: shop, URL: itemURL, Mode: config.ModeProduct, OfferCount: 1,
 		Observations: []Observation{ob(itemURL, 14_000_000, nil)}}
 	evs = Apply(state.New(), []SourceRun{run}, map[string]bool{run.Key(): true}, t0, targets(0, 15_000_000))
-	if !slices.Equal(types(evs), []Type{BelowTarget}) {
+	if !slices.Equal(types(evs), []Type{NewListing, BelowTarget}) {
 		t.Errorf("product mode events = %v", types(evs))
 	}
 }

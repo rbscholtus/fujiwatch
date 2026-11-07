@@ -1,0 +1,7 @@
+{
+  "shop": "x-camera",
+  "mode": "listing",
+  "page_url": "https://x-camera.vn/wp-json/wc/store/v1/products?parent=3380%2C3404%2C2870%2C3339%2C2860%2C5682%2C3450%2C8085%2C3475%2C5805%2C3370%2C2869%2C2868%2C3858%2C3937%2C3959%2C5414%2C4355%2C4266\u0026per_page=100\u0026type=variation",
+  "fetch_url": "https://x-camera.vn/wp-json/wc/store/v1/products?parent=3380%2C3404%2C2870%2C3339%2C2860%2C5682%2C3450%2C8085%2C3475%2C5805%2C3370%2C2869%2C2868%2C3858%2C3937%2C3959%2C5414%2C4355%2C4266\u0026per_page=100\u0026type=variation",
+  "fetched_at": "2026-11-07T12:11:27Z"
+}

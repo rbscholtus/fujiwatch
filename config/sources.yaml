@@ -6,7 +6,6 @@
 # condition: new | used | auto (detect from title/URL).
 #            Defaults: new for product mode, auto for listing mode.
 #
-# TODO: collect the real product, category and used-section URLs per shop.
 
 defaults:
   delay_ms: 3000        # between requests to the same host
@@ -27,10 +26,27 @@ notify:
   weekly: sunday
 
 sources:
+  # ── xspace: Fujifilm's own store (new only). Product JSON per page; a
+  #    product with variants (body, kits) is matched variant by variant.
   - shop: xspace
     mode: product
     product: xf10-24-ii
     url: https://fujifilm-xspace.vn/products/fujinon-xf10-24mmf4-r-ois-wr-ii
+
+  - shop: xspace
+    mode: product
+    product: xf16-55-ii
+    url: https://fujifilm-xspace.vn/products/fujinon-xf16-55mmf2-8-r-lm-wr-ii
+
+  - shop: xspace
+    mode: product
+    product: x-t5
+    url: https://fujifilm-xspace.vn/products/fujifilm-x-t5
+
+  - shop: xspace
+    mode: product
+    product: x-e5
+    url: https://fujifilm-xspace.vn/products/fujifilm-x-e5
 
   # vjshop: robots.txt disallows /may-anh-cu and /ong-kinh-cu, so used gear
   # is watched through the "Đồ cũ chất" brand sub-categories. Listings span
@@ -72,78 +88,149 @@ sources:
     mode: listing
     url: https://vjshop.vn/khuyen-mai?brands=3,11,12
 
-  # Product pages. vjshop links them under a category path
-  # (/ong-kinh-mirrorless/<slug>), but listings report https://vjshop.vn/<slug>;
-  # use that form so both identify the same offer.
-  - shop: vjshop
-    mode: product
-    product: x-t5
-    url: https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang
+  - shop: mayanhhoangto
+    mode: listing
+    url: https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/
 
-  - shop: vjshop
-    mode: product
-    product: xf10-24-ii
-    url: https://vjshop.vn/ong-kinh-fujifilm-xf-10-24mm-f4-r-ois-wr-chinh-hang
-
-  # /xf-18-55mm-f28-4-r-lm-ois-chinh-hang is an alias of the same product.
-  - shop: vjshop
-    mode: product
-    product: xf18-55
-    url: https://vjshop.vn/fujifilm-xf-18-55mm-f28-4-r-lm-ois-chinh-hang
-
-  - shop: vjshop
-    mode: product
-    product: xf16-55
-    url: https://vjshop.vn/fujifilm-xf-16-55mm-f28-r-lm-wr-chinh-hang
-
-  - shop: vjshop
-    mode: product
-    product: xf16-55-ii
-    url: https://vjshop.vn/fujifilm-xf16-55mm-f2-8-r-lm-wr-ii
-
-  # ── WooCommerce shops: category, search and product URLs are rewritten
-  #    to the Store API (/wp-json/wc/store/v1/products) by the adapter.
   - shop: mayanhhoangto
     mode: listing
     url: https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/
 
   - shop: mayanhhoangto
     mode: listing
-    url: https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/
+    url: https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/
 
   - shop: bncamera
     mode: listing
-    url: https://bncamera.com/?s=fujifilm&post_type=product
+    url: https://bncamera.com/danh-muc/may-anh/may-anh-fujifilm
 
   - shop: bncamera
-    mode: product
-    product: tamron-16-50
-    url: https://bncamera.com/san-pham/tamron-16-50mm-f2-8-a-for-fujifilm-x
+    mode: listing
+    url: https://bncamera.com/danh-muc/ong-kinh/ong-kinh-fujifilm
+
+  - shop: bncamera
+    mode: listing
+    url: https://bncamera.com/danh-muc/ong-kinh/ong-kinh-sigma
+
+  - shop: bncamera
+    mode: listing
+    url: https://bncamera.com/danh-muc/ong-kinh/ong-kinh-tamron
+
+  - shop: bncamera
+    mode: listing
+    condition: used
+    url: https://bncamera.com/danh-muc/do-cu
 
   - shop: x-camera
     mode: listing
-    url: https://x-camera.vn/?s=fujifilm&post_type=product
+    url: https://x-camera.vn/san-pham/may-anh/mirroless/
 
-  # ── kyma: category pages (its search is too picky).
+  - shop: x-camera
+    mode: listing
+    url: https://x-camera.vn/san-pham/ong-kinh/ong-kinh-mirroless/
+
+  - shop: x-camera
+    mode: listing
+    condition: used
+    url: https://x-camera.vn/san-pham/do-cu/
+
+  # ── kyma: category pages show 30 items; the adapter loads the rest with
+  #    one POST to the page's "Xem thêm" (show more) endpoint. Categories
+  #    show no stock and drop sold-out products, so the watched products'
+  #    own pages (JSON-LD with availability; colours are ?product-id=)
+  #    come first: they win the shared URL and report out/back in stock.
+  - shop: kyma
+    mode: product
+    product: x-t5
+    url: https://kyma.vn/may-anh-fujifilm-x-t5.html
+
+  - shop: kyma
+    mode: product
+    product: x-t5
+    url: https://kyma.vn/may-anh-fujifilm-x-t5.html?product-id=163637
+
+  - shop: kyma
+    mode: product
+    product: x-e5
+    url: https://kyma.vn/may-anh-fujifilm-x-e5-body-den.html
+
+  - shop: kyma
+    mode: product
+    product: x-e5
+    url: https://kyma.vn/may-anh-fujifilm-x-e5-body-den.html?product-id=216336
+
+  - shop: kyma
+    mode: product
+    product: xf10-24-ii
+    url: https://kyma.vn/ong-kinh-fujifilm-fujinon-xf10-24mm-f4-r-ois-wr-ii.html
+
+  - shop: kyma
+    mode: product
+    product: xf16-55-ii
+    url: https://kyma.vn/ong-kinh-fujifilm-xf-16-55mm-f28-r-lm-wr-ii.html
+
+  - shop: kyma
+    mode: product
+    product: sigma-10-18
+    url: https://kyma.vn/ong-kinh-sigma-10-18mm-f28-dc-dn-contemporary-for-fujifilm-x.html
+
+  - shop: kyma
+    mode: product
+    product: sigma-18-50
+    url: https://kyma.vn/ong-kinh-sigma-18-50mm-f28-dc-dn-c-for-fujifilm-x.html
+
+  - shop: kyma
+    mode: product
+    product: tamron-16-50
+    url: https://kyma.vn/tamron-16-50mm-f2-8-for-fujifilm-x.html
+
   - shop: kyma
     mode: listing
-    url: https://kyma.vn/may-anh-fujifilm
+    url: https://kyma.vn/may-anh-mirrorless-fujifilm
 
   - shop: kyma
     mode: listing
     url: https://kyma.vn/ong-kinh-fujifilm
 
-  # ── zshop (CS-Cart)
+  - shop: kyma
+    mode: listing
+    url: https://kyma.vn/ong-kinh-sigma
+
+  - shop: kyma
+    mode: listing
+    url: https://kyma.vn/ong-kinh-tamron
+
+  # ── zshop (CS-Cart): 40 per page, /page-N/ followed.
   - shop: zshop
     mode: listing
     url: https://zshop.vn/may-anh-mirrorless-fujifilm/
 
   - shop: zshop
-    mode: product
-    product: x-t5
-    url: https://zshop.vn/fujifilm-x-t5.html
+    mode: listing
+    url: https://zshop.vn/lens-fujifilm/
 
-  # ── mayanh24h: robots.txt disallows every URL with a query string.
+  - shop: zshop
+    mode: listing
+    url: https://zshop.vn/lens-sigma/
+
+  - shop: zshop
+    mode: listing
+    url: https://zshop.vn/lens-tamron/
+
+  - shop: zshop
+    mode: listing
+    condition: used
+    url: https://zshop.vn/body-fujifilm-cu/
+
+  - shop: zshop
+    mode: listing
+    condition: used
+    url: https://zshop.vn/lens-fujifilm-hang-cu/
+
+  # ── mayanh24h: robots.txt disallows every URL with a query string, and
+  #    listings page with ?page=N, so only page 1 of a listing can be read.
+  #    Used listings: page 1 (16 items). New gear: product pages (found in
+  #    the sitemap, /sitemap/product/sitemapN.xml).
   - shop: mayanh24h
     mode: listing
     condition: used
@@ -156,23 +243,130 @@ sources:
 
   - shop: mayanh24h
     mode: listing
-    url: https://mayanh24h.com/may-anh-mirrorless-fujifilm.html
+    condition: used
+    url: https://mayanh24h.com/ong-kinh-sigma-cu-cho-mirrorless.html
 
   - shop: mayanh24h
     mode: listing
-    url: https://mayanh24h.com/ong-kinh-fujifilm-x-mount.html
+    condition: used
+    url: https://mayanh24h.com/ong-kinh-tamron-cu-cho-mirrorless.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t5
+    url: https://mayanh24h.com/fujifilm-x-t5.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t5
+    url: https://mayanh24h.com/fujifilm-x-t5-mau-bac.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-e5
+    url: https://mayanh24h.com/fujifilm-x-e5-mau-den.html
+
+  - shop: mayanh24h
+    mode: product
+    product: xf10-24-ii
+    url: https://mayanh24h.com/fujifilm-xf-10-24mm-f-4-r-ii.html
+
+  - shop: mayanh24h
+    mode: product
+    product: xf16-55
+    url: https://mayanh24h.com/fujifilm-16-55mm-2-8-r.html
+
+  - shop: mayanh24h
+    mode: product
+    product: xf16-55-ii
+    url: https://mayanh24h.com/fujifilm-xf-16-55mm-mark-ii.html
+
+  - shop: mayanh24h
+    mode: product
+    product: xf18-55
+    url: https://mayanh24h.com/fujifilm-18-55mm-f-2-8-4.html
+
+  - shop: mayanh24h
+    mode: product
+    product: sigma-10-18
+    url: https://mayanh24h.com/sigma-10-18mm-dc-dn-fujifilm.html
+
+  - shop: mayanh24h
+    mode: product
+    product: sigma-18-50
+    url: https://mayanh24h.com/sigma-18-50mm-f2-8-fujifilm.html
 
   - shop: mayanh24h
     mode: product
     product: tamron-16-50
     url: https://mayanh24h.com/tamron-16-50mm-f-2-8-cho-fujifilm.html
 
-  # ── giangduydat: a product page lists each unit (new and used) as its
-  #    own offer, so it is watched as a listing.
+  # ── giangduydat: a product page lists each unit (new, used 85%, 90%, …)
+  #    as its own offer, so product pages are watched in listing mode. They
+  #    come before the categories: category cards carry no price (a card's
+  #    price may be a used unit's), and when one URL is found by two sources
+  #    in a run, the first source wins. Categories: 40 per page, followed.
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-t3
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-t4
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-t5
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-e5
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-xf-10-24mm-f4-r-ois
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-xf-10-24mm-f4-mark-ii
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-xf-16-55mm-f28-r-lm-wr
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-xf-16-55mm-f28-r-lm-wr-ii
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-xf-18-55mm-f28-4-r-lm-ois
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/sigma-18-50mm-f28-dc-dn-contemporary-for-fujifilm
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/c/may-anh-mirrorless
+
   - shop: giangduydat
     mode: listing
     url: https://giangduydat.vn/c/ong-kinh-fujifilm
 
   - shop: giangduydat
     mode: listing
-    url: https://giangduydat.vn/fujifilm-x-t4
+    url: https://giangduydat.vn/c/ong-kinh-sigma
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/c/ong-kinh-tamron
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/c/ong-kinh-thanh-ly
+
+  - shop: giangduydat
+    mode: listing
+    condition: used
+    url: https://giangduydat.vn/c/may-anh-cu

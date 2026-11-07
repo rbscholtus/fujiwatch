@@ -3,8 +3,11 @@ package fetch
 import (
 	"context"
 	"errors"
+	"io"
 	"net/http"
 	"net/http/httptest"
+	"net/url"
+	"strings"
 	"sync/atomic"
 	"testing"
 	"time"
@@ -146,5 +149,33 @@ func TestGetContextCancelledDuringDelay(t *testing.T) {
 	defer cancel()
 	if _, err := c.Get(ctx, srv.URL); !errors.Is(err, context.DeadlineExceeded) {
 		t.Fatalf("err = %v, want context.DeadlineExceeded", err)
+	}
+}
+
+func TestPostForm(t *testing.T) {
+	var method, ctype, body string
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		method, ctype = r.Method, r.Header.Get("Content-Type")
+		b, _ := io.ReadAll(r.Body)
+		body = string(b)
+		if r.URL.Path == "/missing" {
+			w.WriteHeader(http.StatusNotFound)
+			return
+		}
+		_, _ = w.Write([]byte(`{"ok":true}`))
+	}))
+	defer srv.Close()
+
+	res, err := fastClient().PostForm(t.Context(), srv.URL+"/more", url.Values{"paging": {"0"}, "pageSize": {"300"}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if method != http.MethodPost || ctype != "application/x-www-form-urlencoded" || body != "pageSize=300&paging=0" || string(res.Body) != `{"ok":true}` {
+		t.Errorf("method %s, content type %q, body %q, response %q", method, ctype, body, res.Body)
+	}
+
+	_, err = fastClient().PostForm(t.Context(), srv.URL+"/missing", url.Values{})
+	if err == nil || !strings.HasPrefix(err.Error(), "POST ") {
+		t.Errorf("error = %v, want a POST status error", err)
 	}
 }

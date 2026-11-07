@@ -45,7 +45,13 @@ func cmdMatch(args []string, stdout, stderr io.Writer) int {
 	case match.Ambiguous:
 		_, _ = fmt.Fprintf(stdout, "result:     ambiguous (%s)\n", strings.Join(res.Candidates, ", "))
 	case match.Unmatched:
-		_, _ = fmt.Fprintln(stdout, "result:     unmatched")
+		if len(res.NearMiss) > 0 {
+			// Listed in the email: a watched product is named, but its
+			// mount or version is not confirmed.
+			_, _ = fmt.Fprintf(stdout, "result:     unmatched, near miss (%s)\n", strings.Join(res.NearMiss, ", "))
+		} else {
+			_, _ = fmt.Fprintln(stdout, "result:     unmatched")
+		}
 	}
 	_, _ = fmt.Fprintf(stdout, "condition:  %s\n\n", match.DetectCondition(title, pageURL))
 

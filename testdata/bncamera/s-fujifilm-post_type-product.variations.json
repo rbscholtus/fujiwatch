@@ -1,0 +1,242 @@
+[
+ {
+  "categories": [],
+  "id": 38979,
+  "type": "variation",
+  "parent": 33775,
+  "variation": "Phân loại: Bảo hành BNCare",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 15mm F1.4 DC Contemporary for Fujifilm X",
+  "permalink": "https://bncamera.com/san-pham/sigma-15mm-f1-4-dc-contemporary-for-fujifilm-x?attribute_pa_phan-loai=bncare",
+  "prices": {
+   "price": "10500000",
+   "regular_price": "10500000",
+   "sale_price": "10500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "sigma-15mm-f1-4-dc-contemporary-for-fujifilm-x-2",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 38978,
+  "type": "variation",
+  "parent": 33775,
+  "variation": "Phân loại: Bảo Hành Chính Hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 15mm F1.4 DC Contemporary for Fujifilm X",
+  "permalink": "https://bncamera.com/san-pham/sigma-15mm-f1-4-dc-contemporary-for-fujifilm-x?attribute_pa_phan-loai=chinh-hang",
+  "prices": {
+   "price": "11800000",
+   "regular_price": "11800000",
+   "sale_price": "11800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "sigma-15mm-f1-4-dc-contemporary-for-fujifilm-x",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 30620,
+  "type": "variation",
+  "parent": 29365,
+  "variation": "Màu: Charcoal Silver, Phiên bản: + XC 13-33mm f3.5-6.3",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T30 III",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-iii?attribute_pa_mau=charcoal-silver&attribute_pa_phien-ban=xc-13-33mm-f3-5-6-3",
+  "prices": {
+   "price": "29490000",
+   "regular_price": "32000000",
+   "sale_price": "29490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "fujifilm-x-t30-iii-4",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 30619,
+  "type": "variation",
+  "parent": 29365,
+  "variation": "Màu: Charcoal Silver, Phiên bản: Body Only",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T30 III",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-iii?attribute_pa_mau=charcoal-silver&attribute_pa_phien-ban=body-only",
+  "prices": {
+   "price": "25490000",
+   "regular_price": "28000000",
+   "sale_price": "25490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "fujifilm-x-t30-iii-2",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 30512,
+  "type": "variation",
+  "parent": 29365,
+  "variation": "Màu: Black, Phiên bản: + XC 13-33mm f3.5-6.3",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T30 III",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-iii?attribute_pa_mau=black&attribute_pa_phien-ban=xc-13-33mm-f3-5-6-3",
+  "prices": {
+   "price": "29490000",
+   "regular_price": "32000000",
+   "sale_price": "29490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "fujifilm-x-t30-iii-3",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 30510,
+  "type": "variation",
+  "parent": 29365,
+  "variation": "Màu: Black, Phiên bản: Body Only",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T30 III",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-iii?attribute_pa_mau=black&attribute_pa_phien-ban=body-only",
+  "prices": {
+   "price": "25490000",
+   "regular_price": "28000000",
+   "sale_price": "25490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "fujifilm-x-t30-iii",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29462,
+  "type": "variation",
+  "parent": 29365,
+  "variation": "Màu: Silver, Phiên bản: + XC 13-33mm f3.5-6.3",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T30 III",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-iii?attribute_pa_mau=silver&attribute_pa_phien-ban=xc-13-33mm-f3-5-6-3",
+  "prices": {
+   "price": "29490000",
+   "regular_price": "32000000",
+   "sale_price": "29490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "fujifilm-x-t30-iii-body-only",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29461,
+  "type": "variation",
+  "parent": 29365,
+  "variation": "Màu: Silver, Phiên bản: Body Only",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T30 III",
+  "permalink": "https://bncamera.com/san-pham/fujifilm-x-t30-iii?attribute_pa_mau=silver&attribute_pa_phien-ban=body-only",
+  "prices": {
+   "price": "25490000",
+   "regular_price": "28000000",
+   "sale_price": "25490000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": ".",
+   "currency_prefix": "",
+   "currency_suffix": " ₫"
+  },
+  "slug": "fujifilm-x-t30-iii-xc-13-33mm-f3-5-6-3",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ }
+]

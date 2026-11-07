@@ -6,6 +6,7 @@ package adapters
 import (
 	"bytes"
 	"fmt"
+	"net/url"
 	"slices"
 	"strings"
 	"time"
@@ -41,23 +42,50 @@ type URLRewriter interface {
 	FetchURL(pageURL, mode string) (string, error)
 }
 
-// Paginator is implemented by adapters whose listings span several pages.
-type Paginator interface {
-	// NextPage returns the URL of the page after fetchURL, given that page's
-	// body, or "" if it is the last page.
-	NextPage(fetchURL string, raw []byte) (string, error)
+// Page is one request for a listing page: a GET of URL, or, with Form set,
+// a POST of Form to URL (a shop's "load more" endpoint). The zero Page means
+// "no more pages".
+type Page struct {
+	URL  string
+	Form url.Values
+	// State is opaque to the runner: an adapter can leave a note in a page
+	// it returns and read it back when that page is cur (WooCommerce: the
+	// listing page to continue with after a page's variations).
+	State string
 }
 
-// NextPage returns the listing page after fetchURL, or "" if there is none
-// or the adapter does not paginate.
-func NextPage(a Adapter, fetchURL string, raw []byte) (string, error) {
+// IsZero reports whether p is the zero Page.
+func (p Page) IsZero() bool { return p.URL == "" }
+
+// Key identifies the request, for loop detection.
+func (p Page) Key() string {
+	k := p.URL
+	if p.Form != nil {
+		k = "POST " + p.URL + " " + p.Form.Encode()
+	}
+	if p.State != "" {
+		k += " #" + p.State
+	}
+	return k
+}
+
+// Paginator is implemented by adapters whose listings span several pages.
+type Paginator interface {
+	// NextPage returns the request after cur, given cur's response body, or
+	// the zero Page if cur was the last page.
+	NextPage(cur Page, raw []byte) (Page, error)
+}
+
+// NextPage returns the listing page after cur, or the zero Page if there is
+// none or the adapter does not paginate.
+func NextPage(a Adapter, cur Page, raw []byte) (Page, error) {
 	p, ok := a.(Paginator)
 	if !ok {
-		return "", nil
+		return Page{}, nil
 	}
-	next, err := p.NextPage(fetchURL, raw)
+	next, err := p.NextPage(cur, raw)
 	if err != nil {
-		return "", fmt.Errorf("%s: next page: %w", a.Name(), err)
+		return Page{}, fmt.Errorf("%s: next page: %w", a.Name(), err)
 	}
 	return next, nil
 }
@@ -92,15 +120,7 @@ var registry = map[string]Adapter{
 	"mayanhhoangto": NewWooCommerce("mayanhhoangto"),
 
 	// Custom platforms (CSS selectors)
-	"kyma": NewCSS("kyma",
-		Layout{
-			Name:  "category",
-			Card:  "li.li-product",
-			Title: "a.item__name",
-			Link:  "a.item__name",
-			Price: ".item__price > span:first-child",
-		},
-	),
+	"kyma": NewKyma(), // CSS layouts + POST "show more" (kyma.go)
 	"zshop": NewCSS("zshop", // CS-Cart
 		Layout{
 			Name:   "product page",
@@ -117,6 +137,7 @@ var registry = map[string]Adapter{
 			Link:  "a.product-title",
 			Price: ".ty-price .ty-price-num",
 			Stock: ".ty-qty-out-of-stock",
+			Next:  "a.ty-pagination__next", // /<category>/page-N/, 40 per page
 		},
 	),
 	"mayanh24h": NewCSS("mayanh24h",
@@ -148,11 +169,16 @@ var registry = map[string]Adapter{
 			Price:  `[itemprop="price"]`,
 		},
 		Layout{
+			// No price: a card's price is the lowest of the product's units
+			// ("Từ 9.900.000 đ"), and a single used unit is shown under the
+			// plain product name, so neither price nor condition can be
+			// trusted. Categories only discover products; prices come from
+			// the product pages, watched in listing mode.
 			Name:  "category",
 			Card:  "li.idx-prod",
 			Title: ".name a",
 			Link:  ".name a",
-			Price: ".mrgt10",
+			Next:  `#page a:contains("tiếp")`, // <category>_pN, 40 per page
 		},
 	),
 }

@@ -79,7 +79,7 @@ func WriteText(w io.Writer, rep *Report, dryRun bool) error {
 		if s.Err != "" {
 			status = "FAIL"
 		}
-		fmt.Fprintf(tw, "  %s\t%s\t%s\t%d offers, %d matched\t%s\n", status, s.Shop, s.Mode, s.Offers, s.Matched, s.URL)
+		fmt.Fprintf(tw, "  %s\t%s\t%s\t%d offers, %d matched\t%d page(s), %.0fs\t%s\n", status, s.Shop, s.Mode, s.Offers, s.Matched, s.Pages, s.Seconds, s.URL)
 		if s.Err != "" {
 			fmt.Fprintf(tw, "  \t\t\t%s\t\n", s.Err)
 		}

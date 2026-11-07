@@ -44,13 +44,13 @@ Body products never match kits (a title with "kit", a focal length or "+ lens"),
 |---|---|---|---|
 | xspace | fujifilm-xspace.vn | Haravan | `/products/<handle>.js` JSON |
 | vjshop | vjshop.vn | Next.js | `__NEXT_DATA__` (listings, every page), `api.vjshop.vn` (products) |
-| kyma | kyma.vn | Custom | CSS selectors on category pages |
-| zshop | zshop.vn | CS-Cart | CSS selectors (category and product pages) |
-| mayanhhoangto | mayanhhoangto.com | WooCommerce | Store API |
-| bncamera | bncamera.com | WooCommerce | Store API |
-| mayanh24h | mayanh24h.com | Custom (AngularJS front, server-rendered lists) | CSS selectors (category and product pages) |
-| x-camera | x-camera.vn | WooCommerce | Store API |
-| giangduydat | giangduydat.vn | Custom | CSS selectors; product pages list each unit as a schema.org Offer |
+| kyma | kyma.vn | Custom (ASP.NET) | CSS selectors on category pages, plus its POST "show more" endpoint |
+| zshop | zshop.vn | CS-Cart | CSS selectors (category and product pages, every page) |
+| mayanhhoangto | mayanhhoangto.com | WooCommerce | Store API (every page) |
+| bncamera | bncamera.com | WooCommerce | Store API (every page) |
+| mayanh24h | mayanh24h.com | Custom (AngularJS front, server-rendered lists) | CSS selectors; page 1 of used listings, product pages for new gear (robots.txt) |
+| x-camera | x-camera.vn | WooCommerce | Store API (every page) |
+| giangduydat | giangduydat.vn | Custom | CSS selectors; product pages list each unit as a schema.org Offer, categories for discovery only |
 
 **Out of scope:** Shopee, Lazada, Tiki, Chợ Tốt (scam risk), Facebook Marketplace and groups.
 
@@ -83,12 +83,13 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 
 ## Open items
 
-- [ ] Collect the real product, category and used-section URLs per shop for the watched products. Done: vjshop.
+- [x] Collect the product, category and used-section URLs per shop for the watched products (see [shop notes](docs/shops.md)).
 - [x] Repo visibility: **public** (GitHub Pages works on the free plan).
 - [x] Verify the platform per shop.
 - [x] Body-only products exclude kits ("X-T5 + Lens XF 16-50mm"), so kit prices don't mix into the body's history (`kit_excludes` in `config/watchlist.yaml`).
 - [x] Price-drop threshold: alert on every drop (`min_drop_pct: 0`, `min_drop_vnd: 0`).
-- [x] Multi-page listings are followed (vjshop).
+- [x] Multi-page listings are followed (vjshop, WooCommerce, kyma, zshop, giangduydat). mayanh24h: robots.txt allows page 1 only.
+- [ ] bncamera flash sales: report watched products in upcoming flash-sale slots (next 3 days) as their own event, by email and WhatsApp, without recording the 2-hour flash price as a regular price. Findings in [shop notes](docs/shops.md#woocommerce-bncamera-mayanhhoangto-x-camera).
 - [ ] Set target prices (`target_vnd`, `target_used_vnd`) per product.
 - [ ] vjshop: add the Tamron 16-50mm (X) product page once vjshop lists it.
 - [ ] vjshop: recheck the XF18-55 (product 4898). It is out of stock; its listing shows 8.890.000₫, but the product API has only `default: 0`, so the listing price may be stale.

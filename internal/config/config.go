@@ -47,6 +47,11 @@ type Product struct {
 	RequireAll []string `yaml:"require_all"` // all must match
 	RequireAny []string `yaml:"require_any"` // at least one must match, if set
 	Exclude    []string `yaml:"exclude"`     // none may match
+	// OtherMounts name other mounts ("sony", "canon", …). They never stop a
+	// match (a dual-mount "for Sony E/Fujifilm" title still matches through
+	// require_any); a title that fails require_any and names one of them is
+	// another mount's version: rejected on purpose, not a near miss.
+	OtherMounts []string `yaml:"other_mounts"`
 
 	// Optional alert thresholds: a below_target event fires when an offer's
 	// price drops to or below the target (once per crossing).
@@ -66,10 +71,11 @@ func (p Product) Target(condition string) int64 {
 type Watchlist struct {
 	Products []Product `yaml:"products"`
 
-	// KitExcludes and BodyExcludes only hold the YAML anchors (&kit, &body)
-	// that products reuse in their exclude lists.
+	// KitExcludes, BodyExcludes and OtherMounts only hold the YAML anchors
+	// (&kit, &body, &mounts) that products reuse.
 	KitExcludes  []string `yaml:"kit_excludes"`
 	BodyExcludes []string `yaml:"body_excludes"`
+	OtherMounts  []string `yaml:"other_mounts"` // the &mounts anchor
 }
 
 // Defaults holds per-run fetch settings from sources.yaml.
@@ -226,7 +232,7 @@ func (w Watchlist) validate() []error {
 		if len(p.Patterns) == 0 {
 			errs = append(errs, fmt.Errorf("%s: at least one pattern is required", where))
 		}
-		for _, group := range [][]string{p.Patterns, p.RequireAll, p.RequireAny, p.Exclude} {
+		for _, group := range [][]string{p.Patterns, p.RequireAll, p.RequireAny, p.Exclude, p.OtherMounts} {
 			for _, expr := range group {
 				if _, err := regexp.Compile(expr); err != nil {
 					errs = append(errs, fmt.Errorf("%s: %w", where, err))

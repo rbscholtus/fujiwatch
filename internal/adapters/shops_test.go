@@ -72,6 +72,106 @@ func TestWooFetchURL(t *testing.T) {
 	}
 }
 
+func paginator(t *testing.T, shop string) Paginator {
+	t.Helper()
+	p, ok := ForShop(shop).(Paginator)
+	if !ok {
+		t.Fatalf("%s: adapter does not paginate", shop)
+	}
+	return p
+}
+
+func TestWooNextPage(t *testing.T) {
+	a := paginator(t, "bncamera")
+	full := "[" + strings.TrimSuffix(strings.Repeat(`{"name":"x"},`, 3), ",") + "]"
+	for _, tc := range []struct{ url, body, want string }{
+		{"https://b/wp-json/wc/store/v1/products?category=do-cu&per_page=3", full,
+			"https://b/wp-json/wc/store/v1/products?category=do-cu&page=2&per_page=3"},
+		{"https://b/wp-json/wc/store/v1/products?category=do-cu&page=2&per_page=3", full,
+			"https://b/wp-json/wc/store/v1/products?category=do-cu&page=3&per_page=3"},
+		{"https://b/wp-json/wc/store/v1/products?category=do-cu&per_page=3", `[{"name":"x"}]`, ""}, // last page
+		{"https://b/wp-json/wc/store/v1/products?category=do-cu&per_page=3", `[]`, ""},
+		{"https://b/wp-json/wc/store/v1/products?slug=x", `[{"name":"x"}]`, ""}, // product
+		{"https://b/danh-muc/do-cu", "<html></html>", ""},                       // HTML fallback
+	} {
+		got, err := a.NextPage(Page{URL: tc.url}, []byte(tc.body))
+		if err != nil || got.URL != tc.want || got.Form != nil {
+			t.Errorf("NextPage(%s, %.20s) = %q, %v; want %q", tc.url, tc.body, got, err, tc.want)
+		}
+	}
+}
+
+// A variable product with a price range stands aside for its variations:
+// the listing page is followed by one request for them (State: the listing
+// page to continue with), each variation an offer named after its label.
+func TestWooVariations(t *testing.T) {
+	w := paginator(t, "mayanhhoangto")
+	const list = "https://m.vn/wp-json/wc/store/v1/products?category=mirrorless-fujifirm&per_page=2"
+	page := `[{"id":32479,"type":"variable","name":"Máy ảnh FUJIFILM X-E5 BODY","permalink":"https://m.vn/x-e5/","is_in_stock":true,` +
+		`"prices":{"price":"9000000","currency_code":"VND","currency_minor_unit":0,"price_range":{"min_amount":"9000000","max_amount":"33000000"}}},` +
+		`{"id":7,"type":"simple","name":"Máy ảnh FUJIFILM X-T3 Body cũ","permalink":"https://m.vn/x-t3/","is_in_stock":true,` +
+		`"prices":{"price":"15000000","currency_code":"VND","currency_minor_unit":0}}]`
+	offers, err := Extract(ForShop("mayanhhoangto"), list, []byte(page))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(offers) != 1 || offers[0].URL != "https://m.vn/x-t3/" {
+		t.Errorf("listing offers = %+v, want only the simple product", offers)
+	}
+
+	next, err := w.NextPage(Page{URL: list}, []byte(page))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if next.URL != "https://m.vn/wp-json/wc/store/v1/products?parent=32479&per_page=100&type=variation" ||
+		next.State != "https://m.vn/wp-json/wc/store/v1/products?category=mirrorless-fujifirm&page=2&per_page=2" {
+		t.Fatalf("after the listing page: %+v", next)
+	}
+
+	vars := `[` +
+		`{"id":1,"parent":32479,"type":"variation","name":"Máy ảnh FUJIFILM X-E5 BODY","variation":"Phân loại: Hàng mới chính hãng","permalink":"https://m.vn/x-e5/?attribute_pa_hinh-thuc=hang-moi-chinh-hang","is_in_stock":true,"prices":{"price":"33000000","currency_code":"VND","currency_minor_unit":0}},` +
+		`{"id":2,"parent":32479,"type":"variation","name":"Máy ảnh FUJIFILM X-E5 BODY","variation":"Phân loại: Hàng khá đẹp","permalink":"https://m.vn/x-e5/?attribute_pa_hinh-thuc=hang-kha-dep","is_in_stock":true,"prices":{"price":"29000000","currency_code":"VND","currency_minor_unit":0}},` +
+		`{"id":3,"parent":32479,"type":"variation","name":"Máy ảnh FUJIFILM X-E5 BODY","variation":"Phân loại: Cũ hoạt động tốt","permalink":"https://m.vn/x-e5/?attribute_pa_hinh-thuc=cu","is_in_stock":false,"prices":{"price":"25000000","currency_code":"VND","currency_minor_unit":0}}]`
+	vo, err := Extract(ForShop("mayanhhoangto"), list, []byte(vars))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(vo) != 3 ||
+		vo[0].Title != "Máy ảnh FUJIFILM X-E5 BODY (Phân loại: Hàng mới chính hãng)" || vo[0].Condition != "" || vo[0].PriceVND != 33_000_000 ||
+		vo[1].Condition != match.ConditionUsed || vo[2].Condition != match.ConditionUsed ||
+		vo[0].URL == vo[1].URL {
+		t.Errorf("variation offers = %+v", vo)
+	}
+	if after, err := w.NextPage(next, []byte(vars)); err != nil || after.URL != next.State || after.State != "" {
+		t.Errorf("after the variations: %+v, %v; want the listing's page 2", after, err)
+	}
+
+	// The last listing page with variable products: variations, then the end.
+	last, _ := w.NextPage(Page{URL: list}, []byte(`[`+page[1:strings.Index(page, `},{"id":7`)+1]+`]`))
+	if last.State != "" {
+		t.Errorf("last page: %+v, want variations without a page to continue with", last)
+	}
+	if end, _ := w.NextPage(last, []byte(vars)); !end.IsZero() {
+		t.Errorf("after the last variations: %+v, want the end", end)
+	}
+}
+
+func TestUsedVariation(t *testing.T) {
+	for label, want := range map[string]bool{
+		"Phân loại: Hàng đẹp":                  true,
+		"Phân loại: Hàng khá đẹp":              true,
+		"Phân loại: Khá đẹp 90% sử dụng tốt":   true,
+		"Phân loại: Hàng mới chính hãng":       false,
+		"Phân loại: Hàng mới nhập khẩu":        false,
+		"Màu sắc: Silver, Biến thể: Body only": false,
+		"Phân loại: Mới đẹp":                   false,
+	} {
+		if got := usedVariation(label); got != want {
+			t.Errorf("usedVariation(%q) = %v, want %v", label, got, want)
+		}
+	}
+}
+
 func TestWooBackorderIsNotInStock(t *testing.T) {
 	offers := loadSnapshot(t, "bncamera/tamron-16-50mm-f2-8-a-for-fujifilm-x.json")
 	if len(offers) != 1 {
@@ -194,7 +294,89 @@ func TestWooHTMLFallback(t *testing.T) {
 	}
 }
 
+// CSS layouts with a Next selector: zshop (CS-Cart) links to /page-N/,
+// giangduydat to <category>_pN, until the last page.
+func TestCSSNextPage(t *testing.T) {
+	z := paginator(t, "zshop")
+	page := func(next string) []byte {
+		link := ""
+		if next != "" {
+			link = `<a class="ty-pagination__item ty-pagination__btn ty-pagination__next cm-history cm-ajax" href="` + next + `">›</a>`
+		}
+		return []byte(`<html><body><div class="ty-grid-list__item"><a class="product-title" href="/x/">Fujifilm X-T5</a></div>` + link + `</body></html>`)
+	}
+	got, err := z.NextPage(Page{URL: "https://zshop.vn/lens-fujifilm/"}, page("https://zshop.vn/lens-fujifilm/page-2/"))
+	if err != nil || got.URL != "https://zshop.vn/lens-fujifilm/page-2/" {
+		t.Errorf("first page: next = %+v, %v", got, err)
+	}
+	if got, err := z.NextPage(Page{URL: "https://zshop.vn/lens-fujifilm/page-2/"}, page("")); err != nil || !got.IsZero() {
+		t.Errorf("last page: next = %+v, %v", got, err)
+	}
+	// giangduydat: "tiếp" (next) is a link until the last page.
+	g := paginator(t, "giangduydat")
+	gpage := func(next string) []byte {
+		tail := `<span id="no-page">tiếp</span>`
+		if next != "" {
+			tail = `<span class="page"><a href="` + next + `">tiếp <i></i></a></span>`
+		}
+		return []byte(`<html><body><ul><li class="idx-prod"><div class="name"><a href="/x">Fujifilm X-T5</a></div></li></ul><div id="page" class="c"><span class="page"><a href="https://giangduydat.vn/c/ong-kinh-fujifilm_p2">2</a></span>` + tail + `</div></body></html>`)
+	}
+	if got, err := g.NextPage(Page{URL: "https://giangduydat.vn/c/ong-kinh-fujifilm"}, gpage("https://giangduydat.vn/c/ong-kinh-fujifilm_p2")); err != nil || got.URL != "https://giangduydat.vn/c/ong-kinh-fujifilm_p2" {
+		t.Errorf("giangduydat first page: next = %+v, %v", got, err)
+	}
+	if got, err := g.NextPage(Page{URL: "https://giangduydat.vn/c/ong-kinh-fujifilm_p3"}, gpage("")); err != nil || !got.IsZero() {
+		t.Errorf("giangduydat last page: next = %+v, %v", got, err)
+	}
+
+	// Other CSS shops have no Next selector: one page.
+	if got, _ := paginator(t, "mayanh24h").NextPage(Page{URL: "https://mayanh24h.com/x.html"}, page("https://mayanh24h.com/x.html?p=2")); !got.IsZero() {
+		t.Errorf("mayanh24h: next = %+v", got)
+	}
+}
+
 // ── kyma ─────────────────────────────────────────────────────────
+
+// A category page with remaining products leads to one POST for all of
+// them; the response's cards are extracted, and it ends the listing.
+func TestKymaShowMore(t *testing.T) {
+	k := NewKyma()
+	raw, err := os.ReadFile(filepath.Join(testdataDir, "kyma", "may-anh-fujifilm.html"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	next, err := k.NextPage(Page{URL: "https://kyma.vn/may-anh-fujifilm"}, raw)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if next.URL != "https://kyma.vn/Product/ShowMoreNextProCate" ||
+		next.Form.Encode() != "categoryId=2123&pageSize=300&paging=0&priceMax=200500000&priceMin=590000&sortBy=3" {
+		t.Fatalf("next = %+v", next)
+	}
+
+	resp := `{"list":"<li><div class=\"item__product is--s4\"><a class=\"item__name\" href=\"/may-anh-fujifilm-x-t5.html\"><h3>Máy ảnh Fujifilm X-T5 (Body)</h3></a>` +
+		`<div class=\"item__price\"><span>38,990,000 <i>đ</i></span><span class=\"is--sale\"><del>42,990,000</del></span></div></div></li>",` +
+		`"paging":1,"remainingProducts":-404}`
+	offers, err := Extract(k, "https://kyma.vn/may-anh-fujifilm", []byte(resp))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(offers) != 1 || offers[0].URL != "https://kyma.vn/may-anh-fujifilm-x-t5.html" ||
+		offers[0].Title != "Máy ảnh Fujifilm X-T5 (Body)" || offers[0].PriceVND != 38_990_000 {
+		t.Errorf("offers = %+v", offers)
+	}
+	if after, err := k.NextPage(next, []byte(resp)); err != nil || !after.IsZero() {
+		t.Errorf("after the show-more response: %+v, %v; want the end", after, err)
+	}
+
+	// A response that still reports remaining products is followed.
+	partial := `{"list":"","paging":2,"remainingProducts":36}`
+	if p, err := k.NextPage(next, []byte(partial)); err != nil || p.Form.Get("paging") != "2" || p.Form.Get("categoryId") != "2123" {
+		t.Errorf("partial response: next = %+v, %v", p, err)
+	}
+	if next.Form.Get("paging") != "0" {
+		t.Error("NextPage modified the current page's form")
+	}
+}
 
 func TestKymaCategory(t *testing.T) {
 	offers := loadSnapshot(t, "kyma/may-anh-fujifilm.html")
@@ -295,9 +477,15 @@ func TestGiangDuyDatUnits(t *testing.T) {
 
 func TestGiangDuyDatCategory(t *testing.T) {
 	offers := loadSnapshot(t, "giangduydat/ong-kinh-fujifilm.html")
-	i := slices.IndexFunc(offers, func(o Offer) bool { return strings.Contains(o.Title, "XC 13-33mm") })
-	if i < 0 || offers[i].PriceVND != 4_490_000 {
-		t.Errorf(`"Từ 4.490.000 đ" not parsed: %+v`, offers)
+	// Category cards are discovery only: their price ("Từ 4.490.000 đ", or a
+	// used unit's price under the plain name) is not recorded.
+	if len(offers) < 30 {
+		t.Fatalf("only %d offers", len(offers))
+	}
+	for _, o := range offers {
+		if o.PriceVND != 0 || !strings.HasPrefix(o.URL, "https://giangduydat.vn/") {
+			t.Errorf("category offer %+v, want a product URL and no price", o)
+		}
 	}
 }
 

@@ -1,79 +1,9 @@
 [
   {
     "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-h2s/",
-    "title": "Máy ảnh FUJIFILM X-H2S",
-    "price_vnd": 58490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-h2/",
-    "title": "Máy ảnh FUJIFILM X-H2",
-    "price_vnd": 43490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-t5/",
-    "title": "Máy ảnh FUJIFILM X-T5",
-    "price_vnd": 38490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x100vi/",
-    "title": "Máy ảnh FUJIFILM X100VI",
-    "price_vnd": 49990000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
     "url": "https://x-camera.vn/shop/fujifilm-x-half/",
     "title": "Máy ảnh Fujifilm X-Half",
     "price_vnd": 13490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-s20/",
-    "title": "Máy ảnh FUJIFILM X-S20",
-    "price_vnd": 30990000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-e5/",
-    "title": "Máy ảnh FUJIFILM X-E5",
-    "price_vnd": 30990000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-t50/",
-    "title": "Máy ảnh FUJIFILM X-T50",
-    "price_vnd": 33490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-t30-iii/",
-    "title": "Máy ảnh FUJIFILM X-T30 III",
-    "price_vnd": 25490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-t30-mark-ii/",
-    "title": "Máy ảnh FUJIFILM X-T30 II",
-    "price_vnd": 26990000,
-    "in_stock": false
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-m5/",
-    "title": "Máy ảnh FUJIFILM X-M5",
-    "price_vnd": 22490000,
     "in_stock": true
   },
   {
@@ -85,30 +15,9 @@
   },
   {
     "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x100v/",
-    "title": "Máy ảnh FUJIFILM X100V",
-    "price_vnd": 43990000,
-    "in_stock": false
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-t4/",
-    "title": "Máy ảnh FUJIFILM X-T4",
-    "price_vnd": 36990000,
-    "in_stock": false
-  },
-  {
-    "shop": "x-camera",
     "url": "https://x-camera.vn/shop/fujifilm-x-e4/",
     "title": "Máy ảnh FUJIFILM X-E4",
     "price_vnd": 29990000,
-    "in_stock": false
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-x-s10/",
-    "title": "Máy ảnh FUJIFILM X-S10",
-    "price_vnd": 28990000,
     "in_stock": false
   },
   {
@@ -190,13 +99,6 @@
   },
   {
     "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/fujifilm-gfx-50s-ii/",
-    "title": "Máy ảnh FUJIFILM GFX 50S II",
-    "price_vnd": 78990000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
     "url": "https://x-camera.vn/shop/fujifilm-gfx-100/",
     "title": "Máy ảnh FUJIFILM GFX 100",
     "price_vnd": 0,
@@ -246,13 +148,6 @@
   },
   {
     "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr/",
-    "title": "Ống kính FUJIFILM XF 18mm f/1.4 R LM WR",
-    "price_vnd": 20490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
     "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-18mm-f-2-r/",
     "title": "Ống kính FUJIFILM XF 18mm f/2 R",
     "price_vnd": 5990000,
@@ -263,13 +158,6 @@
     "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-23mm-f1-4-r-lm-wr/",
     "title": "Ống kính FUJIFILM XF 23mm F1.4 R LM WR",
     "price_vnd": 23490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-23mm-f-2-r-wr/",
-    "title": "Ống kính FUJIFILM XF 23mm f/2 R WR",
-    "price_vnd": 8990000,
     "in_stock": true
   },
   {
@@ -316,13 +204,6 @@
   },
   {
     "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-35mm-f-1-4-r/",
-    "title": "Ống kính FUJIFILM XF 35mm f/1.4 R",
-    "price_vnd": 11990000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
     "url": "https://x-camera.vn/shop/ong-kinh-viltrox-af-25mm-f-1-7-for-fujifilm/",
     "title": "Ống kính Viltrox AF 25mm F/1.7 for Fujifilm",
     "price_vnd": 3680000,
@@ -351,13 +232,6 @@
   },
   {
     "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-35mm-f-2-0-r-wr/",
-    "title": "Ống kính FUJIFILM XF 35mm f/2.0 R WR",
-    "price_vnd": 9490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
     "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xc-35mm-f-2/",
     "title": "Ống kính FUJIFILM XC 35mm F/2",
     "price_vnd": 5490000,
@@ -375,13 +249,6 @@
     "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-50mm-f-2-r-wr/",
     "title": "Ống kính FUJIFILM XF 50mm f/2 R WR",
     "price_vnd": 10490000,
-    "in_stock": true
-  },
-  {
-    "shop": "x-camera",
-    "url": "https://x-camera.vn/shop/ong-kinh-fujifilm-xf-56mm-f-1-2-r/",
-    "title": "Ống kính FUJIFILM XF 56mm f/1.2 R WR",
-    "price_vnd": 23490000,
     "in_stock": true
   },
   {

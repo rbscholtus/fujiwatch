@@ -7,7 +7,6 @@ import (
 	"sort"
 	"time"
 
-	"github.com/rbscholtus/fujiwatch/internal/config"
 	"github.com/rbscholtus/fujiwatch/internal/state"
 )
 
@@ -175,10 +174,10 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 			FirstSeen: now,
 			LastSeen:  now,
 		}
-		var events []Event
-		if run.Mode == config.ModeListing {
-			events = append(events, event(NewListing, ob, 0))
-		}
+		// A new offer is news in either mode: an item new on a listing, or
+		// a product page seen for the first time (baseline in its source's
+		// first run, like a new page's listings).
+		events := []Event{event(NewListing, ob, 0)}
 		if t := opts.target(ob); t > 0 && ob.PriceVND > 0 && ob.PriceVND <= t {
 			e := event(BelowTarget, ob, 0)
 			e.TargetVND = t

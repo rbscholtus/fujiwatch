@@ -16,12 +16,20 @@
 
 # Body-only products exclude kits ("X-T5 + Lens XF 16-50mm", "X-T5 Kit
 # XF16-80mm", "X-T5 + Tamron 17-70mm"): a kit's higher price would otherwise
-# be mixed into the body's history. Every kit title names a focal length.
-kit_excludes: &kit ['\bkit\b', '\d+(-\d+)? ?mm\b', '\+ ?(lens|ong kinh)\b']
+# be mixed into the body's history. Most kit titles name a focal length;
+# add-on variations do not: "X-E5 (Len fuji 23 2.8 mua cùng)" ("len" is
+# lens, "mua cùng" bought together) is the price of the lens alone.
+kit_excludes: &kit ['\bkit\b', '\d+(-\d+)? ?mm\b', '\+ ?(lens|ong kinh)\b', '\blens?\b', '\bmua cung\b']
 
 # Lens products exclude titles that name a camera body, for the same reason
 # the other way round ("Fujifilm X-T5 + Sigma 18-50mm" is a kit).
 body_excludes: &body ['\bx-(t|s|h|e|m|a|pro)\d']
+
+# Other mounts, for third-party lenses made for several mounts. A title that
+# names one of these and not Fujifilm/X-mount is that mount's version: not
+# alerted on, and not listed as a near miss. Dual-mount titles ("for Sony
+# E/Fujifilm") still match through require_any.
+other_mounts: &mounts ['sony', '\be-?mount\b', '\bfe\b', 'canon', '\brf(-s)?\b', 'nikon', '\bz-?mount\b', '\bl-?mount\b', 'panasonic', 'leica', 'micro four thirds', '\bm4/3\b', '\bmft\b']
 
 products:
   - id: x-t3
@@ -48,18 +56,20 @@ products:
     patterns: ['\bx-e5(\D|$)']
     exclude: *kit
 
+  # Tamron, Sigma and Tokina also made 10-24 zooms (and "Di II" contains
+  # "ii"), so other brands are excluded from both Marks.
   - id: xf10-24-ii
     name: "XF10-24mm F4 R OIS WR (II)"
     kind: lens
     patterns: ['(^|\D)10-24(\D|$)']
     require_all: ['\bwr\b|\bii\b|mark ?ii']
-    exclude: *body
+    exclude: ['tamron', 'sigma', 'tokina', 'canon', 'nikon', 'sony', '\bx-(t|s|h|e|m|a|pro)\d']
 
   - id: xf10-24-i
     name: "XF10-24mm F4 R OIS (I)"
     kind: lens
     patterns: ['(^|\D)10-24(\D|$)']
-    exclude: ['\bwr\b', '\bii\b', 'mark ?ii', '\bx-(t|s|h|e|m|a|pro)\d']
+    exclude: ['\bwr\b', '\bii\b', 'mark ?ii', 'tamron', 'sigma', 'tokina', 'canon', 'nikon', 'sony', '\bx-(t|s|h|e|m|a|pro)\d']
 
   # The 2025 "WR II" is a different lens at a different price.
   - id: xf16-55
@@ -83,16 +93,17 @@ products:
     patterns: ['tamron', '(^|\D)16-50(\D|$)']
     require_any: ['fuji', 'fujifilm', 'x-?mount', 'ngam x', '\bfx\b']
     exclude: ['sony', '\bfe\b', '\be-?mount', 'nikon', '\bz\b', 'canon', '\brf\b', '\bx-(t|s|h|e|m|a|pro)\d']
+    other_mounts: *mounts
 
   # Canon, Nikon and Sony also make 18-55 kit zooms, and the XF18-55 is the
   # classic X-T kit lens, so: Fujifilm/XF required, other brands and
-  # body-plus-lens kits excluded.
+  # body-plus-lens kits excluded. The MK X 18-55mm T2.9 is a cine lens.
   - id: xf18-55
     name: "XF18-55mm F2.8-4 R LM OIS"
     kind: lens
     patterns: ['(^|\D)18-55(\D|$)']
     require_any: ['\bxf ?18-55', 'fujinon', 'fuji']
-    exclude: ['canon', '\bef-?s\b', 'nikon', '\bdx\b', 'sony', 'pentax', '\bx-(t|s|h|e|m|a|pro)\d']
+    exclude: ['canon', '\bef-?s\b', 'nikon', '\bdx\b', 'sony', 'pentax', '\bmk ?x\b', '\bt2\.9\b', '\bx-(t|s|h|e|m|a|pro)\d']
 
   # Sigma lenses are made for X, Sony E and L mount. Shops often list one
   # product for several mounts ("for Sony E/Fujifilm"), so instead of
@@ -103,6 +114,7 @@ products:
     patterns: ['sigma', '(^|\D)10-18(\D|$)']
     require_any: ['fuji', 'x-?mount', 'ngam x', '\bfx\b']
     exclude: *body
+    other_mounts: *mounts
 
   - id: sigma-18-50
     name: "Sigma 18-50mm F2.8 DC DN Contemporary (X)"
@@ -110,3 +122,4 @@ products:
     patterns: ['sigma', '(^|\D)18-50(\D|$)']
     require_any: ['fuji', 'x-?mount', 'ngam x', '\bfx\b']
     exclude: *body
+    other_mounts: *mounts

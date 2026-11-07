@@ -10,6 +10,7 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
 	"sync"
 	"time"
 )
@@ -22,12 +23,17 @@ const maxBodyBytes = 10 << 20
 
 // StatusError is returned for non-200 responses.
 type StatusError struct {
-	URL  string
-	Code int
+	Method string // "" means GET
+	URL    string
+	Code   int
 }
 
 func (e *StatusError) Error() string {
-	return fmt.Sprintf("GET %s: HTTP %d", e.URL, e.Code)
+	m := e.Method
+	if m == "" {
+		m = http.MethodGet
+	}
+	return fmt.Sprintf("%s %s: HTTP %d", m, e.URL, e.Code)
 }
 
 // retryable reports whether a request that failed with this status might
@@ -109,6 +115,17 @@ func New(opts Options) *Client {
 // Get fetches rawURL. It waits for the per-host delay, retries network errors,
 // 429 and 5xx responses, and returns a *StatusError for any other non-200.
 func (c *Client) Get(ctx context.Context, rawURL string) (*Response, error) {
+	return c.request(ctx, http.MethodGet, rawURL, nil)
+}
+
+// PostForm posts form (application/x-www-form-urlencoded) to rawURL, for
+// shops that load listing pages through a read-only POST endpoint. Delay,
+// retries and errors are as for Get.
+func (c *Client) PostForm(ctx context.Context, rawURL string, form url.Values) (*Response, error) {
+	return c.request(ctx, http.MethodPost, rawURL, form)
+}
+
+func (c *Client) request(ctx context.Context, method, rawURL string, form url.Values) (*Response, error) {
 	u, err := url.Parse(rawURL)
 	if err != nil {
 		return nil, fmt.Errorf("parse url: %w", err)
@@ -127,7 +144,7 @@ func (c *Client) Get(ctx context.Context, rawURL string) (*Response, error) {
 			return nil, err
 		}
 
-		resp, err := c.do(ctx, rawURL)
+		resp, err := c.do(ctx, method, rawURL, form)
 		h.last = time.Now()
 		if err == nil {
 			resp.Attempts = attempt
@@ -145,10 +162,17 @@ func (c *Client) Get(ctx context.Context, rawURL string) (*Response, error) {
 	return nil, lastErr
 }
 
-func (c *Client) do(ctx context.Context, rawURL string) (*Response, error) {
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, rawURL, nil)
+func (c *Client) do(ctx context.Context, method, rawURL string, form url.Values) (*Response, error) {
+	var reqBody io.Reader
+	if form != nil {
+		reqBody = strings.NewReader(form.Encode())
+	}
+	req, err := http.NewRequestWithContext(ctx, method, rawURL, reqBody)
 	if err != nil {
 		return nil, fmt.Errorf("new request: %w", err)
+	}
+	if form != nil {
+		req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	}
 	req.Header.Set("User-Agent", c.ua)
 	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8")
@@ -156,18 +180,22 @@ func (c *Client) do(ctx context.Context, rawURL string) (*Response, error) {
 
 	res, err := c.http.Do(req)
 	if err != nil {
-		return nil, fmt.Errorf("GET %s: %w", rawURL, err)
+		return nil, fmt.Errorf("%s %s: %w", method, rawURL, err)
 	}
 	defer func() { _ = res.Body.Close() }()
 
 	if res.StatusCode != http.StatusOK {
 		_, _ = io.Copy(io.Discard, io.LimitReader(res.Body, 64<<10)) // allow connection reuse
-		return nil, &StatusError{URL: rawURL, Code: res.StatusCode}
+		se := &StatusError{URL: rawURL, Code: res.StatusCode}
+		if method != http.MethodGet {
+			se.Method = method
+		}
+		return nil, se
 	}
 
 	body, err := io.ReadAll(io.LimitReader(res.Body, maxBodyBytes))
 	if err != nil {
-		return nil, fmt.Errorf("GET %s: read body: %w", rawURL, err)
+		return nil, fmt.Errorf("%s %s: read body: %w", method, rawURL, err)
 	}
 	return &Response{
 		URL:    res.Request.URL.String(),

@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"net/url"
 	"os"
 	"path/filepath"
 	"strings"
@@ -21,6 +22,11 @@ type snapshotFetcher struct{ bodies map[string]string }
 
 func (f snapshotFetcher) Get(_ context.Context, u string) (*fetch.Response, error) {
 	p, ok := f.bodies[u]
+	if !ok && strings.Contains(u, "/wp-json/wc/store/") && strings.Contains(u, "page=") {
+		// A Store API page after the snapshot: past the last page the real
+		// API returns an empty array.
+		return &fetch.Response{URL: u, Status: 200, Body: []byte("[]")}, nil
+	}
 	if !ok {
 		return nil, &fetch.StatusError{URL: u, Code: 404}
 	}
@@ -29,6 +35,10 @@ func (f snapshotFetcher) Get(_ context.Context, u string) (*fetch.Response, erro
 		return nil, err
 	}
 	return &fetch.Response{URL: u, Status: 200, Body: b}, nil
+}
+
+func (snapshotFetcher) PostForm(_ context.Context, u string, _ url.Values) (*fetch.Response, error) {
+	return nil, &fetch.StatusError{Method: "POST", URL: u, Code: 404}
 }
 
 func (snapshotFetcher) Allowed(context.Context, string) (bool, error) { return true, nil }

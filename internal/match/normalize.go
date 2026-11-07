@@ -24,8 +24,12 @@ var (
 	spaceRe = regexp.MustCompile(`\s+`)
 )
 
-// stripMarks removes combining diacritics after NFD decomposition.
-var stripMarks = transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+// stripMarks returns a transformer that removes combining diacritics after
+// NFD decomposition. A transform.Chain keeps state and is not safe for
+// concurrent use, so each call builds its own (shops run concurrently).
+func stripMarks() transform.Transformer {
+	return transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+}
 
 // dashFolder maps the dash and space variants shops use to plain ASCII.
 var dashFolder = strings.NewReplacer(
@@ -48,7 +52,7 @@ func Normalize(s string) string {
 	s = strings.ToLower(s)
 	// NFD does not decompose đ, so map it explicitly.
 	s = strings.ReplaceAll(s, "đ", "d")
-	if out, _, err := transform.String(stripMarks, s); err == nil {
+	if out, _, err := transform.String(stripMarks(), s); err == nil {
 		s = out
 	}
 	s = dashFolder.Replace(s)

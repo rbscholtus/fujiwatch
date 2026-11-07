@@ -88,37 +88,28 @@ func TestXSpaceProduct(t *testing.T) {
 	}
 }
 
+// A product with variants yields one offer per variant, named after it, so
+// the matcher can tell the body from kits; a single variant is the product.
 func TestHaravanJSONVariantsAndStock(t *testing.T) {
 	a := ForShop("xspace")
-	tests := []struct {
-		name    string
-		json    string
-		price   int64
-		inStock bool
-	}{
-		{
-			name:    "cheapest available variant",
-			json:    `{"title":"X-T5","price":3699000000,"available":true,"variants":[{"price":3999000000,"available":true},{"price":3699000000,"available":false},{"price":3799000000,"available":true}]}`,
-			price:   37_990_000,
-			inStock: true,
-		},
-		{
-			name:    "sold out uses product price",
-			json:    `{"title":"X-T5","price":3699000000,"available":false,"variants":[{"price":3699000000,"available":false}]}`,
-			price:   36_990_000,
-			inStock: false,
-		},
+	offers, err := Extract(a, xspacePage, []byte(`{"title":"Máy ảnh FUJIFILM X-T5","price":4549000000,"available":true,"variants":[`+
+		`{"title":"Body / Đen","price":4549000000,"available":false},`+
+		`{"title":"XF16-50mm Kit / Đen","price":5599000000,"available":true}]}`))
+	if err != nil {
+		t.Fatal(err)
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			offers, err := Extract(a, xspacePage, []byte(tt.json))
-			if err != nil {
-				t.Fatal(err)
-			}
-			if offers[0].PriceVND != tt.price || *offers[0].InStock != tt.inStock {
-				t.Errorf("got price %d stock %v, want %d %v", offers[0].PriceVND, *offers[0].InStock, tt.price, tt.inStock)
-			}
-		})
+	if len(offers) != 2 ||
+		offers[0].Title != "Máy ảnh FUJIFILM X-T5 (Body / Đen)" || offers[0].PriceVND != 45_490_000 || *offers[0].InStock ||
+		offers[1].Title != "Máy ảnh FUJIFILM X-T5 (XF16-50mm Kit / Đen)" || offers[1].PriceVND != 55_990_000 || !*offers[1].InStock {
+		t.Errorf("offers = %+v", offers)
+	}
+
+	single, err := Extract(a, xspacePage, []byte(`{"title":"X-T5","price":3699000000,"available":false,"variants":[{"title":"Default Title","price":3699000000,"available":false}]}`))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(single) != 1 || single[0].Title != "X-T5" || single[0].PriceVND != 36_990_000 || *single[0].InStock {
+		t.Errorf("single variant = %+v", single)
 	}
 	if _, err := Extract(a, xspacePage, []byte(`{"price":1}`)); err == nil {
 		t.Error("expected error for JSON without a title")
@@ -209,8 +200,8 @@ func TestVJShopNextPage(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		got, err := v.NextPage(tc.url, raw)
-		if err != nil || got != tc.want {
+		got, err := v.NextPage(Page{URL: tc.url}, raw)
+		if err != nil || got.URL != tc.want || got.Form != nil {
 			t.Errorf("NextPage(%s, %s) = %q, %v; want %q", tc.url, tc.file, got, err, tc.want)
 		}
 	}

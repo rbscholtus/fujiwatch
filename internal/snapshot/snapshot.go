@@ -3,6 +3,8 @@
 package snapshot
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"net/url"
@@ -28,9 +30,14 @@ const MetaSuffix = ".meta.json"
 
 var unsafeRe = regexp.MustCompile(`[^a-z0-9._-]+`)
 
+// maxNameLen bounds a snapshot name; file systems allow 255 bytes, and a
+// Store API variations URL lists dozens of product IDs.
+const maxNameLen = 80
+
 // Name derives a file name (without extension) from a page URL:
 // the last path segment plus the query, e.g. "do-cu-chat" or
-// "may-anh-fujifilm-page-2".
+// "may-anh-fujifilm-page-2". A longer name is cut and given a hash of the
+// whole URL, so different long URLs stay apart.
 func Name(pageURL string) string {
 	u, err := url.Parse(pageURL)
 	if err != nil {
@@ -47,6 +54,10 @@ func Name(pageURL string) string {
 	name = strings.Trim(unsafeRe.ReplaceAllString(strings.ToLower(name), "-"), "-.")
 	if name == "" {
 		return "index"
+	}
+	if len(name) > maxNameLen {
+		sum := sha256.Sum256([]byte(pageURL))
+		name = strings.Trim(name[:maxNameLen-9], "-.") + "-" + hex.EncodeToString(sum[:4])
 	}
 	return name
 }

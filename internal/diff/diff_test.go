@@ -68,13 +68,19 @@ func TestNewListing(t *testing.T) {
 	}
 }
 
-// Product mode: the first observation of a fixed product URL is not "new".
-func TestProductModeFirstSeenIsQuiet(t *testing.T) {
+// Product mode: the first observation of a product page is a new listing,
+// baseline in its source's first run; seen again, it is quiet.
+func TestProductModeFirstSeen(t *testing.T) {
 	run := SourceRun{Shop: "xspace", URL: "https://x/p", Mode: config.ModeProduct, OfferCount: 1,
 		Observations: []Observation{{Shop: "xspace", URL: "https://x/p", Product: "xf10-24-ii", PriceVND: 27_490_000}}}
-	evs := Apply(state.New(), []SourceRun{run}, map[string]bool{state.Key("xspace", "https://x/p"): true}, t0, Options{})
-	if len(evs) != 0 {
-		t.Errorf("events = %v, want none", types(evs))
+	cfg := map[string]bool{state.Key("xspace", "https://x/p"): true}
+	st := state.New()
+	evs := Apply(st, []SourceRun{run}, cfg, t0, Options{})
+	if len(evs) != 1 || evs[0].Type != NewListing || !evs[0].Baseline || evs[0].PriceVND != 27_490_000 {
+		t.Errorf("first run: %+v, want one baseline new_listing", evs)
+	}
+	if evs := Apply(st, []SourceRun{run}, cfg, day(1), Options{}); len(evs) != 0 {
+		t.Errorf("second run: %v, want none", types(evs))
 	}
 }
 

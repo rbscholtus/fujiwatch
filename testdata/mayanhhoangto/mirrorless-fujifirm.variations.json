@@ -1,0 +1,1922 @@
+[
+ {
+  "categories": [],
+  "id": 28419,
+  "type": "variation",
+  "parent": 26094,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifim X-T50 (XT50 body)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifim-x-t50-xt50-moi-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "31000000",
+   "regular_price": "35500000",
+   "sale_price": "31000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifim-x-t50-xt50-moi-chinh-hang-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 38145,
+  "type": "variation",
+  "parent": 1828,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XT10 body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fuji-xt10-cu/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xt10-body-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 22491,
+  "type": "variation",
+  "parent": 19382,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-H2 Cũ- Mới (XH2)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-h2-gia-tot/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "34000000",
+   "regular_price": "34000000",
+   "sale_price": "34000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-h2-chinh-hang-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 27530,
+  "type": "variation",
+  "parent": 19382,
+  "variation": "Phân loại: Hàng khá",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-H2 Cũ- Mới (XH2)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-h2-gia-tot/?attribute_pa_hinh-thuc=hang-kha",
+  "prices": {
+   "price": "31000000",
+   "regular_price": "31000000",
+   "sale_price": "31000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-h2-cu%cc%83-moi-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 25858,
+  "type": "variation",
+  "parent": 19524,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T5 (XT5 &#8211; Body)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-t5-moi-gia-tot/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "36500000",
+   "regular_price": "42500000",
+   "sale_price": "36500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t5-xt5-moi-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 31651,
+  "type": "variation",
+  "parent": 19524,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T5 (XT5 &#8211; Body)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-t5-moi-gia-tot/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "34500000",
+   "regular_price": "42500000",
+   "sale_price": "34500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t5-xt5-body",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 40011,
+  "type": "variation",
+  "parent": 19524,
+  "variation": "Phân loại: Hàng khá đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T5 (XT5 &#8211; Body)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-t5-moi-gia-tot/?attribute_pa_hinh-thuc=hang-kha-dep",
+  "prices": {
+   "price": "29000000",
+   "regular_price": "29000000",
+   "sale_price": "29000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t5-xt5-body-hang-kha-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 40012,
+  "type": "variation",
+  "parent": 19524,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T5 (XT5 &#8211; Body)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-t5-moi-gia-tot/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "31000000",
+   "regular_price": "31000000",
+   "sale_price": "31000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t5-xt5-body-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 21016,
+  "type": "variation",
+  "parent": 21014,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm GFX 50S Mark II cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-gfx-50s-mark-ii-moi-nhap-khau/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "48000000",
+   "regular_price": "48000000",
+   "sale_price": "48000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-gfx-50s-mark-ii-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 26888,
+  "type": "variation",
+  "parent": 21683,
+  "variation": "Phân loại: Hàng mới 100%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm XS20 Body (MỚI CŨ &#8211; CHÍNH HÃNG)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xs20/?attribute_pa_hinh-thuc=hang-moi-100",
+  "prices": {
+   "price": "28000000",
+   "regular_price": "32000000",
+   "sale_price": "28000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-xs20-body-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 26889,
+  "type": "variation",
+  "parent": 21683,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm XS20 Body (MỚI CŨ &#8211; CHÍNH HÃNG)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xs20/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "32000000",
+   "regular_price": "37000000",
+   "sale_price": "32000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-xs20-body-moi-chinh-hang-2",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 32879,
+  "type": "variation",
+  "parent": 21683,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm XS20 Body (MỚI CŨ &#8211; CHÍNH HÃNG)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xs20/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "26500000",
+   "regular_price": "32000000",
+   "sale_price": "26500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-xs20-body-moi-chinh-hang-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 25013,
+  "type": "variation",
+  "parent": 24721,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X100 Mark VI (X100VI &#8211; Fuji x1006) Đen / bạc",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/may-anh-fujifilm-x100-mark-vi-x100vi-moi/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "49000000",
+   "regular_price": "58000000",
+   "sale_price": "49000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x100-mark-vi-x100vi-moi-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 25014,
+  "type": "variation",
+  "parent": 24721,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X100 Mark VI (X100VI &#8211; Fuji x1006) Đen / bạc",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/may-anh-fujifilm-x100-mark-vi-x100vi-moi/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "45000000",
+   "regular_price": "49000000",
+   "sale_price": "45000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x100-mark-vi-x100vi-moi-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 28267,
+  "type": "variation",
+  "parent": 24721,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X100 Mark VI (X100VI &#8211; Fuji x1006) Đen / bạc",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/may-anh-fujifilm-x100-mark-vi-x100vi-moi/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "41000000",
+   "regular_price": "41000000",
+   "sale_price": "41000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x100-mark-vi-x100vi-moi-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 28418,
+  "type": "variation",
+  "parent": 26094,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifim X-T50 (XT50 body)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifim-x-t50-xt50-moi-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "34000000",
+   "regular_price": "38000000",
+   "sale_price": "34000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifim-x-t50-xt50-moi-chinh-hang-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 22490,
+  "type": "variation",
+  "parent": 19382,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-H2 Cũ- Mới (XH2)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-h2-gia-tot/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "44000000",
+   "regular_price": "46000000",
+   "sale_price": "44000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-h2-chinh-hang-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37341,
+  "type": "variation",
+  "parent": 26094,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifim X-T50 (XT50 body)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifim-x-t50-xt50-moi-chinh-hang/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "27000000",
+   "regular_price": "27000000",
+   "sale_price": "27000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifim-x-t50-xt50-body-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 28949,
+  "type": "variation",
+  "parent": 28931,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X-M5 Body (XM5 &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-m5-x-m5-moi/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "21500000",
+   "regular_price": "28000000",
+   "sale_price": "21500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-m5-x-m5-moi-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 31650,
+  "type": "variation",
+  "parent": 28931,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X-M5 Body (XM5 &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-m5-x-m5-moi/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "20000000",
+   "regular_price": "25000000",
+   "sale_price": "20000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-m5-body-xm5-moi-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 36542,
+  "type": "variation",
+  "parent": 28931,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X-M5 Body (XM5 &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-m5-x-m5-moi/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "18000000",
+   "regular_price": "18000000",
+   "sale_price": "18000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-m5-body-xm5-moi-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37196,
+  "type": "variation",
+  "parent": 32436,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X-half (FUJI X Half &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-x-half/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "10000000",
+   "regular_price": "10000000",
+   "sale_price": "10000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-half-fuji-x-half-moi-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 32455,
+  "type": "variation",
+  "parent": 32436,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X-half (FUJI X Half &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-x-half/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "12800000",
+   "regular_price": "17500000",
+   "sale_price": "12800000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-half-x-half-moi-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33718,
+  "type": "variation",
+  "parent": 32479,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-E5 BODY (XE5 Mới chính hãng )",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xe-5/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "33000000",
+   "regular_price": "33500000",
+   "sale_price": "33000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-e5-body-moi-chinh-hang-hang-chinh-hang-mau-den",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33717,
+  "type": "variation",
+  "parent": 32479,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-E5 BODY (XE5 Mới chính hãng )",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xe-5/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "33000000",
+   "regular_price": "36000000",
+   "sale_price": "33000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-e5-body-moi-chinh-hang-hang-chinh-hang-mau-bac",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37028,
+  "type": "variation",
+  "parent": 32479,
+  "variation": "Phân loại: Len fuji 23 2.8 mua cùng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-E5 BODY (XE5 Mới chính hãng )",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xe-5/?attribute_pa_hinh-thuc=len-fuji-23-2-8-mua-cung",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-e5-body-xe5-moi-chinh-ha%cc%83ng-len-fuji-23-2-8-mua-cung",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37029,
+  "type": "variation",
+  "parent": 32479,
+  "variation": "Phân loại: Len Sigma 18-50 mua cùng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-E5 BODY (XE5 Mới chính hãng )",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xe-5/?attribute_pa_hinh-thuc=len-sigma-18-50-mua-cung",
+  "prices": {
+   "price": "12000000",
+   "regular_price": "12000000",
+   "sale_price": "12000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-e5-body-xe5-moi-chinh-ha%cc%83ng-len-sigma-18-50-mua-cung",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33541,
+  "type": "variation",
+  "parent": 33114,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm GFX 100RF (Mới &#8211; cũ, Chính hãng)",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-gfx-100rf/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "105000000",
+   "regular_price": "128000000",
+   "sale_price": "105000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-gfx-100rf-moi-chinh-hang-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33133,
+  "type": "variation",
+  "parent": 33114,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm GFX 100RF (Mới &#8211; cũ, Chính hãng)",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-gfx-100rf/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "125000000",
+   "regular_price": "147000000",
+   "sale_price": "125000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-gfx-100rf-moi-chinh-hang-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33134,
+  "type": "variation",
+  "parent": 33114,
+  "variation": "Phân loại: Hàng đã qua sử dụng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm GFX 100RF (Mới &#8211; cũ, Chính hãng)",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-gfx-100rf/?attribute_pa_hinh-thuc=hang-da-qua-su-dung",
+  "prices": {
+   "price": "93000000",
+   "regular_price": "126000000",
+   "sale_price": "93000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-gfx-100rf-moi-chinh-hang-hang-da-qua-su-dung",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 35330,
+  "type": "variation",
+  "parent": 34920,
+  "variation": "Phân loại: Mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T30 III (XT30 3 &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t30-iii/?attribute_pa_hinh-thuc=moi-chinh-hang",
+  "prices": {
+   "price": "25000000",
+   "regular_price": "28999000",
+   "sale_price": "25000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t30-iii-xt30-3-moi-chinh-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 35331,
+  "type": "variation",
+  "parent": 34920,
+  "variation": "Phân loại: Mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T30 III (XT30 3 &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t30-iii/?attribute_pa_hinh-thuc=moi-nhap-khau",
+  "prices": {
+   "price": "23500000",
+   "regular_price": "26990000",
+   "sale_price": "23500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t30-iii-xt30-3-moi-chinh-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23191,
+  "type": "variation",
+  "parent": 9188,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X100V cũ (fujifilm X100 V/ X1005)",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-x-100v/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "33000000",
+   "regular_price": "33000000",
+   "sale_price": "33000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x100v-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 38146,
+  "type": "variation",
+  "parent": 1828,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XT10 body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fuji-xt10-cu/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xt10-body-cu-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37606,
+  "type": "variation",
+  "parent": 5594,
+  "variation": "Phân loại: Hàng khá",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T100 (XT100) + kit 15-45mm cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t100-chinh-hang/?attribute_pa_hinh-thuc=hang-kha",
+  "prices": {
+   "price": "10000000",
+   "regular_price": "10000000",
+   "sale_price": "10000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-t100-xt100-kit-15-45mm-cu%cc%83-hang-kha",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37607,
+  "type": "variation",
+  "parent": 5594,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Fujifilm X-T100 (XT100) + kit 15-45mm cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t100-chinh-hang/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "12000000",
+   "regular_price": "12000000",
+   "sale_price": "12000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-t100-xt100-kit-15-45mm-cu%cc%83-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33567,
+  "type": "variation",
+  "parent": 6219,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X100F cũ",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-x100f-cu/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "17000000",
+   "regular_price": "17000000",
+   "sale_price": "17000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x100f-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33568,
+  "type": "variation",
+  "parent": 6219,
+  "variation": "Phân loại: Khá đẹp 90% sử dụng tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X100F cũ",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-x100f-cu/?attribute_pa_hinh-thuc=moi-93",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x100f-cu-kha-dep-90-su-dung-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 18726,
+  "type": "variation",
+  "parent": 6641,
+  "variation": "Phân loại: Khá đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T3 (XT3) Body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t3-cu/?attribute_pa_hinh-thuc=kha-dep",
+  "prices": {
+   "price": "15000000",
+   "regular_price": "15000000",
+   "sale_price": "15000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t3-xt3-body-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19282,
+  "type": "variation",
+  "parent": 6641,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-T3 (XT3) Body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t3-cu/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "17000000",
+   "regular_price": "17000000",
+   "sale_price": "17000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-t3-xt3-body-cu",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34866,
+  "type": "variation",
+  "parent": 6652,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM X-H1 (XH1) Body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fuji-xh1-chinh-hang/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-h1-xh1-body-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34867,
+  "type": "variation",
+  "parent": 6652,
+  "variation": "Phân loại: Khá đẹp 90% sử dụng tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM X-H1 (XH1) Body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fuji-xh1-chinh-hang/?attribute_pa_hinh-thuc=moi-93",
+  "prices": {
+   "price": "15000000",
+   "regular_price": "15000000",
+   "sale_price": "15000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-h1-xh1-body-cu-kha-dep-90-su-dung-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 35574,
+  "type": "variation",
+  "parent": 6706,
+  "variation": "Phân loại: Hàng khá",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM X-E3 (XE3) (Silver/black) cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-e3-cu/?attribute_pa_hinh-thuc=hang-kha",
+  "prices": {
+   "price": "11000000",
+   "regular_price": "11000000",
+   "sale_price": "11000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-e3-xe3-silver-black-cu-hang-kha",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 35575,
+  "type": "variation",
+  "parent": 6706,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM X-E3 (XE3) (Silver/black) cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-e3-cu/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "13000000",
+   "regular_price": "13000000",
+   "sale_price": "13000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-e3-xe3-silver-black-cu-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 18605,
+  "type": "variation",
+  "parent": 7033,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM X-T30 (XT30) Mirrorless BODY cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t30/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-t30-xt30-mirrorless-body-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 25437,
+  "type": "variation",
+  "parent": 7033,
+  "variation": "Phân loại: Used đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM X-T30 (XT30) Mirrorless BODY cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t30/?attribute_pa_hinh-thuc=used-dep",
+  "prices": {
+   "price": "16000000",
+   "regular_price": "19000000",
+   "sale_price": "16000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-t30-xt30-mirrorless-body-used-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34868,
+  "type": "variation",
+  "parent": 9181,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XT200 KIT 15 45 cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t200-kit/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "15000000",
+   "regular_price": "15000000",
+   "sale_price": "15000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-t200-kit-15-45-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34869,
+  "type": "variation",
+  "parent": 9181,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XT200 KIT 15 45 cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-t200-kit/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "16000000",
+   "regular_price": "16000000",
+   "sale_price": "16000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-x-t200-kit-15-45-cu-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 39462,
+  "type": "variation",
+  "parent": 19382,
+  "variation": "Phân loại: Hàng mới 100%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-H2 Cũ- Mới (XH2)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-h2-gia-tot/?attribute_pa_hinh-thuc=hang-moi-100",
+  "prices": {
+   "price": "42000000",
+   "regular_price": "42000000",
+   "sale_price": "42000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-h2-cu%cc%83-moi-xh2-hang-moi-100",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 36987,
+  "type": "variation",
+  "parent": 9188,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X100V cũ (fujifilm X100 V/ X1005)",
+  "permalink": "https://mayanhhoangto.com/du-lich/compact/fujifilm-x-100v/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "29000000",
+   "regular_price": "29000000",
+   "sale_price": "29000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x100v-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 18731,
+  "type": "variation",
+  "parent": 9193,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Body MIRRORLESS FUJIFILM X-T4 (FUJI XT4 BODY) cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xt4-moi/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "25000000",
+   "regular_price": "25000000",
+   "sale_price": "25000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-a%cc%89nh-mirrorless-fujifilm-x-t4-body-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 27311,
+  "type": "variation",
+  "parent": 9193,
+  "variation": "Phân loại: Khá đẹp 90% sử dụng tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Body MIRRORLESS FUJIFILM X-T4 (FUJI XT4 BODY) cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-xt4-moi/?attribute_pa_hinh-thuc=moi-93",
+  "prices": {
+   "price": "20000000",
+   "regular_price": "20000000",
+   "sale_price": "20000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-a%cc%89nh-mirrorless-fujifilm-x-t4-body",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 36217,
+  "type": "variation",
+  "parent": 13461,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm XS10 Body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-s10-body/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-xs10-body-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34652,
+  "type": "variation",
+  "parent": 13461,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm XS10 Body cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-s10-body/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "21000000",
+   "regular_price": "22500000",
+   "sale_price": "21000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-xs10-body-cu-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 31652,
+  "type": "variation",
+  "parent": 15607,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X-T30 mark 2 (Body XT30 mark II)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-t30-ii-black-body/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "21000000",
+   "regular_price": "26500000",
+   "sale_price": "21000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-xt30-mark-2-body-xt30-mark-ii-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34190,
+  "type": "variation",
+  "parent": 15607,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm X-T30 mark 2 (Body XT30 mark II)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-t30-ii-black-body/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-xt30-mark-2-body-xt30-mark-ii-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29208,
+  "type": "variation",
+  "parent": 16073,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM GFX 50S Medium Format (Cũ, Đẹp)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/gfx-50s-medium-format/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "30000000",
+   "regular_price": "30000000",
+   "sale_price": "30000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-gfx-50s-medium-format-cu-dep-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29209,
+  "type": "variation",
+  "parent": 16073,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM GFX 50S Medium Format (Cũ, Đẹp)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/gfx-50s-medium-format/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "35000000",
+   "regular_price": "35000000",
+   "sale_price": "35000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-gfx-50s-medium-format-cu-dep-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 26430,
+  "type": "variation",
+  "parent": 16970,
+  "variation": "Phân loại: Đã qua sử dụng, khá đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-Pro1 Đẹp Giá tốt",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-pro1-dep-gia-tot/?attribute_pa_hinh-thuc=da-qua-su-dung-kha-dep",
+  "prices": {
+   "price": "11000000",
+   "regular_price": "11000000",
+   "sale_price": "11000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-pro1-dep-gia-tot-da-qua-su-dung-kha-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33164,
+  "type": "variation",
+  "parent": 18078,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Mirrorless FUJIFILM X-H2S Cũ &#8211; Mới (Fuji XH2S)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-h2s-moi-cu/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "35000000",
+   "regular_price": "35000000",
+   "sale_price": "35000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-mirrorless-fujifilm-x-h2s-moi-xh2s-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 39044,
+  "type": "variation",
+  "parent": 18078,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Mirrorless FUJIFILM X-H2S Cũ &#8211; Mới (Fuji XH2S)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-h2s-moi-cu/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "59000000",
+   "regular_price": "59000000",
+   "sale_price": "59000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-mirrorless-fujifilm-x-h2s-cu-moi-xh2s-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 39045,
+  "type": "variation",
+  "parent": 18078,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Mirrorless FUJIFILM X-H2S Cũ &#8211; Mới (Fuji XH2S)",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/fujifilm-x-h2s-moi-cu/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "40000000",
+   "regular_price": "40000000",
+   "sale_price": "40000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-mirrorless-fujifilm-x-h2s-cu-moi-xh2s-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 21017,
+  "type": "variation",
+  "parent": 21014,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh Fujifilm GFX 50S Mark II cũ",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-gfx-50s-mark-ii-moi-nhap-khau/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "72000000",
+   "regular_price": "72000000",
+   "sale_price": "72000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-gfx-50s-mark-ii-moi-nhap-khau-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 26429,
+  "type": "variation",
+  "parent": 16970,
+  "variation": "Phân loại: Hàng khá",
+  "is_in_stock": false,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Máy ảnh FUJIFILM X-Pro1 Đẹp Giá tốt",
+  "permalink": "https://mayanhhoangto.com/mirrorless/mirrorless-fujifirm/may-anh-fujifilm-x-pro1-dep-gia-tot/?attribute_pa_hinh-thuc=hang-kha",
+  "prices": {
+   "price": "9500000",
+   "regular_price": "9500000",
+   "sale_price": "9500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "may-anh-fujifilm-x-pro1-dep-gia-tot-hang-kha",
+  "stock_availability": {
+   "text": "Hết hàng",
+   "class": "out-of-stock"
+  }
+ }
+]

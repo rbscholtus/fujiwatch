@@ -50,6 +50,7 @@ type haravanProduct struct {
 	Price     float64 `json:"price"` // VND × 100; min over variants
 	Available bool    `json:"available"`
 	Variants  []struct {
+		Title     string  `json:"title"` // "Body / Đen / …", "XF16-50mm Kit / Bạc / …"
 		Price     float64 `json:"price"`
 		Available bool    `json:"available"`
 	} `json:"variants"`
@@ -82,22 +83,23 @@ func (h Haravan) extractJSON(pageURL string, raw []byte) ([]Offer, error) {
 		return nil, errors.New("product json has no title")
 	}
 
-	// Lowest price among available variants, else the product price.
-	var minor float64
-	for _, v := range p.Variants {
-		if v.Available && v.Price > 0 && (minor == 0 || v.Price < minor) {
-			minor = v.Price
+	// One offer per variant, named after it, so the matcher can tell a body
+	// from a kit ("XF16-50mm Kit / Bạc / …"); in product mode the runner
+	// picks the variant that matches the product.
+	if len(p.Variants) <= 1 {
+		price := p.Price
+		if len(p.Variants) == 1 && p.Variants[0].Price > 0 {
+			price = p.Variants[0].Price
 		}
+		return []Offer{{Shop: h.shop, URL: pageURL, Title: p.Title, PriceVND: parsePrice(price / 100), InStock: new(p.Available)}}, nil
 	}
-	if minor == 0 {
-		minor = p.Price
+	offers := make([]Offer, 0, len(p.Variants))
+	for _, v := range p.Variants {
+		title := p.Title
+		if t := strings.TrimSpace(v.Title); t != "" && t != "Default Title" {
+			title += " (" + t + ")"
+		}
+		offers = append(offers, Offer{Shop: h.shop, URL: pageURL, Title: title, PriceVND: parsePrice(v.Price / 100), InStock: new(v.Available)})
 	}
-
-	return []Offer{{
-		Shop:     h.shop,
-		URL:      pageURL,
-		Title:    p.Title,
-		PriceVND: parsePrice(minor / 100),
-		InStock:  new(p.Available),
-	}}, nil
+	return offers, nil
 }

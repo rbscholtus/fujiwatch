@@ -1,7 +1,9 @@
 package adapters
 
 import (
+	"bytes"
 	"errors"
+	"fmt"
 	"regexp"
 	"strings"
 
@@ -22,6 +24,7 @@ type Layout struct {
 	Link   string // within the card; href. "" or not found: the page URL
 	Price  string // within the card; first match's text (or content attribute)
 	Stock  string // within the card; optional stock label
+	Next   string // in the page; the link to the next listing page ("" = one page)
 }
 
 // CSS is an adapter for shops without structured data, driven by layouts.
@@ -49,6 +52,34 @@ func (c CSS) Extract(pageURL string, doc *goquery.Document, _ []byte) ([]Offer, 
 		return offers, nil
 	}
 	return nil, errors.New("no layout matched the page")
+}
+
+// NextPage follows the Next link of the first layout that has one and whose
+// marker matches the page.
+func (c CSS) NextPage(cur Page, raw []byte) (Page, error) {
+	if looksLikeJSON(raw) {
+		return Page{}, nil
+	}
+	var doc *goquery.Document
+	for _, l := range c.layouts {
+		if l.Next == "" {
+			continue
+		}
+		if doc == nil {
+			var err error
+			if doc, err = goquery.NewDocumentFromReader(bytes.NewReader(raw)); err != nil {
+				return Page{}, fmt.Errorf("parse html: %w", err)
+			}
+		}
+		if l.Marker != "" && doc.Find(l.Marker).Length() == 0 {
+			continue
+		}
+		if href, ok := doc.Find(l.Next).First().Attr("href"); ok && strings.TrimSpace(href) != "" {
+			return Page{URL: resolveURL(cur.URL, strings.TrimSpace(href))}, nil
+		}
+		return Page{}, nil
+	}
+	return Page{}, nil
 }
 
 func (l Layout) extract(shop, pageURL string, doc *goquery.Document) []Offer {

@@ -1,0 +1,7 @@
+{
+  "shop": "bncamera",
+  "mode": "listing",
+  "page_url": "https://bncamera.com/wp-json/wc/store/v1/products?parent=33775%2C29365\u0026per_page=100\u0026type=variation",
+  "fetch_url": "https://bncamera.com/wp-json/wc/store/v1/products?parent=33775%2C29365\u0026per_page=100\u0026type=variation",
+  "fetched_at": "2026-11-07T12:11:14Z"
+}

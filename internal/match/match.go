@@ -52,11 +52,12 @@ type Trace struct {
 }
 
 type rule struct {
-	id         string
-	patterns   []*regexp.Regexp
-	requireAll []*regexp.Regexp
-	requireAny []*regexp.Regexp
-	exclude    []*regexp.Regexp
+	id          string
+	patterns    []*regexp.Regexp
+	requireAll  []*regexp.Regexp
+	requireAny  []*regexp.Regexp
+	exclude     []*regexp.Regexp
+	otherMounts []*regexp.Regexp
 }
 
 // Matcher matches titles against compiled watchlist rules.
@@ -80,6 +81,9 @@ func New(products []config.Product) (*Matcher, error) {
 			return nil, err
 		}
 		if r.exclude, err = compileAll(p.ID, p.Exclude); err != nil {
+			return nil, err
+		}
+		if r.otherMounts, err = compileAll(p.ID, p.OtherMounts); err != nil {
 			return nil, err
 		}
 		m.rules = append(m.rules, r)
@@ -157,8 +161,12 @@ func (r rule) eval(s string) (bool, string) {
 }
 
 // nearMiss reports whether s matches every pattern and no exclude, but
-// fails a require_all or require_any rule.
+// fails a require_all or require_any rule, and names none of the product's
+// other mounts (that is another mount's version, rejected on purpose).
 func (r rule) nearMiss(s string) bool {
+	if anyMatch(r.otherMounts, s) {
+		return false
+	}
 	for _, re := range r.patterns {
 		if !re.MatchString(s) {
 			return false

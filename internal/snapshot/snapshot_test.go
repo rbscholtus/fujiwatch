@@ -19,6 +19,9 @@ func TestName(t *testing.T) {
 		{"https://kyma.vn/may-anh-fujifilm-x-t5.html?product-id=163637", "may-anh-fujifilm-x-t5-product-id-163637"},
 		{"https://shop.vn/index.php", "index"},
 		{"https://kyma.vn/Máy Ảnh", "m-y-nh"},
+		// Long names are cut and keep a hash of the URL.
+		{"https://b.vn/wp-json/wc/store/v1/products?parent=33775%2C29365%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10&per_page=100&type=variation",
+			"products-parent-33775-2c29365-2c1-2c2-2c3-2c4-2c5-2c6-2c7-2c8-2c9-2c10-5b5a17c7"},
 	}
 	for _, tt := range tests {
 		if got := Name(tt.in); got != tt.want {

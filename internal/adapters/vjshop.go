@@ -160,22 +160,22 @@ func (*VJShop) ListingTotal(raw []byte) (int, bool) {
 // NextPage follows a listing's meta.current_page / meta.last_page: the next
 // page is the same URL with ?page=current+1. Product API responses have no
 // next page.
-func (*VJShop) NextPage(fetchURL string, raw []byte) (string, error) {
+func (*VJShop) NextPage(cur Page, raw []byte) (Page, error) {
 	lp, ok, err := vjListingRaw(raw)
 	if !ok {
-		return "", err
+		return Page{}, err
 	}
 	if lp.Meta == nil || lp.Meta.CurrentPage < 1 || lp.Meta.CurrentPage >= lp.Meta.LastPage {
-		return "", nil
+		return Page{}, nil
 	}
-	u, err := url.Parse(fetchURL)
+	u, err := url.Parse(cur.URL)
 	if err != nil {
-		return "", fmt.Errorf("parse url: %w", err)
+		return Page{}, fmt.Errorf("parse url: %w", err)
 	}
 	q := u.Query()
 	q.Set("page", strconv.Itoa(lp.Meta.CurrentPage+1))
 	u.RawQuery = q.Encode()
-	return u.String(), nil
+	return Page{URL: u.String()}, nil
 }
 
 func (v *VJShop) offer(pageURL string, p vjProduct) Offer {

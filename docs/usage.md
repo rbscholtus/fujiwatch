@@ -25,6 +25,7 @@ The products to watch, and the rules that decide whether a shop's title is that 
 # Shared lists, referenced with YAML anchors.
 kit_excludes: &kit ['\bkit\b', '\d+(-\d+)? ?mm\b', '\+ ?(lens|ong kinh)\b']
 body_excludes: &body ['\bx-(t|s|h|e|m|a|pro)\d']
+other_mounts: &mounts ['sony', '\be-?mount\b', 'canon', '\brf(-s)?\b', 'nikon', '\bl-?mount\b']   # shortened
 
 products:
   - id: x-t5                      # stable ID: state, history files, site URLs
@@ -46,6 +47,7 @@ products:
     patterns: ['tamron', '(^|\D)16-50(\D|$)']
     require_any: ['fuji', 'fujifilm', 'x-?mount', 'ngam x', '\bfx\b']
     exclude: ['sony', '\bfe\b', '\be-?mount', 'nikon', '\bz\b', 'canon', '\brf\b']
+    other_mounts: *mounts         # optional: see below
     target_vnd: 15000000          # optional: below_target alert for new offers
     target_used_vnd: 11000000     # optional: the same for used offers
 ```
@@ -57,6 +59,8 @@ Rules are RE2 regular expressions matched against the **normalised** title (lowe
 - no `exclude` may match.
 
 A title that matches zero or several products is never alerted on. Ambiguous titles, and near misses (all `patterns` match, no `exclude` does, but a `require_all` / `require_any` fails), are listed in the email so the rules can be tuned.
+
+`other_mounts` is for third-party lenses made for several mounts (Sigma, Tamron). It never stops a match: a dual-mount listing ("for Sony E/Fujifilm") still matches through `require_any`. It only decides that a title naming another mount and not Fujifilm ("Sigma 18-50mm … For Sony E") is that mount's version, so it is not listed as a near miss. Use `exclude` instead when even dual-mount titles must not match. `fujiwatch match` shows near misses.
 
 > Go's `regexp` (RE2) has **no** lookahead `(?!…)`, so model boundaries use a negated class: `(\D|$)` means "followed by a non-digit or the end". Focal ranges use `(^|\D)…(\D|$)` instead of `\b`, because there is no word boundary inside "xf10-24", and "110-240" must not match "10-24". Prefer this over `exclude: ['x-?t30']`: an exclude rejects the whole title, which would wrongly drop "X-T3 kèm grip, dùng chung pin với X-T30". Keep `exclude` for real confusions (other mounts, brands, kits, a newer Mark).
 
@@ -113,7 +117,7 @@ fujiwatch sitedata [--config <dir>] [--data <dir>] [--out <dir>]
 | `run` | One watch cycle: fetch every source, match, diff against `data/state.json`, append history, notify, save state. |
 | `snapshot` | Fetch a page and save it under `testdata/<shop>/<slug>.html` (or `.json`) plus `<slug>.meta.json`, for adapter tests. |
 | `extract` | Run one shop's adapter on a saved file and print the offers. |
-| `match` | Show which product a title matches, rule by rule, and the detected condition. |
+| `match` | Show which product a title matches, rule by rule, whether it is a near miss, and the detected condition. |
 | `sitedata` | Build the history site's JSON from `data/` into `site/public/data/`. |
 
 Flags:
@@ -221,7 +225,10 @@ No code changes are needed.
 1. Check the shop's `robots.txt`: the path must not be disallowed (the run refuses, and reports `adapter_broken`). Per-shop rules are in [shops.md](shops.md).
 2. Choose the mode: `listing` for categories, searches and used sections; `product` for one product page (with `product: <watchlist ID>`).
 3. Use the URL in the form the shop's listings report, so one product seen by a listing and by its product page is one offer (vjshop: `https://vjshop.vn/<slug>`, without the category path).
-4. Add it to `config/sources.yaml` and run `go run ./cmd/fujiwatch run --dry-run --no-notify --only <shop>`. Check the offer count: if it is suspiciously round (36, 50, 100), the listing has more pages than are being read.
+4. Add it to `config/sources.yaml` and run `go run ./cmd/fujiwatch run --dry-run --no-notify --only <shop>`. Check the offer count: if it equals a page size (16, 30, 36, 40, 100), the listing may have more pages than are being read.
+5. For a product page, the dry-run report shows no price; to see what is recorded, run with `--data <scratch dir> --no-notify` and read `<scratch dir>/state.json`. Never point `--data` at `data/`.
+6. When one URL is found by two sources in a run, the first source in `sources.yaml` wins: list the more reliable source (a product page) first. A product page behind a listing that already finds its URL adds nothing.
+7. Add a product page only where the listing falls short: robots.txt limits it (mayanh24h), its prices are unreliable (giangduydat), it shows no stock or drops sold-out products (kyma), or there is no listing (xspace). A product page the shop deletes fails every run (`adapter_broken`) until it is removed.
 
 ## Adding a shop
 

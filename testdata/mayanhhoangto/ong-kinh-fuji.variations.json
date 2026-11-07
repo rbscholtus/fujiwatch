@@ -1,0 +1,3002 @@
+[
+ {
+  "categories": [],
+  "id": 19021,
+  "type": "variation",
+  "parent": 3214,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 18-55mm f/2.8-4 R LM OIS Lens",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-18-55-2-8-4-os-new-used/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "7500000",
+   "regular_price": "7500000",
+   "sale_price": "7500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-18-55mm-f-2-8-4-r-lm-ois-lens-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19838,
+  "type": "variation",
+  "parent": 3391,
+  "variation": "Phân loại: Hàng khá",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 23mm f/1.4 R Lens cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-23-1-4-cu/?attribute_pa_hinh-thuc=hang-kha",
+  "prices": {
+   "price": "6000000",
+   "regular_price": "6000000",
+   "sale_price": "6000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-23mm-f-1-4-r-lens-dep-hang-kha",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19839,
+  "type": "variation",
+  "parent": 3391,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 23mm f/1.4 R Lens cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-23-1-4-cu/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-23mm-f-1-4-r-lens-dep-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12108,
+  "type": "variation",
+  "parent": 4005,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XC 50-230mm f/4.5-6.7 OIS II cũ &#8211; mới",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-50-230-ii-os-cu-xach-tay/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "9500000",
+   "regular_price": "9500000",
+   "sale_price": "9500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xc-50-230mm-f-4-5-6-7-ois-ii-lens-xach-tay-dep-99-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12109,
+  "type": "variation",
+  "parent": 4005,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XC 50-230mm f/4.5-6.7 OIS II cũ &#8211; mới",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-50-230-ii-os-cu-xach-tay/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "5000000",
+   "regular_price": "5000000",
+   "sale_price": "5000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xc-50-230mm-f-4-5-6-7-ois-ii-lens-xach-tay-dep-99-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29574,
+  "type": "variation",
+  "parent": 5168,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 23mm f/2 R WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-23-f2-xach-tay/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "6500000",
+   "regular_price": "6500000",
+   "sale_price": "6500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-23mm-f-2-r-wr-silver-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29575,
+  "type": "variation",
+  "parent": 5168,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 23mm f/2 R WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-23-f2-xach-tay/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "10900000",
+   "regular_price": "10900000",
+   "sale_price": "10900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-23mm-f-2-r-wr-silver-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19100,
+  "type": "variation",
+  "parent": 5646,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 16-55mm f/2.8 R LM WR | Fuji 16 55 cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-16-55mm-f-2-8/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-16-55mm-f-2-8-r-lm-wr-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19102,
+  "type": "variation",
+  "parent": 5646,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 16-55mm f/2.8 R LM WR | Fuji 16 55 cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-16-55mm-f-2-8/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "18000000",
+   "regular_price": "18000000",
+   "sale_price": "18000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-16-55mm-f-2-8-r-lm-wr-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 28852,
+  "type": "variation",
+  "parent": 6054,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XC 15-45mm f/3.5-5.6 OIS PZ (Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujinon-15-45mm-xach-tay/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "2500000",
+   "regular_price": "2500000",
+   "sale_price": "2500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xc-15-45mm-f-3-5-5-6-ois-pz-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29213,
+  "type": "variation",
+  "parent": 6054,
+  "variation": "Phân loại: Hàng mới",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XC 15-45mm f/3.5-5.6 OIS PZ (Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujinon-15-45mm-xach-tay/?attribute_pa_hinh-thuc=hang-moi",
+  "prices": {
+   "price": "3300000",
+   "regular_price": "3300000",
+   "sale_price": "3300000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xc-15-45mm-f-3-5-5-6-ois-pz-moi-hang-moi",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12095,
+  "type": "variation",
+  "parent": 6124,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 55-200mm f/3.5-4.8 R LM OIS",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois-lens-xach-tay-cu-fullbox/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois-lens-xach-tay-cu-fullbox-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12096,
+  "type": "variation",
+  "parent": 6124,
+  "variation": "Phân loại: Khá đẹp 90% sử dụng tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 55-200mm f/3.5-4.8 R LM OIS",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois-lens-xach-tay-cu-fullbox/?attribute_pa_hinh-thuc=moi-93",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois-lens-xach-tay-cu-fullbox-kha-de%cc%a3p-90-su%cc%89-du%cc%a3ng-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 25684,
+  "type": "variation",
+  "parent": 6124,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 55-200mm f/3.5-4.8 R LM OIS",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois-lens-xach-tay-cu-fullbox/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-55-200mm-f-3-5-4-8-r-lm-ois-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 28853,
+  "type": "variation",
+  "parent": 6508,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 16mm f/1.4 R WR cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-16mm-f-1-4-r-wr-lens-moi-chinh-hang/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-16mm-f-1-4-r-wr-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34770,
+  "type": "variation",
+  "parent": 6508,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 16mm f/1.4 R WR cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-16mm-f-1-4-r-wr-lens-moi-chinh-hang/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "6000000",
+   "regular_price": "6000000",
+   "sale_price": "6000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-16mm-f-1-4-r-wr-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23058,
+  "type": "variation",
+  "parent": 6514,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 35mm f/1.4 R",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-35mm-f-1-4-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-35mm-f-1-4-r-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23059,
+  "type": "variation",
+  "parent": 6514,
+  "variation": "Phân loại: Đã qua sử dụng như mới 99%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 35mm f/1.4 R",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-35mm-f-1-4-chinh-hang/?attribute_pa_hinh-thuc=moi-99",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-35mm-f-1-4-r-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 39209,
+  "type": "variation",
+  "parent": 6518,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 56mm f/1.2 R APD Lens cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-56mm-f-1-2-apd-cu/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "10500000",
+   "regular_price": "10500000",
+   "sale_price": "10500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-56mm-f-1-2-r-apd-lens-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 39210,
+  "type": "variation",
+  "parent": 6518,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 56mm f/1.2 R APD Lens cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-56mm-f-1-2-apd-cu/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "13000000",
+   "regular_price": "13000000",
+   "sale_price": "13000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-56mm-f-1-2-r-apd-lens-cu-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 22280,
+  "type": "variation",
+  "parent": 6525,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 56mm f/1.2 R mới &#8211; cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-56mm-f-1-2-r-lens/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "9500000",
+   "regular_price": "9500000",
+   "sale_price": "9500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-56mm-f-1-2-r-cu%cc%83-de%cc%a3p-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 22282,
+  "type": "variation",
+  "parent": 6525,
+  "variation": "Phân loại: Khá đẹp 90% sử dụng tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 56mm f/1.2 R mới &#8211; cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-56mm-f-1-2-r-lens/?attribute_pa_hinh-thuc=moi-93",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-56mm-f-1-2-r-cu%cc%83-de%cc%a3p-kha-de%cc%a3p-90-su%cc%89-du%cc%a3ng-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33503,
+  "type": "variation",
+  "parent": 6529,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 90mm f/2 R LM WR | Fuji 90 f2",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-90mm-f-2-r-chinh-hang/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "10500000",
+   "regular_price": "10500000",
+   "sale_price": "10500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-90mm-f-2-r-lm-wr-cu-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33504,
+  "type": "variation",
+  "parent": 6529,
+  "variation": "Phân loại: Khá đẹp 90% sử dụng tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 90mm f/2 R LM WR | Fuji 90 f2",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-90mm-f-2-r-chinh-hang/?attribute_pa_hinh-thuc=moi-93",
+  "prices": {
+   "price": "12000000",
+   "regular_price": "12000000",
+   "sale_price": "12000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-90mm-f-2-r-lm-wr-cu-kha-dep-90-su-dung-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 22998,
+  "type": "variation",
+  "parent": 6541,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 50-140mm f/2.8 R LM OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-50-140mm-f-2-8-chinh-hang/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "25000000",
+   "regular_price": "25000000",
+   "sale_price": "25000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-50-140mm-f-2-8-r-lm-ois-wr-hang-de%cc%a3p",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 22997,
+  "type": "variation",
+  "parent": 6541,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 50-140mm f/2.8 R LM OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-50-140mm-f-2-8-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "35000000",
+   "regular_price": "35000000",
+   "sale_price": "35000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-50-140mm-f-2-8-r-lm-ois-wr-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12080,
+  "type": "variation",
+  "parent": 6554,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 35mm f/2 R WR (Black/Silver) Chính hãng",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-35mm-f-2-r-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "10500000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-35mm-f-2-r-wr-lens-moi-chinh-hang-used-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12081,
+  "type": "variation",
+  "parent": 6554,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 35mm f/2 R WR (Black/Silver) Chính hãng",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-35mm-f-2-r-chinh-hang/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "6500000",
+   "regular_price": "6500000",
+   "sale_price": "6500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-35mm-f-2-r-wr-lens-moi-chinh-hang-used-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12075,
+  "type": "variation",
+  "parent": 6573,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 23mm f/2 R WR (Black/Silver) Cũ &#8211; Mới Chính hãng",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-23mm-f-2-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "11000000",
+   "regular_price": "11000000",
+   "sale_price": "11000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-23mm-f-2-r-wr-lens-moi-chinh-hang-used-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 12076,
+  "type": "variation",
+  "parent": 6573,
+  "variation": "Phân loại: Đã qua sử dụng như mới 99%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 23mm f/2 R WR (Black/Silver) Cũ &#8211; Mới Chính hãng",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-23mm-f-2-chinh-hang/?attribute_pa_hinh-thuc=moi-99",
+  "prices": {
+   "price": "7500000",
+   "regular_price": "7500000",
+   "sale_price": "7500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-23mm-f-2-r-wr-lens-moi-chinh-hang-used-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29672,
+  "type": "variation",
+  "parent": 7327,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 50mm f/2 R WR (Black/Silver) | Fujifilm 50 f2",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-50mm-f-2-new/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "9500000",
+   "regular_price": "9500000",
+   "sale_price": "9500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-50mm-f-2-r-wr-black-silver-chinh-hang-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29673,
+  "type": "variation",
+  "parent": 7327,
+  "variation": "Phân loại: Đã qua sử dụng như mới 99%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 50mm f/2 R WR (Black/Silver) | Fujifilm 50 f2",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/fujifilm-xf-50mm-f-2-new/?attribute_pa_hinh-thuc=moi-99",
+  "prices": {
+   "price": "6500000",
+   "regular_price": "6500000",
+   "sale_price": "6500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "fujifilm-xf-50mm-f-2-r-wr-black-silver-chinh-hang-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29455,
+  "type": "variation",
+  "parent": 8174,
+  "variation": "Phân loại: for Canon RF",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 30mm F1.4 DC DN (C) for Sony/ Fuji/ Canon RF (Sigma 30 1.4)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/lens-sigma-30mm-f-1-4-dc-dn/?attribute_pa_hinh-thuc=for-canon-rf",
+  "prices": {
+   "price": "8100000",
+   "regular_price": "8100000",
+   "sale_price": "8100000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "lens-sigma-30mm-f-1-4-dc-dn-for-sony-for-canon-rf",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29453,
+  "type": "variation",
+  "parent": 8174,
+  "variation": "Phân loại: for Fuji",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 30mm F1.4 DC DN (C) for Sony/ Fuji/ Canon RF (Sigma 30 1.4)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/lens-sigma-30mm-f-1-4-dc-dn/?attribute_pa_hinh-thuc=for-fuji",
+  "prices": {
+   "price": "5500000",
+   "regular_price": "5500000",
+   "sale_price": "5500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "lens-sigma-30mm-f-1-4-dc-dn-for-sony-for-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29454,
+  "type": "variation",
+  "parent": 8174,
+  "variation": "Phân loại: for Sony",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 30mm F1.4 DC DN (C) for Sony/ Fuji/ Canon RF (Sigma 30 1.4)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/lens-sigma-30mm-f-1-4-dc-dn/?attribute_pa_hinh-thuc=for-sony",
+  "prices": {
+   "price": "5500000",
+   "regular_price": "5500000",
+   "sale_price": "5500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "lens-sigma-30mm-f-1-4-dc-dn-for-sony-for-sony",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 39136,
+  "type": "variation",
+  "parent": 9096,
+  "variation": "Phân loại: for Fuji",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Samyang 8 mm f / 2.8 Fisheye II cho Fujifilm X Mount / Sony",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-samyang-8-mm-f-2-8-fisheye-ii-cho-fujifilm-x-mount-hang-xach-tay-cu/?attribute_pa_hinh-thuc=for-fuji",
+  "prices": {
+   "price": "3500000",
+   "regular_price": "3500000",
+   "sale_price": "3500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-samyang-8-mm-f-2-8-fisheye-ii-cho-fujifilm-x-mount-hang-xach-tay-cu-for-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 39137,
+  "type": "variation",
+  "parent": 9096,
+  "variation": "Phân loại: for Sony",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Samyang 8 mm f / 2.8 Fisheye II cho Fujifilm X Mount / Sony",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-samyang-8-mm-f-2-8-fisheye-ii-cho-fujifilm-x-mount-hang-xach-tay-cu/?attribute_pa_hinh-thuc=for-sony",
+  "prices": {
+   "price": "4500000",
+   "regular_price": "4500000",
+   "sale_price": "4500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-samyang-8-mm-f-2-8-fisheye-ii-cho-fujifilm-x-mount-hang-xach-tay-cu-for-sony",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24802,
+  "type": "variation",
+  "parent": 9102,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH FUJIFILM XF 16-80mm f/4 R OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "12000000",
+   "regular_price": "12000000",
+   "sale_price": "12000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr-hang-chinh-ha%cc%83ng-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24803,
+  "type": "variation",
+  "parent": 9102,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH FUJIFILM XF 16-80mm f/4 R OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr-hang-chinh-ha%cc%83ng-hang-de%cc%a3p",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37710,
+  "type": "variation",
+  "parent": 9102,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH FUJIFILM XF 16-80mm f/4 R OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "11500000",
+   "regular_price": "11500000",
+   "sale_price": "11500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-16-80mm-f-4-r-ois-wr-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 21048,
+  "type": "variation",
+  "parent": 9947,
+  "variation": "Phân loại: LENS FOR FUJI",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH TOUIT 32MM F1.8 FOR SONY/ FUJI",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-touit-32mm-f1-8-for-fujifilm-hang-xach-tay-cu/?attribute_pa_hinh-thuc=lens-for-fuji",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-touit-32mm-f1-8-for-sony-lens-for-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 21049,
+  "type": "variation",
+  "parent": 9947,
+  "variation": "Phân loại: LENS FOR SONY",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH TOUIT 32MM F1.8 FOR SONY/ FUJI",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-touit-32mm-f1-8-for-fujifilm-hang-xach-tay-cu/?attribute_pa_hinh-thuc=lens-for-sony",
+  "prices": {
+   "price": "6000000",
+   "regular_price": "6000000",
+   "sale_price": "6000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-touit-32mm-f1-8-for-sony-lens-for-sony",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24830,
+  "type": "variation",
+  "parent": 12407,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH VILTROX AF 85M F/1.8 XF II FOR FUJIFILM (CHÍNH HÃNG)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-af-85m-f-1-8-xf-ii-for-fujifilm-hang-chinh-hang/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "4500000",
+   "regular_price": "4500000",
+   "sale_price": "4500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-af-85m-f-1-8-xf-ii-for-fujifilm-chinh-hang-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24832,
+  "type": "variation",
+  "parent": 12411,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH VILTROX 33MM F/1.4 XF FOR FUJIFILM HÀNG CHÍNH HÃNG",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-viltrox-33mm-f-1-4-xf-for-fujifilm-hang-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "5000000",
+   "regular_price": "6000000",
+   "sale_price": "5000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-33mm-f-1-4-xf-for-fujifilm-hang-chinh-hang-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24833,
+  "type": "variation",
+  "parent": 12411,
+  "variation": "Phân loại: Đã qua sử dụng như mới 99%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH VILTROX 33MM F/1.4 XF FOR FUJIFILM HÀNG CHÍNH HÃNG",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-viltrox-33mm-f-1-4-xf-for-fujifilm-hang-chinh-hang/?attribute_pa_hinh-thuc=moi-99",
+  "prices": {
+   "price": "4300000",
+   "regular_price": "4950000",
+   "sale_price": "4300000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-33mm-f-1-4-xf-for-fujifilm-hang-chinh-hang-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23012,
+  "type": "variation",
+  "parent": 12417,
+  "variation": "Phân loại: Hàng mới 100%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH VILTROX 23MM F/1.4 XF FOR FUJIFILM ĐỜI 2",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-23mm-f-1-4-xf-for-fujifilm-hang-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-100",
+  "prices": {
+   "price": "5000000",
+   "regular_price": "6290000",
+   "sale_price": "5000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-23mm-f-1-4-xf-for-fujifilm-doi-2-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 18704,
+  "type": "variation",
+  "parent": 12518,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "VILTROX AF 56MM F/1.4 STM FOR FUJIFILM HÀNG CHÍNH HÃNG",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-viltrox-af-56mm-f-1-4-stm-for-fujifilm/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "4200000",
+   "regular_price": "5000000",
+   "sale_price": "4200000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-af-56mm-f-1-4-stm-for-fujifilm-hang-chinh-hang-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 18705,
+  "type": "variation",
+  "parent": 12518,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "VILTROX AF 56MM F/1.4 STM FOR FUJIFILM HÀNG CHÍNH HÃNG",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-viltrox-af-56mm-f-1-4-stm-for-fujifilm/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "5000000",
+   "regular_price": "6000000",
+   "sale_price": "5000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-af-56mm-f-1-4-stm-for-fujifilm-hang-chinh-hang-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 30865,
+  "type": "variation",
+  "parent": 13726,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Fujifilm XF 27mm F2.8 R WR (27 2.8 WR &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-27mm-f2-8-ii-r-wr/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "11300000",
+   "regular_price": "11300000",
+   "sale_price": "11300000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-27mm-f2-8-r-wr-27-2-8-wr-moi-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33075,
+  "type": "variation",
+  "parent": 13726,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Fujifilm XF 27mm F2.8 R WR (27 2.8 WR &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-27mm-f2-8-ii-r-wr/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "10200000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-27mm-f2-8-r-wr-27-2-8-wr-moi-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33500,
+  "type": "variation",
+  "parent": 14128,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 50mm f/1.0 R WR cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-50mm-f-1-0-r-wr-chinh-hang/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "17000000",
+   "regular_price": "17000000",
+   "sale_price": "17000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-50mm-f-1-0-r-wr-dep-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 33501,
+  "type": "variation",
+  "parent": 14128,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 50mm f/1.0 R WR cũ",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-50mm-f-1-0-r-wr-chinh-hang/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "20000000",
+   "regular_price": "20000000",
+   "sale_price": "20000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-50mm-f-1-0-r-wr-dep-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 36827,
+  "type": "variation",
+  "parent": 14843,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM GF 80mm f/1.7 R WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-gf-80mm-f-1-7-r-wr/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "46000000",
+   "regular_price": "46000000",
+   "sale_price": "46000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-gf-80mm-f-1-7-r-wr-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 36828,
+  "type": "variation",
+  "parent": 14843,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM GF 80mm f/1.7 R WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-gf-80mm-f-1-7-r-wr/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "35000000",
+   "regular_price": "35000000",
+   "sale_price": "35000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-gf-80mm-f-1-7-r-wr-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 20977,
+  "type": "variation",
+  "parent": 15594,
+  "variation": "Phân loại: LENS FOR FUJI",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 18-50mm f/2.8 DC DN for Sony E/Fujifilm",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-sigma-18-50mm-f-2-8-dc-dn-for-sony-e/?attribute_pa_hinh-thuc=lens-for-fuji",
+  "prices": {
+   "price": "13930000",
+   "regular_price": "13930000",
+   "sale_price": "13930000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-18-50mm-f-2-8-dc-dn-for-sony-e-fujifilm-lens-for-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 20978,
+  "type": "variation",
+  "parent": 15594,
+  "variation": "Phân loại: LENS FOR SONY",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 18-50mm f/2.8 DC DN for Sony E/Fujifilm",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-sigma-18-50mm-f-2-8-dc-dn-for-sony-e/?attribute_pa_hinh-thuc=lens-for-sony",
+  "prices": {
+   "price": "13930000",
+   "regular_price": "13930000",
+   "sale_price": "13930000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-18-50mm-f-2-8-dc-dn-for-sony-e-fujifilm-lens-for-sony",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 38362,
+  "type": "variation",
+  "parent": 15594,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 18-50mm f/2.8 DC DN for Sony E/Fujifilm",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-sigma-18-50mm-f-2-8-dc-dn-for-sony-e/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "10500000",
+   "regular_price": "10500000",
+   "sale_price": "10500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-18-50mm-f-2-8-dc-dn-for-sony-e-fujifilm-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34963,
+  "type": "variation",
+  "parent": 15696,
+  "variation": "Phân loại: Len cho Sony Mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Tamron 11-20mm f/2.8 Di III-A RXD for Sony E/ Fuji/ RF",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-tamron-11-20mm-f-2-8-di-iii-a-rxd-for-sony-e/?attribute_pa_hinh-thuc=len-cho-sony-moi-chinh-hang",
+  "prices": {
+   "price": "13500000",
+   "regular_price": "13500000",
+   "sale_price": "13500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-tamron-11-20mm-f-2-8-di-iii-a-rxd-for-sony-e-len-cho-sony-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34964,
+  "type": "variation",
+  "parent": 15696,
+  "variation": "Phân loại: Len xài rồi cho Fuji",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Tamron 11-20mm f/2.8 Di III-A RXD for Sony E/ Fuji/ RF",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-tamron-11-20mm-f-2-8-di-iii-a-rxd-for-sony-e/?attribute_pa_hinh-thuc=len-xai-roi-cho-fuji",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-tamron-11-20mm-f-2-8-di-iii-a-rxd-for-sony-e-len-xai-roi-cho-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37430,
+  "type": "variation",
+  "parent": 15696,
+  "variation": "Phân loại: for Canon RF",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Tamron 11-20mm f/2.8 Di III-A RXD for Sony E/ Fuji/ RF",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-tamron-11-20mm-f-2-8-di-iii-a-rxd-for-sony-e/?attribute_pa_hinh-thuc=for-canon-rf",
+  "prices": {
+   "price": "13300000",
+   "regular_price": "13300000",
+   "sale_price": "13300000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-tamron-11-20mm-f-2-8-di-iii-a-rxd-for-sony-e-fuji-for-canon-rf",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 20902,
+  "type": "variation",
+  "parent": 17111,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 23mm f/1.4 R LM WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-23mm-f-1-4-r-lm-wr-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "18500000",
+   "regular_price": "22000000",
+   "sale_price": "18500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-23mm-f-1-4-r-lm-wr-moi-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 20903,
+  "type": "variation",
+  "parent": 17111,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 23mm f/1.4 R LM WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-23mm-f-1-4-r-lm-wr-chinh-hang/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-23mm-f-1-4-r-lm-wr-moi-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29450,
+  "type": "variation",
+  "parent": 17173,
+  "variation": "Phân loại: for Sony",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 56mm f/1.4 DC DN (C) for Fujifilm/ Canon RF/ Nikon Z/ L-mount | Sigma 56 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-sony",
+  "prices": {
+   "price": "7500000",
+   "regular_price": "7500000",
+   "sale_price": "7500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-canon-rf-nikon-z-l-mount-sigma-56-f1-4-moi-cu-for-sony",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29449,
+  "type": "variation",
+  "parent": 17173,
+  "variation": "Phân loại: for Nikon Z",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 56mm f/1.4 DC DN (C) for Fujifilm/ Canon RF/ Nikon Z/ L-mount | Sigma 56 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-nikon-z",
+  "prices": {
+   "price": "8500000",
+   "regular_price": "8500000",
+   "sale_price": "8500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-canon-rf-nikon-z-l-mount-sigma-56-f1-4-moi-cu-for-nikon-z",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29451,
+  "type": "variation",
+  "parent": 17173,
+  "variation": "Phân loại: for Canon RF",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 56mm f/1.4 DC DN (C) for Fujifilm/ Canon RF/ Nikon Z/ L-mount | Sigma 56 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-canon-rf",
+  "prices": {
+   "price": "8000000",
+   "regular_price": "8000000",
+   "sale_price": "8000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-canon-rf-nikon-z-l-mount-sigma-56-f1-4-moi-cu-for-canon-rf",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29448,
+  "type": "variation",
+  "parent": 17173,
+  "variation": "Phân loại: for L-mount",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 56mm f/1.4 DC DN (C) for Fujifilm/ Canon RF/ Nikon Z/ L-mount | Sigma 56 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-l-mount",
+  "prices": {
+   "price": "7000000",
+   "regular_price": "7000000",
+   "sale_price": "7000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-canon-rf-nikon-z-l-mount-sigma-56-f1-4-moi-cu-for-l-mount",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29447,
+  "type": "variation",
+  "parent": 17173,
+  "variation": "Phân loại: for Fuji",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Sigma 56mm f/1.4 DC DN (C) for Fujifilm/ Canon RF/ Nikon Z/ L-mount | Sigma 56 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-fuji",
+  "prices": {
+   "price": "7500000",
+   "regular_price": "7500000",
+   "sale_price": "7500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-56mm-f-1-4-dc-dn-c-for-fujifilm-canon-rf-nikon-z-l-mount-sigma-56-f1-4-moi-cu-for-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29459,
+  "type": "variation",
+  "parent": 17178,
+  "variation": "Phân loại: for Canon RF",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 16mm f/1.4 DC DN (C) for Fuji/ Sony/ Canon RF (Sigma 16mm f1.4 &#8211; Cũ, Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-sigma-16mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-canon-rf",
+  "prices": {
+   "price": "8900000",
+   "regular_price": "8900000",
+   "sale_price": "8900000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-16mm-f-1-4-dc-dn-c-for-fujifilm-x-for-canon-rf",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29457,
+  "type": "variation",
+  "parent": 17178,
+  "variation": "Phân loại: for Fuji",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 16mm f/1.4 DC DN (C) for Fuji/ Sony/ Canon RF (Sigma 16mm f1.4 &#8211; Cũ, Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-sigma-16mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-fuji",
+  "prices": {
+   "price": "6500000",
+   "regular_price": "6500000",
+   "sale_price": "6500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-16mm-f-1-4-dc-dn-c-for-fujifilm-x-for-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 29458,
+  "type": "variation",
+  "parent": 17178,
+  "variation": "Phân loại: for Sony",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 16mm f/1.4 DC DN (C) for Fuji/ Sony/ Canon RF (Sigma 16mm f1.4 &#8211; Cũ, Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-sigma-16mm-f-1-4-dc-dn-c-for-fujifilm-x-moi-chinh-hang/?attribute_pa_hinh-thuc=for-sony",
+  "prices": {
+   "price": "6000000",
+   "regular_price": "6000000",
+   "sale_price": "6000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-16mm-f-1-4-dc-dn-c-for-fujifilm-x-for-sony",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 31279,
+  "type": "variation",
+  "parent": 17302,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 33mm f/1.4 R LM WR Mới | Fuji 33mm 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-33mm-f-1-4-r/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-33mm-f-1-4-r-lm-wr-moi-gia-tot-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24664,
+  "type": "variation",
+  "parent": 17302,
+  "variation": "Phân loại: New 100% chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 33mm f/1.4 R LM WR Mới | Fuji 33mm 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-33mm-f-1-4-r/?attribute_pa_hinh-thuc=new-100-chinh-hang",
+  "prices": {
+   "price": "20500000",
+   "regular_price": "21900000",
+   "sale_price": "20500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-33mm-f-1-4-r-lm-wr-moi-gia-tot-new-100-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24663,
+  "type": "variation",
+  "parent": 17302,
+  "variation": "Phân loại: Khá đẹp 90% sử dụng tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "FUJIFILM XF 33mm f/1.4 R LM WR Mới | Fuji 33mm 1.4",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-33mm-f-1-4-r/?attribute_pa_hinh-thuc=moi-93",
+  "prices": {
+   "price": "15000000",
+   "regular_price": "15000000",
+   "sale_price": "15000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-33mm-f-1-4-r-lm-wr-moi-gia-tot-kha-de%cc%a3p-90-su%cc%89-du%cc%a3ng-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24165,
+  "type": "variation",
+  "parent": 17491,
+  "variation": "Phân loại: Hàng mới 100%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Viltrox AF 13mm f/1.4 XF for FUJI Mới",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-af-13mm-f-1-4-xf-for-fuji-moi/?attribute_pa_hinh-thuc=hang-moi-100",
+  "prices": {
+   "price": "8650000",
+   "regular_price": "8650000",
+   "sale_price": "8650000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-af-13mm-f-1-4-xf-for-fuji-moi-hang-moi-100",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24166,
+  "type": "variation",
+  "parent": 17491,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Viltrox AF 13mm f/1.4 XF for FUJI Mới",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-af-13mm-f-1-4-xf-for-fuji-moi/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "5500000",
+   "regular_price": "6500000",
+   "sale_price": "5500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-af-13mm-f-1-4-xf-for-fuji-moi-hang-de%cc%a3p",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 31276,
+  "type": "variation",
+  "parent": 18128,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Tamron 17-70mm f/2.8 Di III-A VC RXD for Fuji",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-for-fuji-moi/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-for-fuji-moi-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 31277,
+  "type": "variation",
+  "parent": 18128,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Tamron 17-70mm f/2.8 Di III-A VC RXD for Fuji",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-for-fuji-moi/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "11500000",
+   "regular_price": "11500000",
+   "sale_price": "11500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-for-fuji-moi-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19134,
+  "type": "variation",
+  "parent": 18128,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Tamron 17-70mm f/2.8 Di III-A VC RXD for Fuji",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-for-fuji-moi/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "15500000",
+   "regular_price": "15500000",
+   "sale_price": "15500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-for-fuji-moi-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19223,
+  "type": "variation",
+  "parent": 18261,
+  "variation": "Phân loại: Hàng mới xách tay",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 18mm f/1.4 R LM WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr/?attribute_pa_hinh-thuc=hang-moi-xach-tay",
+  "prices": {
+   "price": "19500000",
+   "regular_price": "19500000",
+   "sale_price": "19500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr-hang-moi-xach-tay",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 19224,
+  "type": "variation",
+  "parent": 18261,
+  "variation": "Phân loại: Đã qua sử dụng như mới 99%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 18mm f/1.4 R LM WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr/?attribute_pa_hinh-thuc=moi-99",
+  "prices": {
+   "price": "14000000",
+   "regular_price": "14000000",
+   "sale_price": "14000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23727,
+  "type": "variation",
+  "parent": 18261,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 18mm f/1.4 R LM WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr/?attribute_pa_hinh-thuc=hang-moi-chinh-ha%25cc%2583ng",
+  "prices": {
+   "price": "21000000",
+   "regular_price": "21000000",
+   "sale_price": "21000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-18mm-f-1-4-r-lm-wr-hang-moi-chinh-ha%cc%83ng",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37578,
+  "type": "variation",
+  "parent": 19716,
+  "variation": "Phân loại: Hàng mới",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Samyang 12mm f/2.0 AF for FUJIFILM/SONY (samyang 12 f2)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-samyang-12mm-f-2-0-af-for-fujifilm-x-cu-gia-tot/?attribute_pa_hinh-thuc=hang-moi",
+  "prices": {
+   "price": "5500000",
+   "regular_price": "5500000",
+   "sale_price": "5500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-samyang-12mm-f-2-0-af-for-fujifilm-sony-hang-moi",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 37579,
+  "type": "variation",
+  "parent": 19716,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Samyang 12mm f/2.0 AF for FUJIFILM/SONY (samyang 12 f2)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-samyang-12mm-f-2-0-af-for-fujifilm-x-cu-gia-tot/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "4500000",
+   "regular_price": "4500000",
+   "sale_price": "4500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-samyang-12mm-f-2-0-af-for-fujifilm-sony-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23775,
+  "type": "variation",
+  "parent": 20337,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 56mm f/1.2 R WR Giá tốt",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-56mm-f-1-2-r-wr-gia-tot/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "22500000",
+   "regular_price": "22500000",
+   "sale_price": "22500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-56mm-f-1-2-r-wr-gia-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 22995,
+  "type": "variation",
+  "parent": 20337,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 56mm f/1.2 R WR Giá tốt",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-56mm-f-1-2-r-wr-gia-tot/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "18000000",
+   "regular_price": "18000000",
+   "sale_price": "18000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-56mm-f-1-2-r-wr-gia-tot-hang-de%cc%a3p",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34642,
+  "type": "variation",
+  "parent": 20337,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính FUJIFILM XF 56mm f/1.2 R WR Giá tốt",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-56mm-f-1-2-r-wr-gia-tot/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "15000000",
+   "regular_price": "15000000",
+   "sale_price": "15000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-56mm-f-1-2-r-wr-gia-tot-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24823,
+  "type": "variation",
+  "parent": 20459,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Viltrox 75mm f/1.2 AF for Fujifilm X/ Sony E (75 1.2 &#8211; MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-75mm-f-1-2-af-for-fujifilm-x-gia-tot/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "11500000",
+   "regular_price": "11800000",
+   "sale_price": "11500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-75mm-f-1-2-af-for-fujifilm-x-gia-tot-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24824,
+  "type": "variation",
+  "parent": 20459,
+  "variation": "Phân loại: Đã qua sử dụng như mới 99%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Viltrox 75mm f/1.2 AF for Fujifilm X/ Sony E (75 1.2 &#8211; MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-75mm-f-1-2-af-for-fujifilm-x-gia-tot/?attribute_pa_hinh-thuc=moi-99",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-75mm-f-1-2-af-for-fujifilm-x-gia-tot-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24595,
+  "type": "variation",
+  "parent": 20598,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH FUJIFILM 10-24mm f/4 R OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-hang-moi-nhap-khau/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "22500000",
+   "regular_price": "22500000",
+   "sale_price": "22500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-hang-moi-nhap-khau",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23798,
+  "type": "variation",
+  "parent": 20598,
+  "variation": "Phân loại: Hàng mới nhập khẩu",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH FUJIFILM 10-24mm f/4 R OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-hang-moi-nhap-khau/?attribute_pa_hinh-thuc=hang-moi-nhap-khau",
+  "prices": {
+   "price": "17000000",
+   "regular_price": "19000000",
+   "sale_price": "17000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-hang-moi-nhap-khau-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 23799,
+  "type": "variation",
+  "parent": 20598,
+  "variation": "Phân loại: Hàng đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH FUJIFILM 10-24mm f/4 R OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-hang-moi-nhap-khau/?attribute_pa_hinh-thuc=hang-dep",
+  "prices": {
+   "price": "12500000",
+   "regular_price": "12500000",
+   "sale_price": "12500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-hang-moi-nhap-khau-hang-dep",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 34764,
+  "type": "variation",
+  "parent": 20598,
+  "variation": "Phân loại: Cũ hoạt động tốt",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "ỐNG KÍNH FUJIFILM 10-24mm f/4 R OIS WR",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-hang-moi-nhap-khau/?attribute_pa_hinh-thuc=cu-hoat-dong-tot",
+  "prices": {
+   "price": "10000000",
+   "regular_price": "10000000",
+   "sale_price": "10000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-10-24mm-f-4-r-ois-wr-cu-hoat-dong-tot",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 25183,
+  "type": "variation",
+  "parent": 21705,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Fujifilm XF 150-600mm F/5.6 &#8211; 8 R LM OIS WR (150 600 &#8211; MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-150-600mm-f-5-6-8-r-lm-ois-wr-moi-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "40000000",
+   "regular_price": "40000000",
+   "sale_price": "40000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-150-600mm-f-5-6-8-r-lm-ois-wr-moi-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 25184,
+  "type": "variation",
+  "parent": 21705,
+  "variation": "Phân loại: Hàng Đẹp",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Fujifilm XF 150-600mm F/5.6 &#8211; 8 R LM OIS WR (150 600 &#8211; MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-150-600mm-f-5-6-8-r-lm-ois-wr-moi-chinh-hang/?attribute_pa_hinh-thuc=hang-de%25cc%25a3p",
+  "prices": {
+   "price": "32000000",
+   "regular_price": "32000000",
+   "sale_price": "32000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-150-600mm-f-5-6-8-r-lm-ois-wr-moi-hang-de%cc%a3p",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 35634,
+  "type": "variation",
+  "parent": 21929,
+  "variation": "Phân loại: for Fuji",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 100-400mm F/5-6.3 DG DN OS for Sony E-Mount (MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-sigma-100-400mm-f-5-6-3-dg-dn-os-for-sony-e-mount-moi-gia-tot/?attribute_pa_hinh-thuc=for-fuji",
+  "prices": {
+   "price": "16000000",
+   "regular_price": "16000000",
+   "sale_price": "16000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-100-400mm-f-5-6-3-dg-dn-os-for-sony-e-mount-moi-for-fuji",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 35635,
+  "type": "variation",
+  "parent": 21929,
+  "variation": "Phân loại: for L-mount",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 100-400mm F/5-6.3 DG DN OS for Sony E-Mount (MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-sigma-100-400mm-f-5-6-3-dg-dn-os-for-sony-e-mount-moi-gia-tot/?attribute_pa_hinh-thuc=for-l-mount",
+  "prices": {
+   "price": "16000000",
+   "regular_price": "16000000",
+   "sale_price": "16000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-100-400mm-f-5-6-3-dg-dn-os-for-sony-e-mount-moi-for-l-mount",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 35636,
+  "type": "variation",
+  "parent": 21929,
+  "variation": "Phân loại: for Sony",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Sigma 100-400mm F/5-6.3 DG DN OS for Sony E-Mount (MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-sony/ong-kinh-sigma-100-400mm-f-5-6-3-dg-dn-os-for-sony-e-mount-moi-gia-tot/?attribute_pa_hinh-thuc=for-sony",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-sigma-100-400mm-f-5-6-3-dg-dn-os-for-sony-e-mount-moi-for-sony",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24827,
+  "type": "variation",
+  "parent": 22291,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Viltrox AF 27mm f/1.2 STM ED IF for Fuji X (27 1.2 &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-af-27mm-f-1-2-stm-ed-if-for-fuji-x-27-1-2-chinh-hang/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "11500000",
+   "regular_price": "11800000",
+   "sale_price": "11500000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-af-27mm-f-1-2-stm-ed-if-for-fuji-x-sony-e-27-1-2-chinh-hang-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24828,
+  "type": "variation",
+  "parent": 22291,
+  "variation": "Phân loại: Đã qua sử dụng như mới 99%",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Viltrox AF 27mm f/1.2 STM ED IF for Fuji X (27 1.2 &#8211; Mới)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-tamron-sigma-tokina-viltrox/ong-kinh-viltrox-af-27mm-f-1-2-stm-ed-if-for-fuji-x-27-1-2-chinh-hang/?attribute_pa_hinh-thuc=moi-99",
+  "prices": {
+   "price": "9000000",
+   "regular_price": "9000000",
+   "sale_price": "9000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-viltrox-af-27mm-f-1-2-stm-ed-if-for-fuji-x-sony-e-27-1-2-chinh-hang-da%cc%83-qua-su%cc%89-du%cc%a3ng-nhu-moi-99",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ },
+ {
+  "categories": [],
+  "id": 24971,
+  "type": "variation",
+  "parent": 22916,
+  "variation": "Phân loại: Hàng mới chính hãng",
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "is_purchasable": true,
+  "name": "Ống kính Fujifilm XF 18-120mm F/4 LM PZ WR (18 120 &#8211; MỚI)",
+  "permalink": "https://mayanhhoangto.com/ong-kinh/ong-kinh-fuji/ong-kinh-fujifilm-xf-18-120mm-f-4-lm-pz-wr-18-120-moi-xach-tay/?attribute_pa_hinh-thuc=hang-moi-chinh-hang",
+  "prices": {
+   "price": "19000000",
+   "regular_price": "19000000",
+   "sale_price": "19000000",
+   "price_range": null,
+   "currency_code": "VND",
+   "currency_symbol": "₫",
+   "currency_minor_unit": 0,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "",
+   "currency_suffix": "₫"
+  },
+  "slug": "ong-kinh-fujifilm-xf-18-120mm-f-4-lm-pz-wr-18-120-moi-hang-moi-chinh-hang",
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  }
+ }
+]

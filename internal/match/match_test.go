@@ -2,6 +2,7 @@ package match
 
 import (
 	"slices"
+	"sync"
 	"testing"
 
 	"github.com/rbscholtus/fujiwatch/internal/config"
@@ -51,6 +52,25 @@ func TestMatchWatchlist(t *testing.T) {
 		title string
 		want  string
 	}{
+		// Add-on variations: the price is the lens bought with the body
+		{"Máy ảnh FUJIFILM X-E5 BODY (XE5 Mới chính hãng ) (Phân loại: Len fuji 23 2.8 mua cùng)", ""},
+		{"Máy ảnh FUJIFILM X-E5 BODY (XE5 Mới chính hãng ) (Phân loại: Len Sigma 18-50 mua cùng)", ""},
+		{"Máy ảnh FUJIFILM X-E5 BODY (XE5 Mới chính hãng ) (Phân loại: Hàng mới chính hãng)", "x-e5"},
+		{"Máy ảnh FUJIFILM X-T5 (Màu sắc: Black, Biến thể: Body only)", "x-t5"},
+		{"Máy ảnh FUJIFILM X-T5 (Màu sắc: Silver, Biến thể: + Lens XF 16-50mm f/2.8-4.8)", ""},
+		// Dual-mount Sigma listings are X-mount offers too
+		{"Ống kính Sigma 10-18mm f/2.8 DC DN Contemporary for Fujifilm/Sony", "sigma-10-18"},
+		{"Ống kính Sigma 18-50mm f/2.8 DC DN for Sony E/Fujifilm", "sigma-18-50"},
+		{"Sigma 10-18mm f/2.8 DC DN (C) For Sony E / Fujifilm XF", "sigma-10-18"},
+		{"Sigma 18-50mm f/2.8 DC DN (C) For Sony E", ""},
+		// Other brands' 10-24 zooms ("Di II" contains "ii")
+		{"TAMRON 10-24mm f/3.5-4.5 Di II VC HLD", ""},
+		{"Tamron SP AF 10-24mm f/3.5-4.5 DI II Zoom for Canon/ Nikon", ""},
+		{"Fujifilm XF 10-24mm f/4 mark II", "xf10-24-ii"},
+		{"Fujifilm XF 10-24mm f/4 R OIS", "xf10-24-i"},
+		// Cine lenses are not the XF18-55
+		{"Fujifilm MKX18-55mm T2.9", ""},
+		{"Fujifilm MK X 18-55mm T2.9 (Chính hãng)", ""},
 		// X-T3 vs X-T30
 		{"Máy ảnh Fujifilm X-T3 Body (Chính hãng)", "x-t3"},
 		{"Fujifilm XT3 body cũ 98%", "x-t3"},
@@ -171,12 +191,18 @@ func TestNearMiss(t *testing.T) {
 		title string
 		want  []string
 	}{
-		{"Ống kính Tamron 16-50mm F2.8 Di III VXD", []string{"tamron-16-50"}},          // mount not stated
-		{"Ống kính Sigma 18-50mm f/2.8 DC DN (C) For Sony E", []string{"sigma-18-50"}}, // Sigma: other mounts are not excluded
-		{"Ống kính Tamron 16-50mm F2.8 Di III VXD for Sony E", nil},                    // excluded mount
-		{"Máy ảnh Fujifilm X-T5 + Lens XF 16-50mm F/2.8-4.8 | Chính Hãng", nil},        // kit
-		{"Máy ảnh Fujifilm X-H2 | Chính hãng", nil},                                    // another model
-		{"Ống kính Fujifilm XF 16-55mm f/2.8 R LM WR | Chính hãng", nil},               // matched, so no near miss
+		{"Ống kính Tamron 16-50mm F2.8 Di III VXD", []string{"tamron-16-50"}}, // mount not stated
+		{"Ống kính Sigma 10-18mm f/2.8 DC DN", []string{"sigma-10-18"}},       // no mount stated
+		{"Ống kính Sigma 18-50mm f/2.8 DC DN (C) For Sony E", nil},            // another mount (other_mounts)
+		{"Sigma 18-50mm F2.8 DC DN (C) For Canon RF", nil},
+		{"Ống kính Sigma 18-50mm f/2.8 DC DN (C) ngàm Canon RF (18 50 – Mới)", nil},
+		{"Ống Kính Sigma 10-18mm F2.8 DC DN Contemporary (E-Mount) | Chính Hãng", nil},
+		{"Sigma 10-18mm f/2.8 DC DN (C) Canon RF-S (Chính hãng)", nil},
+		{"Sigma 18-50mm f/2.8 DC DN Contemporary for L-Mount", nil},
+		{"Ống kính Tamron 16-50mm F2.8 Di III VXD for Sony E", nil},             // excluded mount
+		{"Máy ảnh Fujifilm X-T5 + Lens XF 16-50mm F/2.8-4.8 | Chính Hãng", nil}, // kit
+		{"Máy ảnh Fujifilm X-H2 | Chính hãng", nil},                             // another model
+		{"Ống kính Fujifilm XF 16-55mm f/2.8 R LM WR | Chính hãng", nil},        // matched, so no near miss
 	} {
 		if got := m.Match(tc.title).NearMiss; !slices.Equal(got, tc.want) {
 			t.Errorf("NearMiss(%q) = %v, want %v", tc.title, got, tc.want)
@@ -224,4 +250,21 @@ func TestDetectCondition(t *testing.T) {
 			t.Errorf("DetectCondition(%q, %q) = %q, want %q", tt.title, tt.url, got, tt.want)
 		}
 	}
+}
+
+// Normalize is called from concurrently running shops.
+func TestNormalizeConcurrent(t *testing.T) {
+	const title, want = "Ống kính Fujinon XF10–24mm F/4 R OIS WR", "ong kinh fujinon xf10-24mm f4 r ois wr"
+	var wg sync.WaitGroup
+	for range 8 {
+		wg.Go(func() {
+			for range 200 {
+				if got := Normalize(title); got != want {
+					t.Errorf("Normalize = %q", got)
+					return
+				}
+			}
+		})
+	}
+	wg.Wait()
 }
