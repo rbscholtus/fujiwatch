@@ -50,6 +50,13 @@ products:
     patterns: ['\bx-t5(\D|$)']
     exclude: *kit
 
+  # Announced; expected in the coming months. Must not match a later X-T60.
+  - id: x-t6
+    name: "Fujifilm X-T6"
+    kind: body
+    patterns: ['\bx-t6(\D|$)']
+    exclude: *kit
+
   - id: x-e5
     name: "Fujifilm X-E5"
     kind: body

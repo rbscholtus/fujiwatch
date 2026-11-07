@@ -9,6 +9,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strings"
 	"testing"
 )
@@ -31,9 +32,11 @@ func TestSiteDataCommand(t *testing.T) {
 
 	var idx struct {
 		Products []struct {
-			ID     string            `json:"id"`
-			Points int               `json:"points"`
-			Offers []json.RawMessage `json:"offers"`
+			ID     string `json:"id"`
+			Points int    `json:"points"`
+			Offers []struct {
+				PriceVND int64 `json:"price_vnd"`
+			} `json:"offers"`
 		} `json:"products"`
 	}
 	b, err := os.ReadFile(filepath.Join(out, "index.json"))
@@ -47,7 +50,14 @@ func TestSiteDataCommand(t *testing.T) {
 		if _, err := os.Stat(filepath.Join(out, p.ID+".json")); err != nil {
 			t.Errorf("missing %s.json", p.ID)
 		}
-		if p.Points == 0 || len(p.Offers) == 0 {
+		// A product announced but not priced yet (X-T6 "sắp ra mắt", coming
+		// soon) has offers without a price, and so no history points.
+		priced := slices.ContainsFunc(p.Offers, func(o struct {
+			PriceVND int64 `json:"price_vnd"`
+		}) bool {
+			return o.PriceVND > 0
+		})
+		if len(p.Offers) == 0 || (priced && p.Points == 0) {
 			t.Errorf("%s: %d points, %d offers; every watched product is in the snapshots", p.ID, p.Points, len(p.Offers))
 		}
 	}

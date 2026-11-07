@@ -26,6 +26,7 @@ A static price-history site, built with Svelte and published on GitHub Pages, sh
 | `x-t3` | Fujifilm X-T3 body | new + used; must not match X-T30 / X-T30 II / X-T30 III |
 | `x-t4` | Fujifilm X-T4 body | new + used |
 | `x-t5` | Fujifilm X-T5 body | new + used; must not match X-T50 |
+| `x-t6` | Fujifilm X-T6 body | new + used; expected soon, not in shops yet |
 | `x-e5` | Fujifilm X-E5 body | new + used |
 | `xf10-24-i` | XF10-24mm F4 R OIS (Mark I) | tracked separately from Mark II (different prices) |
 | `xf10-24-ii` | XF10-24mm F4 R OIS WR (Mark II) | Mark II is the WR version |

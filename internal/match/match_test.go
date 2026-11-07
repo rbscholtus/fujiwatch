@@ -63,6 +63,11 @@ func TestMatchWatchlist(t *testing.T) {
 		{"Ống kính Sigma 18-50mm f/2.8 DC DN for Sony E/Fujifilm", "sigma-18-50"},
 		{"Sigma 10-18mm f/2.8 DC DN (C) For Sony E / Fujifilm XF", "sigma-10-18"},
 		{"Sigma 18-50mm f/2.8 DC DN (C) For Sony E", ""},
+		// X-T6 (not in shops yet) vs a future X-T60, and kits
+		{"Máy ảnh Fujifilm X-T6 Body | Chính hãng", "x-t6"},
+		{"Fujifilm XT6 (Silver)", "x-t6"},
+		{"Fujifilm X-T60 Body", ""},
+		{"Fujifilm X-T6 Kit XF16-50mm", ""},
 		// Other brands' 10-24 zooms ("Di II" contains "ii")
 		{"TAMRON 10-24mm f/3.5-4.5 Di II VC HLD", ""},
 		{"Tamron SP AF 10-24mm f/3.5-4.5 DI II Zoom for Canon/ Nikon", ""},
