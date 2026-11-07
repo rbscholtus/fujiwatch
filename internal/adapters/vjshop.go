@@ -1,10 +1,12 @@
 package adapters
 
 import (
+	"bytes"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"net/url"
+	"strconv"
 	"strings"
 	"time"
 
@@ -25,7 +27,8 @@ var saigon = time.FixedZone("ICT", 7*60*60)
 // VJShop handles vjshop.vn (Next.js).
 //
 //   - Listing pages (categories, "Đồ cũ chất" used goods) embed the product
-//     list in <script id="__NEXT_DATA__">, at props.pageProps.products.
+//     list in <script id="__NEXT_DATA__">, at props.pageProps.products, 36
+//     per page; props.pageProps.meta says which page of how many it is.
 //   - Product pages carry no data, so product mode fetches
 //     api.vjshop.vn/api/products/<slug> instead.
 type VJShop struct {
@@ -91,22 +94,11 @@ func (v *VJShop) Extract(pageURL string, doc *goquery.Document, raw []byte) ([]O
 		return []Offer{o}, nil
 	}
 
-	script := doc.Find(`script#__NEXT_DATA__`).First().Text()
-	if script == "" {
-		return nil, errors.New("__NEXT_DATA__ not found")
+	lp, err := vjListing(doc)
+	if err != nil {
+		return nil, err
 	}
-	var next struct {
-		Props struct {
-			PageProps struct {
-				Products []vjProduct `json:"products"`
-			} `json:"pageProps"`
-		} `json:"props"`
-	}
-	if err := json.Unmarshal([]byte(script), &next); err != nil {
-		return nil, fmt.Errorf("decode __NEXT_DATA__: %w", err)
-	}
-
-	products := next.Props.PageProps.Products
+	products := lp.Products
 	offers := make([]Offer, 0, len(products))
 	for _, p := range products {
 		if p.Core.Name == "" || p.Core.Slug == "" {
@@ -115,6 +107,75 @@ func (v *VJShop) Extract(pageURL string, doc *goquery.Document, raw []byte) ([]O
 		offers = append(offers, v.offer(pageURL, p))
 	}
 	return offers, nil
+}
+
+// vjPageProps is the part of a listing page's __NEXT_DATA__ we read.
+type vjPageProps struct {
+	Products []vjProduct `json:"products"`
+	Meta     *struct {
+		CurrentPage int  `json:"current_page"`
+		LastPage    int  `json:"last_page"`
+		Total       *int `json:"total"`
+	} `json:"meta"`
+}
+
+func vjListing(doc *goquery.Document) (*vjPageProps, error) {
+	script := doc.Find(`script#__NEXT_DATA__`).First().Text()
+	if script == "" {
+		return nil, errors.New("__NEXT_DATA__ not found")
+	}
+	var next struct {
+		Props struct {
+			PageProps vjPageProps `json:"pageProps"`
+		} `json:"props"`
+	}
+	if err := json.Unmarshal([]byte(script), &next); err != nil {
+		return nil, fmt.Errorf("decode __NEXT_DATA__: %w", err)
+	}
+	return &next.Props.PageProps, nil
+}
+
+// vjListingRaw parses a listing page body; ok is false for product API JSON.
+func vjListingRaw(raw []byte) (lp *vjPageProps, ok bool, err error) {
+	if looksLikeJSON(raw) {
+		return nil, false, nil
+	}
+	doc, err := goquery.NewDocumentFromReader(bytes.NewReader(raw))
+	if err != nil {
+		return nil, false, fmt.Errorf("parse html: %w", err)
+	}
+	lp, err = vjListing(doc)
+	return lp, err == nil, err
+}
+
+// ListingTotal returns a listing's meta.total.
+func (*VJShop) ListingTotal(raw []byte) (int, bool) {
+	lp, ok, _ := vjListingRaw(raw)
+	if !ok || lp.Meta == nil || lp.Meta.Total == nil {
+		return 0, false
+	}
+	return *lp.Meta.Total, true
+}
+
+// NextPage follows a listing's meta.current_page / meta.last_page: the next
+// page is the same URL with ?page=current+1. Product API responses have no
+// next page.
+func (*VJShop) NextPage(fetchURL string, raw []byte) (string, error) {
+	lp, ok, err := vjListingRaw(raw)
+	if !ok {
+		return "", err
+	}
+	if lp.Meta == nil || lp.Meta.CurrentPage < 1 || lp.Meta.CurrentPage >= lp.Meta.LastPage {
+		return "", nil
+	}
+	u, err := url.Parse(fetchURL)
+	if err != nil {
+		return "", fmt.Errorf("parse url: %w", err)
+	}
+	q := u.Query()
+	q.Set("page", strconv.Itoa(lp.Meta.CurrentPage+1))
+	u.RawQuery = q.Encode()
+	return u.String(), nil
 }
 
 func (v *VJShop) offer(pageURL string, p vjProduct) Offer {

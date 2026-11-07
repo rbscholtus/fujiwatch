@@ -42,6 +42,12 @@ products:
     patterns: ['\bx-t5(\D|$)']
     exclude: *kit
 
+  - id: x-e5
+    name: "Fujifilm X-E5"
+    kind: body
+    patterns: ['\bx-e5(\D|$)']
+    exclude: *kit
+
   - id: xf10-24-ii
     name: "XF10-24mm F4 R OIS WR (II)"
     kind: lens

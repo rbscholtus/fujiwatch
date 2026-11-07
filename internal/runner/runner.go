@@ -126,27 +126,13 @@ func runSource(ctx context.Context, src config.Source, m *match.Matcher, f Fetch
 		return run, nil
 	}
 
-	allowed, err := f.Allowed(ctx, fetchURL)
-	switch {
-	case err != nil:
-		run.Err = err
-		return run, nil
-	case !allowed:
-		run.Err = fmt.Errorf("%s: %w", fetchURL, ErrDisallowed)
-		return run, nil
-	}
-
-	res, err := f.Get(ctx, fetchURL)
-	if err != nil {
-		run.Err = err
-		return run, nil
-	}
-	offers, err := adapters.Extract(a, src.URL, res.Body)
+	offers, empty, err := fetchOffers(ctx, a, src, fetchURL, f)
 	if err != nil {
 		run.Err = err
 		return run, nil
 	}
 	run.OfferCount = len(offers)
+	run.Empty = empty
 
 	var unmatched []Unmatched
 	if src.Mode == config.ModeProduct {
@@ -177,6 +163,63 @@ func runSource(ctx context.Context, src config.Source, m *match.Matcher, f Fetch
 		run.Observations = append(run.Observations, observation(o, res.ProductID, src))
 	}
 	return run, unmatched
+}
+
+// maxPages bounds how many pages one listing source may span.
+const maxPages = 20
+
+// fetchOffers fetches a source and, for listings, every following page the
+// adapter reports. It is all or nothing: if any page fails, the source fails,
+// so offers on a missing page are never reported as gone. empty is true when
+// the first page yields no offers and states that the listing has no items.
+func fetchOffers(ctx context.Context, a adapters.Adapter, src config.Source, fetchURL string, f Fetcher) (offers []adapters.Offer, empty bool, err error) {
+	seen := map[string]bool{} // offers from earlier pages, by URL and title
+	for page := 1; fetchURL != ""; page++ {
+		if page > maxPages {
+			return nil, false, fmt.Errorf("listing has more than %d pages", maxPages)
+		}
+		allowed, err := f.Allowed(ctx, fetchURL)
+		switch {
+		case err != nil:
+			return nil, false, err
+		case !allowed:
+			return nil, false, fmt.Errorf("%s: %w", fetchURL, ErrDisallowed)
+		}
+		res, err := f.Get(ctx, fetchURL)
+		if err != nil {
+			return nil, false, err
+		}
+		pageOffers, err := adapters.Extract(a, src.URL, res.Body)
+		if err != nil {
+			return nil, false, fmt.Errorf("page %d: %w", page, err)
+		}
+		if page == 1 && len(pageOffers) == 0 {
+			empty = adapters.ReportsEmpty(a, res.Body)
+		}
+		// A listing can shift while it is paged through; skip an offer
+		// already seen on an earlier page.
+		for _, o := range pageOffers {
+			if !seen[o.URL+"\x00"+o.Title] {
+				offers = append(offers, o)
+			}
+		}
+		for _, o := range pageOffers {
+			seen[o.URL+"\x00"+o.Title] = true
+		}
+
+		if src.Mode != config.ModeListing {
+			break
+		}
+		next, err := adapters.NextPage(a, fetchURL, res.Body)
+		if err != nil {
+			return nil, false, err
+		}
+		if next == fetchURL {
+			break
+		}
+		fetchURL = next
+	}
+	return offers, empty, nil
 }
 
 func observation(o adapters.Offer, product string, src config.Source) diff.Observation {

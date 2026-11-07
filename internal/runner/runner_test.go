@@ -3,6 +3,7 @@ package runner
 import (
 	"bytes"
 	"context"
+	"fmt"
 	"os"
 	"slices"
 	"strings"
@@ -81,14 +82,28 @@ func testFetcher(t *testing.T) *fakeFetcher {
 	t.Helper()
 	return &fakeFetcher{
 		bodies: map[string][]byte{
-			xspaceURL + ".js": readFile(t, "xspace/fujinon-xf10-24mmf4-r-ois-wr-ii.json"),
-			vjUsedURL:         readFile(t, "vjshop/do-cu-chat.html"),
-			vjFujiURL:         readFile(t, "vjshop/may-anh-fujifilm.html"),
-			vjXT5API:          readFile(t, "vjshop/fujifilm-x-t5-silver-chinh-hang.json"),
+			xspaceURL + ".js":     readFile(t, "xspace/fujinon-xf10-24mmf4-r-ois-wr-ii.json"),
+			vjUsedURL:             readFile(t, "vjshop/do-cu-chat.html"),
+			vjFujiURL:             readFile(t, "vjshop/may-anh-fujifilm.html"),
+			vjFujiURL + "?page=2": vjPage(2, 3),
+			vjFujiURL + "?page=3": vjPage(3, 3),
+			vjXT5API:              readFile(t, "vjshop/fujifilm-x-t5-silver-chinh-hang.json"),
 		},
 		errs:       map[string]error{brokenURL: &fetch.StatusError{URL: brokenURL, Code: 503}},
 		disallowed: map[string]bool{blockedURL: true},
 	}
+}
+
+// vjPage builds a vjshop listing page (page cur of last) holding a product
+// per title, each priced 10,000,000 VND at /<slug>, the slug being the title.
+func vjPage(cur, last int, titles ...string) []byte {
+	var products []string
+	for _, t := range titles {
+		products = append(products, fmt.Sprintf(`{"core":{"name":%q,"slug":%q},"real_price":10000000}`, t, t))
+	}
+	return fmt.Appendf(nil, `<html><script id="__NEXT_DATA__" type="application/json">`+
+		`{"props":{"pageProps":{"products":[%s],"meta":{"current_page":%d,"last_page":%d,"total":%d}}}}</script></html>`,
+		strings.Join(products, ","), cur, last, len(titles))
 }
 
 func countType(evs []diff.Event, typ diff.Type) int {
@@ -135,28 +150,28 @@ func TestRunFirstCycle(t *testing.T) {
 		t.Errorf("blocked source err = %q", s.Err)
 	}
 
-	// Events: 2 new X-T5 body listings (the 3 kits on that page don't match
-	// the body-only product), 2 broken sources, nothing for the
+	// Events: 2 new X-T5 and 3 new X-E5 body listings (the kits on that page
+	// don't match the body-only products), 2 broken sources, nothing for the
 	// product-mode source on its first run.
-	if n := countType(rep.Events, diff.NewListing); n != 2 {
-		t.Errorf("new_listing = %d, want 2", n)
+	if n := countType(rep.Events, diff.NewListing); n != 5 {
+		t.Errorf("new_listing = %d, want 5", n)
 	}
 	if n := countType(rep.Events, diff.AdapterBroken); n != 2 {
 		t.Errorf("adapter_broken = %d, want 2", n)
 	}
-	if len(rep.Events) != 4 {
-		t.Errorf("events = %d, want 4", len(rep.Events))
+	if len(rep.Events) != 7 {
+		t.Errorf("events = %d, want 7", len(rep.Events))
 	}
 
-	// Unmatched: every non-watched offer from both listings (6 used + 34
-	// new, including the 3 X-T5 kits).
-	if len(rep.Unmatched) != 40 {
-		t.Errorf("unmatched = %d, want 40", len(rep.Unmatched))
+	// Unmatched: every non-watched offer from both listings (43 offers
+	// minus 2 X-T5 and 3 X-E5 bodies; the kits stay unmatched).
+	if len(rep.Unmatched) != 37 {
+		t.Errorf("unmatched = %d, want 37", len(rep.Unmatched))
 	}
 
 	// History: one record per matched offer.
-	if len(hist["xf10-24-ii"]) != 1 || len(hist["x-t5"]) != 2 {
-		t.Errorf("history = xf10-24-ii:%d x-t5:%d", len(hist["xf10-24-ii"]), len(hist["x-t5"]))
+	if len(hist["xf10-24-ii"]) != 1 || len(hist["x-t5"]) != 2 || len(hist["x-e5"]) != 3 {
+		t.Errorf("history = xf10-24-ii:%d x-t5:%d x-e5:%d", len(hist["xf10-24-ii"]), len(hist["x-t5"]), len(hist["x-e5"]))
 	}
 	if r := hist["xf10-24-ii"][0]; r.PriceVND != 27_490_000 || !r.TS.Equal(runTime) || r.Condition != "new" || r.URL != xspaceURL {
 		t.Errorf("xspace history record = %+v", r)
@@ -166,8 +181,8 @@ func TestRunFirstCycle(t *testing.T) {
 	if o := st.Offers[state.Key("xspace", xspaceURL)]; o == nil || o.Product != "xf10-24-ii" {
 		t.Errorf("xspace state = %+v", o)
 	}
-	if len(st.Offers) != 3 {
-		t.Errorf("state offers = %d, want 3", len(st.Offers))
+	if len(st.Offers) != 6 {
+		t.Errorf("state offers = %d, want 6", len(st.Offers))
 	}
 }
 
@@ -297,5 +312,78 @@ func TestWriteText(t *testing.T) {
 		if !strings.Contains(out, want) {
 			t.Errorf("report missing %q:\n%s", want, out)
 		}
+	}
+}
+
+func pagedConfig(t *testing.T, url string) *config.Config {
+	t.Helper()
+	cfg := testConfig(t)
+	cfg.Sources.Sources = []config.Source{{Shop: "vjshop", Mode: config.ModeListing, Condition: config.ConditionAuto, URL: url}}
+	return cfg
+}
+
+// A listing is followed page by page until the adapter reports the last
+// one; an offer that shifts onto the next page while paging is counted once.
+func TestRunFollowsPages(t *testing.T) {
+	const u = "https://vjshop.vn/may-anh-ong-kinh-cu"
+	f := &fakeFetcher{bodies: map[string][]byte{
+		u:             vjPage(1, 3, "Fujifilm X-T5 Body", "Fujifilm X-E3 Body"),
+		u + "?page=2": vjPage(2, 3, "Fujifilm X-E3 Body", "Fujifilm X-T4 Body"),
+		u + "?page=3": vjPage(3, 3, "Fujifilm X-S20 Body"),
+	}}
+	rep, _, err := Run(t.Context(), pagedConfig(t, u), state.New(), f, Options{Now: func() time.Time { return runTime }})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if want := []string{u, u + "?page=2", u + "?page=3"}; !slices.Equal(f.gets, want) {
+		t.Errorf("fetched %v, want %v", f.gets, want)
+	}
+	if sr := rep.Sources[0]; sr.Err != "" || sr.Offers != 4 {
+		t.Errorf("source = %+v, want 4 offers and no error", sr)
+	}
+}
+
+// If a later page fails, the whole source fails: reporting only the pages
+// that loaded would make the missing page's offers look gone.
+func TestRunFailedPageFailsSource(t *testing.T) {
+	const u = "https://vjshop.vn/may-anh-ong-kinh-cu"
+	f := &fakeFetcher{bodies: map[string][]byte{
+		u: vjPage(1, 2, "Fujifilm X-T5 Body"),
+	}}
+	rep, _, err := Run(t.Context(), pagedConfig(t, u), state.New(), f, Options{Now: func() time.Time { return runTime }})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sr := rep.Sources[0]; !strings.Contains(sr.Err, "page=2") || sr.Offers != 0 {
+		t.Errorf("source = %+v, want page 2 error and no offers", sr)
+	}
+	if len(rep.Seen) != 0 {
+		t.Errorf("seen %d offers, want 0", len(rep.Seen))
+	}
+}
+
+// A used-gear listing whose last item sold is not reported as broken; one
+// whose page can't be read still is.
+func TestRunEmptyListing(t *testing.T) {
+	const u = "https://vjshop.vn/may-anh-ong-kinh-cu-sigma"
+	cfg := pagedConfig(t, u)
+	st := state.New()
+	opts := Options{Now: func() time.Time { return runTime }}
+	run := func(body []byte) *Report {
+		t.Helper()
+		rep, _, err := Run(t.Context(), cfg, st, &fakeFetcher{bodies: map[string][]byte{u: body}}, opts)
+		if err != nil {
+			t.Fatal(err)
+		}
+		return rep
+	}
+
+	run(vjPage(1, 1, "Ong kinh Sigma 18-50mm f/2.8 DC DN (C) For Fujifilm X 2nd"))
+	if rep := run(vjPage(1, 1)); countType(rep.Events, diff.AdapterBroken) != 0 {
+		t.Errorf("sold-out listing: events = %v", rep.Events)
+	}
+	run(vjPage(1, 1, "Ong kinh Sigma 18-50mm f/2.8 DC DN (C) For Fujifilm X 2nd"))
+	if rep := run([]byte(`<html><script id="__NEXT_DATA__">{"props":{"pageProps":{"products":[]}}}</script></html>`)); countType(rep.Events, diff.AdapterBroken) != 1 {
+		t.Errorf("listing without a total: events = %v, want adapter_broken", rep.Events)
 	}
 }

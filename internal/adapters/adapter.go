@@ -41,6 +41,46 @@ type URLRewriter interface {
 	FetchURL(pageURL, mode string) (string, error)
 }
 
+// Paginator is implemented by adapters whose listings span several pages.
+type Paginator interface {
+	// NextPage returns the URL of the page after fetchURL, given that page's
+	// body, or "" if it is the last page.
+	NextPage(fetchURL string, raw []byte) (string, error)
+}
+
+// NextPage returns the listing page after fetchURL, or "" if there is none
+// or the adapter does not paginate.
+func NextPage(a Adapter, fetchURL string, raw []byte) (string, error) {
+	p, ok := a.(Paginator)
+	if !ok {
+		return "", nil
+	}
+	next, err := p.NextPage(fetchURL, raw)
+	if err != nil {
+		return "", fmt.Errorf("%s: next page: %w", a.Name(), err)
+	}
+	return next, nil
+}
+
+// ListingCounter is implemented by adapters whose listing pages state how
+// many items the listing holds, so that a genuinely empty listing (the last
+// used lens sold) can be told apart from a page the adapter failed to read.
+type ListingCounter interface {
+	// ListingTotal returns the item count the page states, and false if
+	// the page states none.
+	ListingTotal(raw []byte) (int, bool)
+}
+
+// ReportsEmpty reports whether the page says its listing has no items.
+func ReportsEmpty(a Adapter, raw []byte) bool {
+	c, ok := a.(ListingCounter)
+	if !ok {
+		return false
+	}
+	total, ok := c.ListingTotal(raw)
+	return ok && total == 0
+}
+
 // registry holds the shop-specific adapters, keyed by shop name.
 var registry = map[string]Adapter{
 	"xspace": NewHaravan("xspace"),

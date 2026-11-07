@@ -33,15 +33,44 @@ sources:
     url: https://fujifilm-xspace.vn/products/fujinon-xf10-24mmf4-r-ois-wr-ii
 
   # vjshop: robots.txt disallows /may-anh-cu and /ong-kinh-cu, so used gear
-  # is watched through "Đồ cũ chất" (/do-cu-chat) only.
+  # is watched through the "Đồ cũ chất" brand sub-categories. Listings span
+  # pages of 36 (a per_page parameter is ignored); every page is followed.
   - shop: vjshop
     mode: listing
     condition: used
-    url: https://vjshop.vn/do-cu-chat
+    url: https://vjshop.vn/may-anh-ong-kinh-cu-fujifilm
 
   - shop: vjshop
     mode: listing
-    url: https://vjshop.vn/may-anh-fujifilm   # new Fujifilm bodies (page 1 of 3, 36 per page)
+    condition: used
+    url: https://vjshop.vn/may-anh-ong-kinh-cu-sigma
+
+  - shop: vjshop
+    mode: listing
+    condition: used
+    url: https://vjshop.vn/may-anh-ong-kinh-cu-tamron
+
+  - shop: vjshop
+    mode: listing
+    url: https://vjshop.vn/may-anh-mirrorless-fujifilm
+
+  - shop: vjshop
+    mode: listing
+    url: https://vjshop.vn/ong-kinh-mirrorless-fujifilm
+
+  - shop: vjshop
+    mode: listing
+    url: https://vjshop.vn/ong-kinh-mirrorless-sigma   # all mounts; the matcher keeps X
+
+  - shop: vjshop
+    mode: listing
+    url: https://vjshop.vn/ong-kinh-mirrorless-tamron
+
+  # Promotions ("Khuyến mãi"), narrowed to brands 3, 11, 12 = Fujifilm,
+  # Sigma, Tamron (all brands: ~550 items over 16 pages).
+  - shop: vjshop
+    mode: listing
+    url: https://vjshop.vn/khuyen-mai?brands=3,11,12
 
   - shop: vjshop
     mode: product

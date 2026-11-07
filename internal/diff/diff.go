@@ -58,11 +58,14 @@ type Observation struct {
 
 // SourceRun is the outcome of fetching and extracting one source page.
 type SourceRun struct {
-	Shop         string
-	URL          string
-	Mode         string // config.ModeProduct | config.ModeListing
-	Err          error  // fetch / HTTP / extraction failure
-	OfferCount   int    // offers extracted, before matching
+	Shop       string
+	URL        string
+	Mode       string // config.ModeProduct | config.ModeListing
+	Err        error  // fetch / HTTP / extraction failure
+	OfferCount int    // offers extracted, before matching
+	// Empty: the page itself states its listing has no items, so zero
+	// offers is not an extraction failure.
+	Empty        bool
 	Observations []Observation
 }
 
@@ -121,7 +124,7 @@ func Apply(st *state.State, runs []SourceRun, configured map[string]bool, now ti
 			src.LastError = run.Err.Error()
 			events = append(events, broken(run, run.Err.Error()))
 			continue
-		case run.OfferCount == 0 && src.LastCount > 0:
+		case run.OfferCount == 0 && src.LastCount > 0 && !run.Empty:
 			src.Failures++
 			src.LastError = "no offers extracted"
 			events = append(events, broken(run, fmt.Sprintf("no offers extracted (previous run: %d)", src.LastCount)))

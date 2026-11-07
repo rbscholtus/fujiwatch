@@ -197,6 +197,51 @@ func TestVJShopNewListing(t *testing.T) {
 	}
 }
 
+func TestVJShopNextPage(t *testing.T) {
+	v := NewVJShop()
+	for _, tc := range []struct{ file, url, want string }{
+		{"vjshop/may-anh-fujifilm.html", "https://vjshop.vn/may-anh-fujifilm", "https://vjshop.vn/may-anh-fujifilm?page=2"},
+		{"vjshop/may-anh-fujifilm.html", "https://vjshop.vn/may-anh-fujifilm?sort=latest", "https://vjshop.vn/may-anh-fujifilm?page=2&sort=latest"},
+		{"vjshop/do-cu-chat.html", "https://vjshop.vn/do-cu-chat", ""},       // page 1 of 1
+		{"vjshop/fujifilm-x-t5-silver-chinh-hang.json", vjshopAPI + "x", ""}, // product API
+	} {
+		raw, err := os.ReadFile("../../testdata/" + tc.file)
+		if err != nil {
+			t.Fatal(err)
+		}
+		got, err := v.NextPage(tc.url, raw)
+		if err != nil || got != tc.want {
+			t.Errorf("NextPage(%s, %s) = %q, %v; want %q", tc.url, tc.file, got, err, tc.want)
+		}
+	}
+}
+
+func TestVJShopListingTotal(t *testing.T) {
+	v := NewVJShop()
+	for _, tc := range []struct {
+		body  string
+		total int
+		ok    bool
+	}{
+		{`<script id="__NEXT_DATA__">{"props":{"pageProps":{"products":[],"meta":{"current_page":1,"last_page":1,"total":0}}}}</script>`, 0, true},
+		{`<script id="__NEXT_DATA__">{"props":{"pageProps":{"products":[],"meta":{"current_page":1,"last_page":1}}}}</script>`, 0, false},
+		{`<html>maintenance</html>`, 0, false},
+		{`{"data":{}}`, 0, false},
+	} {
+		total, ok := v.ListingTotal([]byte(tc.body))
+		if total != tc.total || ok != tc.ok {
+			t.Errorf("ListingTotal(%.40q) = %d, %v; want %d, %v", tc.body, total, ok, tc.total, tc.ok)
+		}
+	}
+	raw, err := os.ReadFile("../../testdata/vjshop/may-anh-fujifilm.html")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if total, ok := v.ListingTotal(raw); !ok || total < 36 {
+		t.Errorf("may-anh-fujifilm total = %d, %v", total, ok)
+	}
+}
+
 // The listing's real_price and the product API's active-price selection
 // must agree for the same product at the same time.
 func TestVJShopProductAPIMatchesListing(t *testing.T) {

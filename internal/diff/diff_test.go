@@ -291,3 +291,22 @@ func TestOptionsDropCounts(t *testing.T) {
 		t.Error("300k boundary wrong")
 	}
 }
+
+// A listing that states it has no items (the last used lens sold) is
+// healthy: no adapter_broken, and its offers age out toward "gone".
+func TestEmptyListingIsNotBroken(t *testing.T) {
+	st := state.New()
+	Apply(st, []SourceRun{listing(ob(itemURL, 15_000_000, nil))}, configured(), t0, Options{})
+
+	empty := SourceRun{Shop: shop, URL: listURL, Mode: config.ModeListing, Empty: true}
+	evs := Apply(st, []SourceRun{empty}, configured(), day(1), Options{})
+	if len(evs) != 0 {
+		t.Fatalf("empty listing: events = %v, want none", types(evs))
+	}
+	if s := st.Sources[state.Key(shop, listURL)]; s.Failures != 0 || s.LastCount != 0 {
+		t.Errorf("source health = %+v", s)
+	}
+	if m := st.Offers[state.Key(shop, itemURL)].Missed; m != 1 {
+		t.Errorf("missed = %d, want 1", m)
+	}
+}
