@@ -66,6 +66,7 @@ giangduydat.vn, custom platform. CSS layouts in `adapter.go`.
 
 - A product page lists every unit (new, used 85%, 90%, …) as its own schema.org `Offer` with a name and price, so product pages are watched in **listing** mode. Each unit gets the page URL plus a `#<slug of its name>` fragment as identity (a page with one unit: the page URL).
 - **Category cards carry no usable price:** "Từ 4.490.000 đ" (from) is the lowest of the product's units, new or used, and a single used unit is shown under the plain product name ("Fujifilm X-T3, 22.500.000 đ" is a 98% used body). The category layout therefore reads no price; categories only discover products, and each watched product's page is a source of its own, listed before the categories so it wins when both find the same URL.
+- **One page, several mounts:** third-party lenses can have one page with one unit per mount (`/sigma-10-18mm-f28-dc-dn`: "… for Canon RF", "… for Sony E", "… for Fujifilm X", "… for Leica L"), and the category card names no mount ("Sigma 10-18mm f/2.8 DC DN"). Such a page must be a source of its own to get the X-mount price; the matcher keeps the Fujifilm unit. The card is then no longer reported as a near miss.
 - Category cards `li.idx-prod`; 40 per page, the next page is the "tiếp" (next) link in `#page` (`<category>_pN`), plain text on the last page.
 - Categories: `/c/may-anh-mirrorless` (all brands, ~6 pages), `/c/ong-kinh-fujifilm`, `/c/ong-kinh-sigma`, `/c/ong-kinh-tamron`, `/c/ong-kinh-thanh-ly` (clearance), `/c/may-anh-cu` (used).
 

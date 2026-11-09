@@ -105,7 +105,14 @@ func Run(ctx context.Context, cfg *config.Config, st *state.State, f Fetcher, op
 		run, unmatched := results[i].run, results[i].unmatched
 		runs = append(runs, run)
 		for _, u := range unmatched {
-			if k := state.Key(u.Shop, u.URL); !unmatchedSeen[k] {
+			k := state.Key(u.Shop, u.URL)
+			// A category card for a page that is a source of its own: that
+			// source reports the page's units (giangduydat's generic
+			// "Sigma 10-18mm" card, whose page lists one unit per mount).
+			if u.URL != src.URL && configured[k] {
+				continue
+			}
+			if !unmatchedSeen[k] {
 				unmatchedSeen[k] = true
 				rep.Unmatched = append(rep.Unmatched, u)
 			}

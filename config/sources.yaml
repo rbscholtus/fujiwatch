@@ -354,6 +354,16 @@ sources:
     mode: listing
     url: https://giangduydat.vn/sigma-18-50mm-f28-dc-dn-contemporary-for-fujifilm
 
+  # One page per lens, one unit per mount ("… for Fujifilm X"); its category
+  # card names no mount.
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/sigma-10-18mm-f28-dc-dn
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/tamron-af-16-50mm-f28-di-iii-vxd
+
   - shop: giangduydat
     mode: listing
     url: https://giangduydat.vn/c/may-anh-mirrorless

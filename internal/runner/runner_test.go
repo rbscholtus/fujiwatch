@@ -416,6 +416,34 @@ func TestRunUnmatchedOnce(t *testing.T) {
 	}
 }
 
+// A category card without a mount is not reported as unmatched when its page
+// is a source of its own: that source reports the page's units.
+func TestRunUnmatchedCardOfWatchedPage(t *testing.T) {
+	const category = "https://vjshop.vn/ong-kinh-mirrorless-sigma"
+	const card = "Sigma 10-18mm f/2.8 DC DN"
+	cfg := pagedConfig(t, category)
+	f := &fakeFetcher{bodies: map[string][]byte{category: vjPage(1, 1, card)}}
+	now := Options{Now: func() time.Time { return runTime }}
+	rep, _, err := Run(t.Context(), cfg, state.New(), f, now)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rep.Unmatched) != 1 || !slices.Equal(rep.Unmatched[0].NearMiss, []string{"sigma-10-18"}) {
+		t.Fatalf("without the page as a source: unmatched = %+v, want one near miss", rep.Unmatched)
+	}
+
+	page := rep.Unmatched[0].URL
+	cfg.Sources.Sources = append(cfg.Sources.Sources, config.Source{Shop: "vjshop", Mode: config.ModeListing, Condition: config.ConditionAuto, URL: page})
+	f.bodies[page] = vjPage(1, 1, card+" for Fujifilm X")
+	rep, _, err = Run(t.Context(), cfg, state.New(), f, now)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rep.Unmatched) != 0 {
+		t.Errorf("with the page as a source: unmatched = %+v, want none", rep.Unmatched)
+	}
+}
+
 // kyma: the category page is followed by one POST for the remaining
 // products; offers on both are counted once.
 func TestRunFollowsPostPage(t *testing.T) {
