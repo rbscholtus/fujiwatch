@@ -100,21 +100,18 @@ func cmdRun(args []string, stdout, stderr io.Writer) int {
 }
 
 // notifierFactory builds notifiers from the environment; tests replace it.
-var notifierFactory = func() (email, whatsapp notify.Notifier, problems []string) {
-	e, w, problems := notify.FromEnv(os.Getenv)
+var notifierFactory = func() (email notify.Notifier, instant []notify.Notifier, problems []string) {
+	e, instant, problems := notify.FromEnv(os.Getenv)
 	if e != nil {
 		email = e
 	}
-	if w != nil {
-		whatsapp = w
-	}
-	return email, whatsapp, problems
+	return email, instant, problems
 }
 
 // sendNotifications delivers the run's results. Failures are warnings, not
 // errors: the run's state must still be committed by CI.
 func sendNotifications(ctx context.Context, cfg *config.Config, rep *runner.Report, st *state.State, historyDir string, stderr io.Writer) {
-	email, whatsapp, problems := notifierFactory()
+	email, instant, problems := notifierFactory()
 	for _, p := range problems {
 		warn(stderr, p)
 	}
@@ -124,8 +121,8 @@ func sendNotifications(ctx context.Context, cfg *config.Config, rep *runner.Repo
 		return
 	}
 
-	if whatsapp != nil {
-		if err := whatsapp.Send(ctx, msg); err != nil {
+	for _, n := range instant {
+		if err := n.Send(ctx, msg); err != nil {
 			warn(stderr, err.Error())
 		}
 	}

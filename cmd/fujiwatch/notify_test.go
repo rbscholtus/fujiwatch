@@ -28,7 +28,32 @@ func useNotifiers(t *testing.T, email, wa *recordingNotifier, problems ...string
 	t.Helper()
 	old := notifierFactory
 	t.Cleanup(func() { notifierFactory = old })
-	notifierFactory = func() (notify.Notifier, notify.Notifier, []string) { return email, wa, problems }
+	notifierFactory = func() (notify.Notifier, []notify.Notifier, []string) {
+		return email, []notify.Notifier{wa}, problems
+	}
+}
+
+// One instant channel failing doesn't stop the next.
+func TestRunInstantChannelsIndependent(t *testing.T) {
+	bad := &recordingNotifier{name: "whatsapp", err: errors.New("whatsapp: HTTP 502")}
+	good := &recordingNotifier{name: "telegram"}
+	old := notifierFactory
+	t.Cleanup(func() { notifierFactory = old })
+	notifierFactory = func() (notify.Notifier, []notify.Notifier, []string) {
+		return nil, []notify.Notifier{bad, good}, nil
+	}
+	useSnapshotFetcher(t)
+
+	var out, errOut bytes.Buffer
+	if code := run([]string{"run", "--config", "../../config", "--data", t.TempDir()}, &out, &errOut); code != exitOK {
+		t.Fatalf("exit %d: %s", code, errOut.String())
+	}
+	if len(good.msgs) != 1 {
+		t.Errorf("telegram sent %d messages after whatsapp failed, want 1", len(good.msgs))
+	}
+	if !strings.Contains(errOut.String(), "whatsapp: HTTP 502") {
+		t.Errorf("stderr missing the whatsapp failure:\n%s", errOut.String())
+	}
 }
 
 func TestRunSendsNotifications(t *testing.T) {

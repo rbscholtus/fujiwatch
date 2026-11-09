@@ -275,7 +275,7 @@ var textTmpl = texttemplate.Must(texttemplate.New("text").Parse(`{{.Subject}}
 {{.Time}}
 
 EVENTS ({{len .Events}})
-{{if .Baseline}}{{.Baseline}} from a source's first run: recorded as a baseline, not sent to WhatsApp.
+{{if .Baseline}}{{.Baseline}} from a source's first run: recorded as a baseline, not sent as an instant alert.
 {{end}}{{range .Events}}{{if .Detail}}- {{.Label}}: {{.Shop}}: {{.Detail}}
   {{.URL}}
 {{else}}- {{.Label}}: {{.Product}} ({{.Condition}}) at {{.Shop}}: {{.Price}}
@@ -307,7 +307,7 @@ var htmlTmpl = htmltemplate.Must(htmltemplate.New("html").Parse(`<!doctype html>
 <div style="color:#656d76;margin-bottom:16px">{{.Time}}</div>
 
 <h3>Events ({{len .Events}})</h3>
-{{if .Baseline}}<p style="color:#656d76">{{.Baseline}} from a source's first run: recorded as a baseline, not sent to WhatsApp.</p>
+{{if .Baseline}}<p style="color:#656d76">{{.Baseline}} from a source's first run: recorded as a baseline, not sent as an instant alert.</p>
 {{end}}{{if .Events}}<table cellpadding="6" style="border-collapse:collapse;width:100%">
 {{range .Events}}<tr style="border-top:1px solid #d0d7de;vertical-align:top">
 <td style="white-space:nowrap;font-weight:{{if .Important}}bold{{else}}normal{{end}}">{{.Label}}</td>

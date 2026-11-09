@@ -2,7 +2,7 @@
 
 A small price watcher for Fujifilm X-mount cameras and lenses in Vietnamese camera shops.
 
-It runs once a day on GitHub Actions. Each run checks a list of shop pages, records prices, and sends an alert (WhatsApp and/or email) when:
+It runs once a day on GitHub Actions. Each run checks a list of shop pages, records prices, and sends an alert (Telegram, WhatsApp and/or email) when:
 
 - a watched product drops in price, reaches a target price or comes back in stock (**new gear**), or
 - a new matching listing appears on a shop's used or category page (**used gear**), or
@@ -80,7 +80,7 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 1. ✅ **Skeleton:** config loading, fetch client, VND price parser, normaliser and matcher with table-driven tests (X-T3 vs X-T30, X-T5 vs X-T50, XF10-24 Mark I vs Mark II, Tamron X vs E-mount).
 2. ✅ **First two shops:** fujifilm-xspace (product mode) and vjshop (listing mode, used section), with golden tests from snapshots.
 3. ✅ **State, history and diff:** events, `--dry-run` output.
-4. ✅ **Notifications:** email digest, then CallMeBot WhatsApp.
+4. ✅ **Notifications:** email digest, then CallMeBot WhatsApp, then Telegram.
 5. ✅ **GitHub Actions:** schedule, data commit, secrets.
 6. ✅ **Remaining shops:** kyma, then the WooCommerce shops (Store API), then zshop, mayanh24h, giangduydat.
 7. ✅ **History site:** Svelte page on GitHub Pages.
@@ -94,7 +94,7 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 - [x] Body-only products exclude kits ("X-T5 + Lens XF 16-50mm"), so kit prices don't mix into the body's history (`kit_excludes` in `config/watchlist.yaml`).
 - [x] Price-drop threshold: alert on every drop (`min_drop_pct: 0`, `min_drop_vnd: 0`).
 - [x] Multi-page listings are followed (vjshop, WooCommerce, kyma, zshop, giangduydat). mayanh24h: robots.txt allows page 1 only.
-- [x] bncamera flash sales: watched products in upcoming flash-sale slots (next 3 days) are a `flash_sale` alert, by email and WhatsApp; the 2-hour price is not recorded as a regular price.
+- [x] bncamera flash sales: watched products in upcoming flash-sale slots (next 3 days) are a `flash_sale` alert, by email and instant alert; the 2-hour price is not recorded as a regular price.
 - [ ] Set target prices (`target_vnd`, `target_used_vnd`) per product.
 - [ ] vjshop: add the Tamron 16-50mm (X) product page once vjshop lists it.
 - [ ] vjshop: recheck the XF18-55 (product 4898). It is out of stock; its listing shows 8.890.000₫, but the product API has only `default: 0`, so the listing price may be stale.

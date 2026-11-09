@@ -138,11 +138,20 @@ Flags:
 
 Notifiers are enabled by their environment variables: repository secrets on GitHub Actions, or a local `.env` file (see [`.env.example`](../.env.example)). A notifier with only some of its variables set is skipped with a warning. Notification failures never fail the run (the data must still be committed); they are printed as warnings, and as `::warning::` annotations on GitHub Actions.
 
-**WhatsApp via CallMeBot (instant, important events only: `below_target`, `flash_sale`, `price_drop`, `back_in_stock`, `new_listing`)**
+**Instant alerts: Telegram and WhatsApp (important events only: `below_target`, `flash_sale`, `price_drop`, `back_in_stock`, `new_listing`)**
 
-When one listing has several of these in a run (e.g. `new_listing` and `below_target`), only the most important one is sent, in that order. At most one message per run, with the events batched.
+Both channels send the same alert; each is active when its variables are set, and one failing doesn't stop the other.
 
-Events from a page's **first** successful run (the first run after launch, or a page just added to `sources.yaml`) are a baseline: they are in the email, with a note, but never sent to WhatsApp.
+When one listing has several of these in a run (e.g. `new_listing` and `below_target`), only the most important one is sent, in that order. At most one message per channel per run, with the events batched (up to 4000 characters on Telegram, 1000 on WhatsApp, then "…and N more").
+
+Events from a page's **first** successful run (the first run after launch, or a page just added to `sources.yaml`) are a baseline: they are in the email, with a note, but never sent as an instant alert.
+
+Telegram:
+
+- One-time setup: message `@BotFather`, run `/newbot` and copy the token. Send your new bot any message (a bot can't write first), then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `message.chat.id`.
+- Variables: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`.
+
+WhatsApp via CallMeBot:
 
 - One-time setup: add CallMeBot's number to your phone contacts and send it "I allow callmebot to send me messages". It replies with your personal API key. The current number and steps are at https://www.callmebot.com/blog/free-api-whatsapp-messages/
 - Variables: `CALLMEBOT_PHONE` (`+84…`), `CALLMEBOT_APIKEY`.
@@ -173,7 +182,7 @@ Two workflows:
 
 Actions are pinned to their current major versions (`actions/checkout@v7`, `actions/setup-go@v7`, …); bump them when GitHub releases new majors. `cmd/fujiwatch/workflow_test.go` checks the workflows against this section and executes their shell steps.
 
-**Secrets** (repository → Settings → Secrets and variables → Actions): `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY`, `SMTP_USER`, `SMTP_PASS`, `MAIL_TO`.
+**Secrets** (repository → Settings → Secrets and variables → Actions): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY`, `SMTP_USER`, `SMTP_PASS`, `MAIL_TO`.
 
 **Things to know about GitHub Actions**
 

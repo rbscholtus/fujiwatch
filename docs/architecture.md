@@ -26,7 +26,7 @@ GitHub Actions (cron, daily)
    ├─ matcher: Offer.Title → product ID (or reject)
    ├─ diff against state → []Event
    ├─ append data/history/<product-id>.jsonl
-   ├─ notify (WhatsApp instant events, email daily digest)
+   ├─ notify (Telegram / WhatsApp instant events, email daily digest)
    └─ write data/state.json
         │
         ▼
@@ -68,7 +68,7 @@ fujiwatch/
 │   ├── runner/                  # one cycle: sources → offers → matches → diff; text report
 │   ├── diff/                    # state × observations → events
 │   ├── state/                   # state.json + history jsonl
-│   ├── notify/                  # email, CallMeBot WhatsApp, weekly summary
+│   ├── notify/                  # email, Telegram, CallMeBot WhatsApp, weekly summary
 │   ├── snapshot/                # saving pages to testdata/
 │   └── sitedata/                # data/ → JSON for the history site
 ├── config/
@@ -192,7 +192,7 @@ Only matched offers are tracked. If a page hides the price ("Liên hệ") or the
 - `new_listing`: the URL has not been seen before, in either mode: an item new on a listing, or a product page seen for the first time. In its source's first run it is baseline (email only). The same URL found by two sources in one run counts once (the first source wins).
 - `gone`: not seen for 3 consecutive runs. Removed from state and logged (useful for used items: "sold"). Only runs in which the offer's own source worked count, so a broken shop never marks its items as sold; offers of a source removed from `sources.yaml` age out the same way.
 - `adapter_broken`: the fetch, robots.txt check or extraction failed, the HTTP status is not 200, a page of a multi-page listing failed, or a source that previously returned ≥ 1 offer now returns 0 (unless the page itself states the listing is empty, e.g. vjshop's `meta.total` of 0). Always included in the email, so silent failures are visible.
-- **Baseline:** events of an offer first recorded in its source's first successful run (`Event.Baseline`) go to the email but not to WhatsApp. That covers the first run after launch and every page added later; changes to offers already known are never baseline.
+- **Baseline:** events of an offer first recorded in its source's first successful run (`Event.Baseline`) go to the email but not to the instant alerts. That covers the first run after launch and every page added later; changes to offers already known are never baseline.
 - `flash_sale`: a watched product is on offer in a flash-sale slot (`mode: flash`), with the slot's window (`Start`, `End`), the flash price, the regular price (`OldPrice`) and the quota ("1/5" sold). Reported once per product per slot (`state.json` `flash`, keyed `shop|url|start`, dropped when the slot ends); never baseline, never an offer in state, never in the history. A flash sale with nothing on offer is not `adapter_broken`.
 - `below_target`: an offer's price reached the product's `target_vnd` (new) or `target_used_vnd` (used). Raised once per crossing: when the price goes from above the target (or unknown) to at or below it, including a first sighting already below it.
 

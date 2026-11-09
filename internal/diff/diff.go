@@ -46,7 +46,7 @@ type Event struct {
 	TargetVND int64  `json:"target_vnd,omitempty"`
 	// Baseline: the offer was first recorded in its source's first
 	// successful run (a new deployment or a newly added page). Such events
-	// go to the email digest but not to WhatsApp.
+	// go to the email digest but not to instant alerts.
 	Baseline bool `json:"baseline,omitempty"`
 
 	// flash_sale only: the price holds during [Start, End), instead of

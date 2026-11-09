@@ -1,5 +1,5 @@
 // Package notify sends run results: an email digest (SMTP) and short
-// WhatsApp alerts (CallMeBot).
+// instant alerts (Telegram, WhatsApp via CallMeBot).
 package notify
 
 import (
@@ -146,23 +146,23 @@ func ShouldEmail(n config.Notify, events []diff.Event, now time.Time) bool {
 	return n.Heartbeat != "" && strings.EqualFold(now.In(saigon).Weekday().String(), n.Heartbeat)
 }
 
-// WhatsAppTypes are the events worth an instant message (docs/usage.md,
+// InstantTypes are the events worth an instant message (docs/usage.md,
 // Notifications). Baseline events (a source's first run) are never sent.
 // It is ordered by importance: when one listing has several of these events
 // in a run, only the first type in this list is sent.
-var WhatsAppTypes = []diff.Type{diff.BelowTarget, diff.FlashSale, diff.PriceDrop, diff.BackInStock, diff.NewListing}
+var InstantTypes = []diff.Type{diff.BelowTarget, diff.FlashSale, diff.PriceDrop, diff.BackInStock, diff.NewListing}
 
 func instant(events []diff.Event) []diff.Event {
 	best := map[string]int{} // URL → index into out
 	var out []diff.Event
 	for _, e := range events {
-		rank := slices.Index(WhatsAppTypes, e.Type)
+		rank := slices.Index(InstantTypes, e.Type)
 		if rank < 0 || e.Baseline {
 			continue
 		}
 		key := e.Shop + "|" + e.URL
 		if i, ok := best[key]; ok {
-			if rank < slices.Index(WhatsAppTypes, out[i].Type) {
+			if rank < slices.Index(InstantTypes, out[i].Type) {
 				out[i] = e
 			}
 			continue

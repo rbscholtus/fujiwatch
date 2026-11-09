@@ -36,7 +36,7 @@ func (*WhatsApp) Name() string { return "whatsapp" }
 
 // Send posts the batched alert; with nothing to alert it does nothing.
 func (w *WhatsApp) Send(ctx context.Context, msg *Message) error {
-	text := WhatsAppText(msg)
+	text := AlertText(msg, maxWhatsAppChars)
 	if text == "" {
 		return nil
 	}
@@ -70,8 +70,9 @@ func (w *WhatsApp) Send(ctx context.Context, msg *Message) error {
 	return nil
 }
 
-// WhatsAppText renders the instant alert, or "" if nothing qualifies.
-func WhatsAppText(msg *Message) string {
+// AlertText renders the instant alert within maxChars bytes, or "" if
+// nothing qualifies.
+func AlertText(msg *Message, maxChars int) string {
 	events := instant(msg.Events)
 	if len(events) == 0 {
 		return ""
@@ -113,7 +114,7 @@ func WhatsAppText(msg *Message) string {
 	const reserve = 40 // room for the "…and N more" line
 	text := header
 	for i, l := range lines {
-		if len(text)+2+len(l)+reserve > maxWhatsAppChars {
+		if len(text)+2+len(l)+reserve > maxChars {
 			return text + fmt.Sprintf("\n\n…and %d more (see email)", len(lines)-i)
 		}
 		text += "\n\n" + l
@@ -133,10 +134,10 @@ func redact(err error, secret string) error {
 	if secret == "" {
 		return err
 	}
-	return &redactedError{
-		msg: strings.ReplaceAll(err.Error(), url.QueryEscape(secret), "REDACTED"),
-		err: err,
-	}
+	// A secret appears query-escaped in a query string and as it is in a
+	// path (a Telegram token's ":" differs between the two).
+	msg := strings.NewReplacer(url.QueryEscape(secret), "REDACTED", secret, "REDACTED").Replace(err.Error())
+	return &redactedError{msg: msg, err: err}
 }
 
 func stripTags(s string) string {

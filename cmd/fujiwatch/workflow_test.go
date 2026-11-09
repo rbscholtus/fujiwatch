@@ -116,6 +116,7 @@ func TestWatchWorkflowSecrets(t *testing.T) {
 	}
 	for _, name := range []string{
 		notify.EnvCallMeBotPhone, notify.EnvCallMeBotAPIKey,
+		notify.EnvTelegramToken, notify.EnvTelegramChatID,
 		notify.EnvSMTPUser, notify.EnvSMTPPass, notify.EnvMailTo,
 	} {
 		re := regexp.MustCompile(`(?m)^\s+` + name + `:\s+\$\{\{ secrets\.` + name + ` \}\}$`)

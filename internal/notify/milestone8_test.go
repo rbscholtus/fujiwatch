@@ -29,7 +29,7 @@ func TestWhatsAppBelowTarget(t *testing.T) {
 			{Type: diff.NewListing, Shop: "zshop", URL: "u3", Product: "x-t3", Condition: "used", PriceVND: 18_000_000},
 		},
 	}
-	text := WhatsAppText(msg)
+	text := AlertText(msg, maxWhatsAppChars)
 	if !strings.HasPrefix(text, "fujiwatch: 3 alerts") {
 		t.Errorf("text = %q", text)
 	}

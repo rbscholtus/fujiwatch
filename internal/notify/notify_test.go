@@ -168,7 +168,7 @@ func TestBuildMessage(t *testing.T) {
 // docs/usage.md, Notifications: only price_drop, back_in_stock and new_listing, batched into
 // one short message.
 func TestWhatsAppText(t *testing.T) {
-	text := WhatsAppText(sampleMessage())
+	text := AlertText(sampleMessage(), maxWhatsAppChars)
 	for _, want := range []string{
 		"fujiwatch: 2 alerts",
 		"📉 XF10-24mm F4 R OIS WR (II) (new) xspace: 27.490.000₫ → 25.990.000₫ (-5%)",
@@ -186,12 +186,12 @@ func TestWhatsAppText(t *testing.T) {
 	}
 
 	quiet := &Message{Events: []diff.Event{{Type: diff.PriceRise}, {Type: diff.Gone}, {Type: diff.AdapterBroken}, {Type: diff.OutOfStock}}}
-	if got := WhatsAppText(quiet); got != "" {
+	if got := AlertText(quiet, maxWhatsAppChars); got != "" {
 		t.Errorf("no instant events: text = %q, want empty", got)
 	}
 
 	back := &Message{Events: []diff.Event{{Type: diff.BackInStock, Product: "p", Shop: "s", Condition: "new", PriceVND: 1_000_000, URL: "u"}}}
-	if got := WhatsAppText(back); !strings.Contains(got, "1 alert\n") || !strings.Contains(got, "✅ p (new) back in stock at s: 1.000.000₫") {
+	if got := AlertText(back, maxWhatsAppChars); !strings.Contains(got, "1 alert\n") || !strings.Contains(got, "✅ p (new) back in stock at s: 1.000.000₫") {
 		t.Errorf("back in stock text = %q", got)
 	}
 }
@@ -203,11 +203,11 @@ func TestBaselineEventsAreEmailOnly(t *testing.T) {
 	for i := range msg.Events {
 		msg.Events[i].Baseline = true
 	}
-	if got := WhatsAppText(msg); got != "" {
+	if got := AlertText(msg, maxWhatsAppChars); got != "" {
 		t.Errorf("baseline events sent to WhatsApp:\n%s", got)
 	}
 	msg.Events = append(msg.Events, diff.Event{Type: diff.PriceDrop, Product: "x-t5", Shop: "kyma", Condition: "new", OldPrice: 40_000_000, PriceVND: 38_000_000, URL: "https://k/x-t5"})
-	if got := WhatsAppText(msg); !strings.Contains(got, "1 alert\n") || !strings.Contains(got, "https://k/x-t5") {
+	if got := AlertText(msg, maxWhatsAppChars); !strings.Contains(got, "1 alert\n") || !strings.Contains(got, "https://k/x-t5") {
 		t.Errorf("non-baseline event not sent:\n%s", got)
 	}
 
@@ -230,7 +230,7 @@ func TestWhatsAppTextTruncates(t *testing.T) {
 		msg.Events = append(msg.Events, diff.Event{Type: diff.NewListing, Product: "x-t3", Shop: "vjshop",
 			Condition: "used", PriceVND: 15_000_000, URL: fmt.Sprintf("https://vjshop.vn/may-anh-fujifilm-x-t3-body-2nd-%06d", i)})
 	}
-	text := WhatsAppText(msg)
+	text := AlertText(msg, maxWhatsAppChars)
 	if len(text) > maxWhatsAppChars {
 		t.Errorf("text is %d bytes, want ≤ %d", len(text), maxWhatsAppChars)
 	}
@@ -543,18 +543,22 @@ func TestEmailSendCancelled(t *testing.T) {
 func TestFromEnv(t *testing.T) {
 	env := func(m map[string]string) func(string) string { return func(k string) string { return m[k] } }
 
-	email, wa, problems := FromEnv(env(map[string]string{
+	email, instant, problems := FromEnv(env(map[string]string{
 		EnvSMTPUser: "me@gmail.com", EnvSMTPPass: "pw", EnvMailTo: "a@x.com, b@x.com ,",
 		EnvCallMeBotPhone: "+84901", EnvCallMeBotAPIKey: "k",
+		EnvTelegramToken: "1:t", EnvTelegramChatID: "42",
 	}))
-	if email == nil || wa == nil || len(problems) != 0 {
-		t.Fatalf("email=%v wa=%v problems=%v", email, wa, problems)
+	if email == nil || len(instant) != 2 || len(problems) != 0 {
+		t.Fatalf("email=%v instant=%v problems=%v", email, instant, problems)
 	}
 	if email.Addr != DefaultSMTPAddr || email.From != "me@gmail.com" || len(email.To) != 2 || email.To[1] != "b@x.com" {
 		t.Errorf("email = %+v", email)
 	}
-	if wa.Phone != "+84901" || wa.APIKey != "k" {
-		t.Errorf("whatsapp = %+v", wa)
+	if wa, ok := instant[0].(*WhatsApp); !ok || wa.Phone != "+84901" || wa.APIKey != "k" {
+		t.Errorf("whatsapp = %+v", instant[0])
+	}
+	if tg, ok := instant[1].(*Telegram); !ok || tg.Token != "1:t" || tg.ChatID != "42" {
+		t.Errorf("telegram = %+v", instant[1])
 	}
 
 	email, _, _ = FromEnv(env(map[string]string{
@@ -564,14 +568,14 @@ func TestFromEnv(t *testing.T) {
 		t.Errorf("overrides not applied: %+v", email)
 	}
 
-	email, wa, problems = FromEnv(env(nil))
-	if email != nil || wa != nil || len(problems) != 0 {
-		t.Errorf("nothing set: email=%v wa=%v problems=%v", email, wa, problems)
+	email, instant, problems = FromEnv(env(nil))
+	if email != nil || len(instant) != 0 || len(problems) != 0 {
+		t.Errorf("nothing set: email=%v instant=%v problems=%v", email, instant, problems)
 	}
 
-	email, wa, problems = FromEnv(env(map[string]string{EnvSMTPUser: "u", EnvCallMeBotAPIKey: "k"}))
-	if email != nil || wa != nil || len(problems) != 2 {
-		t.Errorf("partial: email=%v wa=%v problems=%v", email, wa, problems)
+	email, instant, problems = FromEnv(env(map[string]string{EnvSMTPUser: "u", EnvCallMeBotAPIKey: "k", EnvTelegramChatID: "42"}))
+	if email != nil || len(instant) != 0 || len(problems) != 3 {
+		t.Errorf("partial: email=%v instant=%v problems=%v", email, instant, problems)
 	}
 }
 
@@ -581,7 +585,7 @@ func TestFlashSaleAlert(t *testing.T) {
 	e := diff.Event{Type: diff.FlashSale, Product: "x-t5", Shop: "bncamera", Condition: "new", URL: "https://bncamera.com/x",
 		PriceVND: 33_900_000, OldPrice: 38_490_000, Start: start, End: start.Add(2 * time.Hour), Quota: "1/5"}
 	msg := &Message{Events: []diff.Event{e}, Names: map[string]string{"x-t5": "Fujifilm X-T5"}}
-	text := WhatsAppText(msg)
+	text := AlertText(msg, maxWhatsAppChars)
 	for _, want := range []string{"1 alert", "⚡ Fujifilm X-T5 (new) bncamera flash sale: 33.900.000₫ (normally 38.490.000₫, -12%), Sun 08/11 20:00–22:00, 1/5 sold", "https://bncamera.com/x"} {
 		if !strings.Contains(text, want) {
 			t.Errorf("WhatsApp text missing %q:\n%s", want, text)

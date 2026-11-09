@@ -134,7 +134,7 @@ sources:
 
   # bncamera's flash sale (homepage): slots 10–12h, 12–14h and 20–22h for
   # today and the next two days. A watched product on offer is a flash_sale
-  # alert (email + WhatsApp), once per slot; the price is not recorded.
+  # alert (email + instant), once per slot; the price is not recorded.
   - shop: bncamera
     mode: flash
     url: https://bncamera.com/

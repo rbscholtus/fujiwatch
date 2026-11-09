@@ -6,7 +6,7 @@
 # `require_any` must match (if set), and no `exclude` may match.
 #
 # Optional per product: target_vnd / target_used_vnd. When a new / used
-# offer's price reaches the target, a below_target alert is sent (WhatsApp
+# offer's price reaches the target, a below_target alert is sent (instant
 # and email), once per crossing. The site draws targets on the chart.
 #
 # Go's regexp has no lookahead, so model boundaries use (\D|$):
