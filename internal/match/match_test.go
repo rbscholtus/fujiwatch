@@ -83,8 +83,16 @@ func TestMatchWatchlist(t *testing.T) {
 		{"Fujifilm X-T3", "x-t3"},
 		{"Fujifilm X-T3 kèm grip, dùng chung pin với X-T30", "x-t3"},
 		{"Máy ảnh Fujifilm X-T30", ""},
-		{"Fujifilm X-T30 II Body", ""},
+		{"Fujifilm X-T30 II Body", "x-t30-ii"},
 		{"Fujifilm XT30 III kit XC15-45mm", ""},
+		{"Máy ảnh Fujifilm X-T30 mark 2 (Body XT30 mark II) (Phân loại: Hàng Đẹp)", "x-t30-ii"},
+		{"Máy ảnh FUJIFILM X-T30 II (Bảo hành: 24 tháng X-Camera, Màu sắc: Black, Biến thể: Body only)", "x-t30-ii"},
+		{"Máy ảnh FUJIFILM X-T30 II (Bảo hành: 24 tháng X-Camera, Màu sắc: Black, Biến thể: + Lens XC 15-45mm F/3.5-5.6)", ""},
+		{"Fujifilm XT30II cũ", "x-t30-ii"},
+		{"Máy ảnh FUJIFILM X-T30 III (Biến thể: Body, Màu sắc: Silver)", "x-t30-iii"},
+		{"Máy ảnh FUJIFILM X-T30 III (XT30 3 – Mới) (Phân loại: Mới nhập khẩu)", "x-t30-iii"},
+		{"Fujifilm X-T30 Mark III", "x-t30-iii"},
+		{"Máy ảnh FUJIFILM X-T30 III (Biến thể: + Sigma 18-50mm f2.8, Màu sắc: Black)", ""},
 
 		// X-T4
 		{"Fujifilm X-T4 Body Silver", "x-t4"},
@@ -93,8 +101,13 @@ func TestMatchWatchlist(t *testing.T) {
 		// X-T5 vs X-T50
 		{"Máy ảnh Fujifilm X-T5 Body (Đen)", "x-t5"},
 		{"Fujifilm XT5 kit XF16-80mm", ""}, // kit, not body-only
-		{"Máy ảnh Fujifilm X-T50 Body", ""},
+		{"Máy ảnh Fujifilm X-T50 Body", "x-t50"},
 		{"Fujifilm XT50 kit XC15-45", ""},
+		{"Máy ảnh Fujifilm X-T50 (Black, Body Only) | Chính hãng", "x-t50"},
+		{"Fujifilm X-T50 cũ (7337)", "x-t50"},
+		{"Ho Cheng Wei – X-T50 + XF16-50", ""},
+		{"Máy ảnh Fujifilm X-T30 II 2nd 98% (#05922) + XF 23mmF2", ""},
+		{"Máy ảnh Fujifilm X-T50 + Lens XF 16-50mm f/2.8-4.8 (Silver) | Chính hãng", ""},
 
 		// Kits never match body-only products (real titles from the snapshots).
 		{"Máy ảnh Fujifilm X-T5 + Lens XF 16-50mm F/2.8-4.8 (Black) | Chính Hãng", ""},

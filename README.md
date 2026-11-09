@@ -24,9 +24,12 @@ A static price-history site, built with Svelte and published on GitHub Pages, sh
 
 | ID | Product | Notes |
 |---|---|---|
-| `x-t3` | Fujifilm X-T3 body | new + used; must not match X-T30 / X-T30 II / X-T30 III |
+| `x-t3` | Fujifilm X-T3 body | new + used; must not match any X-T30 |
 | `x-t4` | Fujifilm X-T4 body | new + used |
 | `x-t5` | Fujifilm X-T5 body | new + used; must not match X-T50 |
+| `x-t50` | Fujifilm X-T50 body | new + used |
+| `x-t30-ii` | Fujifilm X-T30 II body | new + used; kept apart from X-T30 and X-T30 III |
+| `x-t30-iii` | Fujifilm X-T30 III body | new + used; kept apart from X-T30 and X-T30 II |
 | `x-t6` | Fujifilm X-T6 body | new + used; expected soon, not in shops yet |
 | `x-e5` | Fujifilm X-E5 body | new + used |
 | `xf10-24-i` | XF10-24mm F4 R OIS (Mark I) | tracked separately from Mark II (different prices) |
@@ -38,7 +41,7 @@ A static price-history site, built with Svelte and published on GitHub Pages, sh
 | `sigma-10-18` | Sigma 10-18mm F2.8 DC DN Contemporary | X-mount; dual-mount listings ("for Fujifilm/Sony") count |
 | `sigma-18-50` | Sigma 18-50mm F2.8 DC DN Contemporary | X-mount; dual-mount listings count |
 
-Body products never match kits (a title with "kit", a focal length or "+ lens"), and lens products never match a title that names a camera body, so kit prices stay out of both histories. Adding a product only requires editing `config/watchlist.yaml` (see [Usage: adding a product](docs/usage.md#adding-a-product)).
+Body products never match kits (a title with "kit", a focal length, "+ lens" or "+ XF…"), and lens products never match a title that names a camera body, so kit prices stay out of both histories. Adding a product only requires editing `config/watchlist.yaml` (see [Usage: adding a product](docs/usage.md#adding-a-product)).
 
 **Shops** (`config/sources.yaml`)
 

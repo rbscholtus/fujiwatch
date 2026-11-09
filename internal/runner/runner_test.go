@@ -161,23 +161,23 @@ func TestRunFirstCycle(t *testing.T) {
 		t.Errorf("blocked source err = %q", s.Err)
 	}
 
-	// Events: 2 new X-T5 and 3 new X-E5 body listings (the kits on that page
+	// Events: 2 new X-T5, 3 new X-T50 and 3 new X-E5 body listings (the kits on that page
 	// don't match the body-only products), the product-mode source's product
 	// (all baseline), 2 broken sources.
-	if n := countType(rep.Events, diff.NewListing); n != 6 {
-		t.Errorf("new_listing = %d, want 6", n)
+	if n := countType(rep.Events, diff.NewListing); n != 9 {
+		t.Errorf("new_listing = %d, want 9", n)
 	}
 	if n := countType(rep.Events, diff.AdapterBroken); n != 2 {
 		t.Errorf("adapter_broken = %d, want 2", n)
 	}
-	if len(rep.Events) != 8 {
-		t.Errorf("events = %d, want 8", len(rep.Events))
+	if len(rep.Events) != 11 {
+		t.Errorf("events = %d, want 11", len(rep.Events))
 	}
 
 	// Unmatched: every non-watched offer from both listings (43 offers
-	// minus 2 X-T5 and 3 X-E5 bodies; the kits stay unmatched).
-	if len(rep.Unmatched) != 37 {
-		t.Errorf("unmatched = %d, want 37", len(rep.Unmatched))
+	// minus 2 X-T5, 3 X-T50 and 3 X-E5 bodies; the kits stay unmatched).
+	if len(rep.Unmatched) != 34 {
+		t.Errorf("unmatched = %d, want 34", len(rep.Unmatched))
 	}
 
 	// History: one record per matched offer.
@@ -192,8 +192,8 @@ func TestRunFirstCycle(t *testing.T) {
 	if o := st.Offers[state.Key("xspace", xspaceURL)]; o == nil || o.Product != "xf10-24-ii" {
 		t.Errorf("xspace state = %+v", o)
 	}
-	if len(st.Offers) != 6 {
-		t.Errorf("state offers = %d, want 6", len(st.Offers))
+	if len(st.Offers) != 9 {
+		t.Errorf("state offers = %d, want 9", len(st.Offers))
 	}
 }
 

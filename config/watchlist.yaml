@@ -19,7 +19,8 @@
 # be mixed into the body's history. Most kit titles name a focal length;
 # add-on variations do not: "X-E5 (Len fuji 23 2.8 mua cùng)" ("len" is
 # lens, "mua cùng" bought together) is the price of the lens alone.
-kit_excludes: &kit ['\bkit\b', '\d+(-\d+)? ?mm\b', '\+ ?(lens|ong kinh)\b', '\blens?\b', '\bmua cung\b']
+# Some kit titles have no plain "mm": "X-T50 + XF16-50", "X-T30 II + XF 23mmF2".
+kit_excludes: &kit ['\bkit\b', '\d+(-\d+)? ?mm\b', '\+ ?(lens|ong kinh)\b', '\+ ?(xf|xc) ?\d', '\blens?\b', '\bmua cung\b']
 
 # Lens products exclude titles that name a camera body, for the same reason
 # the other way round ("Fujifilm X-T5 + Sigma 18-50mm" is a kit).
@@ -48,6 +49,25 @@ products:
     name: "Fujifilm X-T5"
     kind: body
     patterns: ['\bx-t5(\D|$)']
+    exclude: *kit
+
+  - id: x-t50
+    name: "Fujifilm X-T50"
+    kind: body
+    patterns: ['\bx-t50(\D|$)']
+    exclude: *kit
+
+  # The Marks are separate products, and neither is the original X-T30.
+  - id: x-t30-ii
+    name: "Fujifilm X-T30 II"
+    kind: body
+    patterns: ['\bx-t30[ -]?(ii|mark ?(ii|2))\b']
+    exclude: *kit
+
+  - id: x-t30-iii
+    name: "Fujifilm X-T30 III"
+    kind: body
+    patterns: ['\bx-t30[ -]?(iii|3|mark ?(iii|3))\b']
     exclude: *kit
 
   # Announced; expected in the coming months. Must not match a later X-T60.

@@ -46,6 +46,16 @@ sources:
 
   - shop: xspace
     mode: product
+    product: x-t50
+    url: https://fujifilm-xspace.vn/products/fujifilm-x-t50
+
+  - shop: xspace
+    mode: product
+    product: x-t30-iii
+    url: https://fujifilm-xspace.vn/products/may-anh-fujifilm-x-t30-iii
+
+  - shop: xspace
+    mode: product
     product: x-e5
     url: https://fujifilm-xspace.vn/products/fujifilm-x-e5
 
@@ -156,6 +166,36 @@ sources:
     mode: product
     product: x-t5
     url: https://kyma.vn/may-anh-fujifilm-x-t5.html?product-id=163637
+
+  - shop: kyma
+    mode: product
+    product: x-t50
+    url: https://kyma.vn/may-anh-fujifilm-x-t50-body-den.html
+
+  - shop: kyma
+    mode: product
+    product: x-t50
+    url: https://kyma.vn/may-anh-fujifilm-x-t50-body-den.html?product-id=204941
+
+  - shop: kyma
+    mode: product
+    product: x-t50
+    url: https://kyma.vn/may-anh-fujifilm-x-t50-body-den.html?product-id=204946
+
+  - shop: kyma
+    mode: product
+    product: x-t30-iii
+    url: https://kyma.vn/fujifilm-x-t30-iii.html
+
+  - shop: kyma
+    mode: product
+    product: x-t30-iii
+    url: https://kyma.vn/fujifilm-x-t30-iii.html?product-id=216642
+
+  - shop: kyma
+    mode: product
+    product: x-t30-iii
+    url: https://kyma.vn/fujifilm-x-t30-iii.html?product-id=216643
 
   - shop: kyma
     mode: product
@@ -271,6 +311,58 @@ sources:
 
   - shop: mayanh24h
     mode: product
+    product: x-t50
+    url: https://mayanh24h.com/fujifilm-x-t50.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t50
+    url: https://mayanh24h.com/fujifilm-x-t50-mau-den-body.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t50
+    url: https://mayanh24h.com/fujifilm-x-t50-than-bac-body.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t30-iii
+    url: https://mayanh24h.com/fujifilm-x-t30-mark-iii.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t30-iii
+    url: https://mayanh24h.com/fujifilm-x-t30-mark-iii-body-bac.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t30-iii
+    url: https://mayanh24h.com/fujifilm-x-t30-mark-iii-body-charcoal.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t30-iii
+    condition: used
+    url: https://mayanh24h.com/fujifilm-x-t30-iii-cu.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t30-ii
+    url: https://mayanh24h.com/fujifilm-x-t30-mark-ii.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t30-ii
+    url: https://mayanh24h.com/fujifilm-x-t30-mark-ii-body-mau-bac.html
+
+  - shop: mayanh24h
+    mode: product
+    product: x-t30-ii
+    condition: used
+    url: https://mayanh24h.com/fujifilm-x-t30-mark-ii-cu.html
+
+  - shop: mayanh24h
+    mode: product
     product: x-e5
     url: https://mayanh24h.com/fujifilm-x-e5-mau-den.html
 
@@ -325,6 +417,18 @@ sources:
   - shop: giangduydat
     mode: listing
     url: https://giangduydat.vn/fujifilm-x-t5
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-t50
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-t30-ii
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/fujifilm-x-t30-iii
 
   - shop: giangduydat
     mode: listing
