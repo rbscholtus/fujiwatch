@@ -38,6 +38,7 @@ A static price-history site, built with Svelte and published on GitHub Pages, sh
 | `xf16-55-ii` | XF16-55mm F2.8 R LM WR II | the 2025 model |
 | `xf18-55` | XF18-55mm F2.8-4 R LM OIS | reject Canon / Nikon / Sony 18-55 kit zooms |
 | `tamron-16-50` | Tamron 16-50mm F2.8 Di III VXD | **X-mount only**; reject Sony E / Nikon Z / Canon RF variants |
+| `tamron-17-70` | Tamron 17-70mm F2.8 Di III-A VC RXD | **X-mount only**; reject Sony E / Nikon Z / Canon RF versions and kits |
 | `sigma-10-18` | Sigma 10-18mm F2.8 DC DN Contemporary | X-mount; dual-mount listings ("for Fujifilm/Sony") count |
 | `sigma-18-50` | Sigma 18-50mm F2.8 DC DN Contemporary | X-mount; dual-mount listings count |
 

@@ -138,6 +138,21 @@ func TestMatchWatchlist(t *testing.T) {
 		{"Tamron 16-50mm F2.8 Di III VXD Nikon Z", ""},
 		{"Tamron 16-50mm F2.8 Di III VXD", ""}, // mount unknown → don't guess
 
+		// Tamron 17-70 (X-mount): real titles from the shops.
+		{"Ống kính Tamron 17-70mm F2.8 Di III-A VC RXD for Fujifilm", "tamron-17-70"},
+		{"Tamron 17-70mm f/2.8 Di III-A VC RXD for FUJIFILM", "tamron-17-70"},
+		{"Tamron 17-70mm f/2.8 Di III-A VC RXD Fujifilm X (Chính hãng)", "tamron-17-70"},
+		{"Ống kính Tamron 17-70mm f/2.8 Di III-A VC RXD for Fuji (Phân loại: Hàng đẹp)", "tamron-17-70"},
+		{"Tamron 17-70mm f/2.8 Di III-A VC RXD For Fujifilm X cũ (0579)", "tamron-17-70"},
+		{"Tamron 17-70mm F2.8 Di III-A VC RXD ngàm X", "tamron-17-70"},
+		{"Tamron 17-70mm f/2.8 Di III-A VC RXD for Sony / Canon RF / Nikon Z", ""},
+		{"Ống kính Tamron 17-70mm F2.8 Di III-A VC RXD for Nikon Z", ""},
+		{"Ống kính Tamron 17-70mm F2.8 Di III-A VC RXD for Canon RF", ""},
+		{"Ống Kính Tamron 17-70mm F2.8 Di III-A VC RXD For Sony E", ""},
+		{"Tamron 17-70mm f/2.8 Di III-A VC RXD", ""}, // mount unknown
+		{"Máy ảnh Sony ZV-E10 II + Lens Tamron 17-70mm f/2.8 (Black) | Chính Hãng", ""},
+		{"Tamron 70-180mm F2.8 Di III VXD G2 for Fujifilm", ""},
+
 		// Sigma 10-18 and 18-50 (X-mount): real titles from the snapshots.
 		{"Ống kính Sigma 10-18mm f/2.8 DC DN Contemporary for Fujifilm/Sony", "sigma-10-18"},
 		{"Sigma 18-50mm f/2.8 DC DN for Fujifilm X", "sigma-18-50"},

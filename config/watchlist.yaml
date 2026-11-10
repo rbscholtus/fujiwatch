@@ -122,6 +122,17 @@ products:
     exclude: ['sony', '\bfe\b', '\be-?mount', 'nikon', '\bz\b', 'canon', '\brf\b', '\bx-(t|s|h|e|m|a|pro)\d']
     other_mounts: *mounts
 
+  # Made for X, Sony E, Nikon Z and Canon RF, one product per mount; a
+  # Fujifilm / X-mount mention is required. Kits are common ("Fujifilm X-T5
+  # + Tamron 17-70mm", "Sony ZV-E10 II + Lens Tamron 17-70mm").
+  - id: tamron-17-70
+    name: "Tamron 17-70mm F2.8 Di III-A VC RXD (X)"
+    kind: lens
+    patterns: ['tamron', '(^|\D)17-70(\D|$)']
+    require_any: ['fuji', 'x-?mount', 'ngam x', '\bfx\b']
+    exclude: *body
+    other_mounts: *mounts
+
   # Canon, Nikon and Sony also make 18-55 kit zooms, and the XF18-55 is the
   # classic X-T kit lens, so: Fujifilm/XF required, other brands and
   # body-plus-lens kits excluded. The MK X 18-55mm T2.9 is a cine lens.

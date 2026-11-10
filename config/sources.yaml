@@ -233,6 +233,11 @@ sources:
     url: https://kyma.vn/tamron-16-50mm-f2-8-for-fujifilm-x.html
 
   - shop: kyma
+    mode: product
+    product: tamron-17-70
+    url: https://kyma.vn/ong-kinh-tamron-1770mm-f28-di-iiia-vc-rxd-for-fujifilm.html
+
+  - shop: kyma
     mode: listing
     url: https://kyma.vn/may-anh-mirrorless-fujifilm
 
@@ -467,6 +472,10 @@ sources:
   - shop: giangduydat
     mode: listing
     url: https://giangduydat.vn/tamron-af-16-50mm-f28-di-iii-vxd
+
+  - shop: giangduydat
+    mode: listing
+    url: https://giangduydat.vn/tamron-17-70mm-f28-di-iii-a-vc-rxd-for-fujifilm
 
   - shop: giangduydat
     mode: listing
