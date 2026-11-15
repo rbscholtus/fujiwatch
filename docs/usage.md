@@ -74,8 +74,8 @@ defaults:
   timeout_s: 20
   # Alert on a price drop of at least min_drop_pct percent OR min_drop_vnd.
   # Both 0: alert on every drop.
-  min_drop_pct: 0
-  min_drop_vnd: 0
+  min_drop_pct: 10
+  min_drop_vnd: 2000000
 
 notify:
   email: always         # always | changes (see Notifications)

@@ -197,8 +197,8 @@ func TestRunFirstCycle(t *testing.T) {
 	}
 }
 
-// Second cycle: xspace drops its price and sells out; a used listing page
-// starts returning nothing.
+// Second cycle: xspace drops its price by 2.5M (9.1%: over min_drop_vnd only)
+// and sells out; a used listing page starts returning nothing.
 func TestRunSecondCycleEvents(t *testing.T) {
 	cfg := testConfig(t)
 	f := testFetcher(t)
@@ -207,7 +207,7 @@ func TestRunSecondCycleEvents(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	f.bodies[xspaceURL+".js"] = []byte(`{"title":"Ống kính Fujinon XF10-24mm F4 R OIS WR II","price":2599000000,"available":false,"variants":[{"price":2599000000,"available":false}]}`)
+	f.bodies[xspaceURL+".js"] = []byte(`{"title":"Ống kính Fujinon XF10-24mm F4 R OIS WR II","price":2499000000,"available":false,"variants":[{"price":2499000000,"available":false}]}`)
 	f.bodies[vjUsedURL] = []byte(`<html><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"products":[]}}}</script></html>`)
 
 	rep, _, err := Run(t.Context(), cfg, st, f, Options{Now: func() time.Time { return runTime.Add(24 * time.Hour) }})
@@ -230,7 +230,7 @@ func TestRunSecondCycleEvents(t *testing.T) {
 		t.Errorf("events =\n  %s\nwant\n  %s", strings.Join(got, "\n  "), strings.Join(want, "\n  "))
 	}
 	for _, e := range rep.Events {
-		if e.Type == diff.PriceDrop && (e.OldPrice != 27_490_000 || e.PriceVND != 25_990_000) {
+		if e.Type == diff.PriceDrop && (e.OldPrice != 27_490_000 || e.PriceVND != 24_990_000) {
 			t.Errorf("price_drop = %d → %d", e.OldPrice, e.PriceVND)
 		}
 	}
@@ -301,7 +301,7 @@ func TestWriteText(t *testing.T) {
 	if _, _, err := Run(t.Context(), cfg, st, f, Options{Now: func() time.Time { return runTime }}); err != nil {
 		t.Fatal(err)
 	}
-	f.bodies[xspaceURL+".js"] = []byte(`{"title":"XF10-24 WR II","price":2599000000,"available":true}`)
+	f.bodies[xspaceURL+".js"] = []byte(`{"title":"XF10-24 WR II","price":2499000000,"available":true}`)
 	rep, _, err := Run(t.Context(), cfg, st, f, Options{Only: "xspace", Now: func() time.Time { return runTime.Add(time.Hour) }})
 	if err != nil {
 		t.Fatal(err)
@@ -316,7 +316,7 @@ func TestWriteText(t *testing.T) {
 		"(dry run",
 		"Events (1)",
 		"PRICE DROP",
-		"27.490.000₫ → 25.990.000₫ (-5.5%)",
+		"27.490.000₫ → 24.990.000₫ (-9.1%)",
 		"Sources (1)",
 		"ok  xspace",
 	} {
