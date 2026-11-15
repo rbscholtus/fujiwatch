@@ -72,8 +72,9 @@ The pages to fetch, plus run-wide settings.
 defaults:
   delay_ms: 3000        # between requests to the same host
   timeout_s: 20
-  # Alert on a price drop of at least min_drop_pct percent OR min_drop_vnd.
-  # Both 0: alert on every drop.
+  # Alert on a price drop of at least min_drop_pct percent OR min_drop_vnd,
+  # measured from the last alerted price (or a higher price seen since), so
+  # small drops add up. Both 0: alert on every drop.
   min_drop_pct: 10
   min_drop_vnd: 2000000
 

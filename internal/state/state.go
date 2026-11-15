@@ -14,17 +14,21 @@ import (
 
 // Offer is the last known state of one shop listing, keyed by Key(shop, url).
 type Offer struct {
-	Product   string    `json:"product"`
-	Shop      string    `json:"shop"`
-	URL       string    `json:"url"`
-	Title     string    `json:"title"`
-	PriceVND  int64     `json:"price_vnd"`
-	InStock   *bool     `json:"in_stock"`
-	Condition string    `json:"condition"`
-	Source    string    `json:"source"` // key of the source page it was found on
-	FirstSeen time.Time `json:"first_seen"`
-	LastSeen  time.Time `json:"last_seen"`
-	Missed    int       `json:"missed,omitempty"` // consecutive successful runs of its source without it
+	Product  string `json:"product"`
+	Shop     string `json:"shop"`
+	URL      string `json:"url"`
+	Title    string `json:"title"`
+	PriceVND int64  `json:"price_vnd"`
+	// DropRefVND is the price drops are measured from: the price of the
+	// last price_drop, raised to any higher price seen since. 0 (state
+	// written before it existed): PriceVND.
+	DropRefVND int64     `json:"drop_ref_vnd,omitempty"`
+	InStock    *bool     `json:"in_stock"`
+	Condition  string    `json:"condition"`
+	Source     string    `json:"source"` // key of the source page it was found on
+	FirstSeen  time.Time `json:"first_seen"`
+	LastSeen   time.Time `json:"last_seen"`
+	Missed     int       `json:"missed,omitempty"` // consecutive successful runs of its source without it
 }
 
 // Source is the health of one configured source page, keyed by Key(shop, url).

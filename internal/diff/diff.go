@@ -91,7 +91,9 @@ func (r SourceRun) Key() string { return state.Key(r.Shop, r.URL) }
 // Options tunes event generation.
 type Options struct {
 	// A price drop is reported if it is at least MinDropPct percent OR at
-	// least MinDropVND. Both zero: every drop is reported.
+	// least MinDropVND below the offer's reference price (the last reported
+	// drop, or a higher price seen since), so small drops add up. Both
+	// zero: every drop is reported.
 	MinDropPct float64
 	MinDropVND int64
 
@@ -209,16 +211,17 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 	old, ok := st.Offers[key]
 	if !ok {
 		st.Offers[key] = &state.Offer{
-			Product:   ob.Product,
-			Shop:      ob.Shop,
-			URL:       ob.URL,
-			Title:     ob.Title,
-			PriceVND:  ob.PriceVND,
-			InStock:   ob.InStock,
-			Condition: ob.Condition,
-			Source:    run.Key(),
-			FirstSeen: now,
-			LastSeen:  now,
+			Product:    ob.Product,
+			Shop:       ob.Shop,
+			URL:        ob.URL,
+			Title:      ob.Title,
+			PriceVND:   ob.PriceVND,
+			DropRefVND: ob.PriceVND,
+			InStock:    ob.InStock,
+			Condition:  ob.Condition,
+			Source:     run.Key(),
+			FirstSeen:  now,
+			LastSeen:   now,
 		}
 		// A new offer is news in either mode: an item new on a listing, or
 		// a product page seen for the first time (baseline in its source's
@@ -236,13 +239,23 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 	}
 
 	var events []Event
+	ref := old.DropRefVND
+	if ref == 0 {
+		ref = old.PriceVND
+	}
 	if old.PriceVND > 0 && ob.PriceVND > 0 && ob.PriceVND != old.PriceVND {
 		switch {
-		case ob.PriceVND < old.PriceVND && opts.dropCounts(old.PriceVND, ob.PriceVND):
-			events = append(events, event(PriceDrop, ob, old.PriceVND))
+		// A drop this run, large enough measured from the reference: the
+		// event's old price is the reference, so it shows the whole drop.
+		case ob.PriceVND < old.PriceVND && opts.dropCounts(ref, ob.PriceVND):
+			events = append(events, event(PriceDrop, ob, ref))
+			ref = ob.PriceVND
 		case ob.PriceVND > old.PriceVND:
 			events = append(events, event(PriceRise, ob, old.PriceVND))
 		}
+	}
+	if ob.PriceVND > ref {
+		ref = ob.PriceVND // a higher price (or the first visible one) resets it
 	}
 	// Target: fire once when the price crosses to or below it (or when the
 	// last known price was hidden), not on every run it stays there.
@@ -264,6 +277,7 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 	if ob.PriceVND > 0 {
 		old.PriceVND = ob.PriceVND
 	}
+	old.DropRefVND = ref
 	if ob.InStock != nil {
 		old.InStock = ob.InStock
 	}

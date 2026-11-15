@@ -93,7 +93,7 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 - [x] Repo visibility: **public** (GitHub Pages works on the free plan).
 - [x] Verify the platform per shop.
 - [x] Body-only products exclude kits ("X-T5 + Lens XF 16-50mm"), so kit prices don't mix into the body's history (`kit_excludes` in `config/watchlist.yaml`).
-- [x] Price-drop threshold: alert on a drop of at least 10% or 2.000.000₫ (`min_drop_pct: 10`, `min_drop_vnd: 2000000`); smaller drops are still recorded in the history.
+- [x] Price-drop threshold: alert on a drop of at least 10% or 2.000.000₫ (`min_drop_pct: 10`, `min_drop_vnd: 2000000`), measured from the last alerted price, so small drops add up; every price is still recorded in the history.
 - [x] Multi-page listings are followed (vjshop, WooCommerce, kyma, zshop, giangduydat). mayanh24h: robots.txt allows page 1 only.
 - [x] bncamera flash sales: watched products in upcoming flash-sale slots (next 3 days) are a `flash_sale` alert, by email and instant alert; the 2-hour price is not recorded as a regular price.
 - [ ] Set target prices (`target_vnd`, `target_used_vnd`) per product.

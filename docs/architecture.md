@@ -164,6 +164,7 @@ Matching rules per product: all `patterns` must match, all `require_all` must ma
       "url": "https://fujifilm-xspace.vn/products/...",
       "title": "Ống kính Fujinon XF10-24mm F4 R OIS WR II",
       "price_vnd": 27490000,
+      "drop_ref_vnd": 27490000,
       "in_stock": true,
       "condition": "new",
       "source": "xspace|https://fujifilm-xspace.vn/products/...",
@@ -187,7 +188,7 @@ Only matched offers are tracked. If a page hides the price ("Liên hệ") or the
 
 **Events (`internal/diff`)**
 
-- `price_drop` / `price_rise`: only drops are alerted on. Optional threshold in `sources.yaml` (`min_drop_pct`, `min_drop_vnd`: a drop counts if it meets either) to ignore noise. The stored price is updated either way.
+- `price_drop` / `price_rise`: only drops are alerted on. Optional threshold in `sources.yaml` (`min_drop_pct`, `min_drop_vnd`: a drop counts if it meets either) to ignore noise. A drop is measured from the offer's reference price (`drop_ref_vnd` in `state.json`), not from the previous run, so small drops add up: the reference is the price of the last `price_drop`, raised to any higher price seen since, and the event's old price is the reference. A price going down part of the way back up keeps the reference. The stored price (`price_vnd`) is updated either way. State without `drop_ref_vnd` uses `price_vnd`.
 - `back_in_stock` / `out_of_stock`
 - `new_listing`: the URL has not been seen before, in either mode: an item new on a listing, or a product page seen for the first time. In its source's first run it is baseline (email only). The same URL found by two sources in one run counts once (the first source wins).
 - `gone`: not seen for 3 consecutive runs. Removed from state and logged (useful for used items: "sold"). Only runs in which the offer's own source worked count, so a broken shop never marks its items as sold; offers of a source removed from `sources.yaml` age out the same way.

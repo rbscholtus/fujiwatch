@@ -387,3 +387,53 @@ func TestFlashSale(t *testing.T) {
 		t.Errorf("empty flash sale: %v", types(evs))
 	}
 }
+
+// docs/architecture.md, State, history and events: drops are measured from
+// the last reported drop (or a higher price seen since), so small drops add up.
+func TestDropMeasuredFromReference(t *testing.T) {
+	opts := Options{MinDropPct: 10, MinDropVND: 2_000_000}
+	steps := []struct {
+		price   int64
+		want    []Type
+		oldShow int64 // the drop event's old price
+		ref     int64 // stored reference after the step
+	}{
+		{30_000_000, nil, 0, 30_000_000},
+		{29_000_000, nil, 0, 30_000_000},                        // -1M: too small
+		{28_500_000, nil, 0, 30_000_000},                        // -1.5M from 30M
+		{28_800_000, []Type{PriceRise}, 0, 30_000_000},          // partial recovery keeps 30M
+		{27_900_000, []Type{PriceDrop}, 30_000_000, 27_900_000}, // -2.1M from 30M
+		{27_000_000, nil, 0, 27_900_000},                        // measured from the alert
+		{0, nil, 0, 27_900_000},                                 // price hidden
+		{31_000_000, []Type{PriceRise}, 0, 31_000_000},          // a higher price resets it
+		{29_000_000, []Type{PriceDrop}, 31_000_000, 29_000_000}, // -2M from 31M
+	}
+	st := state.New()
+	key := state.Key(shop, itemURL)
+	for i, s := range steps {
+		evs := Apply(st, []SourceRun{listing(ob(itemURL, s.price, nil))}, configured(), day(i), opts)
+		if i == 0 {
+			evs = nil // new_listing
+		}
+		if !slices.Equal(types(evs), s.want) {
+			t.Fatalf("step %d (%d): events = %v, want %v", i, s.price, types(evs), s.want)
+		}
+		if s.oldShow != 0 && (evs[0].OldPrice != s.oldShow || evs[0].PriceVND != s.price) {
+			t.Errorf("step %d: price_drop = %d → %d, want %d → %d", i, evs[0].OldPrice, evs[0].PriceVND, s.oldShow, s.price)
+		}
+		if r := st.Offers[key].DropRefVND; r != s.ref {
+			t.Errorf("step %d: drop_ref_vnd = %d, want %d", i, r, s.ref)
+		}
+	}
+}
+
+// State written before drop_ref_vnd existed: the stored price is the reference.
+func TestDropReferenceMissingInState(t *testing.T) {
+	st := state.New()
+	Apply(st, []SourceRun{listing(ob(itemURL, 30_000_000, nil))}, configured(), t0, Options{})
+	st.Offers[state.Key(shop, itemURL)].DropRefVND = 0
+	evs := Apply(st, []SourceRun{listing(ob(itemURL, 27_500_000, nil))}, configured(), day(1), Options{MinDropVND: 2_000_000})
+	if !slices.Equal(types(evs), []Type{PriceDrop}) || evs[0].OldPrice != 30_000_000 {
+		t.Fatalf("events = %+v, want price_drop from 30000000", evs)
+	}
+}
