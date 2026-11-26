@@ -38,7 +38,7 @@ GitHub Actions (cron, daily)
 
 **Two watch modes**
 
-- `product`: a fixed product URL. Track price and stock. Events: `new_listing` (first sighting), `price_drop`, `price_rise`, `back_in_stock`, `out_of_stock`, `below_target`. The URL from `sources.yaml` is the offer's identity, whatever canonical URL the page reports. A page with variants (xspace: body and kits; WooCommerce variations: new, used, kits, add-ons) yields an offer per variant; the runner uses the variants whose title matches the product, in the source's condition first, then in stock, then the cheapest. If none matches, the page is reported as a `mismatch`.
+- `product`: a fixed product URL. Track price and stock. Events: `new_listing` (first sighting), `price_drop`, `price_rise`, `price_published`, `back_in_stock`, `out_of_stock`, `below_target`. The URL from `sources.yaml` is the offer's identity, whatever canonical URL the page reports. A page with variants (xspace: body and kits; WooCommerce variations: new, used, kits, add-ons) yields an offer per variant; the runner uses the variants whose title matches the product, in the source's condition first, then in stock, then the cheapest. If none matches, the page is reported as a `mismatch`.
 - `listing`: a category, search or used-goods page with many items. Every item title goes through the matcher. Events: the same; the item URL is the identity key.
 
 A failure in one source never aborts the run; it becomes an `adapter_broken` event. Only a cancelled context does.
@@ -189,6 +189,7 @@ Only matched offers are tracked. If a page hides the price ("Liên hệ") or the
 **Events (`internal/diff`)**
 
 - `price_drop` / `price_rise`: only drops are alerted on. Optional threshold in `sources.yaml` (`min_drop_pct`, `min_drop_vnd`: a drop counts if it meets either) to ignore noise. A drop is measured from the offer's reference price (`drop_ref_vnd` in `state.json`), not from the previous run, so small drops add up: the reference is the price of the last `price_drop`, raised to any higher price seen since, and the event's old price is the reference. A price going down part of the way back up keeps the reference. The stored price (`price_vnd`) is updated either way. State without `drop_ref_vnd` uses `price_vnd`.
+- `price_published`: an offer known so far only without a price (`price_vnd` 0 in `state.json`: "Liên hệ", a pre-order) shows one. Because a hidden price keeps the last known one, it fires once per offer; a price hidden and shown again is a `price_drop` / `price_rise` as usual. A first price at or below the target is also a `below_target`. Not for a new listing that already has a price (that is `new_listing`).
 - `back_in_stock` / `out_of_stock`
 - `new_listing`: the URL has not been seen before, in either mode: an item new on a listing, or a product page seen for the first time. In its source's first run it is baseline (email only). The same URL found by two sources in one run counts once (the first source wins).
 - `gone`: not seen for 3 consecutive runs. Removed from state and logged (useful for used items: "sold"). Only runs in which the offer's own source worked count, so a broken shop never marks its items as sold; offers of a source removed from `sources.yaml` age out the same way.

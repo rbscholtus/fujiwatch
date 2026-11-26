@@ -25,6 +25,9 @@ const (
 	AdapterBroken Type = "adapter_broken"
 	BelowTarget   Type = "below_target" // price reached the product's target
 	FlashSale     Type = "flash_sale"   // a watched product in a time-limited flash sale
+	// PricePublished: an offer known only without a price ("Liên hệ", a
+	// pre-order) shows one for the first time.
+	PricePublished Type = "price_published"
 )
 
 // GoneAfter is how many consecutive successful runs of its source an offer
@@ -242,6 +245,10 @@ func observe(st *state.State, run SourceRun, key string, ob Observation, now tim
 	ref := old.DropRefVND
 	if ref == 0 {
 		ref = old.PriceVND
+	}
+	// The stored price is the last visible one, so 0 means never priced.
+	if old.PriceVND == 0 && ob.PriceVND > 0 {
+		events = append(events, event(PricePublished, ob, 0))
 	}
 	if old.PriceVND > 0 && ob.PriceVND > 0 && ob.PriceVND != old.PriceVND {
 		switch {

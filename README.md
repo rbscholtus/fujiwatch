@@ -4,7 +4,7 @@ A small price watcher for Fujifilm X-mount cameras and lenses in Vietnamese came
 
 It runs once a day on GitHub Actions. Each run checks a list of shop pages, records prices, and sends an alert (Telegram, WhatsApp and/or email) when:
 
-- a watched product drops in price, reaches a target price or comes back in stock (**new gear**), or
+- a watched product drops in price, reaches a target price, gets its first price (a pre-order or "Liên hệ" listing) or comes back in stock (**new gear**), or
 - a new matching listing appears on a shop's used or category page (**used gear**), or
 - a watched product is in an upcoming flash sale (bncamera).
 
@@ -96,6 +96,7 @@ All done; each was committed with spec tests that pass (`go test ./...`).
 - [x] Price-drop threshold: alert on a drop of at least 10% or 2.000.000₫ (`min_drop_pct: 10`, `min_drop_vnd: 2000000`), measured from the last alerted price, so small drops add up; every price is still recorded in the history.
 - [x] Multi-page listings are followed (vjshop, WooCommerce, kyma, zshop, giangduydat). mayanh24h: robots.txt allows page 1 only.
 - [x] bncamera flash sales: watched products in upcoming flash-sale slots (next 3 days) are a `flash_sale` alert, by email and instant alert; the 2-hour price is not recorded as a regular price.
+- [x] `price_published` alert: an offer listed without a price (the X-T6 pre-orders before its 2026-12-03 launch) gets an instant alert when a price first appears.
 - [ ] Set target prices (`target_vnd`, `target_used_vnd`) per product.
 - [ ] vjshop: add the Tamron 16-50mm (X) product page once vjshop lists it.
 - [ ] vjshop: recheck the XF18-55 (product 4898). It is out of stock; its listing shows 8.890.000₫, but the product API has only `default: 0`, so the listing price may be stale.

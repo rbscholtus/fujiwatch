@@ -95,7 +95,7 @@ func TestPriceChanges(t *testing.T) {
 		{"rise", 15_000_000, 16_000_000, Options{}, []Type{PriceRise}},
 		{"same", 15_000_000, 15_000_000, Options{}, nil},
 		{"price hidden now (Liên hệ)", 15_000_000, 0, Options{}, nil},
-		{"price shown again", 0, 15_000_000, Options{}, nil},
+		{"first visible price (pre-order priced)", 0, 15_000_000, Options{}, []Type{PricePublished}},
 		// Threshold: ≥ 2% OR ≥ 300,000 VND.
 		{"below both thresholds", 15_000_000, 14_800_000, Options{MinDropPct: 2, MinDropVND: 300_000}, nil},
 		{"meets VND threshold", 15_000_000, 14_700_000, Options{MinDropPct: 2, MinDropVND: 300_000}, []Type{PriceDrop}},

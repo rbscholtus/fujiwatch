@@ -96,3 +96,33 @@ func TestBelowTargetIgnores(t *testing.T) {
 		}
 	}
 }
+
+// docs/architecture.md, Events: price_published fires when an offer that
+// never had a visible price shows one; with a target it can also be a
+// below_target crossing.
+func TestPricePublished(t *testing.T) {
+	opts := targets(0, 15_000_000)
+	st := state.New()
+	evs := Apply(st, []SourceRun{listing(ob(itemURL, 0, nil))}, configured(), t0, opts)
+	if !slices.Equal(types(evs), []Type{NewListing}) {
+		t.Fatalf("run 1 = %v", types(evs))
+	}
+	// Still no price: nothing.
+	if evs = Apply(st, []SourceRun{listing(ob(itemURL, 0, nil))}, configured(), day(1), opts); len(evs) != 0 {
+		t.Fatalf("run 2 = %v, want none", types(evs))
+	}
+	evs = Apply(st, []SourceRun{listing(ob(itemURL, 14_000_000, nil))}, configured(), day(2), opts)
+	if !slices.Equal(types(evs), []Type{PricePublished, BelowTarget}) {
+		t.Fatalf("run 3 = %v", types(evs))
+	}
+	if e := evs[0]; e.PriceVND != 14_000_000 || e.OldPrice != 0 {
+		t.Errorf("price_published = %+v", e)
+	}
+	// Hidden again, then shown: the last known price is kept, so this is
+	// an ordinary change, not a second price_published.
+	Apply(st, []SourceRun{listing(ob(itemURL, 0, nil))}, configured(), day(3), opts)
+	evs = Apply(st, []SourceRun{listing(ob(itemURL, 16_000_000, nil))}, configured(), day(4), opts)
+	if !slices.Equal(types(evs), []Type{PriceRise}) {
+		t.Errorf("run 5 = %v, want only price_rise", types(evs))
+	}
+}

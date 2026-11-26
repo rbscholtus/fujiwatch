@@ -77,6 +77,7 @@ var subjectOrder = []struct {
 	{diff.BelowTarget, "below target", "below target"},
 	{diff.FlashSale, "flash sale", "flash sales"},
 	{diff.PriceDrop, "price drop", "price drops"},
+	{diff.PricePublished, "price published", "prices published"},
 	{diff.BackInStock, "back in stock", "back in stock"},
 	{diff.NewListing, "new listing", "new listings"},
 	{diff.AdapterBroken, "broken source", "broken sources"},
@@ -150,7 +151,7 @@ func ShouldEmail(n config.Notify, events []diff.Event, now time.Time) bool {
 // Notifications). Baseline events (a source's first run) are never sent.
 // It is ordered by importance: when one listing has several of these events
 // in a run, only the first type in this list is sent.
-var InstantTypes = []diff.Type{diff.BelowTarget, diff.FlashSale, diff.PriceDrop, diff.BackInStock, diff.NewListing}
+var InstantTypes = []diff.Type{diff.BelowTarget, diff.FlashSale, diff.PriceDrop, diff.PricePublished, diff.BackInStock, diff.NewListing}
 
 func instant(events []diff.Event) []diff.Event {
 	best := map[string]int{} // URL → index into out

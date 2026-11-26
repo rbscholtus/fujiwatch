@@ -18,6 +18,8 @@ func EventLabel(t diff.Type) string {
 		return "PRICE DROP"
 	case diff.PriceRise:
 		return "price rise"
+	case diff.PricePublished:
+		return "PRICE PUBLISHED"
 	case diff.BackInStock:
 		return "BACK IN STOCK"
 	case diff.OutOfStock:
@@ -58,7 +60,7 @@ func EventPrice(e diff.Event) string {
 			s += ", " + e.Quota + " sold"
 		}
 		return s
-	case diff.BackInStock, diff.OutOfStock, diff.NewListing, diff.Gone:
+	case diff.BackInStock, diff.OutOfStock, diff.NewListing, diff.Gone, diff.PricePublished:
 		return price.FormatVND(e.PriceVND)
 	default:
 		return price.FormatVND(e.PriceVND)

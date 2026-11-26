@@ -22,7 +22,7 @@ const CallMeBotURL = "https://api.callmebot.com/whatsapp.php"
 const maxWhatsAppChars = 1000
 
 // WhatsApp sends one short message per run via CallMeBot, only for
-// below_target, flash_sale, price_drop, back_in_stock and new_listing
+// below_target, flash_sale, price_drop, price_published, back_in_stock and new_listing
 // (docs/usage.md, Notifications).
 type WhatsApp struct {
 	Phone   string // international format, e.g. +84…
@@ -93,6 +93,8 @@ func AlertText(msg *Message, maxChars int) string {
 		case diff.BelowTarget:
 			line = fmt.Sprintf("🎯 %s (%s) %s: %s, target %s", name, e.Condition, e.Shop,
 				price.FormatVND(e.PriceVND), price.FormatVND(e.TargetVND))
+		case diff.PricePublished:
+			line = fmt.Sprintf("💰 %s (%s) %s: price published, %s", name, e.Condition, e.Shop, price.FormatVND(e.PriceVND))
 		case diff.BackInStock:
 			line = fmt.Sprintf("✅ %s (%s) back in stock at %s: %s", name, e.Condition, e.Shop, price.FormatVND(e.PriceVND))
 		case diff.NewListing:

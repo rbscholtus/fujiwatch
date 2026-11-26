@@ -78,6 +78,7 @@ func TestSubject(t *testing.T) {
 		{ev(diff.PriceDrop), "fujiwatch: 1 price drop"},
 		{ev(diff.NewListing, diff.PriceDrop, diff.PriceDrop), "fujiwatch: 2 price drops, 1 new listing"},
 		{ev(diff.PriceRise, diff.AdapterBroken, diff.Gone), "fujiwatch: 1 broken source, 1 gone, 1 price rise"},
+		{ev(diff.NewListing, diff.PricePublished, diff.PricePublished), "fujiwatch: 2 prices published, 1 new listing"},
 	}
 	for _, tt := range tests {
 		if got := Subject(tt.events); got != tt.want {
@@ -193,6 +194,18 @@ func TestWhatsAppText(t *testing.T) {
 	back := &Message{Events: []diff.Event{{Type: diff.BackInStock, Product: "p", Shop: "s", Condition: "new", PriceVND: 1_000_000, URL: "u"}}}
 	if got := AlertText(back, maxWhatsAppChars); !strings.Contains(got, "1 alert\n") || !strings.Contains(got, "✅ p (new) back in stock at s: 1.000.000₫") {
 		t.Errorf("back in stock text = %q", got)
+	}
+
+	// A first price is sent; with below_target for the same listing, only
+	// the more important below_target is.
+	pub := diff.Event{Type: diff.PricePublished, Product: "x-t6", Shop: "vjshop", Condition: "new", PriceVND: 45_990_000, URL: "https://v/x-t6"}
+	if got := AlertText(&Message{Events: []diff.Event{pub}}, maxWhatsAppChars); !strings.Contains(got, "💰 x-t6 (new) vjshop: price published, 45.990.000₫\nhttps://v/x-t6") {
+		t.Errorf("price published text = %q", got)
+	}
+	below := pub
+	below.Type, below.TargetVND = diff.BelowTarget, 50_000_000
+	if got := AlertText(&Message{Events: []diff.Event{pub, below}}, maxWhatsAppChars); !strings.Contains(got, "1 alert\n\n🎯") || strings.Contains(got, "💰") {
+		t.Errorf("published + below target text = %q", got)
 	}
 }
 
