@@ -152,10 +152,12 @@ Telegram:
 - One-time setup: message `@BotFather`, run `/newbot` and copy the token. Send your new bot any message (a bot can't write first), then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `message.chat.id`.
 - Variables: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`.
 
-WhatsApp via CallMeBot:
+WhatsApp via CallMeBot (optional, currently not set up: the repository has no `CALLMEBOT_*` secrets):
 
 - One-time setup: add CallMeBot's number to your phone contacts and send it "I allow callmebot to send me messages". It replies with your personal API key. The current number and steps are at https://www.callmebot.com/blog/free-api-whatsapp-messages/
 - Variables: `CALLMEBOT_PHONE` (`+84…`), `CALLMEBOT_APIKEY`.
+- To turn it on in CI, add both secrets once you have the key: `gh secret set CALLMEBOT_PHONE` and `gh secret set CALLMEBOT_APIKEY` (each prompts for the value), or repository → Settings → Secrets and variables → Actions. To turn it off, delete both (`gh secret delete …`).
+- Only set them with real values. Any non-blank value counts as set, so a placeholder turns WhatsApp on and every alert run then warns `whatsapp: HTTP 203: … APIKey is invalid`.
 - It is a free shared service, so failures are non-fatal.
 
 **Email via SMTP (daily digest)**
@@ -183,7 +185,7 @@ Two workflows:
 
 Actions are pinned to their current major versions (`actions/checkout@v7`, `actions/setup-go@v7`, …); bump them when GitHub releases new majors. `cmd/fujiwatch/workflow_test.go` checks the workflows against this section and executes their shell steps.
 
-**Secrets** (repository → Settings → Secrets and variables → Actions): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY`, `SMTP_USER`, `SMTP_PASS`, `MAIL_TO`.
+**Secrets** (repository → Settings → Secrets and variables → Actions): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `SMTP_USER`, `SMTP_PASS`, `MAIL_TO`, and optionally `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY` (not set at the moment; see Notifications, WhatsApp via CallMeBot). Leave a notifier's secrets out entirely to disable it; don't fill them with placeholders.
 
 **Things to know about GitHub Actions**
 
