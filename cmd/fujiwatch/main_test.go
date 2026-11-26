@@ -49,7 +49,7 @@ func TestExtractCommand(t *testing.T) {
 		t.Fatalf("exit %d, stderr: %s", code, errOut.String())
 	}
 	for _, want := range []string{
-		"x-t5", "36990000", "https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang", "(unmatched)", "36 offers",
+		"x-t5", "36990000", "https://vjshop.vn/may-anh-mirrorless/fujifilm-x-t5-silver-chinh-hang", "(unmatched)", "36 offers",
 	} {
 		if !strings.Contains(out.String(), want) {
 			t.Errorf("output missing %q", want)

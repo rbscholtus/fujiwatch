@@ -56,7 +56,7 @@ const (
 	xspaceURL  = "https://fujifilm-xspace.vn/products/fujinon-xf10-24mmf4-r-ois-wr-ii"
 	vjUsedURL  = "https://vjshop.vn/do-cu-chat"
 	vjFujiURL  = "https://vjshop.vn/may-anh-fujifilm"
-	vjXT5URL   = "https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang"
+	vjXT5URL   = "https://vjshop.vn/may-anh-mirrorless/fujifilm-x-t5-silver-chinh-hang"
 	vjXT5API   = "https://api.vjshop.vn/api/products/fujifilm-x-t5-silver-chinh-hang"
 	brokenURL  = "https://kyma.vn/may-anh-fujifilm"
 	blockedURL = "https://vjshop.vn/may-anh-cu"

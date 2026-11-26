@@ -135,7 +135,7 @@ func TestXSpaceHTMLOutOfStock(t *testing.T) {
 
 func TestVJShopFetchURL(t *testing.T) {
 	a := ForShop("vjshop")
-	got, err := FetchURL(a, "https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang", config.ModeProduct)
+	got, err := FetchURL(a, "https://vjshop.vn/may-anh-mirrorless/fujifilm-x-t5-silver-chinh-hang", config.ModeProduct)
 	if err != nil || got != "https://api.vjshop.vn/api/products/fujifilm-x-t5-silver-chinh-hang" {
 		t.Errorf("product FetchURL = %q, %v", got, err)
 	}
@@ -172,7 +172,7 @@ func TestVJShopUsedListing(t *testing.T) {
 func TestVJShopNewListing(t *testing.T) {
 	offers := loadSnapshot(t, "vjshop/may-anh-fujifilm.html")
 	i := slices.IndexFunc(offers, func(o Offer) bool {
-		return o.URL == "https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang"
+		return o.URL == "https://vjshop.vn/may-anh-mirrorless/fujifilm-x-t5-silver-chinh-hang"
 	})
 	if i < 0 {
 		t.Fatal("X-T5 silver not found in listing")
@@ -240,7 +240,7 @@ func TestVJShopProductAPIMatchesListing(t *testing.T) {
 	if len(offers) != 1 {
 		t.Fatalf("got %d offers", len(offers))
 	}
-	if o := offers[0]; o.PriceVND != 36_990_000 || o.URL != "https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang" {
+	if o := offers[0]; o.PriceVND != 36_990_000 || o.URL != "https://vjshop.vn/may-anh-mirrorless/fujifilm-x-t5-silver-chinh-hang" {
 		t.Errorf("offer = %+v", o)
 	}
 }
@@ -263,7 +263,7 @@ func TestVJShopPriceWindows(t *testing.T) {
 	}
 	for _, tt := range tests {
 		a := WithClock(ForShop("vjshop"), func() time.Time { return tt.at })
-		offers, err := Extract(a, "https://vjshop.vn/fujifilm-x-t5-silver-chinh-hang", raw)
+		offers, err := Extract(a, "https://vjshop.vn/may-anh-mirrorless/fujifilm-x-t5-silver-chinh-hang", raw)
 		if err != nil {
 			t.Fatal(err)
 		}

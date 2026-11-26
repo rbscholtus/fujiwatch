@@ -181,7 +181,7 @@ func (*VJShop) NextPage(cur Page, raw []byte) (Page, error) {
 func (v *VJShop) offer(pageURL string, p vjProduct) Offer {
 	o := Offer{
 		Shop:     "vjshop",
-		URL:      resolveURL(pageURL, "/"+p.Core.Slug),
+		URL:      resolveURL(pageURL, vjProductPath(p)),
 		Title:    strings.TrimSpace(p.Core.Name),
 		PriceVND: v.price(p),
 	}
@@ -196,6 +196,16 @@ func (v *VJShop) offer(pageURL string, p vjProduct) Offer {
 		o.Condition = match.ConditionUsed
 	}
 	return o
+}
+
+// vjProductPath is the product's page: /<category>/<slug>. The site reads
+// a bare /<slug> as a category and shows "not found" (docs/shops.md,
+// vjshop).
+func vjProductPath(p vjProduct) string {
+	if p.Core.ProductCategory != nil && p.Core.ProductCategory.Slug != "" {
+		return "/" + p.Core.ProductCategory.Slug + "/" + p.Core.Slug
+	}
+	return "/" + p.Core.Slug
 }
 
 // price returns real_price when the listing provides it; otherwise the
