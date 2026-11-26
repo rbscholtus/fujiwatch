@@ -86,4 +86,5 @@ bncamera.com, mayanhhoangto.com, x-camera.vn. Adapter: `woocommerce.go`.
 - Prices are strings in minor units (check `currency_minor_unit`); names contain HTML entities (`&#8211;`).
 - `is_on_backorder` ("Cho phép đặt hàng trước", pre-order allowed) counts as **not** in stock even when `is_in_stock` is true.
 - Fallback for HTML pages: `.product .price .woocommerce-Price-amount`.
+- **One-off 403s from CI:** on 2026-11-19, bncamera and x-camera answered HTTP 403 to every request (Store API and bncamera's homepage, all retries) within 16 seconds of one GitHub Actions run, while mayanhhoangto worked. The next run, and every run since, was fine. Most likely both servers blocked that runner's IP for a while (they have different hosts: HostVN and Mat Bao). A single day of 403s needs no change; only 403s on several days in a row suggest a deliberate block of datacenter traffic (see [usage.md: GitHub Actions](usage.md#github-actions)).
 - Responses embed full HTML descriptions; snapshots in `testdata/` are trimmed to the fields the adapter reads.
