@@ -80,7 +80,7 @@ fujiwatch/
 ├── testdata/<shop>/             # saved page snapshots, .meta.json, .golden.json
 ├── site/                        # Svelte + Vite static history site
 ├── docs/                        # usage, architecture, shop notes
-└── .github/workflows/           # watch.yml (daily run + site), ci.yml
+└── .github/                    # workflows/watch.yml (daily run + site), workflows/ci.yml, dependabot.yml
 ```
 
 Dependencies: `github.com/PuerkitoBio/goquery` (HTML), `gopkg.in/yaml.v3` (config), `golang.org/x/text` (diacritic stripping), the standard library for everything else. No headless browser: every shop so far serves its data without JavaScript.

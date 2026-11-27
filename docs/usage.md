@@ -178,12 +178,14 @@ WhatsApp via CallMeBot (optional, currently not set up: the repository has no `C
 
 ## GitHub Actions
 
-Two workflows:
+Two workflows and a Dependabot config:
 
 - [`.github/workflows/watch.yml`](../.github/workflows/watch.yml): the daily run. `cron: "17 23 * * *"` is 06:17 Asia/Saigon (cron is UTC), off the hour to avoid queue delays, plus a manual **Run workflow** button with optional `dry_run` and `only` inputs. The `scrape` job runs `go test ./...`, then `fujiwatch run`, then commits `data/` as `data: <date> [skip ci]` (only when it changed). The `site` job builds and deploys the history site.
-- [`.github/workflows/ci.yml`](../.github/workflows/ci.yml): `go vet`, `go test -race` and `golangci-lint` on pushes and pull requests (data-only commits are ignored).
+- [`.github/workflows/ci.yml`](../.github/workflows/ci.yml): `go vet`, `go test -race`, `govulncheck` and `golangci-lint` (with all linters on, including `gosec`) on pushes and pull requests (data-only commits are ignored), and every Monday at 08:23 Asia/Saigon (`cron: "23 1 * * 1"`). The weekly run finds vulnerabilities published since the last push. `govulncheck` reports only vulnerable code the program can actually reach, in our modules and in the standard library; a standard-library finding means bumping the `go` line in `go.mod` to the Go release that fixes it. A failing scheduled run is emailed to whoever last changed the schedule.
 
-Actions are pinned to their current major versions (`actions/checkout@v7`, `actions/setup-go@v7`, …); bump them when GitHub releases new majors. `cmd/fujiwatch/workflow_test.go` checks the workflows against this section and executes their shell steps.
+[`.github/dependabot.yml`](../.github/dependabot.yml) opens one pull request a week per kind of dependency (Go modules, the site's npm packages, the workflows' actions) when updates exist. It doesn't bump the `go` line in `go.mod`; do that by hand. Its security alerts and security updates are separate switches under repository → Settings → Advanced Security.
+
+Actions are pinned to their current major versions (`actions/checkout@v7`, `actions/setup-go@v7`, …); Dependabot proposes new majors as they come out. `cmd/fujiwatch/workflow_test.go` checks the workflows against this section and executes their shell steps.
 
 **Secrets** (repository → Settings → Secrets and variables → Actions): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `SMTP_USER`, `SMTP_PASS`, `MAIL_TO`, and optionally `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY` (not set at the moment; see Notifications, WhatsApp via CallMeBot). Leave a notifier's secrets out entirely to disable it; don't fill them with placeholders.
 

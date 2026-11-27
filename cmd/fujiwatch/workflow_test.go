@@ -146,7 +146,10 @@ func TestWorkflowActionsPinnedToMajor(t *testing.T) {
 
 func TestCIWorkflow(t *testing.T) {
 	wf := readWorkflow(t, "ci.yml")
-	for _, want := range []string{"pull_request:", "go vet ./...", "go test -race ./...", "golangci/golangci-lint-action@", `"data/**"`} {
+	for _, want := range []string{
+		"pull_request:", "go vet ./...", "go test -race ./...", "golangci/golangci-lint-action@", `"data/**"`,
+		"golang.org/x/vuln/cmd/govulncheck@latest ./...",
+	} {
 		if !strings.Contains(wf, want) {
 			t.Errorf("ci.yml missing %q", want)
 		}
@@ -158,6 +161,35 @@ func TestCIWorkflow(t *testing.T) {
 	}
 	if !strings.Contains(string(cfg), `version: "2"`) || !regexp.MustCompile(`version: v2\.\d+`).MatchString(wf) {
 		t.Error("golangci-lint version in ci.yml must be v2.x to match .golangci.yml")
+	}
+	// govulncheck also runs weekly, off the hour.
+	m := regexp.MustCompile(`cron:\s*"(\d+) \d+ \* \* \d"`).FindStringSubmatch(wf)
+	if m == nil {
+		t.Error("ci.yml has no weekly cron schedule")
+	} else if m[1] == "0" {
+		t.Error("ci.yml cron should be off the hour to avoid queue delays")
+	}
+}
+
+// Dependabot keeps every dependency kind up to date: Go modules, the site's
+// npm packages and the workflows' actions.
+func TestDependabotConfig(t *testing.T) {
+	b, err := os.ReadFile("../../.github/dependabot.yml")
+	if err != nil {
+		t.Fatal(err)
+	}
+	cfg := string(b)
+	if strings.Contains(cfg, "\t") {
+		t.Fatal("dependabot.yml contains tabs (invalid YAML indentation)")
+	}
+	for eco, dir := range map[string]string{"gomod": "/", "npm": "/site", "github-actions": "/"} {
+		re := regexp.MustCompile(`- package-ecosystem: ` + eco + `\n\s+directory: ` + regexp.QuoteMeta(dir) + `\n`)
+		if !re.MatchString(cfg) {
+			t.Errorf("dependabot.yml has no %s update for %s", eco, dir)
+		}
+		if _, err := os.Stat(filepath.Join("../..", dir)); err != nil {
+			t.Errorf("dependabot.yml: %s directory %s: %v", eco, dir, err)
+		}
 	}
 }
 
